@@ -1,3 +1,5 @@
+var tailwindcss = require('tailwindcss')
+
 module.exports = {
   siteMetadata: {
     title: 'Finiteloop Systems',
@@ -17,6 +19,13 @@ module.exports = {
       options: {
         name: 'settings',
         path: `${__dirname}/src/settings/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [tailwindcss('./tailwind.js')],
+        precision: 8,
       },
     },
     'gatsby-plugin-netlify-cms',

@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import Layout from '../components/layout'
 class IndexPage extends React.Component {
   render() {
     const { classes } = this.props
     return (
-      <div>
+      <Layout>
         <div
           style={{
             background: 'linear-gradient(-180deg, #FAFAFA 0%, #F1F1F1 100%)',
@@ -27,7 +27,7 @@ class IndexPage extends React.Component {
             </div>
           </section>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
