@@ -16,9 +16,7 @@ export const OfferingTemplate = ({
   return (
     <section name="offering">
       {helmet || ''}
-      <div component="h1" className={classes.title1}>
-        {title}
-      </div>
+      <div component="h1">{title}</div>
       <div
         style={{ padding: '20px', lineHeight: '24px', letterSpacing: '1.29px' }}
       />

@@ -191,14 +191,14 @@ class ContactForm extends React.Component {
     } = this.state
 
     return (
-      <div className={classes.root}>
+      <div>
         <Helmet
           title={
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
 
-        <div className={classes.maps}>
+        <div>
           <MapWithAMakredInfoWindow
             googleMapURL={GoogleMapsUrl}
             loadingElement={<div style={{ height: `100%` }} />}

@@ -34,21 +34,19 @@ class CaseStudies extends React.Component {
                         to={post.frontmatter.path}
                       >
                         <span
-                          className={classes.imageSrc}
                           style={{
                             backgroundImage: `url(${post.frontmatter.image})`,
                           }}
                         />
-                        <span className={classes.imageBackdrop} />
-                        <span className={classes.imageButton}>
+                        <span />
+                        <span>
                           <div
                             component="span"
                             variant="subheading"
                             color="inherit"
-                            className={classes.imageTitle}
                           >
                             {post.frontmatter.title}
-                            <span className={classes.imageMarked} />
+                            <span />
                           </div>
                         </span>
                       </div>
