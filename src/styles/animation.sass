@@ -1,0 +1,24 @@
+
+.animate-text
+  @apply secondary border-primary border-r-2 mx-auto overflow-hidden text-center tracking-wide
+  top: 50%  
+  white-space: nowrap
+  transform: translateY(-50%)
+  font-size: 5vmin
+  width: 14em
+
+/* Animation */
+.anim-typewriter
+    animation: typewriter 2s steps(24) 1s 1 normal both, blinkTextCursor 500ms steps(24) infinite normal
+
+@keyframes typewriter
+    from
+        width: 0em
+    to
+        width: 11.5em
+
+@keyframes blinkTextCursor
+    from
+        @apply border-primary border-r-2
+    to
+        border-right-color: transparent

@@ -4,40 +4,61 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import './layout.sass'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+      query SettingsQuery {
+        global: markdownRemark(
+          frontmatter: { templateKey: { eq: "global-settings" } }
+        ) {
+          frontmatter {
+            logo
+            logoTitle
+            templateKey
+            siteUrl
+            siteTitle
+            siteDescription
+            socialMediaCard {
+              hashTag
+              twtrUrl
+              lnkdnUrl
+              githubUrl
+            }
+          }
+        }
+        links: markdownRemark(
+          frontmatter: { templateKey: { eq: "nav-links" } }
+        ) {
+          frontmatter {
+            headerlinks {
+              item {
+                title
+                url
+                newwindow
+              }
+            }
+            footerlinks {
+              item {
+                title
+                url
+                newwindow
+              }
+            }
           }
         }
       }
     `}
     render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
+      <div className="font-futura antialiased">
+        <Helmet title={data.global.frontmatter.siteTitle} />
+        <Header
+          title={data.global.frontmatter.logoTitle}
+          social={data.global.frontmatter.socialMediaCard}
+          links={data.links.frontmatter.headerlinks}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
-      </>
+        <div className="mx-auto">{children}</div>
+      </div>
     )}
   />
 )

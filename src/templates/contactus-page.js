@@ -201,9 +201,9 @@ class ContactForm extends React.Component {
         <div>
           <MapWithAMakredInfoWindow
             googleMapURL={GoogleMapsUrl}
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `400px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
+            loadingElement={<div style={{ height: '100%' }} />}
+            containerElement={<div style={{ height: '400px' }} />}
+            mapElement={<div style={{ height: '100%' }} />}
             contactData={contactus.frontmatter}
             siteTitle={global.frontmatter.siteTitle}
           />

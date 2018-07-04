@@ -1,0 +1,9 @@
+@mixin font($font-family, $font-file)
+  @font-face
+    font-family: $font-family
+    src: url($font-file+'.otf') format('opentype')
+
+@include font('Futura', '../fonts/FuturaMedium')
+
+.para-primary
+  @apply primary flex font-medium text-xl tracking-wide leading-normal

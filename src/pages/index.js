@@ -1,9 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import '../styles/global.sass'
+import SEO from '../components/seo'
+import Offerrings from '../components/offerings'
 class IndexPage extends React.Component {
   render() {
-    const { classes } = this.props
     return (
       <Layout>
         <div
@@ -11,22 +13,27 @@ class IndexPage extends React.Component {
             background: 'linear-gradient(-180deg, #FAFAFA 0%, #F1F1F1 100%)',
           }}
         >
-          <section name="initial">
-            <div component="h1">
+          <section className="section" name="initial">
+            <h1 className="lg:p-30 md:p-24 sm:p-10 text-primary lg:text-5xl md:text-3xl sm:text-xl font-medium tracking-wide leading-normal">
               We are a boutique consulting firm focusing on experience design
               and highly scalable technical architecture
-            </div>
-            <p className="line-1 anim-typewriter">WE HELP YOU SCALE...</p>
+            </h1>
+            <p className="animate-text anim-typewriter">WE HELP YOU SCALE...</p>
           </section>
         </div>
         <div style={{ background: 'white' }}>
           <section name="more">
-            <div component="span">
+            <div className="primary text-center uppercase text-lg">
               More
               <br />
+              <i className="material-icons -mt-3 text-4xl">
+                keyboard_arrow_down
+              </i>
             </div>
           </section>
         </div>
+        <Offerrings offeringsData={this.props} />
+        <SEO postEdges={this.props} />
       </Layout>
     )
   }

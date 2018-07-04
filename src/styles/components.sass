@@ -1,0 +1,42 @@
+@import color
+
+.logo
+    @apply primary uppercase tracking-wide p-2 border-2 border-primary text-xl no-underline
+    
+.nav
+    @apply z-50 flex items-center justify-between flex-wrap bg-grey-lightest pl-10 pr-10 pt-5 pin-t sticky
+
+.nav:after
+    @apply block -mx-5 pt-5 border-b border-primary
+    content: ""
+    width: 110%
+
+.link-primary
+    @apply secondary uppercase m-3 text-lg no-underline tracking-wide p-3
+
+.link-primary:hover
+    @apply bg-grey-lighter
+
+.hamburgerMenu
+    @apply flex items-center px-3 py-2 border rounded text-primary border-primary
+
+.hamburgerMenu:hover
+    @apply text-secondary border-secondary
+
+.section
+    @apply pb-16
+    background: url(/img/headerBackground.svg) no-repeat top left
+
+.offerings-right
+    @apply flex items-center justify-center p-16
+    background: url(/img/kolamBackground.png) no-repeat top right
+
+.offerings-left
+    @apply flex p-16
+    background: url(/img/kolamBackground.png) no-repeat top left
+
+.offering-content-left
+    @apply flex items-center justify-center mx-5
+
+.offering-content-right
+    @apply mx-5

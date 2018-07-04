@@ -1,33 +1,56 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { GitHubIcon, LnkdnIcon, TwtrIcon, HamburgerIcon } from './icons/icons'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({ title, links, social }) => (
+  <nav className="nav">
+    <Link to="/" className="logo">
+      <span>{title}</span>
+    </Link>
+    <div className="block lg:hidden">
+      <button className="hamburgerMenu">
+        <HamburgerIcon />
+      </button>
     </div>
-  </div>
+    <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div className="text-sm lg:flex-grow" />
+      <div>
+        {links.map(({ item }) => (
+          <Link to={item.url} key={item.title} className="link-primary">
+            {item.title}
+          </Link>
+        ))}
+        <a
+          href={social.lnkdnUrl}
+          target="_new"
+          className="link-primary align-middle"
+        >
+          <LnkdnIcon />
+        </a>
+        <a
+          href={social.twtrUrl}
+          target="_new"
+          className="link-primary align-middle"
+        >
+          <TwtrIcon />
+        </a>
+        <a
+          href={social.githubUrl}
+          target="_new"
+          className="link-primary align-middle"
+        >
+          <GitHubIcon />
+        </a>
+      </div>
+    </div>
+  </nav>
 )
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  links: PropTypes.array.isRequired,
+  social: PropTypes.object.isRequired,
+}
 
 export default Header
