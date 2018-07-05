@@ -32,11 +32,6 @@ exports.createPages = ({ actions, graphql }) => {
         node.frontmatter.templateKey != 'global-settings' &&
         node.frontmatter.templateKey != 'nav-links'
       ) {
-        var doc = {
-          id: id,
-          title: node.frontmatter.title,
-          body: node.html,
-        }
         createPage({
           path: pagePath,
           component: path.resolve(

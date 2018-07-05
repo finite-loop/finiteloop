@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import config from '../../config/SiteConfig'
-
+import PropTypes from 'prop-types'
 class SEO extends Component {
   render() {
     const { postNode, postPath, postSEO } = this.props
@@ -128,6 +128,12 @@ class SEO extends Component {
       </Helmet>
     )
   }
+}
+
+SEO.propTypes = {
+  postNode: PropTypes.object.isRequired,
+  postPath: PropTypes.object.isRequired,
+  postSEO: PropTypes.object.isRequired,
 }
 
 export default SEO

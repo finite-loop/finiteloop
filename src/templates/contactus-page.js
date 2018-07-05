@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Keys from '../../config/APIKeys'
-
+import Layout from '../components/layout'
 import { compose, withStateHandlers } from 'recompose'
 import {
   withScriptjs,
@@ -12,57 +12,7 @@ import {
   Marker,
   InfoWindow,
 } from 'react-google-maps'
-
-const styles = theme => ({
-  root: {
-    marginLeft: '20px',
-    marginRight: '20px',
-  },
-  container: {
-    display: 'flex',
-    flex: 1,
-    marginTop: '10px',
-    justifyContent: 'space-evenly',
-    flexWrap: 'wrap',
-    paddingTop: '20px',
-  },
-  form: {
-    width: 600,
-  },
-  submit: {
-    display: 'flex',
-    margin: '3em 0',
-    alignItems: 'center',
-    color: 'white',
-  },
-  multilineInput: {
-    lineHeight: 1.4,
-    fontSize: '1.2em',
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 600,
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-    },
-  },
-  singleLineInput: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 600,
-    lineHeight: 1.4,
-    fontSize: '1.2em',
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-    },
-  },
-  submitError: {
-    background: 'red',
-    color: 'white',
-  },
-  maps: {
-    width: '800px',
-  },
-})
+import SEO from '../components/seo'
 
 const MapWithAMakredInfoWindow = compose(
   withStateHandlers(
@@ -95,17 +45,11 @@ const MapWithAMakredInfoWindow = compose(
       {props.isOpen && (
         <InfoWindow onCloseClick={props.onToggleOpen}>
           <div>
-            <div
-              component="h3"
-              variant="headline"
-              style={{
-                color: '#70A999',
-              }}
-            >
+            <h3 className="primary text-2xl antialiased font-medium">
               {props.siteTitle}
-            </div>
-            <div style={{ backgroundColor: '#70A999', marginTop: '5px' }} />
-            <div component="span" variant="body1">
+            </h3>
+            <hr className="primary h-1 bg-primary" />
+            <span className="secondary text-base">
               {props.contactData.address1}
               <br />
               {props.contactData.address2}
@@ -113,7 +57,7 @@ const MapWithAMakredInfoWindow = compose(
               {props.contactData.cityPIN}, {props.contactData.stateCountry}
               <br />
               {props.contactData.phone} | {props.contactData.email}
-            </div>
+            </span>
           </div>
         </InfoWindow>
       )}
@@ -178,7 +122,6 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const { classes } = this.props
     const { contactus, global } = this.props.data
     const {
       open,
@@ -191,31 +134,39 @@ class ContactForm extends React.Component {
     } = this.state
 
     return (
-      <div>
+      <Layout>
         <Helmet
           title={
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
-
-        <div>
-          <MapWithAMakredInfoWindow
-            googleMapURL={GoogleMapsUrl}
-            loadingElement={<div style={{ height: '100%' }} />}
-            containerElement={<div style={{ height: '400px' }} />}
-            mapElement={<div style={{ height: '100%' }} />}
-            contactData={contactus.frontmatter}
-            siteTitle={global.frontmatter.siteTitle}
-          />
+        <h1 className="px-12 py-4">{contactus.frontmatter.heading}</h1>
+        <p className="para-secondary px-12 py-4">
+          {contactus.frontmatter.subheading}
+        </p>
+        <div className="">
+          <div className="maps">
+            <MapWithAMakredInfoWindow
+              googleMapURL={GoogleMapsUrl}
+              loadingElement={<div style={{ height: '100%' }} />}
+              containerElement={<div style={{ height: '400px' }} />}
+              mapElement={<div style={{ height: '100%' }} />}
+              contactData={contactus.frontmatter}
+              siteTitle={global.frontmatter.siteTitle}
+            />
+          </div>
         </div>
-      </div>
+        <SEO
+          postPath={contactus.frontmatter.path}
+          postNode={contactus}
+          postSEO
+        />
+      </Layout>
     )
   }
 }
 
-ContactForm.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
+ContactForm.propTypes = {}
 
 export default ContactForm
 

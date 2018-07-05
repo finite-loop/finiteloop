@@ -1,25 +1,24 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Teams from '../components/teams'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import Content, { HTMLContent } from '../components/content'
 
 export const TeamsPageTemplate = ({
   props,
-  title,
   content,
   contentComponent,
-  teams,
-  teamTitle,
-  teamDescription,
-  timer,
   teamData,
 }) => {
-  // const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content
   return (
-    <div>
-      <div
-        style={{ padding: '20px', lineHeight: '24px', letterSpacing: '1.29px' }}
-      />
-    </div>
+    <Layout>
+      <PageContent className="para-secondary p-12" content={content} />
+      <Teams teamsData={props} />
+      <SEO postPath={teamData.frontmatter.path} postNode={teamData} postSEO />
+    </Layout>
   )
 }
 
@@ -30,26 +29,29 @@ const TeamsPageTemplateWrapper = props => {
       {aboutus.map(({ node: aboutusData }) => (
         <TeamsPageTemplate
           key={aboutusData.frontmatter.title}
-          contentComponent=""
           title={aboutusData.frontmatter.title}
-          content={aboutusData.html}
           teamTitle={aboutusData.frontmatter.teamTitle}
           teamDescription={aboutusData.frontmatter.teamDescription}
           teams={aboutusData.frontmatter.team}
           props={props}
-          timer={1000}
           teamData={aboutusData}
           content={aboutusData.html}
-          contentComponent=""
+          contentComponent={HTMLContent}
         />
       ))}
     </div>
   )
 }
 
+TeamsPageTemplate.propTypes = {
+  props: propTypes.object.isRequired,
+  teamData: propTypes.object.isRequired,
+  content: propTypes.string.isRequired,
+  contentComponent: propTypes.func.isRequired,
+}
+
 TeamsPageTemplateWrapper.propTypes = {
-  classes: propTypes.object.isRequired,
-  theme: propTypes.object.isRequired,
+  data: propTypes.object.isRequired,
 }
 
 export default TeamsPageTemplateWrapper

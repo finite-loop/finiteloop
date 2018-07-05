@@ -1,4 +1,5 @@
-var tailwindcss = require('tailwindcss')
+const tailwindcss = require('tailwindcss')
+// const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = {
   siteMetadata: {
@@ -22,12 +23,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-plugin-sass',
       options: {
         postCssPlugins: [tailwindcss('./tailwind.js'), require('autoprefixer')],
-        precision: 8,
+        precision: 5,
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
   ],

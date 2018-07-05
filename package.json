@@ -8,10 +8,12 @@
     "gatsby-plugin-netlify": "next",
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-sass": "^2.0.0-beta.3",
+    "gatsby-plugin-sass": "next",
+    "gatsby-plugin-sharp": "next",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
-    "netlify-cms": "^1.9.2",
+    "gatsby-transformer-sharp": "next",
+    "netlify-cms": "^1.9.3",
     "node-sass": "^4.9.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -31,6 +33,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.0.1",
     "eslint-config-google": "^0.9.1",
     "eslint-config-prettier": "^2.9.0",
     "extract-text-webpack-plugin": "^3.0.2",

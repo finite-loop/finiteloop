@@ -25,6 +25,7 @@
     "spyOn": true
   },
   "rules": {
+    "react/display-name": "off",
     "no-console": "off",
     "no-inner-declarations": "off",
     "valid-jsdoc": "off",

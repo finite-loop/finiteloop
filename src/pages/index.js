@@ -4,15 +4,12 @@ import Layout from '../components/layout'
 import '../styles/global.sass'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
+import Teams from '../components/teams'
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
-          style={{
-            background: 'linear-gradient(-180deg, #FAFAFA 0%, #F1F1F1 100%)',
-          }}
-        >
+        <div className="gradientBackground">
           <section className="section" name="initial">
             <h1 className="heroText">
               We are a boutique consulting firm focusing on experience design
@@ -33,6 +30,7 @@ class IndexPage extends React.Component {
           </section>
         </div>
         <Offerrings offeringsData={this.props} />
+        <Teams teamsData={this.props} />
         <SEO postEdges={this.props} />
       </Layout>
     )
