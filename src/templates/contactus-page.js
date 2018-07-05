@@ -13,6 +13,8 @@ import {
   InfoWindow,
 } from 'react-google-maps'
 import SEO from '../components/seo'
+import { ValidatorForm } from 'react-form-validator-core'
+import TextValidator from '../components/TextValidator'
 
 const MapWithAMakredInfoWindow = compose(
   withStateHandlers(
@@ -124,7 +126,6 @@ class ContactForm extends React.Component {
   render() {
     const { contactus, global } = this.props.data
     const {
-      open,
       email,
       firstname,
       lastname,
@@ -144,7 +145,81 @@ class ContactForm extends React.Component {
         <p className="para-secondary px-12 py-4">
           {contactus.frontmatter.subheading}
         </p>
-        <div className="">
+        <div className="flex flex-col px-10">
+          <ValidatorForm
+            onSubmit={this.handleSubmit}
+            onError={errors => console.log(errors)}
+            name="Contact"
+            ref={f => (this.form = f)}
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="pb-5"
+          >
+            {submitError && <p className="">{submitError}</p>}
+            <TextValidator
+              id="firstname"
+              name="firstname"
+              placeholder="First Name"
+              value={firstname}
+              onChange={this.handleChange}
+              validators={['required']}
+              errorMessages={['This field is required']}
+              margin="normal"
+              className="input-field"
+            />
+            <TextValidator
+              id="lastname"
+              name="lastname"
+              placeholder="Last Name"
+              value={lastname}
+              onChange={this.handleChange}
+              validators={['required']}
+              errorMessages={['This field is required']}
+              margin="normal"
+              className="input-field"
+            />
+            <TextValidator
+              id="email"
+              name="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={this.handleChange}
+              validators={['required', 'isEmail']}
+              errorMessages={['This field is required', 'E-mail is not valid']}
+              margin="normal"
+              className="input-field"
+            />
+            <TextValidator
+              id="company"
+              name="company"
+              placeholder="Company Name"
+              value={company}
+              onChange={this.handleChange}
+              margin="normal"
+              className="input-field"
+            />
+            <TextValidator
+              id="message"
+              name="message"
+              placeholder="Message"
+              value={message}
+              onChange={this.handleChange}
+              validators={['required']}
+              errorMessages={['This field is required']}
+              margin="normal"
+              className="input-field"
+            />
+            <input name="bot-field" style={{ display: 'none' }} />
+            <br />
+            <div style={{ alignItems: 'center' }}>
+              <button
+                type="submit"
+                className="bg-primary hover:bg-grey-darker text-white font-bold py-2 px-4 rounded"
+              >
+                Submit
+              </button>
+            </div>
+          </ValidatorForm>
           <div className="maps">
             <MapWithAMakredInfoWindow
               googleMapURL={GoogleMapsUrl}
@@ -166,7 +241,9 @@ class ContactForm extends React.Component {
   }
 }
 
-ContactForm.propTypes = {}
+ContactForm.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 
 export default ContactForm
 

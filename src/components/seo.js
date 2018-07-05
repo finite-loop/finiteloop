@@ -132,8 +132,8 @@ class SEO extends Component {
 
 SEO.propTypes = {
   postNode: PropTypes.object.isRequired,
-  postPath: PropTypes.object.isRequired,
-  postSEO: PropTypes.object.isRequired,
+  postPath: PropTypes.string.isRequired,
+  postSEO: PropTypes.bool.isRequired,
 }
 
 export default SEO
