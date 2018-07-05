@@ -40,18 +40,23 @@ export const TeamsPageTemplate = ({ teams }) => (
                   />
                 </a>
               </div>
-              <div className="p-4 text-center">
-                <h3 className="lg:text-lg md:text-md sm:text-sm">
+              <div className="px-2 text-center">
+                <h3 className="text-lg pb-2">
                   {person.name + ' '}
-                  <img
-                    alt="kolam background"
-                    height="30"
-                    width="30"
-                    src="/img/kolam.png"
-                  />
+                  <div>
+                    <img
+                      className=""
+                      alt="kolam background"
+                      height="30"
+                      width="30"
+                      src="/img/kolam.png"
+                    />
+                  </div>
                   {person.title}
                 </h3>
-                <p className="para-secondary sm:text-sm">{person.quote}</p>
+                <p className="para-secondary lg:text-xl md:text-lg">
+                  {person.quote}
+                </p>
               </div>
             </div>
           </div>
