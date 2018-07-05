@@ -21,11 +21,11 @@ class Footer extends React.Component {
       <div className="bg-primary flex justify-center align-center flex-wrap text-white p-2 mt-1">
         <div className="flex justify-around flex-1 items-center">
           {this.props.links.map(({ item: footerLinks }) => (
-            <div key={footerLinks.title}>
+            <div key={footerLinks.title} className="py-2">
               {!footerLinks.newwindow && (
                 <Link
                   to={footerLinks.url}
-                  className="text-white text-2xl font-medium uppercase no-underline p-4"
+                  className="text-white lg:text-xl sm:text-sm font-medium uppercase no-underline p-4"
                 >
                   {footerLinks.title}
                 </Link>
@@ -34,7 +34,7 @@ class Footer extends React.Component {
                 <a
                   href={footerLinks.url}
                   target="_new"
-                  className="text-white text-2xl font-medium uppercase no-underline p-4"
+                  className="text-white lg:text-xl sm:text-sm font-medium uppercase no-underline p-4"
                 >
                   {footerLinks.title}
                 </a>
@@ -79,6 +79,9 @@ class Footer extends React.Component {
 
 Footer.propTypes = {
   links: PropTypes.array.isRequired,
+  url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  hashTag: PropTypes.string.isRequired,
 }
 
 export default Footer
