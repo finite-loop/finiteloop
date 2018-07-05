@@ -2,7 +2,10 @@
 
 .logo
     @apply primary uppercase tracking-wide p-2 border-2 border-primary text-xl no-underline
-    
+
+.heroText
+    @apply text-primary font-medium tracking-wide leading-normal
+
 .nav
     @apply z-50 flex items-center justify-between flex-wrap bg-grey-lightest pl-10 pr-10 pt-5 pin-t sticky
 
@@ -12,7 +15,7 @@
     width: 110%
 
 .link-primary
-    @apply secondary uppercase m-3 text-lg no-underline tracking-wide p-3
+    @apply secondary uppercase text-lg no-underline tracking-wide p-4
 
 .link-primary:hover
     @apply bg-grey-lighter
@@ -28,7 +31,7 @@
     background: url(/img/headerBackground.svg) no-repeat top left
 
 .offerings-right
-    @apply flex items-center justify-center p-16
+    @apply flex p-16
     background: url(/img/kolamBackground.png) no-repeat top right
 
 .offerings-left
@@ -36,7 +39,63 @@
     background: url(/img/kolamBackground.png) no-repeat top left
 
 .offering-content-left
-    @apply flex items-center justify-center mx-5
+    @apply flex mx-5
 
 .offering-content-right
     @apply mx-5
+
+// Mobile View
+
+@screen sm
+    .offerings-right
+        @apply p-2
+
+    .offerings-left
+        @apply p-2
+    
+    .heroText
+        @apply p-10 text-xl
+
+    .menu-links
+        @apply w-full block text-center flex-grow
+// Tablet View
+
+@screen md
+    .offerings-right
+        @apply p-12
+
+    .offerings-left
+        @apply p-12
+
+    .heroText
+        @apply p-24 text-3xl
+
+    .menu-links
+        @apply w-full block text-center flex-grow
+// Large Displays
+
+@screen lg
+    .offerings-right
+        @apply p-16
+
+    .offerings-left
+        @apply p-16
+
+    .heroText
+        @apply p-32 text-5xl
+    
+    .menu-links
+        @apply w-auto flex-grow content-center items-center
+
+@screen xl
+    .offerings-right
+        @apply p-16
+
+    .offerings-left
+        @apply p-16
+
+    .heroText
+        @apply p-32 text-5xl
+
+    .menu-links
+        @apply w-auto flex-grow content-center items-center

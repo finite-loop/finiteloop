@@ -14,7 +14,7 @@ class IndexPage extends React.Component {
           }}
         >
           <section className="section" name="initial">
-            <h1 className="lg:p-30 md:p-24 sm:p-10 text-primary lg:text-5xl md:text-3xl sm:text-xl font-medium tracking-wide leading-normal">
+            <h1 className="heroText">
               We are a boutique consulting firm focusing on experience design
               and highly scalable technical architecture
             </h1>

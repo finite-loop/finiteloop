@@ -1,51 +1,54 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { GitHubIcon, LnkdnIcon, TwtrIcon, HamburgerIcon } from './icons/icons'
+import { HamburgerIcon } from './icons/icons'
+import MenuLinks from './menuLinks'
+class Header extends React.Component {
+  state = {
+    menu: false,
+  }
 
-const Header = ({ title, links, social }) => (
-  <nav className="nav">
-    <Link to="/" className="logo">
-      <span>{title}</span>
-    </Link>
-    <div className="block lg:hidden">
-      <button className="hamburgerMenu">
-        <HamburgerIcon />
-      </button>
-    </div>
-    <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div className="text-sm lg:flex-grow" />
-      <div>
-        {links.map(({ item }) => (
-          <Link to={item.url} key={item.title} className="link-primary">
-            {item.title}
-          </Link>
-        ))}
-        <a
-          href={social.lnkdnUrl}
-          target="_new"
-          className="link-primary align-middle"
-        >
-          <LnkdnIcon />
-        </a>
-        <a
-          href={social.twtrUrl}
-          target="_new"
-          className="link-primary align-middle"
-        >
-          <TwtrIcon />
-        </a>
-        <a
-          href={social.githubUrl}
-          target="_new"
-          className="link-primary align-middle"
-        >
-          <GitHubIcon />
-        </a>
-      </div>
-    </div>
-  </nav>
-)
+  toggleMenu = () => () => {
+    if (this.state.menu)
+      this.setState({
+        menu: false,
+      })
+    else
+      this.setState({
+        menu: true,
+      })
+  }
+
+  render() {
+    const { title, links, social } = this.props
+
+    return (
+      <nav className="nav">
+        <Link to="/" className="logo">
+          <span>{title}</span>
+        </Link>
+        <div className="lg:hidden">
+          <button onClick={this.toggleMenu()} className="hamburgerMenu">
+            {!this.state.menu && <i className="material-icons">menu</i>}
+            {this.state.menu && <i className="material-icons">close</i>}
+          </button>
+        </div>
+        {this.state.menu && (
+          <MenuLinks
+            classes="menu-links lg:hidden"
+            social={social}
+            links={links}
+          />
+        )}
+        <MenuLinks
+          classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
+          social={social}
+          links={links}
+        />
+      </nav>
+    )
+  }
+}
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
