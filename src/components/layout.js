@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -58,6 +59,12 @@ const Layout = ({ children }) => (
           links={data.links.frontmatter.headerlinks}
         />
         <div className="mx-auto">{children}</div>
+        <Footer
+          url={data.global.frontmatter.siteUrl}
+          title={data.global.frontmatter.siteTitle}
+          hashTag={data.global.frontmatter.socialMediaCard.hashTag}
+          links={data.links.frontmatter.footerlinks}
+        />
       </div>
     )}
   />

@@ -20,7 +20,8 @@
     "react-dom": "^16.4.1",
     "react-form-validator-core": "^0.4.4",
     "react-google-maps": "^9.4.5",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-share": "^2.2.0"
   },
   "keywords": [
     "gatsby",
