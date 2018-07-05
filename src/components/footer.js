@@ -33,7 +33,6 @@ class Footer extends React.Component {
               {footerLinks.newwindow && (
                 <a
                   href={footerLinks.url}
-                  component={Link}
                   target="_new"
                   className="text-white text-2xl font-medium uppercase no-underline p-4"
                 >
@@ -79,7 +78,7 @@ class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  classes: PropTypes.object.isRequired,
+  links: PropTypes.array.isRequired,
 }
 
 export default Footer

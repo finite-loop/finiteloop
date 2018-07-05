@@ -41,7 +41,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                 </a>
               </div>
               <div className="p-4 text-center">
-                <h3 className="">
+                <h3 className="lg:text-lg md:text-md sm:text-sm">
                   {person.name + ' '}
                   <img
                     alt="kolam background"
@@ -51,7 +51,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                   />
                   {person.title}
                 </h3>
-                <p className="para-secondary">{person.quote}</p>
+                <p className="para-secondary sm:text-sm">{person.quote}</p>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export const TeamsPageTemplate = ({ teams }) => (
 const Teams = ({ teamsData }) => {
   const { edges: aboutus } = teamsData.data.Teams
   return (
-    <section name="teams" className="gradientBackground px-24">
+    <section name="teams" className="gradientBackground px-24 sm:px-2">
       {aboutus.map(({ node: team }) => (
         <TeamsPageTemplate
           key={team.frontmatter.title}

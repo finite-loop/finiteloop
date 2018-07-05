@@ -141,11 +141,13 @@ class ContactForm extends React.Component {
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
-        <h1 className="px-12 py-4">{contactus.frontmatter.heading}</h1>
-        <p className="para-secondary px-12 py-4">
+        <h1 className="lg:px-10 py-4 sm:px-2 text-xl">
+          {contactus.frontmatter.heading}
+        </h1>
+        <p className="para-secondary lg:px-10 py-4 sm:px-2">
           {contactus.frontmatter.subheading}
         </p>
-        <div className="flex flex-col px-10">
+        <div className="flex flex-col lg:px-10 sm:px-2">
           <ValidatorForm
             onSubmit={this.handleSubmit}
             onError={errors => console.log(errors)}
