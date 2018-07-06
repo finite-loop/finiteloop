@@ -5,9 +5,7 @@
   "author": "Parthasarathy S",
   "dependencies": {
     "gatsby": "next",
-    "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-manifest": "next",
     "gatsby-plugin-netlify": "next",
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-react-helmet": "next",
