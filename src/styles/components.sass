@@ -1,6 +1,9 @@
 @import color
 
-.maps *
+#offerings
+    @apply pt-16 -mt-16
+
+.maps * // google maps
     @apply font-futura
     border-style: none
 
@@ -85,7 +88,9 @@
 
     .menu-links
         @apply w-full block text-center flex-grow
-    
+        -webkit-transition: all 0.5s ease-in
+        -o-transition: all 0.5s ease-in
+        transition: all 0.5s ease-in
     .link-secondary
         @apply text-sm flex flex-auto p-2
 
@@ -106,6 +111,7 @@
 
     .menu-links
         @apply w-full block text-center flex-grow
+
 // Large Displays
 
 @screen lg

@@ -27,18 +27,34 @@ class Header extends React.Component {
           <span>{title}</span>
         </Link>
         <div className="lg:hidden">
-          <button onClick={this.toggleMenu()} className="hamburgerMenu">
-            {!this.state.menu && <i className="material-icons">menu</i>}
-            {this.state.menu && <i className="material-icons">close</i>}
+          <button onClick={this.toggleMenu()}>
+            <div className="three col">
+              <div
+                className={
+                  this.state.menu ? 'hamburger is-active' : 'hamburger'
+                }
+                id="hamburger-menu"
+              >
+                <span className="line" />
+                <span className="line" />
+                <span className="line" />
+              </div>
+            </div>
           </button>
         </div>
-        {this.state.menu && (
+        {
+          //this.state.menu && (
           <MenuLinks
-            classes="menu-links lg:hidden"
+            classes={
+              this.state.menu
+                ? 'menu-links menu-links-active lg:hidden'
+                : 'menu-links sm:hidden md:hidden'
+            }
             social={social}
             links={links}
           />
-        )}
+          //)
+        }
         <MenuLinks
           classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
           social={social}

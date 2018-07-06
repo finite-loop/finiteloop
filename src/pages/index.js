@@ -5,6 +5,7 @@ import '../styles/global.sass'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
 import Teams from '../components/teams'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 class IndexPage extends React.Component {
   render() {
     return (
@@ -20,14 +21,14 @@ class IndexPage extends React.Component {
         </div>
         <div style={{ background: 'white' }}>
           <section name="more">
-            <div className="primary text-center uppercase text-lg">
+            <div className="primary text-center mb-3 uppercase text-lg">
               More
               <br />
-              <a className="text-primary" href="#offerings">
+              <AnchorLink className="text-primary" href="#offerings">
                 <i className="material-icons -mt-3 text-4xl">
                   keyboard_arrow_down
                 </i>
-              </a>
+              </AnchorLink>
             </div>
           </section>
         </div>
