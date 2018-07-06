@@ -5,7 +5,7 @@
     border-style: none
 
 .profile-pic
-    @apply border-primary border-solid border-4 w-48 h-48 rounded-full
+    @apply border-primary border-solid border-4 rounded-full
 
 .gradientBackground
     background: linear-gradient(-180deg, #f8fafc 0%, #f1f1f1 100%)
@@ -32,6 +32,12 @@
 
 .link-primary:hover
     @apply bg-grey-lighter
+
+.link-secondary
+    @apply text-white uppercase text-lg no-underline tracking-wide p-4
+
+.link-secondary:hover
+    @apply bg-white text-primary
 
 .hamburgerMenu
     @apply flex items-center px-3 py-2 border rounded text-primary border-primary
@@ -65,6 +71,9 @@
 // Mobile View
 
 @screen sm
+    .profile-pic
+        @apply w-48 h-48
+
     .offerings-right
         @apply p-2
 
@@ -72,13 +81,20 @@
         @apply p-2
     
     .heroText
-        @apply p-10 text-xl
+        @apply p-10 text-2xl
 
     .menu-links
         @apply w-full block text-center flex-grow
+    
+    .link-secondary
+        @apply text-sm flex flex-auto p-2
+
 // Tablet View
 
 @screen md
+    .profile-pic
+        @apply w-48 h-48
+
     .offerings-right
         @apply p-12
 
@@ -93,27 +109,39 @@
 // Large Displays
 
 @screen lg
+    .profile-pic
+        @apply w-48 h-48
+
     .offerings-right
-        @apply p-16
+        @apply px-16 py-10
 
     .offerings-left
-        @apply p-16
+        @apply px-16 py-10
 
     .heroText
         @apply p-32 text-5xl
     
     .menu-links
         @apply w-auto flex-grow content-center items-center
+        
+    .link-secondary
+        @apply text-lg flex flex-col flex-1 content-center
 
 @screen xl
-    .offerings-right
-        @apply p-16
+    .profile-pic
+        @apply w-48 h-48
 
-    .offerings-left
-        @apply p-16
+    .offerings-right
+        @apply px-16 py-10
+
+    .offerings-leftx
+        @apply px-16 py-10
 
     .heroText
         @apply p-32 text-5xl
 
     .menu-links
         @apply w-auto flex-grow content-center items-center
+    
+    .link-secondary
+        @apply text-lg flex flex-col flex-1

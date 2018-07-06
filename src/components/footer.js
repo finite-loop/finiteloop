@@ -23,10 +23,7 @@ class Footer extends React.Component {
           {this.props.links.map(({ item: footerLinks }) => (
             <div key={footerLinks.title} className="py-2">
               {!footerLinks.newwindow && (
-                <Link
-                  to={footerLinks.url}
-                  className="text-white lg:text-xl sm:text-sm font-medium uppercase no-underline p-4"
-                >
+                <Link to={footerLinks.url} className="link-secondary">
                   {footerLinks.title}
                 </Link>
               )}
@@ -34,7 +31,7 @@ class Footer extends React.Component {
                 <a
                   href={footerLinks.url}
                   target="_new"
-                  className="text-white lg:text-xl sm:text-sm font-medium uppercase no-underline p-4"
+                  className="link-secondary"
                 >
                   {footerLinks.title}
                 </a>

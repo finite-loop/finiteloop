@@ -18,7 +18,7 @@ export const OfferingTemplate = ({
     <section name="offering">
       {helmet || ''}
       <h2 className="text-center">{title}</h2>
-      <div className="para-secondary">
+      <div className="para-secondary lg:p-10 sm:p-3">
         <PageContent content={content} />
       </div>
     </section>

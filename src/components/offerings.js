@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const OfferingsPageTemplate = ({ offering }) => {
   const isAlignLeft = offering.frontmatter.align === 'left'
   return (
-    <div style={{ background: 'white' }}>
+    <div id="offerings" style={{ background: 'white' }}>
       {isAlignLeft && (
         <div name="offering" className="offerings-left">
           <div className="offering-content-left xl:block lg:block md:block sm:hidden">

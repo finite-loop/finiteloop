@@ -142,7 +142,14 @@ module.exports = {
   |
   */
 
-  colors: colors,
+  colors: {
+    transperant: colors['transparent'],
+    white: colors['white'],
+    'grey-lightest': colors['grey-lightest'],
+    'grey-lighter': colors['grey-lighter'],
+    'grey-darker': colors['grey-darker'],
+    'grey-darkest': colors['grey-darkest'],
+  },
 
   /*
   |-----------------------------------------------------------------------------
@@ -347,7 +354,14 @@ module.exports = {
   |
   */
 
-  textColors: colors,
+  textColors: {
+    transperant: colors['transparent'],
+    white: colors['white'],
+    'grey-lightest': colors['grey-lightest'],
+    'grey-lighter': colors['grey-lighter'],
+    'grey-darker': colors['grey-darker'],
+    'grey-darkest': colors['grey-darkest'],
+  },
 
   /*
   |-----------------------------------------------------------------------------
@@ -362,7 +376,14 @@ module.exports = {
   |
   */
 
-  backgroundColors: colors,
+  backgroundColors: {
+    transperant: colors['transparent'],
+    white: colors['white'],
+    'grey-lightest': colors['grey-lightest'],
+    'grey-lighter': colors['grey-lighter'],
+    'grey-darker': colors['grey-darker'],
+    'grey-darkest': colors['grey-darkest'],
+  },
 
   /*
   |-----------------------------------------------------------------------------
@@ -421,7 +442,17 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign(
+    { default: colors['grey-light'] },
+    {
+      transperant: colors['transparent'],
+      white: colors['white'],
+      'grey-lightest': colors['grey-lightest'],
+      'grey-lighter': colors['grey-lighter'],
+      'grey-darker': colors['grey-darker'],
+      'grey-darkest': colors['grey-darkest'],
+    }
+  ),
 
   /*
   |-----------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 const tailwindcss = require('tailwindcss')
+const config = require('./config/SiteConfig')
 // const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = {
@@ -31,6 +32,31 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/img/flLogo.png',
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: true,
+          favicons: true,
+          firefox: true,
+          twitter: true,
+          yandex: false,
+          windows: true,
+        },
+      },
+    },
+    // "gatsby-plugin-jss",
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+      },
+    },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
   ],

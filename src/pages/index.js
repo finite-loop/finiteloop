@@ -23,9 +23,11 @@ class IndexPage extends React.Component {
             <div className="primary text-center uppercase text-lg">
               More
               <br />
-              <i className="material-icons -mt-3 text-4xl">
-                keyboard_arrow_down
-              </i>
+              <a className="text-primary" href="#offerings">
+                <i className="material-icons -mt-3 text-4xl">
+                  keyboard_arrow_down
+                </i>
+              </a>
             </div>
           </section>
         </div>

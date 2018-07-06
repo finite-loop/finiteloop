@@ -22,7 +22,7 @@ export const TeamsPageTemplate = ({ teams }) => (
     <div className="w-full flex flex-wrap justify-center items-stretch">
       {teams.team.sort(compare).map(({ person }) => (
         <div key={person.name}>
-          <div className="flex max-w-sm items-center flex-col pb-4">
+          <div className="flex max-w-sm items-center flex-col pb-6">
             <div className="flex max-w-sm min-h-full items-center flex-col">
               <div>
                 <img
@@ -40,7 +40,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                   />
                 </a>
               </div>
-              <div className="px-2 text-center">
+              <div className="px-6 text-center">
                 <h3 className="text-lg pb-2">
                   {person.name + ' '}
                   <div>
@@ -52,7 +52,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                       src="/img/kolam.png"
                     />
                   </div>
-                  {person.title}
+                  <p className="text-primary">{person.title}</p>
                 </h3>
                 <p className="para-secondary lg:text-xl md:text-lg">
                   {person.quote}
