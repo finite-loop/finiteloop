@@ -80,7 +80,8 @@ function encode(data) {
 
 class ContactForm extends React.Component {
   state = {
-    open: false,
+    showError: false,
+    showMessage: false,
     firstname: '',
     lastname: '',
     email: '',
@@ -109,23 +110,45 @@ class ContactForm extends React.Component {
     })
       .then(() => {
         console.log('Form submission success')
-        this.setState({ open: true, ...state })
+        this.setState({
+          showError: false,
+          showMessage: true,
+          firstname: '',
+          lastname: '',
+          email: '',
+          message: '',
+          company: '',
+          submitError: '',
+        })
       })
       .catch(error => {
         console.error('Form submission error:', error)
+        this.setState({
+          showError: true,
+          showMessage: false,
+          firstname: '',
+          lastname: '',
+          email: '',
+          message: '',
+          company: '',
+          submitError: '',
+        })
         this.handleNetworkError()
       })
 
     e.preventDefault()
   }
 
-  handleClose = () => {
-    this.setState({ open: false })
+  displayAlert = submitMsg => {
+    alert(submitMsg)
+    this.setState({ showMessage: false })
   }
 
   render() {
     const { contactus, global } = this.props.data
     const {
+      showError,
+      showMessage,
       email,
       firstname,
       lastname,
@@ -238,6 +261,11 @@ class ContactForm extends React.Component {
           postNode={contactus}
           postSEO
         />
+        {showMessage && this.displayAlert(contactus.frontmatter.submitMsg)}
+        {showError &&
+          this.displayAlert(
+            'Sorry, we have trouble submitting your form. Please try again later'
+          )}
       </Layout>
     )
   }
