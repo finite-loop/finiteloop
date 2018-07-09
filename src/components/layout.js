@@ -51,7 +51,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="font-futura antialiased bg-grey-lightest">
+      <div>
         <Helmet title={data.global.frontmatter.siteTitle} />
         <Header
           title={data.global.frontmatter.logoTitle}

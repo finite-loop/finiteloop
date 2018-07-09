@@ -145,10 +145,6 @@ module.exports = {
   colors: {
     transperant: colors['transparent'],
     white: colors['white'],
-    'grey-lightest': colors['grey-lightest'],
-    'grey-lighter': colors['grey-lighter'],
-    'grey-darker': colors['grey-darker'],
-    'grey-darkest': colors['grey-darkest'],
   },
 
   /*
@@ -357,10 +353,6 @@ module.exports = {
   textColors: {
     transperant: colors['transparent'],
     white: colors['white'],
-    'grey-lightest': colors['grey-lightest'],
-    'grey-lighter': colors['grey-lighter'],
-    'grey-darker': colors['grey-darker'],
-    'grey-darkest': colors['grey-darkest'],
   },
 
   /*
@@ -379,10 +371,6 @@ module.exports = {
   backgroundColors: {
     transperant: colors['transparent'],
     white: colors['white'],
-    'grey-lightest': colors['grey-lightest'],
-    'grey-lighter': colors['grey-lighter'],
-    'grey-darker': colors['grey-darker'],
-    'grey-darkest': colors['grey-darkest'],
   },
 
   /*
@@ -447,10 +435,6 @@ module.exports = {
     {
       transperant: colors['transparent'],
       white: colors['white'],
-      'grey-lightest': colors['grey-lightest'],
-      'grey-lighter': colors['grey-lighter'],
-      'grey-darker': colors['grey-darker'],
-      'grey-darkest': colors['grey-darkest'],
     }
   ),
 

@@ -8,7 +8,7 @@
     @apply border-primary border-solid border-4 rounded-full
 
 .gradientBackground
-    background: linear-gradient(-180deg, #f8fafc 0%, #f1f1f1 100%)
+    background: linear-gradient(-180deg, $primary-alternate 0%, $secondary-alternate 100%)
 
 .heading1
     @apply primary tracking-wide p-2 text-4xl text-center no-underline
@@ -20,24 +20,30 @@
     @apply text-primary font-medium tracking-wide leading-normal
 
 .nav
-    @apply z-50 flex items-center justify-between flex-wrap bg-grey-lightest pl-10 pr-10 pt-5 pin-t sticky
+    @apply z-50 flex items-center justify-between flex-wrap bg-accent pl-10 pr-10 pt-5 pin-t sticky
 
 .nav:after
     @apply block -mx-5 pt-5 border-b border-primary
     content: ""
     width: 110%
 
+.btn-primary
+    @apply bg-primary text-white font-bold py-2 px-4 rounded
+
+.btn-primary:hover
+    @apply bg-secondary
+
 .link-primary
     @apply secondary uppercase text-lg no-underline tracking-wide p-4
 
 .link-primary:hover
-    @apply bg-grey-lighter
+    @apply bg-accent-alternate
 
 .link-secondary
     @apply text-white uppercase text-lg no-underline tracking-wide p-4
 
 .link-secondary:hover
-    @apply bg-white text-primary
+    @apply bg-secondary-alternate text-primary
 
 .hamburgerMenu
     @apply flex items-center px-3 py-2 border rounded text-primary border-primary
@@ -64,7 +70,7 @@
     @apply mx-5
 
 .input-field
-    @apply bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight
+    @apply bg-accent-alternate appearance-none border-2 border-primary-alternate rounded w-full py-2 px-4 text-primary leading-tight
 
 .input-field:hover
     @apply border-primary 

@@ -13,7 +13,7 @@ class TextValidator extends ValidatorComponent {
 
     return (
       <div>
-        <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" />
+        <label className="block uppercase tracking-wide text-xs font-bold mb-2" />
         <input
           {...rest}
           ref={r => {

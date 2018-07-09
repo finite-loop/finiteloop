@@ -7,13 +7,13 @@ const MenuLinks = ({ links, social, classes }) => (
   <div className={classes}>
     <div className="text-sm lg:flex-grow" />
     {links.map(({ item }) => (
-      <div key={item.title} className="link-primary">
+      <div key={item.title} className="p-4">
         <Link className="link-primary" to={item.url}>
           {item.title}
         </Link>
       </div>
     ))}
-    <div className="p-2">
+    <div className="p-4">
       <a href={social.lnkdnUrl} target="_new" className="link-primary">
         <LnkdnIcon />
       </a>

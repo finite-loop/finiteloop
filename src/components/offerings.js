@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const OfferingsPageTemplate = ({ offering }) => {
   const isAlignLeft = offering.frontmatter.align === 'left'
   return (
-    <div id="offerings" style={{ background: 'white' }}>
+    <div id="offerings" className="bg-primary-alternate">
       {isAlignLeft && (
         <div name="offering" className="offerings-left">
           <div className="offering-content-left xl:block lg:block md:block sm:hidden">
@@ -20,7 +20,7 @@ export const OfferingsPageTemplate = ({ offering }) => {
             <Link
               to={offering.frontmatter.path}
               style={{ float: 'right' }}
-              className="primary text-center no-underline uppercase text-md p-2 hover:bg-grey-lightest"
+              className="primary text-center no-underline uppercase text-md p-2 hover:bg-primary-alternate"
             >
               MORE
               <i className="material-icons align-middle -mt-1 text-3xl">
@@ -40,7 +40,7 @@ export const OfferingsPageTemplate = ({ offering }) => {
             <Link
               to={offering.frontmatter.path}
               style={{ float: 'right' }}
-              className="primary text-center no-underline uppercase text-md p-2 hover:bg-grey-lightest"
+              className="primary text-center no-underline uppercase text-md p-2 hover:bg-primary-alternate"
             >
               MORE
               <i className="material-icons align-middle -mt-1 text-3xl">

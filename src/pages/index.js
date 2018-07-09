@@ -19,7 +19,7 @@ class IndexPage extends React.Component {
             <p className="animate-text anim-typewriter">WE HELP YOU SCALE...</p>
           </section>
         </div>
-        <div style={{ background: 'white' }}>
+        <div className="bg-primary-alternate">
           <section name="more">
             <div className="primary text-center mb-3 uppercase text-lg">
               More
