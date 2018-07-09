@@ -41,20 +41,6 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Pavithra.jpg
-      background: gray
-      fbsiteurl: test
-      githubsiteurl: test
-      lnkdnsiteurl: 'https://www.linkedin.com/in/pavithra-iyer-8b7326139/'
-      name: Pavithra
-      quote: >-
-        Returning to one’s root has taken much effort, Dwelling in my hut, I see
-        nothing without, Rivers flow, flowers are red.
-
-        Wait for this space to be updated. Stories are being written.
-      title: Office Champion
-      twtrsiteurl: test
-  - person:
       avatar: /img/team/Sapnil.jpg
       background: dimgray
       fbsiteurl: test
