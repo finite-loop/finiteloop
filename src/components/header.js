@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import MenuLinks from './menuLinks'
+import MenuLinks from '../components/menuLinks'
 class Header extends React.Component {
   state = {
     menu: false,
@@ -42,19 +42,15 @@ class Header extends React.Component {
             </div>
           </button>
         </div>
-        {
-          //this.state.menu && (
-          <MenuLinks
-            classes={
-              this.state.menu
-                ? 'menu-links menu-links-active lg:hidden'
-                : 'menu-links sm:hidden md:hidden'
-            }
-            social={social}
-            links={links}
-          />
-          //)
-        }
+        <MenuLinks
+          classes={
+            this.state.menu
+              ? 'menu-items is-active lg:hidden'
+              : 'menu-items lg:hidden'
+          }
+          social={social}
+          links={links}
+        />
         <MenuLinks
           classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
           social={social}
