@@ -1,26 +1,44 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Finiteloop Site V2
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+This is version 2 of Finiteloop site using gatsbjs v2
 
-## Install
+For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://next.gatsbyjs.org/docs/building-with-components/).
+
+## Local Install
 
 Make sure that you have the Gatsby CLI program installed:
+
 ```sh
 npm install --global gatsby-cli
-```
-
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
+    *or*
+yarn global add gatsby-cli
 ```
 
 Then you can run it by:
+
 ```sh
-cd gatsby-example-site
+cd finiteloop-systems-v2
 gatsby develop
 ```
 
-## Deploy
+## Using Docker
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+```sh
+cd finiteloop-systems-v2
+
+# Dev Environment
+
+docker run --name finiteloop-v2 --rm -it -p 8000:8000 -v $(pwd)/site:/site partha360/finiteloop-v2 develop
+
+# Production Build
+
+docker run --name finiteloop-v2 --rm -it -v $(pwd)/site:/site partha360/finiteloop-v2 build
+
+#Staging Environment
+
+docker run --name finiteloop-v2 --rm -it -p 8000:8000 -v $(pwd)/site:/site partha360/finiteloop-v2 stage #
+```
+
+## Deploy to Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/finite-loop/finiteloop-systems-v2)

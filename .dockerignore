@@ -1,0 +1,7 @@
+.git
+node_modules
+public
+.cache
+site/node_modules
+site/public
+site/.cache
