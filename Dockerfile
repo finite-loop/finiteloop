@@ -15,9 +15,10 @@ RUN apk --no-cache add -t .build-deps \
     python && \
     rm -rf /var/cache/apk/*
 
-RUN npm i npm@latest -g
+RUN apk add --no-cache curl && curl -o- -L https://yarnpkg.com/install.sh | sh
+ENV PATH /root/.yarn/bin:$PATH
 
-RUN npm install --global gatsby-cli
+RUN yarn global add gatsby-cli
 
 RUN mkdir -p /site
 WORKDIR /site

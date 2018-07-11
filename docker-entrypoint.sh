@@ -11,11 +11,11 @@ then
   gatsby new $GATSBY_DIR
 
 else
-  # if [ ! -e "$GATSBY_DIR/node_modules/" ]
-  # then
+  if [ ! -e "$GATSBY_DIR/node_modules/" ]
+  then
     echo "Installing dependecies..."
-    npm install && npm cache verify
-  # fi
+    yarn
+  fi
 fi
 
 # Decide what to do
@@ -28,13 +28,15 @@ then
 elif  [ "$1" == "build" ]
 then
   rm -rf $GATSBY_DIR/public
+  rm -rf $GATSBY_DIR/node_modules
   gatsby -v
-  npm run build
+  yarn build
 
 elif  [ "$1" == "stage" ]
 then
   rm -rf $GATSBY_DIR/public
-  npm run build
+  rm -rf $GATSBY_DIR/node_modules
+  yarn build
   gatsby serve --port 8000
 
 else
