@@ -5,3 +5,4 @@ public
 site/node_modules
 site/public
 site/.cache
+npm-debug.log

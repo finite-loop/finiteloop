@@ -47,5 +47,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/finite-loop/finiteloop-systems-v2"
+  },
+  "guppy": {
+    "id": "finiteloop-systems-v2",
+    "name": "finiteloop-systems-v2",
+    "type": "gatsby",
+    "color": "#4919b7",
+    "icon": null,
+    "createdAt": 1531720397113
   }
 }
