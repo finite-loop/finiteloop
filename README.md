@@ -26,6 +26,12 @@ gatsby develop
 https://hub.docker.com/r/partha360/finiteloop-systems-v2/
 
 ```sh
+git clone https://github.com/finite-loop/finiteloop-systems-v2.git (https)
+
+    or
+
+git clone git@github.com:finite-loop/finiteloop-systems-v2.git (ssh)
+
 cd finiteloop-systems-v2
 
 # Dev Environment
