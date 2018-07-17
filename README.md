@@ -36,15 +36,15 @@ cd finiteloop-systems-v2
 
 # Dev Environment
 
-docker run --rm -it -p 8000:8000 -v $(pwd)/site:/site partha360/finiteloop-v2 develop
+docker run --rm -it -p 8000:8000 -v $(pwd):/site partha360/finiteloop-systems-v2 develop
 
 # Production Build
 
-docker run --rm -it -v $(pwd)/site:/site partha360/finiteloop-v2 build
+docker run --rm -it -v $(pwd):/site partha360/finiteloop-systems-v2 build
 
 #Staging Environment
 
-docker run --rm -it -p 8000:8000 -v $(pwd)/site:/site partha360/finiteloop-v2 stage #
+docker run --rm -it -p 8000:8000 -v $(pwd):/site partha360/finiteloop-systems-v2 stage #
 ```
 
 ## Deploy to Netlify
