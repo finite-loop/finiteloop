@@ -23,6 +23,12 @@ const MenuLinks = ({ links, social, classes }) => (
       <a href={social.githubUrl} target="_new" className="link-primary">
         <GitHubIcon />
       </a>
+      <a href={social.mediumUrl} target="_new" className="link-primary">
+        <img
+          style={{ borderRadius: '50%', width: '30px', height: '30px' }}
+          src="https://cdn-images-1.medium.com/fit/c/120/120/1*6_fgYnisCa9V21mymySIvA.png"
+        />
+      </a>
     </div>
   </div>
 )

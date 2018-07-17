@@ -15,5 +15,5 @@ socialMediaCard:
   lnkdnUrl: 'https://www.linkedin.com/company/finiteloop/'
   fbUrl:
   githubUrl: 'https://github.com/finite-loop'
+  mediumUrl: 'https://medium.com/finiteloop-systems'
 ---
-
