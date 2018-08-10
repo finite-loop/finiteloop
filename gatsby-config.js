@@ -2,7 +2,8 @@ const config = require('./config/SiteConfig')
 
 module.exports = {
   siteMetadata: {
-    title: 'Finiteloop Systems',
+    title: config.siteTitle,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -46,5 +47,6 @@ module.exports = {
     },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-sitemap',
   ],
 }
