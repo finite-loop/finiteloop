@@ -1,6 +1,4 @@
-const tailwindcss = require('tailwindcss')
 const config = require('./config/SiteConfig')
-// const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = {
   siteMetadata: {
@@ -26,19 +24,20 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
+        path: `${__dirname}/src/img/`,
+        name: 'img',
       },
     },
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        postCssPlugins: [tailwindcss('./tailwind.js'), require('autoprefixer')],
-        precision: 5,
+        path: `${__dirname}/src/styles`,
+        name: 'styles',
       },
     },
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-postcss',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

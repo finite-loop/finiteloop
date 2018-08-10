@@ -25,7 +25,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     var id = 0
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const pagePath = node.frontmatter.path
       id = id + 1
       if (

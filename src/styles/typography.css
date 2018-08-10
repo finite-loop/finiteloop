@@ -1,0 +1,52 @@
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file) format('opentype');
+    font-display: fallback;
+  }
+}
+@include font('Futura', '../fonts/FuturaMedium.otf');
+
+body {
+  @apply font-futura;
+}
+.para-primary {
+  @apply primary flex font-medium text-xl tracking-wide leading-normal;
+}
+.para-secondary {
+  @apply secondary flex font-medium tracking-wide leading-normal;
+}
+
+@screen sm {
+  .para-secondary {
+    @apply text-lg;
+  }
+  .para-primary {
+    @apply text-lg;
+  }
+}
+@screen md {
+  .para-secondary {
+    @apply text-lg;
+  }
+  .para-primary {
+    @apply text-lg;
+  }
+}
+@screen lg {
+  .para-secondary {
+    @apply text-xl;
+  }
+
+  .para-primary {
+    @apply text-xl;
+  }
+}
+@screen xl {
+  .para-secondary {
+    @apply text-xl;
+  }
+  .para-primary {
+    @apply text-xl;
+  }
+}
