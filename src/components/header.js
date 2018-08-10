@@ -27,7 +27,7 @@ class Header extends React.Component {
           <span>{title}</span>
         </Link>
         <div className="lg:hidden">
-          <button onClick={this.toggleMenu()}>
+          <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
             <div className="three col">
               <div
                 className={

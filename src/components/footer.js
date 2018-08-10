@@ -42,6 +42,7 @@ class Footer extends React.Component {
         <div className="flex justify-around flex-1 items-center cursor-pointer">
           Share
           <TwitterShareButton
+            aria-label={this.props.title}
             url={this.props.url}
             title={this.props.title}
             via="_finiteloop"
@@ -49,23 +50,33 @@ class Footer extends React.Component {
           >
             <TwitterIcon round size={48} />
           </TwitterShareButton>
-          <LinkedinShareButton url={this.props.url} title={this.props.title}>
+          <LinkedinShareButton
+            aria-label={this.props.title}
+            url={this.props.url}
+            title={this.props.title}
+          >
             <LinkedinIcon round size={48} />
           </LinkedinShareButton>
           <EmailShareButton
+            aria-label={this.props.title}
             url={this.props.url}
             subject={'Enquire about ' + this.props.title}
           >
             <EmailIcon round size={48} />
           </EmailShareButton>
           <FacebookShareButton
+            aria-label={this.props.title}
             url={this.props.url}
             quote={this.props.title}
             hashtag={'#' + this.props.hashTag}
           >
             <FacebookIcon round size={48} />
           </FacebookShareButton>
-          <WhatsappShareButton url={this.props.url} title={this.props.title}>
+          <WhatsappShareButton
+            aria-label={this.props.title}
+            url={this.props.url}
+            title={this.props.title}
+          >
             <WhatsappIcon round size={48} />
           </WhatsappShareButton>
         </div>

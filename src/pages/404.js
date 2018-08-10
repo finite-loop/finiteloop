@@ -9,6 +9,8 @@ const NotFoundPage = () => (
     <p>
       Never mind, there is always a{' '}
       <button
+        role="button"
+        aria-label="Home"
         href="#flat-buttons"
         variant="raised"
         color="primary"

@@ -15,16 +15,17 @@ const MenuLinks = ({ links, social, classes }) => (
     ))}
     <div className="p-4">
       <a href={social.lnkdnUrl} target="_new" className="link-primary">
-        <LnkdnIcon />
+        <LnkdnIcon alt="LinkedIn" />
       </a>
       <a href={social.twtrUrl} target="_new" className="link-primary">
-        <TwtrIcon />
+        <TwtrIcon alt="Twitter" />
       </a>
       <a href={social.githubUrl} target="_new" className="link-primary">
-        <GitHubIcon />
+        <GitHubIcon alt="Github" />
       </a>
       <a href={social.mediumUrl} target="_new" className="link-primary">
         <img
+          alt="Medium"
           style={{ borderRadius: '50%', width: '30px', height: '30px' }}
           src="https://cdn-images-1.medium.com/fit/c/120/120/1*6_fgYnisCa9V21mymySIvA.png"
         />

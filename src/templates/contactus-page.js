@@ -237,7 +237,12 @@ class ContactForm extends React.Component {
             <input name="bot-field" style={{ display: 'none' }} />
             <br />
             <div style={{ alignItems: 'center' }}>
-              <button type="submit" className="btn-primary">
+              <button
+                role="submit"
+                aria-label="Submit"
+                type="submit"
+                className="btn-primary"
+              >
                 Submit
               </button>
             </div>

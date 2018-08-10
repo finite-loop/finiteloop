@@ -37,6 +37,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                       marginTop: '-30px',
                       marginLeft: '160px',
                     }}
+                    alt="LinkedIn"
                   />
                 </a>
               </div>
