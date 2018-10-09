@@ -5,6 +5,7 @@ import Teams from '../components/teams'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
+import '../styles/index.css'
 
 export const TeamsPageTemplate = ({
   props,

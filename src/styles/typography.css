@@ -1,22 +1,22 @@
 @mixin font($font-family, $font-file) {
   @font-face {
     font-family: $font-family;
-    src: url($font-file) format('opentype');
+    src: url($font-file) format('truetype');
     font-display: fallback;
   }
 }
-@include font('Futura', '../fonts/FuturaMedium.otf');
+@include font('Neptune', '../fonts/Neptune-Medium.ttf');
 
 body {
-  @apply font-futura;
+  @apply font-neptune;
 }
 
 .logoText {
-  @apply secondary font-medium text-2xl no-underline;
+  @apply secondary font-medium text-4xl no-underline;
 }
 
 .para-primary {
-  @apply primary flex font-medium text-xl tracking-wide leading-normal;
+  @apply primary flex font-medium text-lg tracking-wide leading-normal;
 }
 .para-secondary {
   @apply secondary flex font-medium tracking-wide leading-normal;
@@ -40,18 +40,18 @@ body {
 }
 @screen lg {
   .para-secondary {
-    @apply text-xl;
+    @apply text-lg;
   }
 
   .para-primary {
-    @apply text-xl;
+    @apply text-lg;
   }
 }
 @screen xl {
   .para-secondary {
-    @apply text-xl;
+    @apply text-lg;
   }
   .para-primary {
-    @apply text-xl;
+    @apply text-lg;
   }
 }

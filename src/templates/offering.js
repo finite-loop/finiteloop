@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
 import SEO from '../components/seo'
+import '../styles/index.css'
 
 export const OfferingTemplate = ({
   content,
@@ -18,7 +19,7 @@ export const OfferingTemplate = ({
     <section name="offering">
       {helmet || ''}
       <h2 className="text-center">{title}</h2>
-      <div className="para-secondary lg:p-10 sm:p-3">
+      <div className="para-primary lg:p-10 sm:p-3">
         <PageContent content={content} />
       </div>
     </section>

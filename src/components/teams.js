@@ -55,7 +55,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                   </div>
                   <p className="text-secondary">{person.title}</p>
                 </h3>
-                <p className="para-primary lg:text-xl md:text-lg">
+                <p className="para-primary lg:text-lg md:text-lg">
                   {person.quote}
                 </p>
               </div>

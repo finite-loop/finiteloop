@@ -20,7 +20,7 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
-  headerFontFamily: 'Futura',
-  bodyFontFamily: 'Futura',
+  headerFontFamily: 'Neptune',
+  bodyFontFamily: 'Neptune',
   baseFontSize: '18px',
 }

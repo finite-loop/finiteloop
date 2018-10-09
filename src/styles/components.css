@@ -1,6 +1,6 @@
 .maps * {
   /* google maps */
-  @apply font-futura;
+  @apply font-neptune;
   border-style: none;
 }
 .profile-pic {
@@ -20,7 +20,7 @@
   @apply primary uppercase tracking-wide p-2 border-2 border-primary text-xl no-underline;
 }
 .heroText {
-  @apply text-primary font-medium tracking-wide leading-normal;
+  @apply text-primary text-center font-medium tracking-wide leading-normal;
 }
 .nav {
   @apply z-50 flex items-center justify-between flex-wrap bg-primary pl-10 pr-10 pt-1 pin-t sticky;
@@ -39,7 +39,7 @@
 }
 
 .link-primary {
-  @apply text-white uppercase text-lg no-underline tracking-wide p-4;
+  @apply text-white uppercase text-sm no-underline tracking-wide p-4;
 }
 
 .link-primary:hover {
@@ -47,7 +47,7 @@
 }
 
 .link-secondary {
-  @apply text-white uppercase text-lg no-underline tracking-wide p-4;
+  @apply text-white uppercase text-sm no-underline tracking-wide p-4;
 }
 
 .link-secondary:hover {
@@ -159,7 +159,7 @@
     @apply w-auto flex-grow content-center items-center;
   }
   .link-secondary {
-    @apply text-lg flex flex-col flex-1 content-center;
+    @apply text-sm flex flex-col flex-1 content-center;
   }
 }
 @screen xl {
@@ -183,6 +183,6 @@
     @apply w-auto flex-grow content-center items-center;
   }
   .link-secondary {
-    @apply text-lg flex flex-col flex-1;
+    @apply text-sm flex flex-col flex-1;
   }
 }

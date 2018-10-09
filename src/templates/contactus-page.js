@@ -15,6 +15,7 @@ import {
 import SEO from '../components/seo'
 import { ValidatorForm } from 'react-form-validator-core'
 import TextValidator from '../components/TextValidator'
+import '../styles/index.css'
 
 const MapWithAMakredInfoWindow = compose(
   withStateHandlers(

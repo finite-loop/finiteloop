@@ -26,9 +26,9 @@ class Header extends React.Component {
         <Link to="/">
           <img width="75" src="/img/flLogo.png" />
         </Link>
-        <Link className="logoText" to="/">
+        {/* <Link className="logoText" to="/">
           {title}
-        </Link>
+        </Link> */}
         <div className="lg:hidden">
           <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
             <div className="three col">

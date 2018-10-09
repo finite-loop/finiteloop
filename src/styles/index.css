@@ -3,7 +3,7 @@
 
 @import 'color';
 body {
-  @apply font-futura antialiased bg-accent;
+  @apply font-neptune antialiased bg-accent;
 }
 img {
   max-width: initial;

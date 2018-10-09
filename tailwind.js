@@ -192,8 +192,8 @@ module.exports = {
   */
 
   fonts: {
-    futura: [
-      'Futura',
+    neptune: [
+      'Neptune',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
