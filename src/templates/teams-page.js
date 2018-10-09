@@ -15,7 +15,7 @@ export const TeamsPageTemplate = ({
   const PageContent = contentComponent || Content
   return (
     <Layout>
-      <PageContent className="para-secondary p-12" content={content} />
+      <PageContent className="para-primary p-12" content={content} />
       <Teams teamsData={props} />
       <SEO postPath={teamData.frontmatter.path} postNode={teamData} postSEO />
     </Layout>

@@ -23,8 +23,11 @@ class Header extends React.Component {
 
     return (
       <nav className="nav">
-        <Link to="/" className="logo">
-          <span>{title}</span>
+        <Link to="/">
+          <img width="75" src="/img/flLogo.png" />
+        </Link>
+        <Link className="logoText" to="/">
+          {title}
         </Link>
         <div className="lg:hidden">
           <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>

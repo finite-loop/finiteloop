@@ -40,7 +40,7 @@
 .menu-items.is-active {
   @apply w-full text-center flex-grow;
   visibility: visible;
-  max-height: 150px;
+  max-height: 200px;
   overflow-y: hidden;
   transition-duration: 0.5s;
   transition: max-height 0.5s ease-in-out;
@@ -66,7 +66,7 @@
 .hamburger .line {
   width: 40px;
   height: 5px;
-  @apply bg-primary;
+  @apply bg-secondary;
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.5s ease-in;

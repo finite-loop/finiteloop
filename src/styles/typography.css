@@ -10,6 +10,11 @@
 body {
   @apply font-futura;
 }
+
+.logoText {
+  @apply secondary font-medium text-2xl no-underline;
+}
+
 .para-primary {
   @apply primary flex font-medium text-xl tracking-wide leading-normal;
 }

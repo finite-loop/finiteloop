@@ -23,7 +23,7 @@
   @apply text-primary font-medium tracking-wide leading-normal;
 }
 .nav {
-  @apply z-50 flex items-center justify-between flex-wrap bg-accent pl-10 pr-10 pt-2 pin-t sticky;
+  @apply z-50 flex items-center justify-between flex-wrap bg-primary pl-10 pr-10 pt-1 pin-t sticky;
 }
 .nav:after {
   @apply block -mx-5 pt-2 border-b border-primary;
@@ -39,7 +39,7 @@
 }
 
 .link-primary {
-  @apply secondary uppercase text-lg no-underline tracking-wide p-4;
+  @apply text-white uppercase text-lg no-underline tracking-wide p-4;
 }
 
 .link-primary:hover {
@@ -84,7 +84,7 @@
   @apply mx-5;
 }
 .input-field {
-  @apply bg-accent-alternate appearance-none border-2 border-primary-alternate rounded w-full py-2 px-4 text-primary leading-tight;
+  @apply bg-primary appearance-none border-2 border-primary-alternate rounded w-full py-2 px-4 text-primary-alternate leading-tight;
 }
 .input-field:hover {
   @apply border-primary;

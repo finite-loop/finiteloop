@@ -2,23 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  EmailShareButton,
-  FacebookIcon,
-  TwitterIcon,
-  WhatsappIcon,
-  LinkedinIcon,
-  EmailIcon,
-} from 'react-share'
+// import {
+//   FacebookShareButton,
+//   LinkedinShareButton,
+//   TwitterShareButton,
+//   WhatsappShareButton,
+//   EmailShareButton,
+//   FacebookIcon,
+//   TwitterIcon,
+//   WhatsappIcon,
+//   LinkedinIcon,
+//   EmailIcon,
+// } from 'react-share'
 
 class Footer extends React.Component {
   render() {
     return (
-      <div className="bg-primary flex justify-center align-center flex-wrap text-white p-2 mt-1">
+      <div className="bg-secondary flex justify-center align-center flex-wrap text-white p-2 mt-1">
         <div className="flex justify-around flex-1 items-center">
           {this.props.links.map(({ item: footerLinks }) => (
             <div key={footerLinks.title} className="py-2">
@@ -39,7 +39,7 @@ class Footer extends React.Component {
             </div>
           ))}
         </div>
-        <div className="flex justify-around flex-1 items-center cursor-pointer">
+        {/* <div className="flex justify-around flex-1 items-center cursor-pointer">
           Share
           <TwitterShareButton
             aria-label={this.props.title}
@@ -79,7 +79,7 @@ class Footer extends React.Component {
           >
             <WhatsappIcon round size={48} />
           </WhatsappShareButton>
-        </div>
+        </div> */}
       </div>
     )
   }

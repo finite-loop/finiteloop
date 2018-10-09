@@ -42,7 +42,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                 </a>
               </div>
               <div className="px-6 text-center">
-                <h3 className="text-lg pb-2">
+                <h3 className="text-secondary pb-2">
                   {person.name + ' '}
                   <div>
                     <img
@@ -53,9 +53,9 @@ export const TeamsPageTemplate = ({ teams }) => (
                       src="/img/kolam.png"
                     />
                   </div>
-                  <p className="text-primary">{person.title}</p>
+                  <p className="text-secondary">{person.title}</p>
                 </h3>
-                <p className="para-secondary lg:text-xl md:text-lg">
+                <p className="para-primary lg:text-xl md:text-lg">
                   {person.quote}
                 </p>
               </div>
