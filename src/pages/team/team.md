@@ -76,7 +76,7 @@ team:
       lnkdnsiteurl: 'https://www.linkedin.com/in/shashikantsoni/'
       name: Shashi
       quote: >-
-        Not interested in small challenges. The real principle engineer. Likes
+        Not interested in small challenges. The real principal engineer. Likes
         to be called a developer than architect. Has architected critical
         systems for a billion people. Down to earth. Cut the crap. The original
         traveler. Super bikes, Vedic living and vegetarian food. You will find
