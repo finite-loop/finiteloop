@@ -2,7 +2,12 @@
   from = "/"
   to = "http://khyateh.com"
   status = 301
-  force = false
+  force = true
+[[redirects]]
+  from = "/*"
+  to = "http://khyateh.com"
+  status = 301
+  force = true
 [build]
   publish = "public"
   command = "yarn build"
