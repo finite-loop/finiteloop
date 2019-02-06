@@ -37,7 +37,7 @@ class IndexPage extends React.Component {
           </Link>
         </div>
         {/* <Teams teamsData={this.props} /> */}
-        <SEO postEdges={this.props} />
+        <SEO postPath="/" postNode={this.props} postSEO={false} />
       </Layout>
     )
   }

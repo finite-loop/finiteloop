@@ -3,7 +3,7 @@
 
 @import 'color';
 body {
-  @apply font-neptune antialiased;
+  @apply font-neptune antialiased overflow-x-hidden scrolling-touch;
 }
 img {
   max-width: initial;

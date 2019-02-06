@@ -5,7 +5,7 @@ import { GitHubIcon } from './icons/icons'
 
 const MenuLinks = ({ links, social, classes }) => (
   <div className={classes}>
-    <div className="text-sm lg:flex-grow" />
+    <div className="text-sm flex-grow" />
     {links.map(({ item }) => (
       <Link key={item.title} className="link-primary" to={item.url}>
         <span style={{ lineHeight: '4.4vh' }}>{item.title}</span>

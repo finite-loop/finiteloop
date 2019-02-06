@@ -1,6 +1,6 @@
 /* Text Animation */
 .animate-text {
-  @apply primary border-primary text-3xl border-r-2 mx-auto overflow-hidden text-center;
+  @apply primary border-primary text-2xl border-r-2 mx-auto overflow-hidden text-center;
   top: 50%;
   white-space: nowrap;
   transform: translateY(-50%);
@@ -31,18 +31,18 @@
 /* menu links animation */
 .menu-items {
   max-height: 0;
-  @apply w-full block text-center flex-grow;
-  visibility: hidden;
-  transition-duration: 0.5s;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
+  @apply w-full text-center flex;
+  transition-duration: 1s;
+  overflow-y: hidden;
+  transition: max-height 1s cubic-bezier(0.4, 0, 0.09, 0.96);
 }
 .menu-items.is-active {
-  @apply w-full text-center flex-grow;
+  @apply w-full text-center;
   visibility: visible;
-  max-height: 200px;
+  max-height: 100vh;
   overflow-y: hidden;
-  transition-duration: 0.5s;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
+  transition-duration: 1s;
+  transition: max-height 1s cubic-bezier(0.4, 0, 0.09, 0.96);
 }
 /* hamburger menu animation */
 .col {

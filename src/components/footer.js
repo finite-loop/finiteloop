@@ -103,7 +103,7 @@ Footer.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   hashTag: PropTypes.string.isRequired,
-  social: PropTypes.array.isRequired,
+  social: PropTypes.object.isRequired,
 }
 
 export default Footer
