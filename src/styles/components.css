@@ -100,6 +100,19 @@
   @apply border-primary;
 }
 
+/* iPhone with notch */
+
+@supports (padding: max(0px)) {
+  .footer {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .nav {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
 /* Mobile View */
 
 @screen sm {
