@@ -1,4 +1,6 @@
-# Finiteloop Site V2
+# Finiteloop Site
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68f17afa-c0c0-44e5-a395-0d943ecf9ec4/deploy-status)](https://app.netlify.com/sites/finiteloop/deploys)
 
 This is version 2 of Finiteloop site using gatsbjs v2
 

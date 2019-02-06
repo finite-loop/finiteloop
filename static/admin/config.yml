@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
+  identity_url: 'https://finiteloop.netlify.com/.netlify/identity'
+  gateway_url: 'https://finiteloop.netlify.com/.netlify/git'
   branch: master
+
+display_url: https://finiteloop.netlify.com/
 
 publish_mode: editorial_workflow
 
@@ -8,185 +12,401 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "settings"
-    label: "Settings"
+  - name: 'settings'
+    label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
-      - file: "src/settings/global.md"
-        label: "Global Settings"
-        name: "global-params"
+      - file: 'src/settings/global.md'
+        label: 'Global Settings'
+        name: 'global-params'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "global-settings"}
-          - {label: Site Title, name: siteTitle, widget: string}
-          - {label: Site Url, name: siteUrl, widget: string, required: false}
-          - {label: Site Description, name: siteDescription, widget: text, required: false}
-          - {label: Logo, name: logo, widget: image, required: true}
-          - {label: Logo Title, name: logoTitle, widget: string, required: true}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'global-settings',
+            }
+          - { label: Site Title, name: siteTitle, widget: string }
+          - { label: Site Url, name: siteUrl, widget: string, required: false }
+          - {
+              label: Site Description,
+              name: siteDescription,
+              widget: text,
+              required: false,
+            }
+          - { label: Logo, name: logo, widget: image, required: true }
+          - {
+              label: Logo Title,
+              name: logoTitle,
+              widget: string,
+              required: true,
+            }
           - label: Social Media
             name: socialMediaCard
             widget: object
             fields:
-              - {label: Twitter Site Account, name: twitterSiteAccount, widget: string, required: false}
-              - {label: Twitter Creator Account, name: twitterCreatorAccount, widget: string, required: false}
-              - {label: Hash Tag, name: hashTag, widget: string, required: false}
-              - {label: Twitter Url, name: twtrUrl, widget: string, required: false}
-              - {label: Linked Url, name: lnkdnUrl, widget: string, required: false}
-              - {label: Github Url, name: githubUrl, widget: string, required: false}
-              - {label: Facebook Url, name: fbUrl, widget: string, required: false}
-              - {label: Header Meta / Scripts, name: headerScripts, widget: text, required: false}
+              - {
+                  label: Twitter Site Account,
+                  name: twitterSiteAccount,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Twitter Creator Account,
+                  name: twitterCreatorAccount,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Hash Tag,
+                  name: hashTag,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Twitter Url,
+                  name: twtrUrl,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Linked Url,
+                  name: lnkdnUrl,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Github Url,
+                  name: githubUrl,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Facebook Url,
+                  name: fbUrl,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Header Meta / Scripts,
+                  name: headerScripts,
+                  widget: text,
+                  required: false,
+                }
 
-  - name: "links"
-    label: "Links"
+  - name: 'links'
+    label: 'Links'
     create: true
     editor:
-    preview: false
+      preview: false
     files:
-    - file: "src/settings/links.md"
-      label: "Links"
-      name: "navlinks"
-      fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "nav-links"}
-        - label: "Header Links"
-          name: "headerlinks"
-          widget: "list"  
-          fields:
-            - label: Items
-              name: item
-              widget: object
-              fields:
-                - {label: "Title", name: title, widget: string}
-                - {label: "URL", name: url, widget: string, default: "/"}
-                - {label: "Open in new window?", name: newwindow, widget: "boolean", default: false}
-                - {label: "Glyph Icon", name: icon, widget: "string"}
-        - label: "Footer Links"
-          name: "footerlinks"
-          widget: "list"
-          fields:
-            - label: Items
-              name: item
-              widget: object
-              fields:
-                - {label: "Title", name: title, widget: string}
-                - {label: "URL", name: url, widget: string, default: "/"}
-                - {label: "Open in new window?", name: newwindow, widget: "boolean", default: "false"}
-                - {label: "Glyph Icon", name: icon, widget: "string"}
+      - file: 'src/settings/links.md'
+        label: 'Links'
+        name: 'navlinks'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'nav-links',
+            }
+          - label: 'Header Links'
+            name: 'headerlinks'
+            widget: 'list'
+            fields:
+              - label: Items
+                name: item
+                widget: object
+                fields:
+                  - { label: 'Title', name: title, widget: string }
+                  - { label: 'URL', name: url, widget: string, default: '/' }
+                  - {
+                      label: 'Open in new window?',
+                      name: newwindow,
+                      widget: 'boolean',
+                      default: false,
+                    }
+                  - { label: 'Glyph Icon', name: icon, widget: 'string' }
+          - label: 'Footer Links'
+            name: 'footerlinks'
+            widget: 'list'
+            fields:
+              - label: Items
+                name: item
+                widget: object
+                fields:
+                  - { label: 'Title', name: title, widget: string }
+                  - { label: 'URL', name: url, widget: string, default: '/' }
+                  - {
+                      label: 'Open in new window?',
+                      name: newwindow,
+                      widget: 'boolean',
+                      default: 'false',
+                    }
+                  - { label: 'Glyph Icon', name: icon, widget: 'string' }
 
-  - name: "casestudy"
-    label: "Case Study"
-    folder: "src/pages/case-studies"
+  - name: 'casestudy'
+    label: 'Case Study'
+    folder: 'src/pages/case-studies'
     create: true
     editor:
       preview: false
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "case-study"}
-      - {label: "Path", name: "path", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: Image, name: image, widget: image}
-      - {label: "Date", name: date, widget: datetime, default: "Date"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Display in homepage?", name: "homepage", widget: "boolean", default: false}
-      - label: "Customer"
-        name: "customer"
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'case-study',
+        }
+      - { label: 'Path', name: 'path', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: Image, name: image, widget: image }
+      - { label: 'Date', name: date, widget: datetime, default: 'Date' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Display in homepage?',
+          name: 'homepage',
+          widget: 'boolean',
+          default: false,
+        }
+      - label: 'Customer'
+        name: 'customer'
         widget: object
         fields:
-          - {label: "Name", name: name, widget: string, default: "Emmet"}
-          - {label: "Profile", name: profile, widget: text, default: "Customer Profile"}
-          - {label: "Web", name: web, widget: string, default: "url"}
-      - label: "Case Study"
-        name: "casestudy"
+          - { label: 'Name', name: name, widget: string, default: 'Emmet' }
+          - {
+              label: 'Profile',
+              name: profile,
+              widget: text,
+              default: 'Customer Profile',
+            }
+          - { label: 'Web', name: web, widget: string, default: 'url' }
+      - label: 'Case Study'
+        name: 'casestudy'
         widget: object
         fields:
-          - {label: "Description", name: description, widget: markdown, default: "Description"}
-          - {label: "Focus", name: focus, widget: markdown, default: "Focus"}
-          - {label: "Challenges", name: challenges, widget: markdown, default: "challenges"}
-          - {label: "Solution", name: solution, widget: markdown, default: "solution"}
-          - {label: "Benefits", name: benefits, widget: markdown, default: "benefits"}
-          - {label: "Technology", name: technology, widget: markdown, default: "technology"}
+          - {
+              label: 'Description',
+              name: description,
+              widget: markdown,
+              default: 'Description',
+            }
+          - { label: 'Focus', name: focus, widget: markdown, default: 'Focus' }
+          - {
+              label: 'Challenges',
+              name: challenges,
+              widget: markdown,
+              default: 'challenges',
+            }
+          - {
+              label: 'Solution',
+              name: solution,
+              widget: markdown,
+              default: 'solution',
+            }
+          - {
+              label: 'Benefits',
+              name: benefits,
+              widget: markdown,
+              default: 'benefits',
+            }
+          - {
+              label: 'Technology',
+              name: technology,
+              widget: markdown,
+              default: 'technology',
+            }
 
-  - name: "offerings"
-    label: "Offering"
-    folder: "src/pages/offerings"
+  - name: 'offerings'
+    label: 'Offering'
+    folder: 'src/pages/offerings'
     create: true
     editor:
       preview: false
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "offering"}
-      - {label: Image, name: image, widget: image}
-      - {label: "Path", name: "path", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Order (Priotity)", name: "order", widget: "number", default: 1, valueType: "int", required: true}
-      - {label: "Align Content", name: "align", widget: "select", options: ["left", "right"], required: true}
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'offering',
+        }
+      - { label: Image, name: image, widget: image }
+      - { label: 'Path', name: 'path', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Order (Priotity)',
+          name: 'order',
+          widget: 'number',
+          default: 1,
+          valueType: 'int',
+          required: true,
+        }
+      - {
+          label: 'Align Content',
+          name: 'align',
+          widget: 'select',
+          options: ['left', 'right'],
+          required: true,
+        }
 
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/team/team.md"
-        label: "Teams"
-        name: "teams"
+      - file: 'src/pages/team/team.md'
+        label: 'Teams'
+        name: 'teams'
         editor:
           preview: false
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "teams-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/teams"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Team title", name: "teamTitle", widget: "text"}
-          - {label: "Team Description", name: "teamDescription", widget: "text"}
-          - label: "Team"
-            name: "team"
-            widget: "list"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'teams-page',
+            }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/teams' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Team title', name: 'teamTitle', widget: 'text' }
+          - {
+              label: 'Team Description',
+              name: 'teamDescription',
+              widget: 'text',
+            }
+          - label: 'Team'
+            name: 'team'
+            widget: 'list'
             fields:
               - label: Person
                 name: person
                 widget: object
                 fields:
-                  - {label: Name, name: name, widget: string, default: "Emmet"}
-                  - {label: Title, name: title, widget: string, default: "Solution Architect"}
-                  - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
-                  - {label: Quote, name: quote, widget: "text", default: "About me"}
-                  - {label: Background, name: background, widget: string, default: "darkgray"}
-                  - {label: "Facebook Site url", name: "fbsiteurl", widget: string, required: false}
-                  - {label: "Twitter Site url", name: "twtrsiteurl", widget: string, required: false}
-                  - {label: "Linkedin Site url", name: "lnkdnsiteurl", widget: string, required: false}
-                  - {label: "Github Site url", name: "githubsiteurl", widget: string, required: false}
-      - file: "src/pages/contact/contact.md"
-        label: "Contact Us"
-        name: "contactus"
+                  - {
+                      label: Name,
+                      name: name,
+                      widget: string,
+                      default: 'Emmet',
+                    }
+                  - {
+                      label: Title,
+                      name: title,
+                      widget: string,
+                      default: 'Solution Architect',
+                    }
+                  - {
+                      label: Avatar,
+                      name: avatar,
+                      widget: image,
+                      default: '/img/emmet.jpg',
+                    }
+                  - {
+                      label: Quote,
+                      name: quote,
+                      widget: 'text',
+                      default: 'About me',
+                    }
+                  - {
+                      label: Background,
+                      name: background,
+                      widget: string,
+                      default: 'darkgray',
+                    }
+                  - {
+                      label: 'Facebook Site url',
+                      name: 'fbsiteurl',
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Twitter Site url',
+                      name: 'twtrsiteurl',
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Linkedin Site url',
+                      name: 'lnkdnsiteurl',
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      label: 'Github Site url',
+                      name: 'githubsiteurl',
+                      widget: string,
+                      required: false,
+                    }
+      - file: 'src/pages/contact/contact.md'
+        label: 'Contact Us'
+        name: 'contactus'
         editor:
           preview: false
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contactus-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/contact"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Heading", name: "heading", widget: "text"}
-          - {label: "Sub Heading", name: "subheading", widget: "text"}
-          - {label: "Image", name: "image", widget: "image", required: false}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Address Line 1", name: "address1", widget: "string"}
-          - {label: "Address Line 2", name: "address2", widget: "string"}
-          - {label: "City & PINCode", name: "cityPIN", widget: "string"}
-          - {label: "State & Country", name: "stateCountry", widget: "string"}
-          - {label: "Phone", name: "phone", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Submit Message", name: "submitMsg", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - label: "Map"
-            name: "map"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'contactus-page',
+            }
+          - {
+              label: 'Path',
+              name: 'path',
+              widget: 'hidden',
+              default: '/contact',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Heading', name: 'heading', widget: 'text' }
+          - { label: 'Sub Heading', name: 'subheading', widget: 'text' }
+          - { label: 'Image', name: 'image', widget: 'image', required: false }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Address Line 1', name: 'address1', widget: 'string' }
+          - { label: 'Address Line 2', name: 'address2', widget: 'string' }
+          - { label: 'City & PINCode', name: 'cityPIN', widget: 'string' }
+          - { label: 'State & Country', name: 'stateCountry', widget: 'string' }
+          - { label: 'Phone', name: 'phone', widget: 'string' }
+          - { label: 'Email', name: 'email', widget: 'string' }
+          - { label: 'Submit Message', name: 'submitMsg', widget: 'string' }
+          - { label: 'Email', name: 'email', widget: 'string' }
+          - label: 'Map'
+            name: 'map'
             widget: object
             fields:
-            - label: "Position"
-              name: "position"
-              widget: object
-              fields:
-                - {label: "Lattitude", name: lat, widget: number, valueType: float, default: 0.00}
-                - {label: "Longitude", name: long, widget: number, valueType: float, default: 0.00}
-            - label: "Center Postion"
-              name: "center"
-              widget: object
-              fields:
-                - {label: "Lattitude", name: lat, widget: number, valueType: float, default: 0.00}
-                - {label: "Longitude", name: long, widget: number, valueType: float, default: 0.00}
+              - label: 'Position'
+                name: 'position'
+                widget: object
+                fields:
+                  - {
+                      label: 'Lattitude',
+                      name: lat,
+                      widget: number,
+                      valueType: float,
+                      default: 0.00,
+                    }
+                  - {
+                      label: 'Longitude',
+                      name: long,
+                      widget: number,
+                      valueType: float,
+                      default: 0.00,
+                    }
+              - label: 'Center Postion'
+                name: 'center'
+                widget: object
+                fields:
+                  - {
+                      label: 'Lattitude',
+                      name: lat,
+                      widget: number,
+                      valueType: float,
+                      default: 0.00,
+                    }
+                  - {
+                      label: 'Longitude',
+                      name: long,
+                      widget: number,
+                      valueType: float,
+                      default: 0.00,
+                    }
