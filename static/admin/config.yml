@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  identity_url: 'https://finiteloop.netlify.com/.netlify/identity'
   branch: master
 
 display_url: https://finiteloop.netlify.com/
