@@ -52,18 +52,19 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <div className="relative min-h-screen">
         <Helmet title={data.global.frontmatter.siteTitle} />
         <Header
           title={data.global.frontmatter.logoTitle}
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.headerlinks}
         />
-        <div className="mx-auto">{children}</div>
+        <div className="mx-auto pb-10">{children}</div>
         <Footer
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}
           hashTag={data.global.frontmatter.socialMediaCard.hashTag}
+          social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.footerlinks}
         />
       </div>

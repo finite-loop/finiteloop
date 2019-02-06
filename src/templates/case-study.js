@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import '../styles/index.css'
+import Layout from '../components/layout'
 
 export const CaseStudyTemplate = ({
   content,
@@ -13,72 +14,67 @@ export const CaseStudyTemplate = ({
   image,
   casestudy,
   classes,
-}) => {
-  // const PostContent = contentComponent || Content
-  return (
-    <div style={{ padding: '20px' }}>
-      {helmet || ''}
-      <div>
-        <div component="h1">{title}</div>
-        <div component="p">{description}</div>
-        <img src={image} style={{ width: '200px' }} />
-        <div
-          style={{
-            padding: '20px',
-            lineHeight: '24px',
-            letterSpacing: '1.29px',
-          }}
-        />
-        <div>
-          <div component="h3">Focus</div>
-          <div
-            id="focus"
-            style={{
-              padding: '20px',
-              lineHeight: '24px',
-              letterSpacing: '1.29px',
-            }}
-          >
-            <div markdown={casestudy.focus} />
-          </div>
-          <div component="h3">Challenges</div>
-          <div
-            style={{
-              padding: '20px',
-              lineHeight: '24px',
-              letterSpacing: '1.29px',
-            }}
-          >
-            <div markdown={casestudy.challenges} />
-          </div>
-          <div component="h3">Solution</div>
-          <div
-            style={{
-              padding: '20px',
-              lineHeight: '24px',
-              letterSpacing: '1.29px',
-            }}
-          >
-            <div markdown={casestudy.solution} />
-          </div>
-          <div component="h3">Benefits</div>
-          <div
-            style={{
-              padding: '20px',
-              lineHeight: '24px',
-              letterSpacing: '1.29px',
-            }}
-          />
-        </div>
+}) => (
+  <section name="case-studies">
+    {helmet || ''}
+    <h1>{title}</h1>
+    <h2>{description}</h2>
+    <img src={image} style={{ width: '200px' }} />
+    <div
+      style={{
+        padding: '20px',
+        lineHeight: '24px',
+        letterSpacing: '1.29px',
+      }}
+    />
+    <div>
+      <div component="h3">Focus</div>
+      <div
+        id="focus"
+        style={{
+          padding: '20px',
+          lineHeight: '24px',
+          letterSpacing: '1.29px',
+        }}
+      >
+        <div markdown={casestudy.focus} />
       </div>
+      <div component="h3">Challenges</div>
+      <div
+        style={{
+          padding: '20px',
+          lineHeight: '24px',
+          letterSpacing: '1.29px',
+        }}
+      >
+        <div markdown={casestudy.challenges} />
+      </div>
+      <div component="h3">Solution</div>
+      <div
+        style={{
+          padding: '20px',
+          lineHeight: '24px',
+          letterSpacing: '1.29px',
+        }}
+      >
+        <div markdown={casestudy.solution} />
+      </div>
+      <div component="h3">Benefits</div>
+      <div
+        style={{
+          padding: '20px',
+          lineHeight: '24px',
+          letterSpacing: '1.29px',
+        }}
+      />
     </div>
-  )
-}
+  </section>
+)
 
 const CaseStudy = props => {
   const { markdownRemark: casestudy } = props.data
   return (
-    <div>
+    <Layout>
       <CaseStudyTemplate
         content={casestudy.html}
         contentComponent=""
@@ -91,12 +87,13 @@ const CaseStudy = props => {
         casestudy={casestudy.frontmatter.casestudy}
         classes={props.classes}
       />
-    </div>
+    </Layout>
   )
 }
 
 CaseStudy.propTypes = {
   classes: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default CaseStudy

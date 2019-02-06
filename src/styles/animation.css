@@ -1,10 +1,9 @@
 /* Text Animation */
 .animate-text {
-  @apply secondary border-primary border-r-2 mx-auto overflow-hidden text-center tracking-wide;
+  @apply primary border-primary text-3xl border-r-2 mx-auto overflow-hidden text-center;
   top: 50%;
   white-space: nowrap;
   transform: translateY(-50%);
-  font-size: 5vmin;
   width: 14em;
 }
 
@@ -17,7 +16,7 @@
     width: 0em;
   }
   to {
-    width: 11.5em;
+    width: 11em;
   }
 }
 @keyframes blinkTextCursor {
@@ -35,7 +34,7 @@
   @apply w-full block text-center flex-grow;
   visibility: hidden;
   transition-duration: 0.5s;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
 }
 .menu-items.is-active {
   @apply w-full text-center flex-grow;
@@ -43,7 +42,7 @@
   max-height: 200px;
   overflow-y: hidden;
   transition-duration: 0.5s;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
 }
 /* hamburger menu animation */
 .col {

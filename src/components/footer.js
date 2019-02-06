@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { LnkdnIcon, TwtrIcon, GitHubIcon } from './icons/icons'
 
 // import {
 //   FacebookShareButton,
@@ -17,9 +18,10 @@ import { Link } from 'gatsby'
 
 class Footer extends React.Component {
   render() {
+    const { social } = this.props
     return (
-      <div className="bg-secondary flex justify-center align-center flex-wrap text-white p-2 mt-1">
-        <div className="flex justify-around flex-1 items-center">
+      <div className="footer flex-col justify-center align-center flex-wrap">
+        <div className="flex justify-center flex-wrap">
           {this.props.links.map(({ item: footerLinks }) => (
             <div key={footerLinks.title} className="py-2">
               {!footerLinks.newwindow && (
@@ -80,6 +82,17 @@ class Footer extends React.Component {
             <WhatsappIcon round size={48} />
           </WhatsappShareButton>
         </div> */}
+        <div className="flex justify-center">
+          <a href={social.lnkdnUrl} target="_new" className="link-secondary">
+            <LnkdnIcon style={{ height: '4.5vh' }} alt="LinkedIn" />
+          </a>
+          <a href={social.twtrUrl} target="_new" className="link-secondary">
+            <TwtrIcon style={{ height: '4.5vh' }} alt="Twitter" />
+          </a>
+          <a href={social.githubUrl} target="_new" className="link-secondary">
+            <GitHubIcon style={{ height: '4.5vh' }} alt="Github" />
+          </a>
+        </div>
       </div>
     )
   }
@@ -90,6 +103,7 @@ Footer.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   hashTag: PropTypes.string.isRequired,
+  social: PropTypes.array.isRequired,
 }
 
 export default Footer

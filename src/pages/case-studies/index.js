@@ -9,55 +9,29 @@ class CaseStudies extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+      <section name="casestudies">
+        <h1 className="has-text-weight-bold is-size-2">Case Studies</h1>
+        {posts
+          .filter(post => post.node.frontmatter.templateKey === 'case-study')
+          .map(({ node: post }) => (
+            <div style={{ height: '100%', width: '400px' }} key={post.id}>
+              <Link
+                to={post.frontmatter.path}
+                style={{ float: 'right' }}
+                className="primary text-center no-underline uppercase text-md p-2 hover:bg-primary-alternate"
+              >
+                <img src={post.frontmatter.image} style={{ width: '100%' }} />
+                <span>
+                  <div component="span" variant="subheading" color="inherit">
+                    {post.frontmatter.title}
+                    <span />
+                  </div>
+                </span>
+              </Link>
+              <div style={{}} title={post.excerpt} />
             </div>
-            <div>
-              <div cellHeight={180}>
-                {posts
-                  .filter(
-                    post => post.node.frontmatter.templateKey === 'case-study'
-                  )
-                  .map(({ node: post }) => (
-                    <div
-                      style={{ height: '400px', width: '400px' }}
-                      key={post.id}
-                    >
-                      <div
-                        style={{
-                          width: '100%',
-                        }}
-                        component={Link}
-                        to={post.frontmatter.path}
-                      >
-                        <span
-                          style={{
-                            backgroundImage: `url(${post.frontmatter.image})`,
-                          }}
-                        />
-                        <span />
-                        <span>
-                          <div
-                            component="span"
-                            variant="subheading"
-                            color="inherit"
-                          >
-                            {post.frontmatter.title}
-                            <span />
-                          </div>
-                        </span>
-                      </div>
-                      <div style={{}} title={post.excerpt} />
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+          ))}
+      </section>
     )
   }
 }

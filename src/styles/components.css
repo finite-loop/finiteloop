@@ -6,29 +6,29 @@
 .profile-pic {
   @apply border-primary border-solid border-4 rounded-full;
 }
-.gradientBackground {
-  background: linear-gradient(
-    -180deg,
-    $primary-alternate 0%,
-    $secondary-alternate 100%
-  );
-}
+
 .heading1 {
   @apply primary tracking-wide p-2 text-4xl text-center no-underline;
 }
 .logo {
-  @apply primary uppercase tracking-wide p-2 border-2 border-primary text-xl no-underline;
+  @apply w-12 m-2;
+}
+.line {
+  @apply .w-4/5 border-t;
 }
 .heroText {
   @apply text-primary text-center font-medium tracking-wide leading-normal;
 }
 .nav {
-  @apply z-50 flex items-center justify-between flex-wrap bg-primary pl-10 pr-10 pt-1 pin-t sticky;
+  @apply z-50 flex items-center justify-between flex-wrap bg-white pin-t sticky shadow;
 }
 .nav:after {
-  @apply block -mx-5 pt-2 border-b border-primary;
+  @apply block border-b border-primary;
   content: '';
   width: 110%;
+}
+.footer {
+  @apply absolute pin-b bg-primary text-white p-2 mt-1 w-full h-auto;
 }
 .btn-primary {
   @apply bg-primary text-white font-bold py-2 px-4 rounded;
@@ -39,19 +39,22 @@
 }
 
 .link-primary {
-  @apply text-white uppercase text-sm no-underline tracking-wide p-4;
+  @apply text-primary font-medium uppercase text-sm no-underline tracking-wide p-4;
 }
 
 .link-primary:hover {
-  @apply bg-accent-alternate;
+  box-shadow: inset 0 4px 0 0 $secondary-color;
+  @apply border-primary text-secondary;
 }
 
 .link-secondary {
-  @apply text-white uppercase text-sm no-underline tracking-wide p-4;
+  @apply text-white font-medium uppercase text-sm no-underline
+    tracking-wide px-4 py-2;
 }
 
 .link-secondary:hover {
-  @apply bg-secondary-alternate text-primary;
+  box-shadow: inset 0 4px 0 0 $secondary-color;
+  @apply border-primary text-secondary;
 }
 
 .hamburgerMenu {
@@ -63,18 +66,25 @@
 }
 
 .section {
-  @apply pb-16;
-  background: url(/img/headerBackground.png) no-repeat top left;
+  @apply pb-12;
+  /* background: url(/img/headerBackground.png) no-repeat top left; */
+}
+.projectButton {
+  @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-full;
+}
+
+.projectButton:hover {
+  @apply bg-primary text-white;
 }
 
 .offerings-right {
   @apply flex p-16;
-  background: url(/img/kolamBackground.png) no-repeat top right;
+  /* background: url(/img/kolamBackground.png) no-repeat top right; */
 }
 
 .offerings-left {
   @apply flex p-16;
-  background: url(/img/kolamBackground.png) no-repeat top left;
+  /* background: url(/img/kolamBackground.png) no-repeat top left; */
 }
 
 .offering-content-left {
@@ -93,9 +103,9 @@
 /* Mobile View */
 
 @screen sm {
-  #offerings {
+  /* #offerings {
     @apply pt-24 -mt-16;
-  }
+  } */
   .profile-pic {
     @apply w-48 h-48;
   }
@@ -105,22 +115,15 @@
   .offerings-left {
     @apply p-2;
   }
-  .heroText {
-    @apply p-10 text-2xl;
-  }
   .menu-links {
-    @apply w-full block text-center
-  flex-grow;
-  }
-  .link-secondary {
-    @apply text-sm flex flex-auto p-2;
+    @apply w-full block text-center flex-grow;
   }
 }
 /* Tablet View */
 @screen md {
-  #offerings {
+  /* #offerings {
     @apply pt-16 -mt-16;
-  }
+  } */
   .profile-pic {
     @apply w-48 h-48;
   }
@@ -131,18 +134,15 @@
   .offerings-left {
     @apply p-12;
   }
-  .heroText {
-    @apply p-24 text-3xl;
-  }
   .menu-links {
     @apply w-full block text-center flex-grow;
   }
 }
 /* Large Displays */
 @screen lg {
-  #offerings {
+  /* #offerings {
     @apply pt-16 -mt-16;
-  }
+  } */
   .profile-pic {
     @apply w-48 h-48;
   }
@@ -152,20 +152,14 @@
   .offerings-left {
     @apply px-16 py-10;
   }
-  .heroText {
-    @apply p-32 text-5xl;
-  }
   .menu-links {
     @apply w-auto flex-grow content-center items-center;
   }
-  .link-secondary {
-    @apply text-sm flex flex-col flex-1 content-center;
-  }
 }
 @screen xl {
-  #offerings {
+  /* #offerings {
     @apply pt-16 -mt-16;
-  }
+  } */
   .profile-pic {
     @apply w-48 h-48;
   }
@@ -176,13 +170,7 @@
   .offerings-leftx {
     @apply px-16 py-10;
   }
-  .heroText {
-    @apply p-32 text-5xl;
-  }
   .menu-links {
-    @apply w-auto flex-grow content-center items-center;
-  }
-  .link-secondary {
-    @apply text-sm flex flex-col flex-1;
+    @apply w-auto m-0 flex-grow content-center items-center;
   }
 }

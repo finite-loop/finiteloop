@@ -2,22 +2,42 @@
 templateKey: nav-links
 headerlinks:
   - item:
-      title: Our People
+      title: Services
+      url: /offerings
+  - item:
+      title: Labs
+      url: /labs
+  - item:
+      title: The Way
+      url: /way
+  - item:
+      title: Team
       url: /team
       newwindow: false
   - item:
-      title: Get in Touch
+      title: Careers
       url: /contact
 footerlinks:
   - item:
-      title: Our People
-      url: /team
+      title: Case Study
+      url: /case-studies
   - item:
-      title: Get in Touch
-      url: /contact
+      title: Team
+      url: /team
   - item:
       newwindow: true
       title: Open Source
       url: 'https://github.com/finite-loop'
+  - item:
+      title: Careers
+      url: /careers
+  - item:
+      title: Contact Us
+      url: /contact
+  - item:
+      title: Feedback
+      url: /feedback
+  - item:
+      title: Privacy Policy
+      url: /privacy
 ---
-

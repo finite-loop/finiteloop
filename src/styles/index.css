@@ -3,13 +3,16 @@
 
 @import 'color';
 body {
-  @apply font-neptune antialiased bg-accent;
+  @apply font-neptune antialiased;
 }
 img {
   max-width: initial;
 }
+img:hover {
+  opacity: 0.75;
+}
 h2 {
-  @apply secondary text-left uppercase text-3xl font-medium tracking-wide antialiased py-2;
+  @apply primary text-center uppercase text-lg font-medium tracking-wide antialiased py-2;
 }
 @import 'components';
 @import 'animation';

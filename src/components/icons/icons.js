@@ -1,15 +1,15 @@
 import React from 'react'
 
 export const GitHubIcon = props => (
-  <svg height="30px" width="30px" viewBox="0 0 24 24" {...props}>
+  <svg height="20px" width="20px" viewBox="0 0 24 24" {...props}>
     <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3" />
   </svg>
 )
 
 export const FbIcon = props => (
   <svg
-    height="30px"
-    width="30px"
+    height="20px"
+    width="20px"
     style={{ enableBackground: 'new 0 0 48 48' }}
     viewBox="0 0 48 48"
     {...props}
@@ -24,8 +24,8 @@ export const FbIcon = props => (
 
 export const LnkdnIcon = props => (
   <svg
-    height="30px"
-    width="30px"
+    height="20px"
+    width="20px"
     style={{ enableBackground: 'new 0 0 48 48' }}
     viewBox="0 0 48 48"
     {...props}
@@ -40,8 +40,8 @@ export const LnkdnIcon = props => (
 
 export const TwtrIcon = props => (
   <svg
-    height="30px"
-    width="30px"
+    height="20px"
+    width="20px"
     style={{ enableBackground: 'new 0 0 48 48' }}
     viewBox="0 0 48 48"
     {...props}
@@ -55,11 +55,14 @@ export const TwtrIcon = props => (
 )
 
 export const MediumIcon = props => (
-  <svg height="25px" width="25px" viewBox="0 0 48 48" {...props}>
-    <circle cx="24" cy="24" fill="#ffffff" r="30" />
-    <path
-      d="M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z"
-      fill="#000000"
-    />
+  <svg
+    height="30"
+    width="30"
+    style={{ enableBackground: 'new 0 0 48 48' }}
+    fillRule="evenodd"
+    clipRule="evenodd"
+    {...props}
+  >
+    <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.974 17.557v-.235l-1.092-1.072c-.096-.073-.144-.194-.124-.313v-7.874c-.02-.119.028-.24.124-.313l1.118-1.072v-.235h-3.869l-2.758 6.88-3.138-6.88h-4.059v.235l1.308 1.575c.128.115.194.285.176.457v6.188c.038.223-.032.451-.189.614l-1.471 1.784v.235h4.17v-.235l-1.471-1.784c-.158-.163-.233-.389-.202-.614v-5.352l3.66 7.985h.425l3.143-7.985v6.365c0 .17 0 .202-.111.313l-1.13 1.098v.235h5.49z" />
   </svg>
 )

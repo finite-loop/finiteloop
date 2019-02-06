@@ -17,7 +17,7 @@ function compare(a, b) {
 }
 
 export const TeamsPageTemplate = ({ teams }) => (
-  <div className="gradientBackground">
+  <div>
     <h1 className="heading1">{teams.teamTitle}</h1>
     <div className="w-full flex flex-wrap justify-center items-stretch">
       {teams.team.sort(compare).map(({ person }) => (
@@ -69,10 +69,10 @@ export const TeamsPageTemplate = ({ teams }) => (
 )
 
 const Teams = ({ teamsData }) => {
-  const { edges: aboutus } = teamsData.data.Teams
+  const { edges: teams } = teamsData.data.Teams
   return (
-    <section name="teams" className="gradientBackground px-24 sm:px-2">
-      {aboutus.map(({ node: team }) => (
+    <section name="teams" className="px-24 sm:px-2">
+      {teams.map(({ node: team }) => (
         <TeamsPageTemplate
           key={team.frontmatter.title}
           props={teamsData}

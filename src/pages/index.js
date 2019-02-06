@@ -1,25 +1,23 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import '../styles/index.css'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
-import Teams from '../components/teams'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+// import AnchorLink from 'react-anchor-link-smooth-scroll'
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="gradientBackground">
-          <section className="section" name="initial">
-            <h1 className="heroText">
-              We are a boutique consulting firm focusing on experience design
-              and highly scalable technical architecture
-            </h1>
-            <p className="animate-text anim-typewriter">WE HELP YOU SCALE...</p>
-          </section>
-        </div>
-        <div className="bg-primary-alternate">
+        <section className="section" name="initial">
+          <h1 className="heroText">
+            We are a boutique consulting firm focusing on experience design and
+            highly scalable technical architecture
+          </h1>
+          <p className="animate-text anim-typewriter">WE HELP YOU SCALE...</p>
+          <hr className="line" />
+        </section>
+        {/* <div className="bg-secondary-alternate">
           <section name="more">
             <div className="primary text-center mb-3 uppercase text-lg">
               More
@@ -31,9 +29,14 @@ class IndexPage extends React.Component {
               </AnchorLink>
             </div>
           </section>
-        </div>
+        </div> */}
         <Offerrings offeringsData={this.props} />
-        <Teams teamsData={this.props} />
+        <div className="mx-auto text-center pb-32">
+          <Link to="/contact">
+            <button className="projectButton">Start a Project !</button>
+          </Link>
+        </div>
+        {/* <Teams teamsData={this.props} /> */}
         <SEO postEdges={this.props} />
       </Layout>
     )
@@ -81,7 +84,7 @@ export const teamsPageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 80)
           id
           frontmatter {
             order
