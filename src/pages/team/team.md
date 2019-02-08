@@ -61,12 +61,12 @@ team:
       fbsiteurl: test
       githubsiteurl: test
       lnkdnsiteurl: 'https://www.linkedin.com/in/sharadbaliyan/'
-      name: Sharad
+      name: Shobha
       quote: >-
         Easy-going. Intense. How he manages to be both? Meet him and you’ll find
         out. Ex-Adobe and NID Alum. If you find him to be more angsty about your
         service and user experience than you, it’s ok. He’s like that.
-      title: Architect – Service Design
+      title: Architect
       twtrsiteurl: test
   - person:
       avatar: /img/team/Shashi.jpg
