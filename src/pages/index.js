@@ -17,15 +17,14 @@ class IndexPage extends React.Component {
             highly scalable technical architecture
           </h1>
           <h2>
-            WE HELP YOU in{' '}
-            <TextLoop>
-              <span className="text-secondary">Technology Advisory</span>
-              <span className="text-secondary">
-                Organisation Transformation
-              </span>
-              <span className="text-secondary">Blockchain</span>
-              <span className="text-secondary">Frontend Architecture</span>
-              <span className="text-secondary">Experiance Design</span>
+            Our expertise
+            <br />
+            <TextLoop className="text-secondary text-xl leading-normal">
+              <span>Technology Advisory</span>
+              <span>Organisation Transformation</span>
+              <span>Blockchain</span>
+              <span>Frontend Architecture</span>
+              <span>Experiance Design</span>
             </TextLoop>{' '}
           </h2>
           <hr className="line" />
