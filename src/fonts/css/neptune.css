@@ -1,0 +1,161 @@
+/**
+ * @license
+ *
+ * Font Family: Neptune
+ * Designed by: Gaetan Baehr
+ * URL: https://www.fontstore.com/font/neptune
+ *
+ * Page-views per Month: 10k
+ * License: https://api.fontstore.com/downloads/licenses/fonts
+ *
+ * Font Styles:
+ * Neptune Extralight
+ * Neptune Extralight Italic
+ * Neptune Light
+ * Neptune Light Italic
+ * Neptune Regular
+ * Neptune Italic
+ * Neptune Medium
+ * Neptune Medium Italic
+ * Neptune Bold
+ * Neptune Bold Italic
+ * Neptune Extrabold
+ * Neptune Extrabold Italic
+ *
+ * © 2018 Fontstore
+*/
+
+/* @import must be at top of file */
+@import url('////api.fontstore.com/count/437d157c-4e6b-421c-b705-fe4722a2e602');
+
+@font-face {
+  font-family: 'Neptune-Extralight';
+  src: url('../fonts/neptune/Neptune-Extralight.eot');
+  src: url('../fonts/neptune/Neptune-Extralight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Extralight.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Extralight.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Extralight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-ExtralightItalic';
+  src: url('../fonts/neptune/Neptune-ExtralightItalic.eot');
+  src: url('../fonts/neptune/Neptune-ExtralightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-ExtralightItalic.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-ExtralightItalic.woff') format('woff'),
+       url('../fonts/neptune/Neptune-ExtralightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-Light';
+  src: url('../fonts/neptune/Neptune-Light.eot');
+  src: url('../fonts/neptune/Neptune-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Light.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Light.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-LightItalic';
+  src: url('../fonts/neptune/Neptune-LightItalic.eot');
+  src: url('../fonts/neptune/Neptune-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-LightItalic.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-LightItalic.woff') format('woff'),
+       url('../fonts/neptune/Neptune-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-Regular';
+  src: url('../fonts/neptune/Neptune-Regular.eot');
+  src: url('../fonts/neptune/Neptune-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Regular.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Regular.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-Italic';
+  src: url('../fonts/neptune/Neptune-Italic.eot');
+  src: url('../fonts/neptune/Neptune-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Italic.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Italic.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-Medium';
+  src: url('../fonts/neptune/Neptune-Medium.eot');
+  src: url('../fonts/neptune/Neptune-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Medium.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Medium.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-MediumItalic';
+  src: url('../fonts/neptune/Neptune-MediumItalic.eot');
+  src: url('../fonts/neptune/Neptune-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-MediumItalic.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-MediumItalic.woff') format('woff'),
+       url('../fonts/neptune/Neptune-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-Bold';
+  src: url('../fonts/neptune/Neptune-Bold.eot');
+  src: url('../fonts/neptune/Neptune-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Bold.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Bold.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-BoldItalic';
+  src: url('../fonts/neptune/Neptune-BoldItalic.eot');
+  src: url('../fonts/neptune/Neptune-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-BoldItalic.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-BoldItalic.woff') format('woff'),
+       url('../fonts/neptune/Neptune-BoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-Extrabold';
+  src: url('../fonts/neptune/Neptune-Extrabold.eot');
+  src: url('../fonts/neptune/Neptune-Extrabold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-Extrabold.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-Extrabold.woff') format('woff'),
+       url('../fonts/neptune/Neptune-Extrabold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neptune-ExtraboldItalic';
+  src: url('../fonts/neptune/Neptune-ExtraboldItalic.eot');
+  src: url('../fonts/neptune/Neptune-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neptune/Neptune-ExtraboldItalic.woff2') format('woff2'),
+       url('../fonts/neptune/Neptune-ExtraboldItalic.woff') format('woff'),
+       url('../fonts/neptune/Neptune-ExtraboldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -28,6 +28,7 @@
     "react-form-validator-core": "^0.5.1",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
+    "react-responsive-carousel": "^3.1.46",
     "react-share": "^2.4.0"
   },
   "keywords": [

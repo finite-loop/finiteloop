@@ -16,9 +16,7 @@
 .line {
   @apply .w-4/5 border-t;
 }
-.heroText {
-  @apply text-primary text-center font-medium tracking-wide leading-normal;
-}
+
 .nav {
   @apply z-50 flex items-center justify-between flex-wrap bg-white pin-t sticky shadow;
 }
@@ -39,7 +37,7 @@
 }
 
 .link-primary {
-  @apply text-primary font-medium uppercase text-sm no-underline tracking-wide p-4;
+  @apply text-primary font-semibold uppercase text-sm no-underline tracking-wide p-3;
 }
 
 .link-primary:hover {
@@ -53,8 +51,7 @@
 }
 
 .link-secondary:hover {
-  box-shadow: inset 0 4px 0 0 $secondary-color;
-  @apply border-primary text-secondary;
+  @apply text-secondary;
 }
 
 .hamburgerMenu {
@@ -100,12 +97,36 @@
   @apply border-primary;
 }
 
+.caption {
+  white-space: wrap;
+  color: black;
+  background-color: white;
+  visibility: inherit;
+  transition: none;
+  text-align: left;
+  border-width: 0px;
+  margin: 0px;
+  padding: 5px 15px 10px;
+  letters-pacing: 0px;
+  font-weight: 200;
+  font-size: 2.6vmin;
+  min-height: 0px;
+  min-width: 0%;
+  max-height: 250px;
+  max-width: 450px;
+  height: auto;
+  opacity: 0.75;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-origin: 50% 50% 0px;
+  overflow: hidden;
+}
+
 /* iPhone with notch */
 
 @supports (padding: max(0px)) {
   .footer {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+    padding-left: max(3rem, env(safe-area-inset-left));
+    padding-right: max(3rem, env(safe-area-inset-right));
   }
   .nav {
     padding-left: env(safe-area-inset-left);

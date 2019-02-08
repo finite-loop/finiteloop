@@ -11023,6 +11023,13 @@ react-dom@^16.0.0, react-dom@^16.6.3, react-dom@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
+react-easy-swipe@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/react-easy-swipe/-/react-easy-swipe-0.0.16.tgz#5a3d949a8f975d05be92a818254315d1318a81ea"
+  integrity sha1-Wj2Umo+XXQW+kqgYJUMV0TGKgeo=
+  dependencies:
+    prop-types "^15.5.8"
+
 react-emotion@^9.2.5:
   version "9.2.12"
   resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.12.tgz#74d1494f89e22d0b9442e92a33ca052461955c83"
@@ -11170,6 +11177,15 @@ react-redux@^5.1.1:
     prop-types "^15.6.1"
     react-is "^16.6.0"
     react-lifecycles-compat "^3.0.0"
+
+react-responsive-carousel@^3.1.46:
+  version "3.1.46"
+  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.1.46.tgz#2c57c1d8708c9179d8fa146f506e012bb12a373f"
+  integrity sha512-IojuucuudDwM7bx3NI1SLjBCQI6t3W/lK7oEgDr5CPegzu+jrxwMM7uWRduaYH3AflBBOG3MaxkTduMG4R2DUQ==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    react-easy-swipe "^0.0.16"
 
 react-router-dom@^4.2.2:
   version "4.3.1"

@@ -59,7 +59,7 @@ const Layout = ({ children }) => (
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.headerlinks}
         />
-        <div className="mx-auto sm:pb-38 md:pb-32 lg:pb-24">{children}</div>
+        <div className="mx-auto sm:pb-38 md:pb-32 lg:pb-32">{children}</div>
         <Footer
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}

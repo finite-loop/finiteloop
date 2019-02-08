@@ -11,10 +11,9 @@ img {
 img:hover {
   opacity: 0.75;
 }
-h2 {
-  @apply primary text-center uppercase text-lg font-medium tracking-wide antialiased py-2;
-}
+@import url('../fonts/css/neptune.css');
 @import 'components';
+
 @import 'animation';
 @tailwind utilities;
 

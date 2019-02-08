@@ -32,16 +32,16 @@
 .menu-items {
   max-height: 0;
   @apply w-full text-center flex;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   overflow-y: hidden;
-  transition: max-height 1s cubic-bezier(0.4, 0, 0.09, 0.96);
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
 }
 .menu-items.is-active {
   @apply w-full text-center;
   visibility: visible;
   max-height: 100vh;
   overflow-y: hidden;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition: max-height 1s cubic-bezier(0.4, 0, 0.09, 0.96);
 }
 /* hamburger menu animation */
@@ -68,8 +68,8 @@
   @apply bg-secondary;
   display: block;
   margin: 8px auto;
-  -webkit-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
   transition: all 0.3s ease-in;
 }
 .hamburger:hover {

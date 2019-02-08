@@ -93,10 +93,38 @@ collections:
                   widget: text,
                   required: false,
                 }
-
+  - name: 'components'
+    label: 'Components'
+    editor:
+      preview: false
+    files:
+      - file: 'src/components/carousel.md'
+        label: 'Carousel'
+        name: 'carousel'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'service-carousel',
+            }
+          - label: 'Carousel List'
+            name: 'carouselList'
+            widget: 'list'
+            fields:
+              - label: Items
+                name: item
+                widget: object
+                fields:
+                  - { label: Background Image, name: bgImage, widget: image }
+                  - {
+                      label: Overlay Text,
+                      name: imageText,
+                      widget: markdown,
+                      required: false,
+                    }
   - name: 'links'
     label: 'Links'
-    create: true
     editor:
       preview: false
     files:

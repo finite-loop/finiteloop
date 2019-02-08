@@ -84,13 +84,13 @@ class Footer extends React.Component {
         </div> */}
         <div className="flex justify-center">
           <a href={social.lnkdnUrl} target="_new" className="link-secondary">
-            <LnkdnIcon style={{ height: '4.5vh' }} alt="LinkedIn" />
+            <LnkdnIcon alt="LinkedIn" />
           </a>
           <a href={social.twtrUrl} target="_new" className="link-secondary">
-            <TwtrIcon style={{ height: '4.5vh' }} alt="Twitter" />
+            <TwtrIcon alt="Twitter" />
           </a>
           <a href={social.githubUrl} target="_new" className="link-secondary">
-            <GitHubIcon style={{ height: '4.5vh' }} alt="Github" />
+            <GitHubIcon alt="Github" />
           </a>
         </div>
       </div>

@@ -5,18 +5,22 @@
     font-display: fallback;
   }
 }
-@include font('Neptune', '../fonts/Neptune-Medium.ttf');
+@include font('Neptune', '../fonts/neptune/Neptune-Regular.ttf');
 
 body {
   @apply font-neptune;
 }
 
-.logoText {
-  @apply secondary font-medium text-4xl no-underline;
+h2 {
+  @apply primary text-center uppercase text-lg font-semibold tracking-normal antialiased py-2;
 }
 
 .heroText {
-  @apply mx-auto p-12 text-center .max-w-3xl text-3xl;
+  @apply text-primary text-center font-light tracking-normal leading-normal mx-auto p-12 text-center .max-w-4xl text-4xl;
+}
+
+.logoText {
+  @apply secondary font-medium text-4xl no-underline;
 }
 
 .para-primary {

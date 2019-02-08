@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import '../styles/index.css'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
-// import AnchorLink from 'react-anchor-link-smooth-scroll'
+import ServicesCarousel from '../components/carousel'
 class IndexPage extends React.Component {
   render() {
     return (
@@ -17,26 +17,14 @@ class IndexPage extends React.Component {
           <p className="animate-text anim-typewriter">WE HELP YOU SCALE...</p>
           <hr className="line" />
         </section>
-        {/* <div className="bg-secondary-alternate">
-          <section name="more">
-            <div className="primary text-center mb-3 uppercase text-lg">
-              More
-              <br />
-              <AnchorLink className="text-primary" href="#offerings">
-                <i className="material-icons -mt-3 text-4xl">
-                  keyboard_arrow_down
-                </i>
-              </AnchorLink>
-            </div>
-          </section>
-        </div> */}
+
         <Offerrings offeringsData={this.props} />
-        <div className="mx-auto text-center pb-32">
+        <div className="mx-auto text-center pb-4">
           <Link to="/contact">
             <button className="projectButton">Start a Project !</button>
           </Link>
         </div>
-        {/* <Teams teamsData={this.props} /> */}
+        <ServicesCarousel data={this.props} />
         <SEO postPath="/" postNode={this.props} postSEO={false} />
       </Layout>
     )
@@ -48,37 +36,7 @@ IndexPage.propTypes = {}
 export default IndexPage
 
 export const teamsPageQuery = graphql`
-  query Teams {
-    Teams: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "teams-page" } } }
-    ) {
-      edges {
-        node {
-          html
-          id
-          frontmatter {
-            path
-            title
-            image
-            teamTitle
-            teamDescription
-            team {
-              person {
-                name
-                title
-                avatar
-                quote
-                background
-                fbsiteurl
-                twtrsiteurl
-                lnkdnsiteurl
-                githubsiteurl
-              }
-            }
-          }
-        }
-      }
-    }
+  query Home {
     Offerings: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "offering" } } }
     ) {
@@ -93,23 +51,6 @@ export const teamsPageQuery = graphql`
             image
             templateKey
             align
-          }
-        }
-      }
-    }
-    Casestudies: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "case-study" } } }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 200)
-          id
-          frontmatter {
-            path
-            title
-            image
-            templateKey
-            homepage
           }
         }
       }

@@ -8,17 +8,9 @@ const NotFoundPage = () => (
     <p>Sad, sad, sad...... I know you did not mean to, but things happen.</p>
     <p>
       Never mind, there is always a{' '}
-      <button
-        role="button"
-        aria-label="Home"
-        href="#flat-buttons"
-        variant="raised"
-        color="primary"
-        component={Link}
-        to="/"
-      >
-        Home
-      </button>{' '}
+      <Link to="/contact">
+        <button className="projectButton">HOME</button>
+      </Link>
       for everyone
     </p>
   </div>
