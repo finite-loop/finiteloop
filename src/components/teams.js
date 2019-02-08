@@ -18,44 +18,34 @@ function compare(a, b) {
 
 export const TeamsPageTemplate = ({ teams }) => (
   <div>
-    <h1 className="heading1">{teams.teamTitle}</h1>
     <div className="w-full flex flex-wrap justify-center items-stretch">
       {teams.team.sort(compare).map(({ person }) => (
         <div key={person.name}>
           <div className="flex max-w-sm items-center flex-col pb-6">
             <div className="flex max-w-sm min-h-full items-center flex-col">
+              <h3 className="text-center text-2xl text-secondary pb-2">
+                {person.name}
+              </h3>
               <div>
                 <img
                   alt={person.name}
                   src={person.avatar}
                   className="profile-pic flex align-center"
                 />
-                <a href={person.lnkdnsiteurl} target="_new">
-                  <LnkdnIcon
-                    className="w-12 h-12"
-                    style={{
-                      marginTop: '-30px',
-                      marginLeft: '160px',
-                    }}
-                    alt="LinkedIn"
-                  />
-                </a>
               </div>
-              <div className="px-6 text-center">
-                <h3 className="text-secondary pb-2">
-                  {person.name + ' '}
-                  <div>
-                    <img
-                      className=""
-                      alt="kolam background"
-                      height="30"
-                      width="30"
-                      src="/img/kolam.png"
-                    />
-                  </div>
-                  <p className="text-secondary">{person.title}</p>
-                </h3>
-                <p className="para-primary lg:text-lg md:text-lg">
+              <a href={person.lnkdnsiteurl} target="_new">
+                <LnkdnIcon
+                  className="w-12 h-12"
+                  style={{
+                    marginTop: '-30px',
+                    marginLeft: '200px',
+                  }}
+                  alt="LinkedIn"
+                />
+              </a>
+              <div className="px-6 text-justify">
+                <h3 className="text-primary text-center">{person.title}</h3>
+                <p className="para-primary sm:p-2 lg:p-4 sm:text-lg lg:text-lg md:text-lg">
                   {person.quote}
                 </p>
               </div>

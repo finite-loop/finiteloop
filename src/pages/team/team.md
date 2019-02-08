@@ -25,6 +25,17 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
+      avatar: /img/team/Mohita.jpg
+      background: gray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/mohita-janbandhu-6812261b/'
+      name: Mohita
+      quote: >-
+        Born creative. Calligraphy, Binding and coffee. Can represent complex ideas with simple and extra-ordinary visuals. Original works creator, with intense customer focus, and loads of experience.
+      title: Experience Architect
+      twtrsiteurl: test
+  - person:
       avatar: /img/team/Partha.jpg
       background: gray
       fbsiteurl: test
@@ -56,12 +67,23 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
+      avatar: /img/team/Shobha.jpg
+      background: gray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/shobha-srikantaswamy-3104985/'
+      name: Shobha
+      quote: >-
+        Knows all about integrating systems, and building large scale enterprise applications. Quick learner, Hands-on, and a pragmatic architect with exceptional customer focus. Active interest and efforts in contributing to the improvement of the society.
+      title: Architect
+      twtrsiteurl: test
+  - person:
       avatar: /img/team/Sharad.jpg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
       lnkdnsiteurl: 'https://www.linkedin.com/in/sharadbaliyan/'
-      name: Shobha
+      name: Sharad
       quote: >-
         Easy-going. Intense. How he manages to be both? Meet him and you’ll find
         out. Ex-Adobe and NID Alum. If you find him to be more angsty about your
@@ -111,7 +133,7 @@ team:
         Sudarshan will quickly find something to relate to you with.
         Boisterously gregarious; he will soon seem more a part of your team as
         he goes around helping you, in finding out how to address the challenges
-        you are facing and making it look easy & apparent. 
+        you are facing and making it look easy & apparent.
       title: Architect – Service Design
       twtrsiteurl: test
   - person:
@@ -130,7 +152,7 @@ team:
       title: Architect
       twtrsiteurl: test
 ---
+
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
->
 >
 > **We listen, learn, and lead.**

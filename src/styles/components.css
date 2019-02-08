@@ -91,7 +91,7 @@
   @apply mx-5;
 }
 .input-field {
-  @apply bg-primary appearance-none border-2 border-primary-alternate rounded w-full py-2 px-4 text-primary-alternate leading-tight;
+  @apply bg-secondary-alternate appearance-none border-2 border-primary-alternate rounded w-full py-2 px-4 text-primary leading-tight;
 }
 .input-field:hover {
   @apply border-primary;
@@ -135,7 +135,6 @@
 }
 
 /* Mobile View */
-
 @screen sm {
   /* #offerings {
     @apply pt-24 -mt-16;
@@ -159,7 +158,7 @@
     @apply pt-16 -mt-16;
   } */
   .profile-pic {
-    @apply w-48 h-48;
+    @apply w-64 h-64;
   }
 
   .offerings-right {
@@ -178,7 +177,7 @@
     @apply pt-16 -mt-16;
   } */
   .profile-pic {
-    @apply w-48 h-48;
+    @apply w-64 h-64;
   }
   .offerings-right {
     @apply px-16 py-10;
@@ -195,7 +194,7 @@
     @apply pt-16 -mt-16;
   } */
   .profile-pic {
-    @apply w-48 h-48;
+    @apply w-64 h-64;
   }
   .offerings-right {
     @apply px-16

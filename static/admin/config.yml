@@ -28,6 +28,7 @@ collections:
               default: 'global-settings',
             }
           - { label: Site Title, name: siteTitle, widget: string }
+          - { label: Site Long Title, name: siteLongTitle, widget: string }
           - { label: Site Url, name: siteUrl, widget: string, required: false }
           - {
               label: Site Description,
@@ -36,12 +37,20 @@ collections:
               required: false,
             }
           - { label: Logo, name: logo, widget: image, required: true }
+          - { label: Intro Text, name: introText, widget: string }
+          - { label: Intro Text 2, name: introText2, widget: string }
           - {
               label: Logo Title,
               name: logoTitle,
               widget: string,
               required: true,
             }
+          - {
+              label: 'Service Lines',
+              name: 'services',
+              widget: 'list',
+              field: { label: 'Title', name: title, widget: string }
+          }
           - label: Social Media
             name: socialMediaCard
             widget: object

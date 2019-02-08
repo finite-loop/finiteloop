@@ -51,8 +51,8 @@ const MapWithAMakredInfoWindow = compose(
             <h3 className="primary text-2xl antialiased font-medium">
               {props.siteTitle}
             </h3>
-            <hr className="primary h-1 bg-primary" />
-            <span className="secondary text-base">
+            <hr className="primary bg-primary" />
+            <span className="secondary font-medium text-base">
               {props.contactData.address1}
               <br />
               {props.contactData.address2}
@@ -165,10 +165,10 @@ class ContactForm extends React.Component {
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
-        <h1 className="lg:px-10 py-4 sm:px-2 text-xl">
+        <h1 className="text-justify lg:px-10 sm:p-3 md:p-4 sm:text-xl md:text-2xl">
           {contactus.frontmatter.heading}
         </h1>
-        <p className="para-secondary lg:px-10 py-4 sm:px-2">
+        <p className="text-justify lg:px-10 py-4 sm:px-2 sm:text-xl md:text-2xl">
           {contactus.frontmatter.subheading}
         </p>
         <div className="flex flex-col lg:px-10 sm:px-2">
@@ -228,6 +228,8 @@ class ContactForm extends React.Component {
               id="message"
               name="message"
               placeholder="Message"
+              multiLine
+              rows={4}
               value={message}
               onChange={this.handleChange}
               validators={['required']}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Helmet from 'react-helmet'
 import TextLoop from 'react-text-loop'
 import PropTypes from 'prop-types'
 import Layout from '../components/layout'
@@ -11,22 +12,25 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet
+          title={
+            this.props.data.global.frontmatter.siteTitle +
+            ' | ' +
+            this.props.data.global.frontmatter.siteLongTitle
+          }
+        />
         <section className="section" name="introduction">
           <h1 className="heroText">
-            We are a boutique consulting firm focusing on experience design and
-            highly scalable technical architecture
+            {this.props.data.global.frontmatter.introText}
+            <TextLoop className="text-secondary font-semibold">
+              {this.props.data.global.frontmatter.services.map(item => (
+                <span key={item}>{item}</span>
+              ))}
+            </TextLoop>
           </h1>
-          <h2>
-            Our expertise
-            <br />
-            <TextLoop className="text-secondary text-xl leading-normal">
-              <span>Technology Advisory</span>
-              <span>Organisation Transformation</span>
-              <span>Blockchain</span>
-              <span>Frontend Architecture</span>
-              <span>Experiance Design</span>
-            </TextLoop>{' '}
-          </h2>
+          <h1 className="text-primary sm:text-2xl md:text-3xl xl:text-4xl text-center">
+            {this.props.data.global.frontmatter.introText2}
+          </h1>
           <hr className="line" />
         </section>
 
@@ -79,6 +83,17 @@ export const teamsPageQuery = graphql`
             imageText
           }
         }
+      }
+    }
+    global: markdownRemark(
+      frontmatter: { templateKey: { eq: "global-settings" } }
+    ) {
+      frontmatter {
+        siteTitle
+        siteLongTitle
+        introText
+        introText2
+        services
       }
     }
   }

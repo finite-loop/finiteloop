@@ -2,6 +2,7 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   siteTitle: 'FiniteLoop Systems', // Navigation and Site Title
+  siteLongTitle: 'Experts in Technical Advisory, Architecture & Salesforce',
   siteTitleAlt: 'Finite Loop Systems', // Alternative Site title for SEO
   siteUrl: 'https://finiteloop.io', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
@@ -20,7 +21,7 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
-  headerFontFamily: 'Neptune',
-  bodyFontFamily: 'Neptune',
+  headerFontFamily: 'Neptune-Regular',
+  bodyFontFamily: 'Neptune-Regular',
   baseFontSize: '18px',
 }

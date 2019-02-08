@@ -10,16 +10,25 @@ class TextValidator extends ValidatorComponent {
       validatorListener,
       ...rest
     } = this.props
-
     return (
       <div>
         <label className="block uppercase tracking-wide text-xs font-bold mb-2" />
-        <input
-          {...rest}
-          ref={r => {
-            this.input = r
-          }}
-        />
+        {!this.props.multiLine && (
+          <input
+            {...rest}
+            ref={r => {
+              this.input = r
+            }}
+          />
+        )}
+        {this.props.multiLine && (
+          <textarea
+            {...rest}
+            ref={r => {
+              this.input = r
+            }}
+          />
+        )}
         {this.errorText()}
       </div>
     )

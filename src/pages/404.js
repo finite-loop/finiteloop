@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 const NotFoundPage = () => (
   <Layout>
     <div>
-      <h1>Oops </h1>
+      <h1 className="text-center">Oops </h1>
       <h2>
         Sad, sad, sad...... I know you did not mean to, but things happen.{' '}
         <br /> Never mind, there is always a{' '}

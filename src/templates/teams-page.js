@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Teams from '../components/teams'
 import SEO from '../components/seo'
@@ -16,7 +17,17 @@ export const TeamsPageTemplate = ({
   const PageContent = contentComponent || Content
   return (
     <Layout>
-      <PageContent className="para-primary p-12" content={content} />
+      <Helmet
+        title={
+          props.data.global.frontmatter.siteTitle +
+          ' | ' +
+          teamData.frontmatter.title
+        }
+      />
+      <PageContent
+        className="para-primary text-center sm:px-6 md:px-12 lg:px-24 py-12 sm:text-xl md:text-3xl"
+        content={content}
+      />
       <Teams teamsData={props} />
       <SEO postPath={teamData.frontmatter.path} postNode={teamData} postSEO />
     </Layout>
@@ -46,6 +57,7 @@ const TeamsPageTemplateWrapper = props => {
 
 TeamsPageTemplate.propTypes = {
   props: propTypes.object.isRequired,
+  data: propTypes.object,
   teamData: propTypes.object.isRequired,
   content: propTypes.string.isRequired,
   contentComponent: propTypes.func.isRequired,
@@ -88,6 +100,13 @@ export const teamsPageQuery = graphql`
             }
           }
         }
+      }
+    }
+    global: markdownRemark(
+      frontmatter: { templateKey: { eq: "global-settings" } }
+    ) {
+      frontmatter {
+        siteTitle
       }
     }
   }

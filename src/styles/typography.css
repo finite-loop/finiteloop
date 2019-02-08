@@ -1,22 +1,23 @@
-@mixin font($font-family, $font-file) {
+/* @mixin font($font-family, $font-file) {
   @font-face {
     font-family: $font-family;
     src: url($font-file) format('truetype');
     font-display: fallback;
   }
 }
-@include font('Neptune', '../fonts/neptune/Neptune-Regular.ttf');
+@include font('Neptune', '../fonts/neptune/Neptune-Regular.ttf'); */
+@import 'neptune';
 
 body {
-  @apply font-neptune;
+  font-family: 'Neptune-Regular';
 }
 
 h2 {
-  @apply primary text-center uppercase text-lg font-semibold tracking-normal antialiased py-2;
+  @apply primary uppercase text-lg font-semibold tracking-normal antialiased py-2;
 }
 
 .heroText {
-  @apply text-primary text-center font-light tracking-normal leading-normal mx-auto p-12 text-center .max-w-4xl text-4xl;
+  @apply text-primary font-light tracking-normal leading-normal mx-auto;
 }
 
 .logoText {
@@ -24,42 +25,32 @@ h2 {
 }
 
 .para-primary {
-  @apply primary flex tracking-wide leading-normal p-1;
+  @apply primary flex tracking-wide leading-normal;
 }
 .para-secondary {
   @apply secondary flex font-medium tracking-wide leading-normal;
 }
 
+/* Mobile View */
 @screen sm {
-  .para-secondary {
-    @apply text-base;
-  }
-  .para-primary {
-    @apply text-base;
+  .heroText {
+    @apply max-w-2xl text-2xl px-4 py-4;
   }
 }
+/* Tablet View */
 @screen md {
-  .para-secondary {
-    @apply text-base;
-  }
-  .para-primary {
-    @apply text-base;
+  .heroText {
+    @apply max-w-3xl text-3xl px-10 py-8;
   }
 }
+/* Large Displays */
 @screen lg {
-  .para-secondary {
-    @apply text-base;
-  }
-
-  .para-primary {
-    @apply text-base;
+  .heroText {
+    @apply max-w-4xl text-4xl px-12 py-10;
   }
 }
 @screen xl {
-  .para-secondary {
-    @apply text-base;
-  }
-  .para-primary {
-    @apply text-base;
+  .heroText {
+    @apply max-w-4xl text-4xl px-12 py-10;
   }
 }

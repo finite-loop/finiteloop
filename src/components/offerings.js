@@ -14,7 +14,7 @@ export const OfferingsPageTemplate = ({ offering }) => (
             alt={offering.frontmatter.title}
           />
         </Link>
-        <p className="para-primary text-center">{offering.excerpt}</p>
+        <p className="para-primary text-center px-4 py-1">{offering.excerpt}</p>
         <Link
           to={offering.frontmatter.path}
           style={{ float: 'right' }}
