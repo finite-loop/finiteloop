@@ -1,19 +1,22 @@
 import React from 'react'
 
 import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 const NotFoundPage = () => (
-  <div>
-    <h1>Oops </h1>
-    <p>Sad, sad, sad...... I know you did not mean to, but things happen.</p>
-    <p>
-      Never mind, there is always a{' '}
-      <Link to="/contact">
-        <button className="projectButton">HOME</button>
-      </Link>
-      for everyone
-    </p>
-  </div>
+  <Layout>
+    <div>
+      <h1>Oops </h1>
+      <h2>
+        Sad, sad, sad...... I know you did not mean to, but things happen.{' '}
+        <br /> Never mind, there is always a{' '}
+        <Link to="/">
+          <button className="projectButton">HOME</button>
+        </Link>{' '}
+        for everyone
+      </h2>
+    </div>
+  </Layout>
 )
 
 export default NotFoundPage
