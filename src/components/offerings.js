@@ -30,19 +30,16 @@ export const OfferingsPageTemplate = ({ offering }) => (
   </div>
 )
 
-const Offerrings = ({ offeringsData }) => {
-  const { edges: offerings } = offeringsData.data.Offerings
-  return (
-    <section
-      name="offerings"
-      className="w-full flex flex-wrap justify-center items-stretch"
-    >
-      {offerings.sort(compare).map(({ node }) => (
-        <OfferingsPageTemplate key={node.frontmatter.title} offering={node} />
-      ))}
-    </section>
-  )
-}
+const Offerrings = ({ offeringsData }) => (
+  <section
+    name="offerings"
+    className="w-full flex flex-wrap justify-center items-stretch"
+  >
+    {offeringsData.sort(compare).map(({ node }) => (
+      <OfferingsPageTemplate key={node.frontmatter.title} offering={node} />
+    ))}
+  </section>
+)
 
 function compare(a, b) {
   const genreA = a.node.frontmatter.order
@@ -62,7 +59,7 @@ OfferingsPageTemplate.propTypes = {
 }
 
 Offerrings.propTypes = {
-  offeringsData: PropTypes.object.isRequired,
+  offeringsData: PropTypes.array.isRequired,
 }
 
 export default Offerrings

@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Content, { HTMLContent } from '../components/content'
 
-const ServicesCarousel = props => {
-  console.log(props)
+const ServicesCarousel = ({ carouselData }) => {
+  const PageContent = HTMLContent || Content
   return (
-    <div className="mx-auto w-full">
+    <section name="services" className="mx-auto w-full">
       <Carousel
         showThumbs={false}
         infiniteLoop={true}
@@ -17,76 +18,21 @@ const ServicesCarousel = props => {
         // axis={'vertical'}
         centerMode={false}
       >
-        <div>
-          <img src="img/Slider-Home.jpg" />
-          <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
-            <div className="caption">
-              <i>finiteloop</i> is a cloud advisory, and technology solutions
-              company.
-              <br />
-              <br />
-              We work with Service Design, Frontned, Cloud, Blockchain,
-              Salesforce and other technologies
+        {carouselData.carouselList.map(({ item }) => (
+          <div key={item.bgImage}>
+            <img src={item.bgImage} />
+            <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
+              <PageContent className="caption" content={item.imageText} />
             </div>
           </div>
-        </div>
-        <div>
-          <img src="img/Slider-SRS2.jpg" />
-          <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
-            <div className="caption">
-              <i>finiteloop</i> is a cloud advisory, and technology solutions
-              company.
-              <br />
-              <br />
-              We work with Service Design, Frontned, Cloud, Blockchain,
-              Salesforce and other technologies
-            </div>
-          </div>
-        </div>
-        <div>
-          <img src="img/SliderMain-HHH2.jpg" />
-          <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
-            <div className="caption">
-              <i>finiteloop</i> is a cloud advisory, and technology solutions
-              company.
-              <br />
-              <br />
-              We work with Service Design, Frontned, Cloud, Blockchain,
-              Salesforce and other technologies
-            </div>
-          </div>
-        </div>
-        <div>
-          <img src="img/SliderMain-TDH1.jpg" />
-          <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
-            <div className="caption">
-              <i>finiteloop</i> is a cloud advisory, and technology solutions
-              company.
-              <br />
-              <br />
-              We work with Service Design, Frontned, Cloud, Blockchain,
-              Salesforce and other technologies
-            </div>
-          </div>
-        </div>
-        <div>
-          <img src="img/SliderMain-Youth.jpg" />
-          <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
-            <div className="caption">
-              <i>finiteloop</i> is a cloud advisory, and technology solutions
-              company.
-              <br />
-              <br />
-              We work with Service Design, Frontned, Cloud, Blockchain,
-              Salesforce and other technologies
-            </div>
-          </div>
-        </div>
+        ))}
       </Carousel>
-    </div>
+    </section>
   )
 }
 
-ServicesCarousel.propTypes = {}
+ServicesCarousel.propTypes = {
+  carouselData: PropTypes.object.isRequired,
+}
 
 export default ServicesCarousel

@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: finite-loop/finiteloop-systems-v2
   branch: master
 
 display_url: https://finiteloop.netlify.com/
@@ -118,7 +119,7 @@ collections:
                 fields:
                   - { label: Background Image, name: bgImage, widget: image }
                   - {
-                      label: Overlay Text,
+                      label: 'Overlay Text',
                       name: imageText,
                       widget: markdown,
                       required: false,
@@ -172,7 +173,6 @@ collections:
                       default: 'false',
                     }
                   - { label: 'Glyph Icon', name: icon, widget: 'string' }
-
   - name: 'casestudy'
     label: 'Case Study'
     folder: 'src/pages/case-studies'
