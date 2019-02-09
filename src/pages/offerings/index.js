@@ -14,9 +14,14 @@ class Offerings extends React.Component {
       <Layout>
         <section name="services">
           <PageContent
-            className="para-primary text-center sm:px-6 md:px-12 lg:px-24 py-12 sm:text-xl md:text-3xl"
+            className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:text-xl md:text-3xl"
             content={data.global.frontmatter.offeringText}
           />
+          <div className="mx-auto text-center pb-4">
+            <Link to="/contact">
+              <button className="rectButton">Talk to us</button>
+            </Link>
+          </div>
           {posts.map(({ node: post }) => (
             <div key={post.id} className="sm:px-4 md:px-12 lg:px-16">
               <a

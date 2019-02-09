@@ -41,7 +41,7 @@ class IndexPage extends React.Component {
         <Offerrings offeringsData={this.props.data.Offerings.edges} />
         <div className="mx-auto text-center pb-4">
           <Link to="/contact">
-            <button className="projectButton">Start a Project !</button>
+            <button className="roundedButton">Start a Project !</button>
           </Link>
         </div>
         <ServicesCarousel carouselData={this.props.data.Carousel.frontmatter} />

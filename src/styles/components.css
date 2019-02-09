@@ -70,11 +70,19 @@
 .section {
   @apply pb-8;
 }
-.projectButton {
+.roundedButton {
   @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-full;
 }
 
-.projectButton:hover {
+.roundedButton:hover {
+  @apply bg-primary text-white;
+}
+
+.rectButton {
+  @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-lg;
+}
+
+.rectButton:hover {
   @apply bg-primary text-white;
 }
 
