@@ -14,7 +14,7 @@
   @apply w-12 m-2;
 }
 .line {
-  @apply .w-4/5 border-t;
+  @apply w-4/5 border-t;
 }
 
 .nav {
@@ -41,7 +41,12 @@
 }
 
 .link-primary:hover {
-  box-shadow: inset 0 4px 0 0 $secondary-color;
+  box-shadow: inset 0 5px 0 0 $secondary-color;
+  @apply border-primary text-secondary;
+}
+
+.active-link {
+  box-shadow: inset 0 5px 0 0 $secondary-color;
   @apply border-primary text-secondary;
 }
 
@@ -71,6 +76,12 @@
 
 .projectButton:hover {
   @apply bg-primary text-white;
+}
+
+.offerings {
+  columns: 2;
+  column-gap: 2em;
+  column-rule: 1px solid $accent-color;
 }
 
 .offerings-right {

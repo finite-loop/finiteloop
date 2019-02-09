@@ -31,7 +31,8 @@ exports.createPages = ({ actions, graphql }) => {
       if (
         node.frontmatter.templateKey != 'global-settings' &&
         node.frontmatter.templateKey != 'nav-links' &&
-        node.frontmatter.templateKey != 'service-carousel'
+        node.frontmatter.templateKey != 'service-carousel' &&
+        node.frontmatter.templateKey != 'offering'
       ) {
         createPage({
           path: pagePath,

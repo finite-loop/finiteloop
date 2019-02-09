@@ -51,6 +51,7 @@ collections:
               widget: 'list',
               field: { label: 'Title', name: title, widget: string }
           }
+          - { label: Offering Intro Text, name: offeringText, widget: markdown }
           - label: Social Media
             name: socialMediaCard
             widget: object

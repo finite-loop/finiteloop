@@ -1,10 +1,22 @@
 ---
 templateKey: offering
-image: /img/salesforce.png
-path: /solution-arch
-title: Solution Architecture
+image: /img/experiancedesign.png
+path: solution-arch
+title: Technology Advisory
 order: 1
 align: left
 ---
 
-You are implementing a business critical project, with high complexity and massive concurrent usage. We have done this many times before. Our team has worked on different challenges that have enrolled a billion users, or, enabled millions of payment transactions, or, helped a global automotive company create a custom ordering platform with millions of possible combinations. You bring the vision, we bring the technical chops.
+We help organisations navigate from strategy to operations. Our experts have designed and delivered complex solutions for customers across the globe. We offer the following advisory services.
+
+- Cloud strategy
+- Architecture development
+- User experience
+- Proof of concepts
+- Minimum viable products
+- Technology reviews
+- Integrations
+- Performance tuning & Data art
+- Portfolio rationalisation
+
+We hand-craft software products that are beautiful inside-out.

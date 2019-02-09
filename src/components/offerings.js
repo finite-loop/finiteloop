@@ -8,7 +8,7 @@ export const OfferingsPageTemplate = ({ offering }) => (
     <div className="flex max-w-xs items-center flex-col pb-4">
       <div className="flex max-w-sm min-h-full items-center flex-col">
         <h2 component="h2">{offering.frontmatter.title}</h2>
-        <Link to={offering.frontmatter.path}>
+        <Link to={`offerings#${offering.frontmatter.path}`}>
           <img
             src={offering.frontmatter.image}
             alt={offering.frontmatter.title}
@@ -16,7 +16,7 @@ export const OfferingsPageTemplate = ({ offering }) => (
         </Link>
         <p className="para-primary text-center px-4 py-1">{offering.excerpt}</p>
         <Link
-          to={offering.frontmatter.path}
+          to={`offerings#${offering.frontmatter.path}`}
           style={{ float: 'right' }}
           className="secondary text-center no-underline text-md p-2"
         >

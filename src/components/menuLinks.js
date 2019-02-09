@@ -7,8 +7,13 @@ const MenuLinks = ({ links, social, classes }) => (
   <div className={classes}>
     <div className="text-sm flex-grow" />
     {links.map(({ item }) => (
-      <Link key={item.title} className="link-primary" to={item.url}>
-        <span style={{ lineHeight: '4.4vh' }}>{item.title}</span>
+      <Link
+        activeClassName="active-link"
+        key={item.title}
+        className="link-primary"
+        to={item.url}
+      >
+        <span style={{ lineHeight: '5vh' }}>{item.title}</span>
       </Link>
     ))}
     {/* <a href={social.lnkdnUrl} target="_new" className="link-primary">
@@ -18,7 +23,7 @@ const MenuLinks = ({ links, social, classes }) => (
       <TwtrIcon style={{ height: '4.5vh' }} alt="Twitter" />
     </a> */}
     <a href={social.githubUrl} target="_new" className="link-primary">
-      <GitHubIcon style={{ height: '4vh' }} alt="Github" />
+      <GitHubIcon style={{ height: '4.5vh' }} alt="Github" />
     </a>
     {/* <a href={social.mediumUrl} target="_new" className="link-primary">
       <MediumIcon style={{ height: '4.5vh' }} alt="Medium" />

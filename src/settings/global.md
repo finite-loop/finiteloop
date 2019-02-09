@@ -18,7 +18,8 @@ services:
   - Experiance Design
   - Frontend Architecture
   - Salesforce
-
+offeringText: >-
+  We do Technology advisory, and Salesforce consulting. We focus on a few things, and try to do it well. We understand the new landscape, trends, and design the right solutions for our customers. We simplify it for you.
 socialMediaCard:
   twitterCreatorAccount: '@partha360'
   twitterSiteAccount: '_finiteloop'
