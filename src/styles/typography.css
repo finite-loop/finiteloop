@@ -1,11 +1,3 @@
-/* @mixin font($font-family, $font-file) {
-  @font-face {
-    font-family: $font-family;
-    src: url($font-file) format('truetype');
-    font-display: fallback;
-  }
-}
-@include font('Neptune', '../fonts/neptune/Neptune-Regular.ttf'); */
 @import 'neptune';
 
 body {
@@ -46,7 +38,7 @@ h2 {
 /* Large Displays */
 @screen lg {
   .heroText {
-    @apply max-w-4xl text-4xl px-12 py-10;
+    @apply max-w-4xl text-4xl px-10 py-10;
   }
 }
 @screen xl {

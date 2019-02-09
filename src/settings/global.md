@@ -11,13 +11,13 @@ siteDescription: >-
 logo: /img/flLogo.png
 logoTitle: Finiteloop
 services:
-  - Organisation Tranformation
   - Cloud Advisory
   - Enterprise Architecture
+  - Org Tranformation
   - BlockChain
-  - Salesforce
   - Experiance Design
   - Frontend Architecture
+  - Salesforce
 
 socialMediaCard:
   twitterCreatorAccount: '@partha360'

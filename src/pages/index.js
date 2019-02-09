@@ -22,7 +22,11 @@ class IndexPage extends React.Component {
         <section className="section" name="introduction">
           <h1 className="heroText">
             {this.props.data.global.frontmatter.introText}
-            <TextLoop className="text-secondary font-semibold">
+            <TextLoop
+              interval={1500}
+              springConfig={{ stiffness: 150, damping: 20 }}
+              className="text-secondary font-semibold"
+            >
               {this.props.data.global.frontmatter.services.map(item => (
                 <span key={item}>{item}</span>
               ))}
@@ -81,6 +85,8 @@ export const teamsPageQuery = graphql`
           item {
             bgImage
             imageText
+            top
+            left
           }
         }
       }

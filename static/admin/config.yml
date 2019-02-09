@@ -133,6 +133,9 @@ collections:
                       widget: markdown,
                       required: false,
                     }
+                  - { label: Top %, name: top, widget: string }
+                  - { label: Left Position %, name: left, widget: string }
+
   - name: 'links'
     label: 'Links'
     editor:

@@ -15,13 +15,14 @@ const ServicesCarousel = ({ carouselData }) => {
         interval={4000}
         useKeyboardArrows={true}
         dynamicHeight={false}
-        // axis={'vertical'}
         centerMode={false}
       >
         {carouselData.carouselList.map(({ item }) => (
           <div key={item.bgImage}>
             <img src={item.bgImage} />
-            <div style={{ position: 'absolute', top: '10%', left: '65%' }}>
+            <div
+              style={{ position: 'absolute', top: item.top, left: item.left }}
+            >
               <PageContent className="caption" content={item.imageText} />
             </div>
           </div>

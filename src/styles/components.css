@@ -63,8 +63,7 @@
 }
 
 .section {
-  @apply pb-12;
-  /* background: url(/img/headerBackground.png) no-repeat top left; */
+  @apply pb-8;
 }
 .projectButton {
   @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-full;
@@ -102,7 +101,8 @@
   color: black;
   background-color: white;
   visibility: inherit;
-  transition: none;
+  transition-duration: 0.5s;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
   text-align: left;
   border-width: 0px;
   margin: 0px;
@@ -116,8 +116,6 @@
   max-width: 450px;
   height: auto;
   opacity: 0.75;
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  transform-origin: 50% 50% 0px;
   overflow: hidden;
 }
 
