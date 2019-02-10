@@ -7,7 +7,7 @@ export const OfferingsPageTemplate = ({ offering }) => (
   <div id="offerings">
     <div className="flex max-w-xs items-center flex-col pb-4">
       <div className="flex max-w-sm min-h-full items-center flex-col">
-        <h2 component="h2">{offering.frontmatter.title}</h2>
+        <h2 className="text-lg">{offering.frontmatter.title}</h2>
         <Link to={`offerings#${offering.frontmatter.path}`}>
           <img
             src={offering.frontmatter.image}

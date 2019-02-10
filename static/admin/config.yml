@@ -452,7 +452,7 @@ collections:
                       default: 0.00,
                     }
       - file: 'src/pages/privacy/privacy-policy.md'
-        label: 'Provacy Policy'
+        label: 'Privacy Policy'
         name: 'privacy-policy'
         fields:
           - {
@@ -475,3 +475,4 @@ collections:
               name: image,
               widget: 'Image',
             }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

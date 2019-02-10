@@ -86,12 +86,6 @@
   @apply bg-primary text-white;
 }
 
-.offerings {
-  columns: 2;
-  column-gap: 2em;
-  column-rule: 1px solid $accent-color;
-}
-
 .offerings-right {
   @apply flex p-16;
   /* background: url(/img/kolamBackground.png) no-repeat top right; */
@@ -171,9 +165,11 @@
 }
 /* Tablet View */
 @screen md {
-  /* #offerings {
-    @apply pt-16 -mt-16;
-  } */
+  .two-column {
+    columns: 2;
+    column-gap: 2em;
+    column-rule: 1px solid $accent-color;
+  }
   .profile-pic {
     @apply w-64 h-64;
   }
@@ -190,9 +186,11 @@
 }
 /* Large Displays */
 @screen lg {
-  /* #offerings {
-    @apply pt-16 -mt-16;
-  } */
+  .two-column {
+    columns: 2;
+    column-gap: 2em;
+    column-rule: 1px solid $accent-color;
+  }
   .profile-pic {
     @apply w-64 h-64;
   }
@@ -207,9 +205,11 @@
   }
 }
 @screen xl {
-  /* #offerings {
-    @apply pt-16 -mt-16;
-  } */
+  .two-column {
+    columns: 2;
+    column-gap: 2em;
+    column-rule: 1px solid $accent-color;
+  }
   .profile-pic {
     @apply w-64 h-64;
   }

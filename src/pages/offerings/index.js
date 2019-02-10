@@ -32,7 +32,7 @@ class Offerings extends React.Component {
               <h2 className="text-2xl pb-4">
                 <span id={post.frontmatter.path}>{post.frontmatter.title}</span>
               </h2>
-              <div className="offerings pb-4" style={{ minHeight: '150px' }}>
+              <div className="two-column pb-4" style={{ minHeight: '150px' }}>
                 <PageContent
                   className="primary text-lg tracking-wide leading-normal"
                   content={post.html}
