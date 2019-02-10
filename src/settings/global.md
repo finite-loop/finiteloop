@@ -11,9 +11,8 @@ siteDescription: >-
 logo: /img/flLogo.png
 logoTitle: Finiteloop
 services:
-  - Cloud Advisory
-  - Enterprise Architecture
-  - Org Tranformation
+  - Technology Advisory
+  - Org Transformation
   - BlockChain
   - Experiance Design
   - Frontend Architecture

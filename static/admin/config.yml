@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: finite-loop/finiteloop-systems-v2
+  name: git-gateway
+  repo: https://github.com/finite-loop/finiteloop-systems-v2
   branch: master
 
 display_url: https://finiteloop.netlify.com/
