@@ -11,6 +11,9 @@ img {
 img:hover {
   opacity: 0.75;
 }
+p {
+  @apply pb-2;
+}
 @import 'components';
 
 @import 'animation';

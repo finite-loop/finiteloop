@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "author": "Parthasarathy S",
   "dependencies": {
+    "ajv": "6.9.0",
     "gatsby": "^2.0.115",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-google-analytics": "^2.0.13",
@@ -63,5 +64,8 @@
     "color": "#4919b7",
     "icon": null,
     "createdAt": 1531720397113
+  },
+  "resolutions": {
+    "ajv": "6.8.1"
   }
 }

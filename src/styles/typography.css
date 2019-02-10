@@ -4,6 +4,10 @@ body {
   font-family: 'Neptune-Regular';
 }
 
+h1 {
+  @apply primary text-5xl font-semibold tracking-normal antialiased pb-2;
+}
+
 h2 {
   @apply primary uppercase text-lg font-semibold tracking-normal antialiased py-2;
 }

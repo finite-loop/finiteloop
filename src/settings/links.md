@@ -39,5 +39,5 @@ footerlinks:
       url: /feedback
   - item:
       title: Privacy Policy
-      url: /privacy
+      url: /privacy-policy
 ---

@@ -3,7 +3,9 @@ backend:
   repo: https://github.com/finite-loop/finiteloop-systems-v2
   branch: master
 
+site_url: https://finiteloop.netlify.com/
 display_url: https://finiteloop.netlify.com/
+logo_url: /img/flLogo.png
 
 publish_mode: editorial_workflow
 
@@ -449,3 +451,27 @@ collections:
                       valueType: float,
                       default: 0.00,
                     }
+      - file: 'src/pages/privacy/privacy-policy.md'
+        label: 'Provacy Policy'
+        name: 'privacy-policy'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'privacy-policy',
+            }
+          - {
+              label: 'Path',
+              name: 'path',
+              widget: 'hidden',
+              default: '/privacy-policy',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Header', name: header, widget: 'string' }
+          - { label: 'Footer', name: footer, widget: 'string' }
+          - {
+              label: 'Image',
+              name: image,
+              widget: 'Image',
+            }
