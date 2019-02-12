@@ -79,11 +79,11 @@
 }
 
 .rectButton {
-  @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-lg;
+  @apply text-2xl py-2 px-4 border-2 border-alternate rounded-lg;
 }
 
 .rectButton:hover {
-  @apply bg-primary text-white;
+  @apply bg-accent-alternate text-white;
 }
 
 .offerings-right {
@@ -107,6 +107,22 @@
 }
 .input-field:hover {
   @apply border-primary;
+}
+
+.portfolio-list {
+  @apply text-secondary text-sm uppercase border-0 pr-2 mb-2;
+
+  &&:hover {
+    @apply text-accent-alternate;
+  }
+}
+
+.service-list {
+  @apply text-secondary text-lg uppercase border-0 pr-2 mb-4;
+
+  &&:hover {
+    @apply text-accent-alternate;
+  }
 }
 
 .caption {

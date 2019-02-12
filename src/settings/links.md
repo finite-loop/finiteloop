@@ -5,6 +5,9 @@ headerlinks:
       title: Services
       url: /offerings
   - item:
+      title: Case Study
+      url: /case-studies
+  - item:
       title: Labs
       url: /labs
   - item:

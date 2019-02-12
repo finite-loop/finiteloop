@@ -13,7 +13,7 @@ const MenuLinks = ({ links, social, classes }) => (
         className="link-primary"
         to={item.url}
       >
-        <span style={{ lineHeight: '5vh' }}>{item.title}</span>
+        <span style={{ lineHeight: '5vh', height: '5vh' }}>{item.title}</span>
       </Link>
     ))}
     {/* <a href={social.lnkdnUrl} target="_new" className="link-primary">
@@ -23,7 +23,7 @@ const MenuLinks = ({ links, social, classes }) => (
       <TwtrIcon style={{ height: '4.5vh' }} alt="Twitter" />
     </a> */}
     <a href={social.githubUrl} target="_new" className="link-primary">
-      <GitHubIcon style={{ height: '4.5vh' }} alt="Github" />
+      <GitHubIcon style={{ height: '4.6vh' }} alt="Github" />
     </a>
     {/* <a href={social.mediumUrl} target="_new" className="link-primary">
       <MediumIcon style={{ height: '4.5vh' }} alt="Medium" />

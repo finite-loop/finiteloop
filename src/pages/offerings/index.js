@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../../components/content'
 import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
 class Offerings extends React.Component {
   render() {
@@ -12,6 +14,7 @@ class Offerings extends React.Component {
     const PageContent = HTMLContent || Content
     return (
       <Layout>
+        <Helmet title={`${data.global.frontmatter.siteTitle} | Services`} />
         <section name="services">
           <PageContent
             className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:text-xl md:text-3xl"
@@ -43,6 +46,17 @@ class Offerings extends React.Component {
             </div>
           ))}
         </section>
+        <SEO
+          postPath="/offerings"
+          postNode={{
+            frontmatter: {
+              title: data.global.frontmatter.siteTitle + ' | ' + 'Services',
+              excerpt: data.global.frontmatter.offeringText,
+              image: '',
+            },
+          }}
+          postSEO
+        />
       </Layout>
     )
   }
