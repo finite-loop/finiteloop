@@ -53,6 +53,12 @@ $secondary-alternate: #f1f1f1;
 .text-secondary {
   color: $secondary-color;
 }
+.text-secondary-alternate {
+  color: $secondary-alternate;
+}
+.text-accent-alternate {
+  color: $accent-alternate;
+}
 ::selection {
   color: white;
   background: $primary-color;

@@ -1,4 +1,5 @@
 const path = require('path')
+const _ = require('lodash')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -13,6 +14,8 @@ exports.createPages = ({ actions, graphql }) => {
               path
               templateKey
               title
+              portfolio
+              service
             }
           }
         }
@@ -25,7 +28,9 @@ exports.createPages = ({ actions, graphql }) => {
     }
     var id = 0
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node }) => {
       const pagePath = node.frontmatter.path
       id = id + 1
       if (
@@ -44,5 +49,48 @@ exports.createPages = ({ actions, graphql }) => {
         })
       }
     })
+    // Portfolio Tagged pages:
+    let portfolio = []
+    // Iterate through each post, putting all found tags into `tags`
+    _.each(posts, edge => {
+      if (_.get(edge, 'node.frontmatter.portfolio')) {
+        portfolio = portfolio.concat(edge.node.frontmatter.portfolio)
+      }
+    })
+    // Eliminate duplicate Portfolio tags
+    portfolio = _.uniq(portfolio)
+
+    // Make Portfolio tag pages
+    portfolio.forEach(portfolio => {
+      createPage({
+        path: `/portfolio/${_.kebabCase(portfolio)}/`,
+        component: path.resolve('src/templates/portfolios.js'),
+        context: {
+          portfolio,
+        },
+      })
+      // Service Tagged pages:
+      let service = []
+      // Iterate through each post, putting all found tags into `tags`
+      _.each(posts, edge => {
+        if (_.get(edge, 'node.frontmatter.service')) {
+          service = service.concat(edge.node.frontmatter.service)
+        }
+      })
+      // Eliminate duplicate service tags
+      service = _.uniq(service)
+
+      // Make service tag pages
+      service.forEach(service => {
+        createPage({
+          path: `/service/${_.kebabCase(service)}/`,
+          component: path.resolve('src/templates/service-lines.js'),
+          context: {
+            service,
+          },
+        })
+      })
+    })
+    return posts
   })
 }

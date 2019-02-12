@@ -31,6 +31,7 @@
     "react-helmet": "^5.2.0",
     "react-responsive-carousel": "^3.1.46",
     "react-share": "^2.4.0",
+    "react-tabs": "^3.0.0",
     "react-text-loop": "^2.0.1"
   },
   "keywords": [

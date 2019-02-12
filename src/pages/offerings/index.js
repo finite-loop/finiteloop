@@ -78,6 +78,7 @@ export const offeringsQuery = graphql`
       frontmatter: { templateKey: { eq: "global-settings" } }
     ) {
       frontmatter {
+        siteTitle
         offeringText
       }
     }

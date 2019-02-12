@@ -1,50 +1,59 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Layout from '../../components/layout'
 
 class CaseStudies extends React.Component {
   render() {
-    const { data, classes } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props
+    const { edges: posts } = data.Casestudies
 
     return (
-      <section name="casestudies">
-        <h1 className="has-text-weight-bold is-size-2">Case Studies</h1>
-        {posts
-          .filter(post => post.node.frontmatter.templateKey === 'case-study')
-          .map(({ node: post }) => (
-            <div style={{ height: '100%', width: '400px' }} key={post.id}>
-              <Link
-                to={post.frontmatter.path}
-                style={{ float: 'right' }}
-                className="primary text-center no-underline uppercase text-md p-2 hover:bg-primary-alternate"
-              >
-                <img src={post.frontmatter.image} style={{ width: '100%' }} />
-                <span>
-                  <div component="span" variant="subheading" color="inherit">
-                    {post.frontmatter.title}
-                    <span />
+      <Layout>
+        <Helmet title={`${data.global.frontmatter.siteTitle} | Case Study`} />
+        <section
+          className="flex flex-wrap justify-center items-center px-12"
+          name="casestudies"
+        >
+          {posts
+            .filter(post => post.node.frontmatter.templateKey === 'case-study')
+            .map(({ node: post }) => (
+              <div className="shadow-lg m-4 rounded-lg flex-col" key={post.id}>
+                <Link
+                  to={post.frontmatter.path}
+                  style={{ float: 'right' }}
+                  className="primary text-center no-underline uppercase text-xl"
+                >
+                  <img
+                    src={post.frontmatter.image}
+                    className="sm:max-w-sm md:max-w-auto h-auto p-2"
+                  />
+                  <hr className="line w-full" />
+                  <div className="p-2 text-center">
+                    <span className="flex-1">{post.frontmatter.title}</span>
                   </div>
-                </span>
-              </Link>
-              <div style={{}} title={post.excerpt} />
-            </div>
-          ))}
-      </section>
+                </Link>
+              </div>
+            ))}
+        </section>
+      </Layout>
     )
   }
 }
 
 CaseStudies.propTypes = {
-  classes: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default CaseStudies
 
 export const caseStudiesQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    Casestudies: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -57,6 +66,13 @@ export const caseStudiesQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
           }
         }
+      }
+    }
+    global: markdownRemark(
+      frontmatter: { templateKey: { eq: "global-settings" } }
+    ) {
+      frontmatter {
+        siteTitle
       }
     }
   }

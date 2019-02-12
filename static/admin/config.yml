@@ -204,8 +204,9 @@ collections:
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: Image, name: image, widget: image }
+      - { label: 'Portfolio', name: portfolio, widget: list }
+      - { label: 'Service Line', name: service, widget: list }
       - { label: 'Date', name: date, widget: datetime, default: 'Date' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
       - {
           label: 'Display in homepage?',
           name: 'homepage',
@@ -229,35 +230,9 @@ collections:
         widget: object
         fields:
           - {
-              label: 'Description',
-              name: description,
-              widget: markdown,
-              default: 'Description',
-            }
-          - { label: 'Focus', name: focus, widget: markdown, default: 'Focus' }
-          - {
-              label: 'Challenges',
-              name: challenges,
-              widget: markdown,
-              default: 'challenges',
-            }
-          - {
-              label: 'Solution',
-              name: solution,
-              widget: markdown,
-              default: 'solution',
-            }
-          - {
-              label: 'Benefits',
-              name: benefits,
-              widget: markdown,
-              default: 'benefits',
-            }
-          - {
-              label: 'Technology',
-              name: technology,
-              widget: markdown,
-              default: 'technology',
+              label: 'Body',
+              name: body,
+              widget: markdown
             }
 
   - name: 'offerings'

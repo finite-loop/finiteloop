@@ -15,7 +15,7 @@ p {
   @apply pb-2;
 }
 @import 'components';
-
+@import 'tab';
 @import 'animation';
 @tailwind utilities;
 
