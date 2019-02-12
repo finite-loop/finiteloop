@@ -25,7 +25,7 @@ const CaseStudies = props => {
   return (
     <Layout>
       <Helmet title={`${data.global.frontmatter.siteTitle} | Case Study`} />
-      <div className="sm:px-4 lg:px-24 pt-4 mx-auto text-center">
+      <div className="sm:px-4 lg:px-24 pt-4 text-center">
         <button
           onClick={() => setCurrentPortfolio('All')}
           className={
@@ -62,18 +62,25 @@ const CaseStudies = props => {
               (post.frontmatter.portfolio.indexOf(currentPortfolio) > -1 ||
                 currentPortfolio === 'All') && (
                 <div className="shadow-lg m-2 rounded-lg" key={post.id}>
-                  <Link
-                    to={post.frontmatter.path}
-                    className="primary float-right text-center no-underline uppercase text-xl"
-                  >
-                    <div className="pt-2">{post.frontmatter.title}</div>
+                  <div className="flex flex-wrap justify-center">
+                    <Link
+                      to={post.frontmatter.path}
+                      className="primary text-center no-underline uppercase text-xl"
+                    >
+                      <div className="pt-2">{post.frontmatter.title}</div>
+                    </Link>
                     <hr className="line w-full" />
-                    <img
-                      src={post.frontmatter.image}
-                      className="sm:max-w-xs md:max-w-sm p-2"
-                    />
-                  </Link>
-                  <hr className="line w-full" />
+                    <Link
+                      to={post.frontmatter.path}
+                      className="primary  text-center no-underline uppercase text-xl"
+                    >
+                      <img
+                        src={post.frontmatter.image}
+                        className="sm:max-w-xs md:max-w-sm p-2"
+                      />
+                    </Link>
+                    <hr className="line w-full" />
+                  </div>
                   <div className="p-2 text-justify max-w-sm">
                     {post.frontmatter.portfolio.map(item => (
                       <Link key={item} to={`/portfolio/${_.kebabCase(item)}/`}>

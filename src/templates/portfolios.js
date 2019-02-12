@@ -28,20 +28,20 @@ const Portfolios = ({ pageContext, data }) => {
         </Link>
       </div>
       <section
-        className="flex flex-wrap justify-center items-center px-12"
+        className="flex flex-wrap justify-center items-center"
         name="casestudies"
       >
         {edges.map(({ node }) => {
           const { path, title, image } = node.frontmatter
           return (
-            <div className="shadow-lg m-4 rounded-lg flex-col" key={path}>
+            <div className="shadow-lg m-2 rounded-lg flex-col" key={path}>
               <Link
                 to={path}
-                className="primary float-right text-center no-underline uppercase text-xl"
+                className="primary text-center no-underline uppercase text-xl"
               >
                 <img src={image} className="sm:max-w-xs md:max-w-sm p-2" />
                 <hr className="line w-full" />
-                <div className="p-2 text-center">
+                <div className="p-1 text-center">
                   <span className="flex-1">{title}</span>
                 </div>
               </Link>
