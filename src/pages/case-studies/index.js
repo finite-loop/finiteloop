@@ -25,13 +25,13 @@ const CaseStudies = props => {
   return (
     <Layout>
       <Helmet title={`${data.global.frontmatter.siteTitle} | Case Study`} />
-      <div className="px-24 pt-4 mx-auto text-center">
+      <div className="sm:px-4 lg:px-24 pt-4 mx-auto text-center">
         <button
           onClick={() => setCurrentPortfolio('All')}
           className={
             currentPortfolio === 'All'
-              ? 'rectButton bg-accent-alternate text-secondary-alternate text-lg m-1'
-              : 'rectButton text-primary text-lg m-1'
+              ? 'rectButton bg-accent-alternate text-secondary-alternate text-lg m-1 sm:text-xs'
+              : 'rectButton text-primary text-lg m-1 sm:text-xs'
           }
         >
           All
@@ -42,8 +42,8 @@ const CaseStudies = props => {
             onClick={() => setCurrentPortfolio(item)}
             className={
               currentPortfolio === item
-                ? 'rectButton bg-accent-alternate text-secondary-alternate text-lg m-1'
-                : 'rectButton text-primary text-lg m-1'
+                ? 'rectButton bg-accent-alternate text-secondary-alternate text-lg m-1 sm:text-xs'
+                : 'rectButton text-primary text-lg m-1 sm:text-xs'
             }
           >
             {item}
@@ -52,7 +52,7 @@ const CaseStudies = props => {
       </div>
 
       <section
-        className="flex flex-wrap justify-center items-center p-12"
+        className="flex flex-wrap justify-center items-center"
         name="casestudies"
       >
         {posts
@@ -100,9 +100,10 @@ const CaseStudies = props => {
           frontmatter: {
             title: data.global.frontmatter.siteTitle + ' | ' + 'Case Study',
             image: '',
+            excerpt: '',
           },
         }}
-        postSEO
+        postSEO={false}
       />
     </Layout>
   )

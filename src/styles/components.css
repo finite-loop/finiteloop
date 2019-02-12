@@ -79,7 +79,7 @@
 }
 
 .rectButton {
-  @apply text-2xl py-2 px-4 border-2 border-alternate rounded-lg;
+  @apply text-2xl py-2 px-4 border-2 border-alternate rounded-lg uppercase;
 }
 
 .rectButton:hover {

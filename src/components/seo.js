@@ -166,12 +166,12 @@ class SEO extends Component {
           href="img/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="img/favicons/manifest.json" />
-        <meta name="msapplication-TileColor" content="#70A999" />
+        <meta name="msapplication-TileColor" content="#6c807f" />
         <meta
           name="msapplication-TileImage"
           content="img/favicons/ms-icon-144x144.png"
         />
-        <meta name="theme-color" content="#70A999" />
+        <meta name="theme-color" content="#6c807f" />
         {/* General tags */}
         <meta name="description" content={description} />
         <meta name="image" content={image} />

@@ -37,13 +37,9 @@ const Portfolios = ({ pageContext, data }) => {
             <div className="shadow-lg m-4 rounded-lg flex-col" key={path}>
               <Link
                 to={path}
-                style={{ float: 'right' }}
-                className="primary text-center no-underline uppercase text-xl"
+                className="primary float-right text-center no-underline uppercase text-xl"
               >
-                <img
-                  src={image}
-                  className="sm:max-w-sm md:max-w-auto h-auto p-2"
-                />
+                <img src={image} className="sm:max-w-xs md:max-w-sm p-2" />
                 <hr className="line w-full" />
                 <div className="p-2 text-center">
                   <span className="flex-1">{title}</span>
@@ -58,9 +54,7 @@ const Portfolios = ({ pageContext, data }) => {
 }
 
 Portfolios.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-  }),
+  pageContext: PropTypes.shape({}),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,

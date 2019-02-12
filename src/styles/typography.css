@@ -30,7 +30,7 @@ h2 {
 /* Mobile View */
 @screen sm {
   .heroText {
-    @apply max-w-2xl text-2xl px-4 py-4;
+    @apply max-w-xl text-xl px-2 py-4;
   }
 }
 /* Tablet View */
