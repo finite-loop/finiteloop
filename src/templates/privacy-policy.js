@@ -5,7 +5,6 @@ import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
-import '../styles/index.css'
 
 export const PrivacyPageTemplate = ({
   props,

@@ -2,6 +2,10 @@
 @tailwind components;
 
 @import 'color';
+@import 'components';
+@import 'animation';
+@import 'typography';
+@import 'tab';
 body {
   @apply font-neptune antialiased overflow-x-hidden scrolling-touch;
 }
@@ -14,11 +18,6 @@ img:hover {
 p {
   @apply pb-2;
 }
-@import 'components';
-@import 'tab';
-@import 'animation';
 @tailwind utilities;
-
-@import 'typography';
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
