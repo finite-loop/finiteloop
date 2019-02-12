@@ -176,6 +176,8 @@ CaseStudyTemplate.propTypes = {
   image: PropTypes.string.isRequired,
   portfolio: PropTypes.array.isRequired,
   service: PropTypes.array.isRequired,
+  global: PropTypes.object.isRequired,
+  url: PropTypes.string.isRequired,
 }
 
 CaseStudy.propTypes = {
@@ -201,9 +203,6 @@ export const pageQuery = graphql`
           name
           profile
           web
-        }
-        casestudy {
-          body
         }
       }
     }
