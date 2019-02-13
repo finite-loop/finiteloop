@@ -49,7 +49,7 @@ export const CaseStudyTemplate = ({
           </Link>
         ))}
         <div className="flex sm:flex-wrap md:flex-wrap lg:flex-wrap xl:flex-no-wrap">
-          <div className="">
+          <div className="xl:w-3/4">
             <Tabs>
               <TabList>
                 <Tab>Customer</Tab>
@@ -92,8 +92,8 @@ export const CaseStudyTemplate = ({
               </TabPanel>
             </Tabs>
           </div>
-          <div className="xl:px-6">
-            <div>
+          <div className="sm:w-full xl:w-1/4 xl:px-12">
+            <div className="text-left">
               <h2>Our Work</h2>
               {service.map(item => (
                 <Link key={item} to={`/service/${_.kebabCase(item)}/`}>
@@ -110,7 +110,7 @@ export const CaseStudyTemplate = ({
                 </Link>
               ))}
             </div>
-            <div className="flex flex-wrap justify-center">
+            <div className="justify-center">
               <hr className="line w-full" />
               <p className="text-center uppercase">Share this project</p>
               <div className="flex w-full justify-center">
