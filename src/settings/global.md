@@ -9,7 +9,7 @@ siteDescription: >-
 logo: /img/flLogo.png
 introText: >-
   We are a boutique consulting firm focusing on experience design and highly
-  scalable technical architecture. We help you with
+  scalable technical architecture. Our expertise - 
 introText2: We help you scale
 logoTitle: Finiteloop
 services:
@@ -28,8 +28,9 @@ socialMediaCard:
   githubUrl: 'https://github.com/finite-loop'
   hashTag: FiniteLoopSystems
   lnkdnUrl: 'https://www.linkedin.com/company/finiteloop/'
+  mediumUrl: 'https://medium.com/finiteloop-systems'
   twitterCreatorAccount: '@partha360'
   twitterSiteAccount: _finiteloop
   twtrUrl: 'https://twitter.com/_finiteloop'
-  mediumUrl: 'https://medium.com/finiteloop-systems'
 ---
+
