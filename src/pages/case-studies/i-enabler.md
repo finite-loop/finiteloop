@@ -17,7 +17,7 @@ customer:
   web: 'https://innovationenabler.com/'
 ---
 
-The i-enabler product needed a migration path from departmental technologies to a cloud based solution. Khyateh provided advisory regarding cloud architecture, migration path and strategy for the product development and roll-out
+The i-enabler product needed a migration path from departmental technologies to a cloud based solution. FiniteLoop provided advisory regarding cloud architecture, migration path and strategy for the product development and roll-out
 
 ## **Focus**
 

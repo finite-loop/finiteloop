@@ -19,7 +19,7 @@ headerlinks:
       newwindow: false
   - item:
       title: Careers
-      url: /contact/
+      url: /careers/
 footerlinks:
   - item:
       title: Case Study

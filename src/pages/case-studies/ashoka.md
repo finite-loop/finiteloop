@@ -30,7 +30,7 @@ customer:
 
 Ashoka is migrating the recruiting functionality to Financial Force HCM application (FFHCM). The candidate search tool provided by FFHCM has few limitations. There is an existing custom search tool by a third party which need to be optimised for performance and code quality.
 
-Ashoka’s instance has a medium size code base and data, with about 500 users. Khyateh performed technical review,static code analysis, and implemented a new design and code.
+Ashoka’s instance has a medium size code base and data, with about 500 users. FiniteLoop performed technical review,static code analysis, and implemented a new design and code.
 
 ## Focus
 

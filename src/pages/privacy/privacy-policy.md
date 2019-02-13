@@ -9,7 +9,7 @@ footer: This is a internet generated privacy policy. We wrote this to show that 
 
 # Privacy Policy
 
-Khyateh (“us”, “we”, or “our”) operates the https://www.finiteloop.io website (the “Service”).
+FiniteLoop (“us”, “we”, or “our”) operates the https://www.finiteloop.io website (the “Service”).
 
 This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.
 

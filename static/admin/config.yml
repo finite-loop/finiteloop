@@ -451,3 +451,23 @@ collections:
               widget: 'Image',
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/careers/careers.md'
+        label: 'Careers'
+        name: 'Careers'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'careers',
+            }
+          - {
+              label: 'Path',
+              name: 'path',
+              widget: 'hidden',
+              default: '/careers',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Header', name: header, widget: 'string' }
+          - { label: 'Footer', name: footer, widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
