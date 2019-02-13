@@ -39,7 +39,8 @@ footerlinks:
       url: /contact/
   - item:
       title: Feedback
-      url: /feedback/
+      url: 'https://surveys.hotjar.com/s?siteId=1197144&surveyId=128280'
+      newwindow: true
   - item:
       title: Privacy Policy
       url: /privacy-policy/

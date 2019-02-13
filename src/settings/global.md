@@ -2,7 +2,7 @@
 templateKey: global-settings
 siteTitle: FiniteLoop Systems
 siteLongTitle: 'Experts in Technical / Cloud Advisory, Architecture & Salesforce'
-introText: 'We are a boutique consulting firm focusing on experience design and highly scalable technical architecture. We expertise in '
+introText: 'We are a boutique consulting firm focusing on experience design and highly scalable technical architecture. We help you with '
 introText2: 'We help you scale'
 siteUrl: 'https://finiteloop.io'
 siteDescription: >-

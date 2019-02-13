@@ -52,6 +52,13 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-hotjar',
+      options: {
+        id: 1197144,
+        sv: 6,
+      },
+    },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
     'gatsby-plugin-sitemap',
