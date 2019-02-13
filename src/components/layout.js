@@ -25,7 +25,6 @@ const Layout = ({ children }) => (
               twtrUrl
               lnkdnUrl
               githubUrl
-              mediumUrl
             }
           }
         }

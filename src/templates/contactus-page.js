@@ -47,9 +47,7 @@ const MapWithAMakredInfoWindow = compose(
       {props.isOpen && (
         <InfoWindow onCloseClick={props.onToggleOpen}>
           <div>
-            <h3 className="primary text-2xl antialiased font-medium">
-              {props.siteTitle}
-            </h3>
+            <h3 className="primary text-2xl font-medium">{props.siteTitle}</h3>
             <hr className="primary bg-primary" />
             <span className="secondary font-medium text-base">
               {props.contactData.address1}
@@ -57,6 +55,7 @@ const MapWithAMakredInfoWindow = compose(
               {props.contactData.address2}
               <br />
               {props.contactData.cityPIN}, {props.contactData.stateCountry}
+              <br />
               <br />
               {props.contactData.phone} | {props.contactData.email}
             </span>

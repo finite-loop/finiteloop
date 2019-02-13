@@ -101,6 +101,12 @@ collections:
                   required: false,
                 }
               - {
+                  label: Medium Url,
+                  name: mediumUrl,
+                  widget: string,
+                  required: false,
+                }
+              - {
                   label: Header Meta / Scripts,
                   name: headerScripts,
                   widget: text,

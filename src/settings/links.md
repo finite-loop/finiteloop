@@ -5,9 +5,6 @@ headerlinks:
       title: Services
       url: /offerings/
   - item:
-      title: Case Study
-      url: /case-studies/
-  - item:
       title: Labs
       url: /labs/
   - item:
@@ -32,11 +29,12 @@ footerlinks:
       title: Open Source
       url: 'https://github.com/finite-loop'
   - item:
+      newwindow: true
+      title: Blog
+      url: 'https://medium.com/finiteloop-systems'
+  - item:
       title: Careers
       url: /careers/
-  - item:
-      title: Contact Us
-      url: /contact/
   - item:
       title: Feedback
       url: 'https://surveys.hotjar.com/s?siteId=1197144&surveyId=128280'
@@ -44,4 +42,7 @@ footerlinks:
   - item:
       title: Privacy Policy
       url: /privacy-policy/
+  - item:
+      title: Contact Us
+      url: /contact/
 ---

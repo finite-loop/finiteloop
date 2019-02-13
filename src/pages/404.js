@@ -7,11 +7,11 @@ const NotFoundPage = () => (
   <Layout>
     <div>
       <h1 className="text-center">Oops </h1>
-      <h2>
+      <h2 className="text-center">
         Sad, sad, sad...... I know you did not mean to, but things happen.{' '}
         <br /> Never mind, there is always a{' '}
         <Link to="/">
-          <button className="projectButton">HOME</button>
+          <button className="rectButton">HOME</button>
         </Link>{' '}
         for everyone
       </h2>
