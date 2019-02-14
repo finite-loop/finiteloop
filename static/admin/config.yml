@@ -477,3 +477,60 @@ collections:
           - { label: 'Header', name: header, widget: 'string' }
           - { label: 'Footer', name: footer, widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/labs/labs.md'
+        label: 'Labs'
+        name: 'Labs'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'labs',
+            }
+          - {
+              label: 'Path',
+              name: 'path',
+              widget: 'hidden',
+              default: '/labs',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Header', name: header, widget: 'string' }
+          - { label: 'Footer', name: footer, widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/way/way.md'
+        label: 'The Way'
+        name: 'TheWay'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'way',
+            }
+          - {
+              label: 'Path',
+              name: 'path',
+              widget: 'hidden',
+              default: '/way',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Header', name: header, widget: 'string' }
+          - { label: 'Footer', name: footer, widget: 'string' }
+          - label: 'Main / Heading' 
+            name: main
+            widget: object
+            fields:
+              - { label: 'Image', name: 'image', widget: image}
+              - { label: 'Description', name: 'desc', widget: markdown}
+          - label: 'Sub Heading'
+            name: subheader
+            widget: object
+            fields:
+              - { label: 'Title', name: title, widget: string}
+              - label: 'Children'
+                name: children
+                widget: list
+                fields:
+                  - { label: 'Image', name: 'image', widget: image}
+                  - { label: 'Description', name: 'desc', widget: markdown}
+          - { label: 'Body', name: 'body', widget: 'markdown' }

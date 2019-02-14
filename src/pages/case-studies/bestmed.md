@@ -2,7 +2,7 @@
 templateKey: case-study
 path: /best-med
 title: Bestmed
-image: /img/applicationLogo.jpg.png
+image: /img/applicationLogo.png
 date: 2016-03-03T00:00:00+05:30
 homepage: true
 portfolio:
