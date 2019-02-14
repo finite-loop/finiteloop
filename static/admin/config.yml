@@ -522,15 +522,15 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: image}
               - { label: 'Description', name: 'desc', widget: markdown}
-          - label: 'Sub Heading'
-            name: subheader
-            widget: object
-            fields:
-              - { label: 'Title', name: title, widget: string}
-              - label: 'Children'
-                name: children
+              - label: 'Sub Heading'
+                name: subheader
                 widget: list
                 fields:
-                  - { label: 'Image', name: 'image', widget: image}
-                  - { label: 'Description', name: 'desc', widget: markdown}
+                  - { label: 'Title', name: title, widget: string}
+                  - label: 'Children'
+                    name: children
+                    widget: list
+                    fields:
+                      - { label: 'Image', name: 'image', widget: image}
+                      - { label: 'Description', name: 'desc', widget: markdown}
           - { label: 'Body', name: 'body', widget: 'markdown' }
