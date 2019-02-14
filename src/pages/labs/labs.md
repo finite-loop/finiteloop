@@ -25,11 +25,11 @@ Please visit our git repository [here](https://github.com/khyateh)
 
 Reference code, boiler-plate, best practices, starter kits on Angular, React, GatsbyJs, Blockchain, our website on GatsbyJs...you pick.
 
-<div class="text-center flex flex-wrap justify-around m-2">
-<a href="https://github.com/finite-loop" target="_blank" class="rectButton text-primary no-underline text-center">Our Website</a>
-    <a href="https://github.com/partha360" target="_blank" class="rectButton text-primary no-underline text-center">Angular, React, node...</a>
-    <a href="https://github.com/shashiks" target="_blank" class="rectButton text-primary no-underline text-center">Blockchain...</a>
-        <a href="https://github.com/khyateh" target="_blank" class="rectButton text-primary no-underline text-center">Salesforce & more...</a>
+<div class="text-center flex flex-wrap justify-around">
+<a href="https://github.com/finite-loop" target="_blank" class="rectButton text-primary no-underline text-center my-1">Our Website</a>
+    <a href="https://github.com/partha360" target="_blank" class="rectButton text-primary no-underline text-center my-1">Angular, React, node...</a>
+    <a href="https://github.com/shashiks" target="_blank" class="rectButton text-primary no-underline text- my-1">Blockchain...</a>
+        <a href="https://github.com/khyateh" target="_blank" class="rectButton text-primary no-underline text-center my-1">Salesforce & more...</a>
 </div>
 <div class="p-2">
    <hr class="line w-full" />
