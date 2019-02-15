@@ -21,10 +21,10 @@ h2 {
 }
 
 .para-primary {
-  @apply primary flex tracking-wide leading-normal;
+  @apply primary rounded tracking-normal leading-normal bg-secondary-alternate;
 }
 .para-secondary {
-  @apply secondary flex font-medium tracking-wide leading-normal;
+  @apply secondary font-medium tracking-wide leading-normal;
 }
 
 /* Mobile View */
@@ -32,11 +32,17 @@ h2 {
   .heroText {
     @apply max-w-xl text-xl px-4 py-4;
   }
+  .para-primary {
+    @apply m-4 p-4 text-xl text-center;
+  }
 }
 /* Tablet View */
 @screen md {
   .heroText {
     @apply max-w-3xl text-3xl px-10 py-8;
+  }
+  .para-primary {
+    @apply m-6 p-6 text-2xl text-center;
   }
 }
 /* Large Displays */
@@ -44,9 +50,15 @@ h2 {
   .heroText {
     @apply max-w-4xl text-4xl px-10 py-10;
   }
+  .para-primary {
+    @apply m-8 p-8 text-2xl text-center;
+  }
 }
 @screen xl {
   .heroText {
-    @apply max-w-4xl text-4xl px-12 py-10;
+    @apply max-w-4xl text-4xl px-10 py-10;
+  }
+  .para-primary {
+    @apply m-12 p-12 text-3xl text-center;
   }
 }

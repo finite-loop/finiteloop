@@ -23,7 +23,7 @@ export const PrivacyPageTemplate = ({
         }
       />
       <PageContent
-        className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-2 sm:text-xl md:text-3xl"
+        className="para-primary"
         content={privacyData.frontmatter.header}
       />
       <PageContent
@@ -31,7 +31,7 @@ export const PrivacyPageTemplate = ({
         content={content}
       />
       <PageContent
-        className="para-primary text-justify pb-4 sm:px-6 md:px-12 lg:px-24 pt-2 sm:text-lg md:text-xl"
+        className="para-primary"
         content={privacyData.frontmatter.footer}
       />
       <div className="mx-auto text-center pb-4">

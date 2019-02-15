@@ -17,13 +17,16 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
           wayData.frontmatter.title
         }
       />
+      <PageContent
+        className="para-primary"
+        content={wayData.frontmatter.header}
+      />
       <section name="The Way" className="sm:px-4 md:px-8 lg:px-12 xl:px-16">
-        <PageContent
-          className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-2 sm:text-xl md:text-3xl"
-          content={wayData.frontmatter.header}
-        />
-        <div className="flex justify-center flex-wrap m-2">
-          <img className="rounded h-64" src={wayData.frontmatter.main.image} />
+        <div className="flex sm:flex-wrap lg:flex-no-wrap justify-center m-2">
+          <img
+            className="sm:h-64 lg:h-full rounded px-2"
+            src={wayData.frontmatter.main.image}
+          />
           <PageContent
             className="mx-4 leading-normal tracking-wide text-xl"
             content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
@@ -52,10 +55,12 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
             ))}
           </div>
         ))}
-        <PageContent
-          className="para-primary text-justify pb-4 sm:px-6 md:px-12 lg:px-24 pt-2 sm:text-xl md:text-2xl"
-          content={wayData.frontmatter.footer}
-        />
+        {wayData.frontmatter.footer && (
+          <PageContent
+            className="para-primary"
+            content={wayData.frontmatter.footer}
+          />
+        )}
       </section>
       <SEO postPath={wayData.frontmatter.path} postNode={wayData} postSEO />
     </Layout>

@@ -1,6 +1,6 @@
 {
-  "name": "finiteloop-systems-v2",
-  "description": "Finiteloop Systems Site - Version 2",
+  "name": "finiteloop-v2",
+  "description": "Finiteloop Site - Version 2",
   "version": "2.0.0",
   "author": "Parthasarathy S",
   "dependencies": {

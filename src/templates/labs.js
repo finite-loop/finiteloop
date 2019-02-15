@@ -23,17 +23,19 @@ export const LabsPageTemplate = ({
         }
       />
       <PageContent
-        className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-2 sm:text-xl md:text-3xl"
+        className="para-primary"
         content={labsData.frontmatter.header}
       />
       <PageContent
         className="text-justify leading-normal tracking-wide sm:text-lg lg:px-12 sm:px-8 pt-4"
         content={content}
       />
-      <PageContent
-        className="para-primary text-justify pb-4 sm:px-6 md:px-12 lg:px-24 pt-2 sm:text-xl md:text-2xl"
-        content={labsData.frontmatter.footer}
-      />
+      {labsData.frontmatter.footer && (
+        <PageContent
+          className="para-primary"
+          content={labsData.frontmatter.footer}
+        />
+      )}
       <SEO postPath={labsData.frontmatter.path} postNode={labsData} postSEO />
     </Layout>
   )

@@ -13,4 +13,4 @@ Our working methods are organised in five spaces. It is cyclic, non-linear, inte
 
 - Reflection space
 
-
+- Service space

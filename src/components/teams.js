@@ -18,10 +18,10 @@ function compare(a, b) {
 
 export const TeamsPageTemplate = ({ teams }) => (
   <div>
-    <div className="w-full flex flex-wrap justify-center items-stretch">
+    <div className="w-auto flex flex-wrap justify-center items-stretch">
       {teams.team.sort(compare).map(({ person }) => (
         <div key={person.name} className="shadow-lg m-4 rounded-lg">
-          <div className="flex max-w-sm items-center flex-col pb-6">
+          <div className="flex max-w-sm items-center flex-col pb-2">
             <div className="flex max-w-sm min-h-full items-center flex-col">
               <h3 className="text-center text-2xl text-secondary p-2">
                 {person.name}
@@ -45,7 +45,7 @@ export const TeamsPageTemplate = ({ teams }) => (
               </a>
               <div className="px-6 text-justify">
                 <h3 className="text-primary text-center">{person.title}</h3>
-                <p className="para-primary sm:p-2 lg:p-4 sm:text-lg lg:text-lg md:text-lg">
+                <p className="para-primary text-justify bg-white p-2 mx-0 my-2 sm:text-lg lg:text-lg md:text-lg">
                   {person.quote}
                 </p>
               </div>
@@ -61,7 +61,7 @@ export const TeamsPageTemplate = ({ teams }) => (
 const Teams = ({ teamsData }) => {
   const { edges: teams } = teamsData.data.Teams
   return (
-    <section name="teams" className="px-24 sm:px-2">
+    <section name="teams">
       {teams.map(({ node: team }) => (
         <TeamsPageTemplate
           key={team.frontmatter.title}

@@ -19,7 +19,7 @@ class IndexPage extends React.Component {
             this.props.data.global.frontmatter.siteLongTitle
           }
         />
-        <section className="section" name="introduction">
+        <section className="pb-6" name="introduction">
           <h1 className="heroText">
             {this.props.data.global.frontmatter.introText}
             <TextLoop

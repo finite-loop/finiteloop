@@ -17,7 +17,7 @@ class Offerings extends React.Component {
         <Helmet title={`${data.global.frontmatter.siteTitle} | Services`} />
         <section name="services">
           <PageContent
-            className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:text-xl md:text-3xl"
+            className="para-primary"
             content={data.global.frontmatter.offeringText}
           />
           <div className="mx-auto text-center pb-4">

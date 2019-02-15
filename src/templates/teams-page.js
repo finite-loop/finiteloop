@@ -23,10 +23,7 @@ export const TeamsPageTemplate = ({
           teamData.frontmatter.title
         }
       />
-      <PageContent
-        className="para-primary text-center sm:px-6 md:px-12 lg:px-24 py-12 sm:text-xl md:text-3xl"
-        content={content}
-      />
+      <PageContent className="para-primary" content={content} />
       <Teams teamsData={props} />
       <SEO postPath={teamData.frontmatter.path} postNode={teamData} postSEO />
     </Layout>

@@ -67,9 +67,6 @@
   @apply text-secondary border-secondary;
 }
 
-.section {
-  @apply pb-8;
-}
 .roundedButton {
   @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-full;
 }
