@@ -15,16 +15,16 @@ class Offerings extends React.Component {
     return (
       <Layout>
         <Helmet title={`${data.global.frontmatter.siteTitle} | Services`} />
-        <section name="services">
-          <PageContent
-            className="para-primary"
-            content={data.global.frontmatter.offeringText}
-          />
-          <div className="mx-auto text-center pb-4">
-            <Link to="/contact">
-              <button className="rectButton">Talk to us</button>
-            </Link>
-          </div>
+        <PageContent
+          className="para-primary"
+          content={data.global.frontmatter.offeringText}
+        />
+        <div className="mx-auto text-center pb-4">
+          <Link to="/contact">
+            <button className="rectButton">Talk to us</button>
+          </Link>
+        </div>
+        <section name="services" className="tracking-wide leading-loose">
           {posts.map(({ node: post }) => (
             <div key={post.id} className="sm:px-4 md:px-12 lg:px-16">
               <a
@@ -35,9 +35,9 @@ class Offerings extends React.Component {
               <h2 className="text-2xl pb-4">
                 <span id={post.frontmatter.path}>{post.frontmatter.title}</span>
               </h2>
-              <div className="two-column pb-4" style={{ minHeight: '150px' }}>
+              <div className="two-column pb-4">
                 <PageContent
-                  className="primary text-lg tracking-wide leading-normal"
+                  className="primary text-lg tracking-normal leading-loose"
                   content={post.html}
                 />
                 {/* <img src={post.frontmatter.image} style={{ width: '200px' }} /> */}

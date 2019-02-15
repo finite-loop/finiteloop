@@ -21,14 +21,14 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
         className="para-primary"
         content={wayData.frontmatter.header}
       />
-      <section name="The Way" className="sm:px-4 md:px-8 lg:px-12 xl:px-16">
+      <section name="The Way" className="sm:px-2 md:px-4 lg:px-10 xl:px-12">
         <div className="flex sm:flex-wrap lg:flex-no-wrap justify-center m-2">
           <img
-            className="sm:h-64 lg:h-full rounded px-2"
+            className="sm:h-64 lg:h-full rounded m-2"
             src={wayData.frontmatter.main.image}
           />
           <PageContent
-            className="mx-4 leading-normal tracking-wide text-xl"
+            className="mx-2 leading-normal tracking-wide sm:text-lg text-xl"
             content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
           />
         </div>
@@ -40,7 +40,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
             {items.children.map(item => (
               <div
                 key={item.title}
-                className="flex max-w-xl my-2 text-center content-center justify-center"
+                className="flex sm:flex-wrap md:flex-no-wrap max-w-xl my-2 text-center content-center justify-center"
               >
                 <img
                   className="rounded h-48"

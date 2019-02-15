@@ -14,7 +14,7 @@ Install SRS from [AppExchange](https://appexchange.salesforce.com/listingDetail?
 
 Please visit our git repository [here](https://github.com/khyateh)
 
-<div class="text-center">
+<div class="sm:text-justify md:text-center">
 <a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000000qFtMEAU" target="_blank" class="rectButton text-primary no-underline text-center">Download SRS</a>
 </div>
 <div class="p-2">
