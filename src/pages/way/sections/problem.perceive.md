@@ -1,6 +1,7 @@
 ---
 templateKey: way-sections
 title: The purpose space
+filename: problem.perceive
 image: /img/khyateh_final_CMYK-05.jpg
 ---
 

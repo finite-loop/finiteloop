@@ -8,27 +8,27 @@ header: >-
   optimise and simplify every step.
 footer:
 main:
-  desc: ./main.md
+  desc: ./sections/main.md
   image: /img/khyateh_final_CMYK-02.jpg
 sections:
   - title: The purpose space
     children:
-      - desc: ./purpose.md
+      - desc: ./sections/purpose.md
   - title: The problem space
     children:
-      - desc: ./problem.discover.md
-      - desc: ./problem.perceive.md
-      - desc: ./problem.seize.md
+      - desc: ./sections/problem.discover.md
+      - desc: ./sections/problem.perceive.md
+      - desc: ./sections/problem.seize.md
   - title: The solution space
     children:
-      - desc: ./solution.tame.md
-      - desc: ./solution.transform.md
-      - desc: ./solution.transcend.md
+      - desc: ./sections/solution.tame.md
+      - desc: ./sections/solution.transform.md
+      - desc: ./sections/solution.transcend.md
   - title: The reflection space
     children:
-      - desc: ./reflection.unity.md
-      - desc: ./reflection.source.md
+      - desc: ./sections/reflection.unity.md
+      - desc: ./sections/reflection.source.md
   - title: The service space
     children:
-      - desc: ./service.md
+      - desc: ./sections/service.md
 ---

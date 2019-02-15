@@ -532,11 +532,16 @@ collections:
                 widget: list
                 fields:
                   - { label: 'Description - Link to markdown file', name: 'desc', widget: string}
-          - label: 'Section Desciption'
-            name: section-desc
-            widget: list
-            create: true
-            fields: 
-              - { label: 'Template Key',name: 'templateKey',widget: 'hidden', default: 'way-sections'}
-              - { label: 'Image', name: 'image', widget: image}
-              - { label: 'Description', name: 'body', widget: markdown}
+
+  - name: 'way-sections'
+    label: 'Way Sections'
+    folder: 'src/pages/way/sections'
+    create: true
+    identifier_field: filename
+    editor:
+      preview: false
+      fields: 
+        - { label: 'Template Key',name: 'templateKey',widget: 'hidden', default: 'way-sections'}
+        - { label: 'File Name', name: 'filename', widget: string}
+        - { label: 'Image', name: 'image', widget: image}
+        - { label: 'Description', name: 'body', widget: markdown}

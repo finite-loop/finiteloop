@@ -1,5 +1,6 @@
 ---
 templateKey: way-sections
+filename: main
 title: Our Way
 ---
 

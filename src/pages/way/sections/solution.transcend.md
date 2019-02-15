@@ -1,6 +1,7 @@
 ---
 templateKey: way-sections
 title: The purpose space
+filename: solution.transcend
 image: /img/khyateh_final_CMYK-09.jpg
 ---
 
