@@ -531,6 +531,12 @@ collections:
                 name: children
                 widget: list
                 fields:
-                  - { label: 'Image', name: 'image', widget: image}
-                  - { label: 'Description', name: 'desc', widget: string}
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+                  - { label: 'Description - Link to markdown file', name: 'desc', widget: string}
+          - label: 'Section Desciption'
+            name: section-desc
+            widget: list
+            create: true
+            fields: 
+              - { label: 'Template Key',name: 'templateKey',widget: 'hidden', default: 'way-sections'}
+              - { label: 'Image', name: 'image', widget: image}
+              - { label: 'Description', name: 'body', widget: markdown}
