@@ -97,7 +97,7 @@ export const CaseStudyTemplate = ({
               <h2>Our Work</h2>
               {service.map(item => (
                 <Link key={item} to={`/service/${_.kebabCase(item)}/`}>
-                  <button className="service-list text-left w-full">
+                  <button className="service-list text-left w-full" role="link">
                     <svg
                       className="fill-current w-6 h-6 mr-1 -mb-1"
                       xmlns="http://www.w3.org/2000/svg"

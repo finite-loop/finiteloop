@@ -11,7 +11,9 @@ const NotFoundPage = () => (
         Sad, sad, sad...... I know you did not mean to, but things happen.{' '}
         <br /> Never mind, there is always a{' '}
         <Link to="/">
-          <button className="rectButton">HOME</button>
+          <button role="button" className="rectButton">
+            HOME
+          </button>
         </Link>{' '}
         for everyone
       </h2>

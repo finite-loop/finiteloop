@@ -36,7 +36,9 @@ export const PrivacyPageTemplate = ({
       />
       <div className="mx-auto text-center pb-4">
         <Link to="/contact">
-          <button className="rectButton">Talk to us</button>
+          <button role="button" className="rectButton">
+            Talk to us
+          </button>
         </Link>
       </div>
       <SEO

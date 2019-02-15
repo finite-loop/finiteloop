@@ -24,7 +24,9 @@ const Portfolios = ({ pageContext, data }) => {
       </h1>
       <div className="mx-auto text-center pb-4">
         <Link to="/case-studies">
-          <button className="rectButton">All Case Studies</button>
+          <button role="button" className="rectButton">
+            All Case Studies
+          </button>
         </Link>
       </div>
       <section
@@ -39,7 +41,11 @@ const Portfolios = ({ pageContext, data }) => {
                 to={path}
                 className="primary text-center no-underline uppercase text-xl"
               >
-                <img src={image} className="sm:max-w-xs md:max-w-sm p-2" />
+                <img
+                  src={image}
+                  className="sm:max-w-xs md:max-w-sm p-2"
+                  alt={title}
+                />
                 <hr className="line w-full" />
                 <div className="p-1 text-center">
                   <span className="flex-1">{title}</span>

@@ -1,9 +1,11 @@
 {
   "name": "FiniteLoop",
-  "short_name": "FL",
+  "lang": "en-US",
+  "short_name": "FiniteLoop",
   "theme_color": "#ba4f1a",
   "background_color": "#444f51",
-  "display": "browser",
+  "display": "fullscreen",
+  ​​"orientation": "natural",
   "scope": "/",
   "start_url": "/",
   "icons": [

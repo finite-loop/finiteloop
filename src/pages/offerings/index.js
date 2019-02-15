@@ -40,7 +40,6 @@ class Offerings extends React.Component {
                   className="primary text-lg tracking-normal leading-loose"
                   content={post.html}
                 />
-                {/* <img src={post.frontmatter.image} style={{ width: '200px' }} /> */}
               </div>
               <hr className="line w-full" />
             </div>

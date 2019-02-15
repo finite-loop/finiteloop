@@ -25,7 +25,7 @@ class Header extends React.Component {
       <nav className="nav" role="navigation">
         <div className="max-w-5xl sm:px-2 lg:px-12 mx-auto flex flex-1">
           <Link to="/">
-            <img className="logo" src="/img/WhiteFLLogo.jpg" />
+            <img className="logo" src="/img/WhiteFLLogo.jpg" alt="Logo" />
           </Link>
           <MenuLinks
             classes="menu-links xl:flex lg:flex sm:hidden md:hidden"

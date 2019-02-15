@@ -19,7 +19,7 @@ const ServicesCarousel = ({ carouselData }) => {
       >
         {carouselData.carouselList.map(({ item }) => (
           <div key={item.bgImage}>
-            <img src={item.bgImage} />
+            <img src={item.bgImage} alt="Carousal Background" />
             <div
               style={{ position: 'absolute', top: item.top, left: item.left }}
             >

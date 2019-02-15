@@ -22,7 +22,9 @@ const ServiceLines = ({ pageContext, data }) => {
       </h1>
       <div className="mx-auto text-center pb-4">
         <Link to="/case-studies">
-          <button className="rectButton">All Case Studies</button>
+          <button role="button" className="rectButton">
+            All Case Studies
+          </button>
         </Link>
       </div>
       <section
@@ -37,7 +39,11 @@ const ServiceLines = ({ pageContext, data }) => {
                 to={path}
                 className="primary float-right text-center no-underline uppercase text-xl"
               >
-                <img src={image} className="sm:max-w-xs md:max-w-sm p-2" />
+                <img
+                  src={image}
+                  alt={title}
+                  className="sm:max-w-xs md:max-w-sm p-2"
+                />
                 <hr className="line w-full" />
                 <div className="p-2 text-center">
                   <span className="flex-1">{title}</span>

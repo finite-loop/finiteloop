@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export const OfferingsPageTemplate = ({ offering }) => (
   // const isAlignLeft = offering.frontmatter.align === 'left'
-  <div id="offerings">
+  <div>
     <div className="flex max-w-xs items-center flex-col pb-4">
       <div className="flex max-w-sm min-h-full items-center flex-col">
         <h2 className="text-lg">{offering.frontmatter.title}</h2>

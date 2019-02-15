@@ -26,6 +26,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
           <img
             className="sm:h-64 lg:h-full rounded m-2"
             src={wayData.frontmatter.main.image}
+            alt="Main Image"
           />
           <PageContent
             className="mx-2 leading-normal tracking-wide sm:text-lg text-xl"
@@ -45,6 +46,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                 <img
                   className="rounded h-48"
                   src={item.desc.childMarkdownRemark.frontmatter.image}
+                  alt={item.title}
                 />
 
                 <PageContent
