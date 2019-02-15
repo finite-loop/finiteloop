@@ -1,17 +1,17 @@
 ---
 templateKey: global-settings
-siteTitle: FiniteLoop Systems
+siteTitle: FiniteLoop
 siteLongTitle: 'Experts in Technical / Cloud Advisory, Architecture & Salesforce'
 siteUrl: 'https://finiteloop.io'
 siteDescription: >-
-  FiniteLoop Systems - We are a boutique consulting firm focusing on experience
-  design and highly scalable technical architecture.
+  FiniteLoop - We are a boutique consulting firm focusing on experience design
+  and highly scalable technical architecture.
 logo: /img/flLogo.png
 introText: >-
   We are a boutique consulting firm focusing on experience design and highly
   scalable technical architecture. Our expertise - 
 introText2: We help you scale
-logoTitle: Finiteloop
+logoTitle: FiniteLoop
 services:
   - Technology Advisory
   - Cloud Advisory
@@ -26,7 +26,7 @@ offeringText: >-
   design the right solutions for our customers. We simplify it for you.
 socialMediaCard:
   githubUrl: 'https://github.com/finite-loop'
-  hashTag: FiniteLoopSystems
+  hashTag: FiniteLoop
   lnkdnUrl: 'https://www.linkedin.com/company/finiteloop/'
   mediumUrl: 'https://medium.com/finiteloop-systems'
   twitterCreatorAccount: '@partha360'
