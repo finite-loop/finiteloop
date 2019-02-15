@@ -1,17 +1,12 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
 
-export const WayPageTemplate = ({
-  props,
-  content,
-  contentComponent,
-  wayData,
-}) => {
+export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
   const PageContent = contentComponent || Content
   return (
     <Layout>
@@ -22,23 +17,46 @@ export const WayPageTemplate = ({
           wayData.frontmatter.title
         }
       />
-      <PageContent
-        className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-2 sm:text-xl md:text-3xl"
-        content={wayData.frontmatter.header}
-      />
-      <PageContent
-        className="text-justify leading-normal tracking-wide sm:text-lg lg:px-12 sm:px-8 pt-4 two-column"
-        content={content}
-      />
-      <PageContent
-        className="para-primary text-justify pb-4 sm:px-6 md:px-12 lg:px-24 pt-2 sm:text-xl md:text-2xl"
-        content={wayData.frontmatter.footer}
-      />
-      <div className="mx-auto text-center pb-4">
-        <Link to="/contact">
-          <button className="rectButton">Talk to us</button>
-        </Link>
-      </div>
+      <section name="The Way" className="sm:px-4 md:px-8 lg:px-12 xl:px-16">
+        <PageContent
+          className="para-primary text-center sm:px-6 md:px-12 lg:px-24 pt-12 pb-2 sm:text-xl md:text-3xl"
+          content={wayData.frontmatter.header}
+        />
+        <div className="flex justify-center flex-wrap m-2">
+          <img className="rounded h-64" src={wayData.frontmatter.main.image} />
+          <PageContent
+            className="mx-4 leading-normal tracking-wide text-xl"
+            content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
+          />
+        </div>
+        {wayData.frontmatter.sections.map(items => (
+          <div key={items.title} className="flex justify-center py-2 flex-wrap">
+            <h2 className="text-left text-xl bg-primary-alternate w-full">
+              {items.title}
+            </h2>
+            {items.children.map(item => (
+              <div
+                key={item.title}
+                className="flex max-w-xl my-2 text-center content-center justify-center"
+              >
+                <img
+                  className="rounded h-48"
+                  src={item.desc.childMarkdownRemark.frontmatter.image}
+                />
+
+                <PageContent
+                  className="mx-4 text-justify leading-normal tracking-wide"
+                  content={item.desc.childMarkdownRemark.html}
+                />
+              </div>
+            ))}
+          </div>
+        ))}
+        <PageContent
+          className="para-primary text-justify pb-4 sm:px-6 md:px-12 lg:px-24 pt-2 sm:text-xl md:text-2xl"
+          content={wayData.frontmatter.footer}
+        />
+      </section>
       <SEO postPath={wayData.frontmatter.path} postNode={wayData} postSEO />
     </Layout>
   )
@@ -91,6 +109,31 @@ export const WayPageQuery = graphql`
             title
             header
             footer
+            main {
+              desc {
+                childMarkdownRemark {
+                  html
+                  frontmatter {
+                    title
+                  }
+                }
+              }
+              image
+            }
+            sections {
+              title
+              children {
+                desc {
+                  childMarkdownRemark {
+                    html
+                    frontmatter {
+                      title
+                      image
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
