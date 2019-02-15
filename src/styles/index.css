@@ -1,6 +1,7 @@
 @tailwind preflight;
 @tailwind components;
 
+@import 'neptune';
 @import 'color';
 @import 'components';
 @import 'animation';

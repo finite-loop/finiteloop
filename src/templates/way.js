@@ -31,7 +31,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
         </div>
         {wayData.frontmatter.sections.map(items => (
           <div key={items.title} className="flex justify-center py-2 flex-wrap">
-            <h2 className="text-left text-xl bg-primary-alternate w-full">
+            <h2 className="text-left p-2 text-xl bg-primary-alternate w-full">
               {items.title}
             </h2>
             {items.children.map(item => (

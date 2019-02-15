@@ -193,7 +193,7 @@ module.exports = {
 
   fonts: {
     neptune: [
-      'Neptune',
+      'Neptune-Regular',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
