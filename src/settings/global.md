@@ -9,7 +9,7 @@ siteDescription: >-
 logo: /img/flLogo.png
 introText: >-
   We are a boutique consulting firm focusing on experience design and highly
-  scalable technical architecture. Our expertise - 
+  scalable technical architecture.
 introText2: We help you scale
 logoTitle: FiniteLoop
 services:
@@ -33,4 +33,3 @@ socialMediaCard:
   twitterSiteAccount: _finiteloop
   twtrUrl: 'https://twitter.com/_finiteloop'
 ---
-

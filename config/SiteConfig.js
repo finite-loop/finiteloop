@@ -2,9 +2,10 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   siteTitle: 'FiniteLoop', // Navigation and Site Title
-  siteLongTitle: 'Experts in Technical Advisory, Architecture & Salesforce',
+  siteLongTitle:
+    'Experts in Technical / Cloud Advisory, Architecture & Salesforce',
   siteTitleAlt: 'FiniteLoop', // Alternative Site title for SEO
-  siteUrl: 'https://finiteloop.io', // Domain of your site. No trailing slash!
+  siteUrl: 'https://finiteloop.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/img/flLogo.png', // Used for SEO and manifest
   googleAnalyticsID: 'UA-115473854-1', // GA tracking ID.

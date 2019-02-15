@@ -105,13 +105,13 @@ class SEO extends Component {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="img/faviconsfavicon-32x32.png"
+          href="img/favicons/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="img/faviconsfavicon-16x16.png"
+          href="img/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="img/favicons/manifest.json" />
         <meta name="apple-mobile-web-app-title" content="FiniteLoop" />

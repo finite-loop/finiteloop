@@ -18,7 +18,7 @@
 }
 
 .nav {
-  @apply z-50 flex items-center justify-between flex-wrap bg-white pin-t sticky shadow;
+  @apply z-50 flex items-center justify-between flex-wrap bg-white pin-t w-full sticky shadow;
 }
 .nav:after {
   @apply block border-b border-primary;
