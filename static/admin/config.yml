@@ -540,8 +540,8 @@ collections:
     identifier_field: filename
     editor:
       preview: false
-      fields: 
-        - { label: 'Template Key',name: 'templateKey',widget: 'hidden', default: 'way-sections'}
-        - { label: 'File Name', name: 'filename', widget: string}
-        - { label: 'Image', name: 'image', widget: image}
-        - { label: 'Description', name: 'body', widget: markdown}
+    fields: 
+      - { label: 'Template Key',name: 'templateKey',widget: 'hidden', default: 'way-sections'}
+      - { label: 'File Name', name: 'filename', widget: string}
+      - { label: 'Image', name: 'image', widget: image}
+      - { label: 'Description', name: 'body', widget: markdown}
