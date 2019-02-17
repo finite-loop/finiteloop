@@ -22,8 +22,9 @@ const ServicesCarousel = ({ carouselData }) => {
             <img src={item.bgImage} alt="Carousal Background" />
             <div
               style={{ position: 'absolute', top: item.top, left: item.left }}
+              className="caption"
             >
-              <PageContent className="caption" content={item.imageText} />
+              <PageContent content={item.imageText} />
             </div>
           </div>
         ))}

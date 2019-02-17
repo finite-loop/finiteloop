@@ -22,39 +22,56 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
         content={wayData.frontmatter.header}
       />
       <section name="The Way" className="sm:px-2 md:px-4 lg:px-10 xl:px-12">
-        <div className="flex sm:flex-wrap lg:flex-no-wrap justify-center m-2">
+        <div className="flex sm:flex-wrap md:flex-no-wrap justify-center mb-4">
           <img
-            className="sm:h-64 lg:h-full rounded m-2"
+            className="sm:w-full sm:h-full md:w-auto md:h-auto rounded-lg"
             src={wayData.frontmatter.main.image}
             alt="Main Image"
           />
           <PageContent
-            className="mx-2 leading-normal tracking-wide sm:text-lg text-xl"
+            className="mx-4 leading-normal tracking-wide sm:text-lg md:text-xl"
             content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
           />
         </div>
         {wayData.frontmatter.sections.map(items => (
-          <div key={items.title} className="flex justify-center py-2 flex-wrap">
-            <h2 className="text-left p-2 text-xl bg-primary-alternate w-full">
+          <div key={items.title}>
+            <h2 className="text-left p-4 text-2xl bg-secondary-alternate w-full">
               {items.title}
             </h2>
-            {items.children.map(item => (
-              <div
-                key={item.title}
-                className="flex sm:flex-wrap md:flex-no-wrap max-w-xl my-2 text-center content-center justify-center"
-              >
-                <img
-                  className="rounded h-48"
-                  src={item.desc.childMarkdownRemark.frontmatter.image}
-                  alt={item.title}
-                />
-
-                <PageContent
-                  className="mx-4 text-justify leading-normal tracking-wide"
-                  content={item.desc.childMarkdownRemark.html}
-                />
-              </div>
-            ))}
+            <div className="flex sm:flex-wrap md:flex-no-wrap justify-around">
+              {items.children.map(item => (
+                <React.Fragment key={item.title}>
+                  {Object.keys(items.children).length === 1 && (
+                    <div className="flex sm:flex-wrap md:flex-no-wrap max-w-full w-full pb-2 px-2">
+                      <div className="flex-none sm:max-w-full md:max-w-xs lg:max-w-sm">
+                        <img
+                          className="w-full rounded"
+                          src={item.desc.childMarkdownRemark.frontmatter.image}
+                          alt={item.title}
+                        />
+                      </div>
+                      <PageContent
+                        className="ml-4 flex-grow sm:text-lg lg:text-xl leading-normal tracking-wide"
+                        content={item.desc.childMarkdownRemark.html}
+                      />
+                    </div>
+                  )}
+                  {Object.keys(items.children).length > 1 && (
+                    <div className="flex-col max-w-md pb-2 px-2">
+                      <img
+                        className="max-w-full rounded"
+                        src={item.desc.childMarkdownRemark.frontmatter.image}
+                        alt={item.title}
+                      />
+                      <PageContent
+                        className="sm:text-lg lg:text-xl leading-normal tracking-wide"
+                        content={item.desc.childMarkdownRemark.html}
+                      />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         ))}
         {wayData.frontmatter.footer && (

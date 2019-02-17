@@ -123,25 +123,7 @@
 }
 
 .caption {
-  white-space: wrap;
-  color: black;
-  background-color: white;
-  visibility: inherit;
-  transition-duration: 0.5s;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
-  text-align: left;
-  border-width: 0px;
-  margin: 0px;
-  padding: 5px 15px 10px;
-  letters-pacing: 0px;
-  font-weight: 200;
-  min-height: 0px;
-  min-width: 0%;
-  max-height: 250px;
-  max-width: 450px;
-  height: auto;
-  opacity: 0.75;
-  overflow: hidden;
+  @apply rounded-lg m-0 h-auto bg-white min-h-0 min-w-0 overflow-hidden opacity-75 whitespace-normal;
 }
 
 /* iPhone with notch */
@@ -174,6 +156,9 @@
   .menu-links {
     @apply w-full block text-center flex-grow;
   }
+  .caption {
+    @apply p-1 text-left max-h-full max-w-xs text-xs;
+  }
 }
 /* Tablet View */
 @screen md {
@@ -195,6 +180,9 @@
   .menu-links {
     @apply w-full block flex-grow;
   }
+  .caption {
+    @apply p-3 max-w-xs text-lg;
+  }
 }
 /* Large Displays */
 @screen lg {
@@ -215,6 +203,9 @@
   .menu-links {
     @apply w-auto flex-grow;
   }
+  .caption {
+    @apply p-3 max-w-xs text-xl;
+  }
 }
 @screen xl {
   .two-column {
@@ -234,5 +225,8 @@
   }
   .menu-links {
     @apply w-auto flex-grow;
+  }
+  .caption {
+    @apply leading-normal tracking-normal p-3 max-w-sm text-2xl;
   }
 }
