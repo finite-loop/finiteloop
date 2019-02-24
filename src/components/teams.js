@@ -18,12 +18,12 @@ function compare(a, b) {
 
 export const TeamsPageTemplate = ({ teams }) => (
   <div>
-    <div className="w-auto flex flex-wrap justify-center items-stretch">
+    <div className="flex flex-wrap justify-center items-stretch">
       {teams.team.sort(compare).map(({ person }) => (
-        <div key={person.name} className="shadow-lg m-4 rounded-lg">
-          <div className="flex max-w-sm items-center flex-col pb-2">
+        <div key={person.name} className="shadow-md m-3 rounded-lg">
+          <div className="flex items-center flex-col">
             <div className="flex max-w-sm min-h-full items-center flex-col">
-              <h3 className="text-center text-2xl text-secondary p-2">
+              <h3 className="text-center text-xl text-secondary p-2">
                 {person.name}
               </h3>
               <div>

@@ -21,12 +21,12 @@
   @apply z-50 flex items-center justify-between flex-wrap bg-white pin-t w-full sticky shadow;
 }
 .nav:after {
-  @apply block border-b border-primary;
+  @apply block border-b;
   content: '';
   width: 110%;
 }
 .footer {
-  @apply absolute pin-b bg-primary text-white p-2 mt-1 w-full h-auto;
+  @apply pin-b bg-primary text-white p-2 mt-1 w-full h-auto;
 }
 .btn-primary {
   @apply bg-primary text-white font-bold py-2 px-4 rounded;
