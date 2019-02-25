@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 // import TextLoop from 'react-text-loop'
 import PropTypes from 'prop-types'
-import Layout from '../components/layout'
+import HomeLayout from '../components/layout.home'
 import '../styles/index.css'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
@@ -11,7 +11,7 @@ import ServicesCarousel from '../components/carousel'
 class IndexPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <HomeLayout>
         <Helmet
           title={
             this.props.data.global.frontmatter.siteTitle +
@@ -46,7 +46,7 @@ class IndexPage extends React.Component {
         </div>
         <ServicesCarousel carouselData={this.props.data.Carousel.frontmatter} />
         <SEO postPath="/" postNode={this.props} postSEO={false} />
-      </Layout>
+      </HomeLayout>
     )
   }
 }

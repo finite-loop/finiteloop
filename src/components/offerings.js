@@ -35,7 +35,7 @@ export const OfferingsPageTemplate = ({ offering }) => (
 )
 
 const Offerrings = ({ offeringsData }) => (
-  <section name="offerings" className="flex justify-center flex-wrap max-w-4xl">
+  <section name="offerings" className="flex justify-center flex-wrap">
     {offeringsData.sort(compare).map(({ node }) => (
       <OfferingsPageTemplate key={node.frontmatter.title} offering={node} />
     ))}
