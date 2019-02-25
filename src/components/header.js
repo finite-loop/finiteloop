@@ -23,7 +23,7 @@ class Header extends React.Component {
 
     return (
       <nav className="nav" role="navigation">
-        <div className="container sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-5xl flex flex-1">
+        <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto flex flex-1">
           <Link to="/">
             <img className="logo" src="/img/WhiteFLLogo.jpg" alt="Logo" />
           </Link>
@@ -33,7 +33,7 @@ class Header extends React.Component {
             links={links}
           />
         </div>
-        <div className="px-2 lg:hidden">
+        <div className="sm:mx-2 md:px-5 flex lg:hidden">
           <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
             <div className="three col">
               <div

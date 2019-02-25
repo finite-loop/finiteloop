@@ -58,7 +58,7 @@ const Layout = ({ children }) => (
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.headerlinks}
         />
-        <div className="container my-8 p-4 sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-5xl rounded shadow-lg">
+        <div className="sm:max-w-4/5 md:max-w-3/4 my-8 py-4 mx-auto rounded shadow-lg">
           {children}
         </div>
         <Footer

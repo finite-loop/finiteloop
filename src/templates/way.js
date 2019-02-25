@@ -22,14 +22,14 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
         content={wayData.frontmatter.header}
       />
       <section name="The Way" className="sm:px-2 md:px-4 lg:px-10 xl:px-12">
-        <div className="flex sm:flex-wrap md:flex-no-wrap justify-center mb-4">
+        <div className="flex sm:flex-wrap lg:flex-no-wrap justify-center mb-4">
           <img
-            className="sm:w-full sm:h-full md:w-auto md:h-auto rounded-lg"
+            className="sm:w-full sm:h-full lg:w-3/5 rounded-lg"
             src={wayData.frontmatter.main.image}
             alt="Main Image"
           />
           <PageContent
-            className="mx-4 leading-normal tracking-wide sm:text-lg md:text-xl"
+            className="mx-4 leading-normal tracking-normal sm:text-lg md:text-xl"
             content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
           />
         </div>
@@ -38,7 +38,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
             <h2 className="text-left p-4 text-2xl bg-secondary-alternate w-full">
               {items.title}
             </h2>
-            <div className="flex sm:flex-wrap md:flex-no-wrap justify-around">
+            <div className="flex sm:flex-wrap md:flex-no-wrap justify-between">
               {items.children.map(item => (
                 <React.Fragment key={item.title}>
                   {Object.keys(items.children).length === 1 && (
@@ -51,20 +51,20 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                         />
                       </div>
                       <PageContent
-                        className="ml-4 flex-grow sm:text-lg lg:text-xl leading-normal tracking-wide"
+                        className="ml-4 flex-grow sm:text-lg lg:text-xl leading-normal tracking-normal"
                         content={item.desc.childMarkdownRemark.html}
                       />
                     </div>
                   )}
                   {Object.keys(items.children).length > 1 && (
-                    <div className="flex-col max-w-md pb-2 px-2">
+                    <div className="flex-col max-w-md pb-2 px-4">
                       <img
                         className="max-w-full rounded"
                         src={item.desc.childMarkdownRemark.frontmatter.image}
                         alt={item.title}
                       />
                       <PageContent
-                        className="sm:text-lg lg:text-xl leading-normal tracking-wide"
+                        className="sm:text-lg lg:text-lg leading-normal tracking-normal"
                         content={item.desc.childMarkdownRemark.html}
                       />
                     </div>
