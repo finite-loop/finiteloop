@@ -5,7 +5,7 @@ siteLongTitle: 'Experts in Technical / Cloud Advisory, Architecture & Salesforce
 siteUrl: 'https://finiteloop.io'
 siteDescription: >-
   FiniteLoop - We are a boutique consulting firm focusing on experience design
-  and highly scalable technical architecture.
+  and highly scalable architecture.
 logo: /img/flLogo.png
 introText: >-
   We are a boutique consulting firm focusing on experience design and highly
@@ -33,3 +33,4 @@ socialMediaCard:
   twitterSiteAccount: _finiteloop
   twtrUrl: 'https://twitter.com/_finiteloop'
 ---
+
