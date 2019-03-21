@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Carousel } from 'react-responsive-carousel'
+import Img from 'gatsby-image'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Content, { HTMLContent } from '../components/content'
 
@@ -19,7 +20,10 @@ const ServicesCarousel = ({ carouselData }) => {
       >
         {carouselData.carouselList.map(({ item }) => (
           <div key={item.bgImage}>
-            <img src={item.bgImage} alt="Carousal Background" />
+            <Img
+              fluid={item.image.childImageSharp.fluid}
+              alt="Carousal Background"
+            />
             <div
               style={{ position: 'absolute', top: item.top, left: item.left }}
               className="caption"

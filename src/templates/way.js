@@ -2,6 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
@@ -23,9 +24,9 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
       />
       <section name="The Way" className="sm:px-2 md:px-4 lg:px-10 xl:px-12">
         <div className="flex sm:flex-wrap lg:flex-no-wrap justify-center mb-4">
-          <img
+          <Img
             className="sm:w-full sm:h-full lg:w-3/5 rounded-lg"
-            src={wayData.frontmatter.main.image}
+            fluid={wayData.frontmatter.main.image.childImageSharp.fluid}
             alt="Main Image"
           />
           <PageContent
@@ -43,10 +44,13 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                 <React.Fragment key={item.title}>
                   {Object.keys(items.children).length === 1 && (
                     <div className="flex sm:flex-wrap md:flex-no-wrap max-w-full w-full pb-2 px-2">
-                      <div className="flex-none sm:max-w-full md:max-w-xs lg:max-w-sm">
-                        <img
+                      <div className="flex-none w-full sm:max-w-full md:max-w-xs lg:max-w-sm">
+                        <Img
                           className="w-full rounded"
-                          src={item.desc.childMarkdownRemark.frontmatter.image}
+                          fluid={
+                            item.desc.childMarkdownRemark.frontmatter.image
+                              .childImageSharp.fluid
+                          }
                           alt={item.title}
                         />
                       </div>
@@ -58,9 +62,12 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                   )}
                   {Object.keys(items.children).length > 1 && (
                     <div className="flex-col max-w-md pb-2 px-4">
-                      <img
+                      <Img
                         className="max-w-full rounded"
-                        src={item.desc.childMarkdownRemark.frontmatter.image}
+                        fluid={
+                          item.desc.childMarkdownRemark.frontmatter.image
+                            .childImageSharp.fluid
+                        }
                         alt={item.title}
                       />
                       <PageContent
@@ -142,7 +149,13 @@ export const WayPageQuery = graphql`
                   }
                 }
               }
-              image
+              image {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             sections {
               title
@@ -152,7 +165,13 @@ export const WayPageQuery = graphql`
                     html
                     frontmatter {
                       title
-                      image
+                      image {
+                        childImageSharp {
+                          fluid(quality: 100) {
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      }
                     }
                   }
                 }

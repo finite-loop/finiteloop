@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 // Components
 import { Link, graphql } from 'gatsby'
@@ -28,27 +29,31 @@ const ServiceLines = ({ pageContext, data }) => {
         </Link>
       </div>
       <section
-        className="flex flex-wrap justify-center items-center px-12"
+        className="flex flex-wrap justify-center items-center"
         name="casestudies"
       >
         {edges.map(({ node }) => {
           const { path, title, image } = node.frontmatter
           return (
-            <div className="shadow-lg m-4 rounded-lg flex-col" key={path}>
-              <Link
-                to={path}
-                className="primary float-right text-center no-underline uppercase text-xl"
-              >
-                <img
-                  src={image}
-                  alt={title}
-                  className="sm:max-w-xs md:max-w-sm p-2"
-                />
+            <div className="shadow-lg w-64 m-2 rounded-lg" key={path}>
+              <div className="flex flex-wrap justify-center">
+                <Link
+                  to={path}
+                  className="primary w-full float-right text-center no-underline uppercase text-xl"
+                >
+                  <Img
+                    fluid={image.childImageSharp.fluid}
+                    alt={title}
+                    className="m-2"
+                  />
+                </Link>
+              </div>
+              <div className="p-2 text-justify max-w-sm">
                 <hr className="line w-full" />
                 <div className="p-2 text-center">
-                  <span className="flex-1">{title}</span>
+                  <span>{title}</span>
                 </div>
-              </Link>
+              </div>
             </div>
           )
         })}
@@ -89,7 +94,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            image
+            image {
+              childImageSharp {
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

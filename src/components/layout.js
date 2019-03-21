@@ -14,7 +14,13 @@ const Layout = ({ children }) => (
           frontmatter: { templateKey: { eq: "global-settings" } }
         ) {
           frontmatter {
-            logo
+            logo {
+              childImageSharp {
+                fluid(maxWidth: 630) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             logoTitle
             templateKey
             siteUrl

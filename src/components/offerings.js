@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
 export const OfferingsPageTemplate = ({ offering }) => (
-  // const isAlignLeft = offering.frontmatter.align === 'left'
   <div>
     <div className="flex max-w-sm items-center flex-col pb-4">
       <div className="flex min-h-full items-center flex-col">
@@ -11,8 +11,8 @@ export const OfferingsPageTemplate = ({ offering }) => (
           {offering.frontmatter.title}
         </h2>
         <Link to={`offerings#${offering.frontmatter.path}`}>
-          <img
-            src={offering.frontmatter.image}
+          <Img
+            fixed={offering.frontmatter.image.childImageSharp.fixed}
             alt={offering.frontmatter.title}
           />
         </Link>

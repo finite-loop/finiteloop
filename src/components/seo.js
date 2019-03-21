@@ -113,7 +113,7 @@ class SEO extends Component {
           sizes="16x16"
           href="img/favicons/favicon-16x16.png"
         />
-        <link rel="manifest" href="img/favicons/manifest.json" />
+        <link rel="manifest" href="manifest.json" />
         <meta name="apple-mobile-web-app-title" content="FiniteLoop" />
         <meta name="application-name" content="FiniteLoop" />
         <meta name="msapplication-TileColor" content="#ba4f1a" />

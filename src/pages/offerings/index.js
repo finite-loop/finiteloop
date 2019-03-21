@@ -78,7 +78,13 @@ export const offeringsQuery = graphql`
           html
           id
           frontmatter {
-            image
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             title
             templateKey
             path

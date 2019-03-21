@@ -78,14 +78,26 @@ export const teamsPageQuery = graphql`
           frontmatter {
             path
             title
-            image
+            image {
+              childImageSharp {
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             teamTitle
             teamDescription
             team {
               person {
                 name
                 title
-                avatar
+                avatar {
+                  childImageSharp {
+                    fluid(quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
                 quote
                 background
                 fbsiteurl

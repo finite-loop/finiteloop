@@ -95,7 +95,13 @@ export const privacyPageQuery = graphql`
           frontmatter {
             path
             title
-            image
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             header
             footer
           }

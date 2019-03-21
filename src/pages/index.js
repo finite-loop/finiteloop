@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-// import TextLoop from 'react-text-loop'
 import PropTypes from 'prop-types'
 import HomeLayout from '../components/layout.home'
 import '../styles/index.css'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
 import ServicesCarousel from '../components/carousel'
+
 class IndexPage extends React.Component {
   render() {
     return (
@@ -22,15 +22,6 @@ class IndexPage extends React.Component {
         <section className="pb-6" name="introduction">
           <h1 className="heroText text-center">
             {this.props.data.global.frontmatter.introText}
-            {/* <TextLoop
-              interval={1500}
-              springConfig={{ stiffness: 150, damping: 20 }}
-              className="text-secondary font-semibold"
-            >
-              {this.props.data.global.frontmatter.services.map(item => (
-                <span key={item}>{item}</span>
-              ))}
-            </TextLoop> */}
           </h1>
           <h1 className="text-primary sm:text-2xl md:text-3xl xl:text-4xl text-center">
             {this.props.data.global.frontmatter.introText2}
@@ -70,7 +61,14 @@ export const teamsPageQuery = graphql`
             order
             path
             title
-            image
+            image {
+              childImageSharp {
+                fixed {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+              publicURL
+            }
             templateKey
             align
           }
@@ -83,7 +81,14 @@ export const teamsPageQuery = graphql`
       frontmatter {
         carouselList {
           item {
-            bgImage
+            image {
+              childImageSharp {
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+              publicURL
+            }
             imageText
             top
             left

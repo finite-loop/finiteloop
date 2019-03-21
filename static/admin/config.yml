@@ -135,7 +135,7 @@ collections:
                 name: item
                 widget: object
                 fields:
-                  - { label: Background Image, name: bgImage, widget: image }
+                  - { label: Background Image, name: image, widget: image }
                   - {
                       label: 'Overlay Text',
                       name: imageText,

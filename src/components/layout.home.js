@@ -14,7 +14,13 @@ const HomeLayout = ({ children }) => (
           frontmatter: { templateKey: { eq: "global-settings" } }
         ) {
           frontmatter {
-            logo
+            logo {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             logoTitle
             templateKey
             siteUrl

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 import { graphql } from 'gatsby'
@@ -72,11 +73,11 @@ const CaseStudies = props => {
                     <hr className="line w-full" />
                     <Link
                       to={post.frontmatter.path}
-                      className="primary  text-center no-underline uppercase text-xl"
+                      className="primary w-full text-center no-underline uppercase text-xl"
                     >
-                      <img
-                        src={post.frontmatter.image}
-                        className="sm:max-w-xs md:max-w-sm p-2"
+                      <Img
+                        fluid={post.frontmatter.image.childImageSharp.fluid}
+                        className="m-2"
                       />
                     </Link>
                     <hr className="line w-full" />
@@ -130,7 +131,13 @@ export const caseStudiesQuery = graphql`
           excerpt(pruneLength: 400)
           id
           frontmatter {
-            image
+            image {
+              childImageSharp {
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             title
             templateKey
             path

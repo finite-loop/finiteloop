@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 import { LnkdnIcon } from '../components/icons/icons'
 
 function compare(a, b) {
@@ -27,9 +28,9 @@ export const TeamsPageTemplate = ({ teams }) => (
                 {person.name}
               </h3>
               <div>
-                <img
+                <Img
                   alt={person.name}
-                  src={person.avatar}
+                  fluid={person.avatar.childImageSharp.fluid}
                   className="profile-pic flex align-center"
                 />
               </div>

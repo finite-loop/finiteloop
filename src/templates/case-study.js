@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import {
   LinkedinShareButton,
@@ -57,9 +58,9 @@ export const CaseStudyTemplate = ({
               </TabList>
               <TabPanel>
                 <div className="p-4 clearfix">
-                  <img
-                    src={image}
-                    className="sm:hidden md:block max-w-xs float-right p-2"
+                  <Img
+                    fluid={image.childImageSharp.fluid}
+                    className="w-full sm:hidden md:block max-w-xs float-right m-2"
                   />
                   <PageContent
                     className="text-lg tracking-wide leading-normal max-w-5xl pb-4"
@@ -78,9 +79,9 @@ export const CaseStudyTemplate = ({
               </TabPanel>
               <TabPanel>
                 <div className="p-4 clearfix">
-                  <img
-                    className="sm:hidden md:block max-w-xs float-right p-2"
-                    src={image}
+                  <Img
+                    className="w-full sm:hidden md:block max-w-xs float-right p-2"
+                    fluid={image.childImageSharp.fluid}
                   />
                   <div>
                     <PageContent
@@ -196,7 +197,13 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         path
-        image
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         title
         date
         portfolio

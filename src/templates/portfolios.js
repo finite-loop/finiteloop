@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 // Components
 import { Link, graphql } from 'gatsby'
@@ -36,19 +37,19 @@ const Portfolios = ({ pageContext, data }) => {
         {edges.map(({ node }) => {
           const { path, title, image } = node.frontmatter
           return (
-            <div className="shadow-lg m-2 rounded-lg flex-col" key={path}>
+            <div className="shadow-lg m-2 w-64 rounded-lg flex-col" key={path}>
               <Link
                 to={path}
                 className="primary text-center no-underline uppercase text-xl"
               >
-                <img
-                  src={image}
-                  className="sm:max-w-xs md:max-w-sm p-2"
+                <Img
+                  fluid={image.childImageSharp.fluid}
+                  className="m-2"
                   alt={title}
                 />
-                <hr className="line w-full" />
-                <div className="p-1 text-center">
-                  <span className="flex-1">{title}</span>
+                <hr className="line" />
+                <div className="p-1 w-full text-center">
+                  <span>{title}</span>
                 </div>
               </Link>
             </div>
@@ -91,7 +92,13 @@ export const portfolioQuery = graphql`
           frontmatter {
             title
             path
-            image
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
