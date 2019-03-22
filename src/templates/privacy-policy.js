@@ -27,7 +27,7 @@ export const PrivacyPageTemplate = ({
         content={privacyData.frontmatter.header}
       />
       <PageContent
-        className="text-justify leading-normal tracking-wide sm:text-lg lg:px-12 sm:px-8 pt-4 two-column"
+        className="text-left leading-loose tracking-normal sm:text-lg lg:px-12 sm:px-8 pt-4 two-column"
         content={content}
       />
       <PageContent

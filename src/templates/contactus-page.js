@@ -163,10 +163,10 @@ class ContactForm extends React.Component {
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
-        <h1 className="text-justify lg:px-10 sm:p-3 md:p-4 sm:text-xl md:text-2xl">
+        <h1 className="text-left lg:px-10 sm:p-3 md:p-4 sm:text-xl md:text-2xl">
           {contactus.frontmatter.heading}
         </h1>
-        <p className="text-justify lg:px-10 py-4 sm:px-2 sm:text-xl md:text-2xl">
+        <p className="text-left lg:px-10 py-4 sm:px-2 sm:text-xl md:text-2xl">
           {contactus.frontmatter.subheading}
         </p>
         <div className="flex flex-col lg:px-10 sm:px-2">

@@ -48,7 +48,7 @@ const ServiceLines = ({ pageContext, data }) => {
                   />
                 </Link>
               </div>
-              <div className="p-2 text-justify max-w-sm">
+              <div className="p-2 text-left max-w-sm">
                 <hr className="line w-full" />
                 <div className="p-2 text-center">
                   <span>{title}</span>

@@ -19,28 +19,24 @@
 }
 
 .react-tabs__tab:hover {
-  @apply text-secondary;
+  @apply text-primary;
 }
 
 .react-tabs__tab--selected {
-  @apply text-primary border-t-4 bg-white;
+  @apply text-primary border-t-4 bg-white border-fl-primary-alternate;
   top: 0px;
-  border-top-color: $secondary-color;
 }
 
 .react-tabs__tab--selected:hover {
-  @apply text-secondary;
+  @apply text-primary;
 }
 
 .react-tabs__tab--disabled {
-  color: GrayText;
-  cursor: default;
+  @apply text-fl-secondary-accent cursor-default;
 }
 
 .react-tabs__tab:focus {
-  box-shadow: 0 0 5px #444f51;
-  border-color: #444f51;
-  outline: none;
+  @apply shadow-flPrimary border-fl-secondary outline-none;
 }
 
 .react-tabs__tab:focus:after {

@@ -24,7 +24,7 @@ class Offerings extends React.Component {
             <button className="rectButton">Talk to us</button>
           </Link>
         </div>
-        <section name="services" className="tracking-wide leading-loose">
+        <section name="services" className="tracking-normal leading-loose">
           {posts.map(({ node: post }) => (
             <div key={post.id} className="sm:px-4 md:px-12 lg:px-16">
               <a

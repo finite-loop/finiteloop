@@ -27,7 +27,7 @@ export const LabsPageTemplate = ({
         content={labsData.frontmatter.header}
       />
       <PageContent
-        className="text-justify leading-normal tracking-wide sm:text-lg lg:px-12 sm:px-8 py-4"
+        className="text-left leading-normal tracking-wide sm:text-lg lg:px-12 sm:px-8 py-4"
         content={content}
       />
       {labsData.frontmatter.footer && (

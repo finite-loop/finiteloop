@@ -44,7 +44,13 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   transparent: 'transparent',
-
+  'fl-primary': '#1d3740',
+  'fl-primary-alternate': '#A83723',
+  'fl-primary-accent': '#BDD6D7',
+  'fl-secondary': '#77878C',
+  'fl-secondary-alternate': '#BDD6D7',
+  'fl-secondary-accent': '#E5EFEF',
+  'fl-secondary-accent-alternate': '#F0D5CA',
   black: '#22292f',
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
@@ -145,6 +151,13 @@ module.exports = {
   colors: {
     transperant: colors['transparent'],
     white: colors['white'],
+    'fl-primary': colors['fl-primary'],
+    'fl-primary-alternate': colors['fl-primary-alternate'],
+    'fl-primary-accent': colors['fl-primary-accent'],
+    'fl-secondary': colors['fl-secondary'],
+    'fl-secondary-alternate': colors['fl-secondary-alternate'],
+    'fl-secondary-accent': colors['fl-secondary-accent'],
+    'fl-secondary-accent-alternate': colors['fl-secondary-accent-alternate'],
   },
 
   /*
@@ -193,6 +206,7 @@ module.exports = {
 
   fonts: {
     neptune: [
+      'Neptune-Light',
       'Neptune-Regular',
       'system-ui',
       'BlinkMacSystemFont',
@@ -353,6 +367,13 @@ module.exports = {
   textColors: {
     transperant: colors['transparent'],
     white: colors['white'],
+    'fl-primary': colors['fl-primary'],
+    'fl-primary-alternate': colors['fl-primary-alternate'],
+    'fl-primary-accent': colors['fl-primary-accent'],
+    'fl-secondary': colors['fl-secondary'],
+    'fl-secondary-alternate': colors['fl-secondary-alternate'],
+    'fl-secondary-accent': colors['fl-secondary-accent'],
+    'fl-secondary-accent-alternate': colors['fl-secondary-accent-alternate'],
   },
 
   /*
@@ -371,6 +392,13 @@ module.exports = {
   backgroundColors: {
     transperant: colors['transparent'],
     white: colors['white'],
+    'fl-primary': colors['fl-primary'],
+    'fl-primary-alternate': colors['fl-primary-alternate'],
+    'fl-primary-accent': colors['fl-primary-accent'],
+    'fl-secondary': colors['fl-secondary'],
+    'fl-secondary-alternate': colors['fl-secondary-alternate'],
+    'fl-secondary-accent': colors['fl-secondary-accent'],
+    'fl-secondary-accent-alternate': colors['fl-secondary-accent-alternate'],
   },
 
   /*
@@ -435,6 +463,13 @@ module.exports = {
     {
       transperant: colors['transparent'],
       white: colors['white'],
+      'fl-primary': colors['fl-primary'],
+      'fl-primary-alternate': colors['fl-primary-alternate'],
+      'fl-primary-accent': colors['fl-primary-accent'],
+      'fl-secondary': colors['fl-secondary'],
+      'fl-secondary-alternate': colors['fl-secondary-alternate'],
+      'fl-secondary-accent': colors['fl-secondary-accent'],
+      'fl-secondary-accent-alternate': colors['fl-secondary-accent-alternate'],
     }
   ),
 
@@ -759,6 +794,7 @@ module.exports = {
   */
 
   shadows: {
+    flPrimary: 'inset 0 5px 0 0 #ba4f1a',
     default: '0 2px 4px 0 rgba(0,0,0,0.10)',
     md: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
     lg: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',

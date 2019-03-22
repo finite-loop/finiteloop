@@ -63,7 +63,7 @@ export const teamsPageQuery = graphql`
             title
             image {
               childImageSharp {
-                fixed {
+                fixed(width: 200) {
                   ...GatsbyImageSharpFixed
                 }
               }

@@ -29,6 +29,7 @@
 
 @font-face {
   font-family: 'Neptune-Extralight';
+  font-display: 'auto';
   src: url('../fonts/neptune/Neptune-Extralight.eot');
   src: url('../fonts/neptune/Neptune-Extralight.eot?#iefix')
       format('embedded-opentype'),
@@ -53,6 +54,7 @@
 
 @font-face {
   font-family: 'Neptune-Light';
+  font-display: 'auto';
   src: url('../fonts/neptune/Neptune-Light.eot');
   src: url('../fonts/neptune/Neptune-Light.eot?#iefix')
       format('embedded-opentype'),
@@ -77,6 +79,7 @@
 
 @font-face {
   font-family: 'Neptune-Regular';
+  font-display: 'auto';
   src: url('../fonts/neptune/Neptune-Regular.eot');
   src: url('../fonts/neptune/Neptune-Regular.eot?#iefix')
       format('embedded-opentype'),

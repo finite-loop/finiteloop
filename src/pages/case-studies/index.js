@@ -31,7 +31,7 @@ const CaseStudies = props => {
           onClick={() => setCurrentPortfolio('All')}
           className={
             currentPortfolio === 'All'
-              ? 'rectButton bg-accent-alternate text-secondary-alternate text-lg m-1 sm:text-xs'
+              ? 'rectButton bg-primary text-secondary-alternate text-lg m-1 sm:text-xs'
               : 'rectButton text-primary text-lg m-1 sm:text-xs'
           }
         >
@@ -43,7 +43,7 @@ const CaseStudies = props => {
             onClick={() => setCurrentPortfolio(item)}
             className={
               currentPortfolio === item
-                ? 'rectButton bg-accent-alternate text-secondary-alternate text-lg m-1 sm:text-xs'
+                ? 'rectButton bg-primary text-secondary-alternate text-lg m-1 sm:text-xs'
                 : 'rectButton text-primary text-lg m-1 sm:text-xs'
             }
           >
@@ -82,7 +82,7 @@ const CaseStudies = props => {
                     </Link>
                     <hr className="line w-full" />
                   </div>
-                  <div className="p-2 text-justify max-w-sm">
+                  <div className="p-2 text-left max-w-sm">
                     {post.frontmatter.portfolio.map(item => (
                       <Link key={item} to={`/portfolio/${_.kebabCase(item)}/`}>
                         <button className="portfolio-list">

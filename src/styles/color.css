@@ -1,92 +1,77 @@
-$primary-color: #444f51;
-$secondary-color: #ba4f1a;
 $accent-color: #e6f2f2;
-$accent-alternate: #6c807f;
-$primary-alternate: #e6f2f2;
-$secondary-alternate: #f1f1f1;
 
 .primary {
-  color: $primary-color;
+  @apply text-fl-primary;
 }
 .secondary {
-  color: $secondary-color;
+  @apply text-fl-primary-alternate;
 }
 .accent {
-  color: $accent-color;
+  @apply text-fl-primary-accent;
 }
 .bg-primary {
-  background-color: $primary-color;
+  @apply bg-fl-primary;
 }
 .bg-secondary {
-  background-color: $secondary-color;
+  @apply bg-fl-secondary;
 }
 .bg-primary-alternate {
-  background-color: $primary-alternate;
+  @apply bg-fl-primary-alternate;
 }
 .bg-secondary-alternate {
-  background-color: $secondary-alternate;
+  @apply bg-fl-secondary-alternate;
 }
-.bg-accent {
-  background-color: $accent-color;
+.bg-primary-accent {
+  @apply bg-fl-primary-accent;
 }
 .bg-accent-alternate {
-  background-color: $accent-alternate;
+  @apply bg-fl-secondary-accent-alternate;
 }
 .border-primary {
-  border-color: $primary-color;
+  @apply border-fl-primary;
 }
 .border-primary-alternate {
-  border-color: $primary-alternate;
+  @apply border-fl-primary-alternate;
 }
 .border-secondary {
-  border-color: $secondary-color;
+  @apply border-fl-secondary;
 }
 .border-alternate {
-  border-color: $accent-alternate;
+  @apply border-fl-secondary-alternate;
 }
 .text-primary-alternate {
-  color: $primary-alternate;
+  @apply text-fl-primary-alternate;
 }
 .text-primary {
-  color: $primary-color;
+  @apply text-fl-primary;
 }
 .text-secondary {
-  color: $secondary-color;
+  @apply text-fl-secondary;
 }
 .text-secondary-alternate {
-  color: $secondary-alternate;
+  @apply text-fl-secondary-alternate;
 }
 .text-accent-alternate {
-  color: $accent-alternate;
+  @apply border-fl-secondary-accent-alternate;
 }
 ::selection {
-  color: white;
-  background: $primary-color;
+  @apply text-white bg-fl-primary;
 }
 
-.gradientBackground {
-  background: linear-gradient(
-    -180deg,
-    $secondary-alternate 0%,
-    $secondary-alternate 100%
-  );
-}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px $primary-color;
-  border-radius: 10px;
+  @apply shadow-flPrimary rounded-sm;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $primary-color;
-  border-radius: 10px;
+  @apply bg-fl-primary rounded-sm;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $primary-color;
+  @apply bg-fl-primary;
 }

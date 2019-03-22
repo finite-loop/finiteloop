@@ -7,7 +7,7 @@ export const OfferingsPageTemplate = ({ offering }) => (
   <div>
     <div className="flex max-w-sm items-center flex-col pb-4">
       <div className="flex min-h-full items-center flex-col">
-        <h2 className="text-md mb-2 font-medium">
+        <h2 className="text-md mb-2 text-fl-primary font-medium">
           {offering.frontmatter.title}
         </h2>
         <Link to={`offerings#${offering.frontmatter.path}`}>
@@ -16,13 +16,13 @@ export const OfferingsPageTemplate = ({ offering }) => (
             alt={offering.frontmatter.title}
           />
         </Link>
-        <div className="leading-normal tracking-normal text-md w-auto px-5 text-center py-2">
+        <div className="leading-normal tracking-normal text-lg w-auto px-5 text-center py-2">
           {offering.excerpt}
         </div>
         <Link
           to={`offerings#${offering.frontmatter.path}`}
           style={{ float: 'right' }}
-          className="secondary text-center no-underline text-md p-2"
+          className="secondary text-center no-underline text-lg p-1"
         >
           Read More
           <i className="material-icons align-middle text-2xl">

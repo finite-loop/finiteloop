@@ -16,18 +16,10 @@ const MenuLinks = ({ links, social, classes }) => (
         <span>{item.title}</span>
       </Link>
     ))}
-    {/* <a href={social.lnkdnUrl} target="_new" className="link-primary">
-      <LnkdnIcon style={{ height: '4.5vh' }} alt="LinkedIn" />
-    </a>
-    <a href={social.twtrUrl} target="_new" className="link-primary">
-      <TwtrIcon style={{ height: '4.5vh' }} alt="Twitter" />
-    </a> */}
-    <a href={social.githubUrl} target="_new" className="link-primary">
+
+    <a href={social.githubUrl} target="_new" className="py-5 px-3">
       <GitHubIcon alt="Github" />
     </a>
-    {/* <a href={social.mediumUrl} target="_new" className="link-primary">
-      <MediumIcon style={{ height: '4.5vh' }} alt="Medium" />
-    </a> */}
   </div>
 )
 

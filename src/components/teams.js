@@ -44,9 +44,9 @@ export const TeamsPageTemplate = ({ teams }) => (
                   alt="LinkedIn"
                 />
               </a>
-              <div className="px-6 text-justify">
+              <div className="px-6 text-left">
                 <h3 className="text-primary text-center">{person.title}</h3>
-                <p className="para-primary text-justify bg-white p-2 mx-0 my-2 sm:text-lg lg:text-lg md:text-lg">
+                <p className="para-primary text-left tracking-normal bg-white p-0 mx-0 my-2 sm:text-lg lg:text-lg md:text-lg">
                   {person.quote}
                 </p>
               </div>

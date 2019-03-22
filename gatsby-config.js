@@ -73,6 +73,7 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 1080,
               backgroundColor: 'transparent', // required to display blurred image first
+              quality: 100,
             },
           },
         ],
