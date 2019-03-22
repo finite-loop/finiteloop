@@ -66,7 +66,7 @@
 }
 
 .roundedButton {
-  @apply text-primary text-2xl py-2 px-4 border-2 border-primary rounded-full;
+  @apply text-primary text-fl-secondary-accent text-2xl py-2 px-4 bg-primary-alternate rounded-full;
 }
 
 .roundedButton:hover {
@@ -74,7 +74,7 @@
 }
 
 .rectButton {
-  @apply text-xl py-1 px-4 border-2 border-primary rounded-lg uppercase;
+  @apply text-lg text-fl-secondary-accent py-1 px-3 bg-primary-alternate rounded-lg uppercase;
 }
 
 .rectButton:hover {
