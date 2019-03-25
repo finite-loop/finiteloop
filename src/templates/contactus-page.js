@@ -47,9 +47,10 @@ const MapWithAMakredInfoWindow = compose(
       {props.isOpen && (
         <InfoWindow onCloseClick={props.onToggleOpen}>
           <div>
-            <h3 className="primary text-2xl font-medium">{props.siteTitle}</h3>
-            <hr className="primary bg-primary" />
-            <span className="secondary font-medium text-base">
+            <h3 className="text-fl-primary-alternate text-2xl pb-2 font-medium">
+              {props.siteTitle}
+            </h3>
+            <span>
               {props.contactData.address1}
               <br />
               {props.contactData.address2}
@@ -57,7 +58,10 @@ const MapWithAMakredInfoWindow = compose(
               {props.contactData.cityPIN}, {props.contactData.stateCountry}
               <br />
               <br />
-              {props.contactData.phone} | {props.contactData.email}
+              {props.contactData.phone} |{' '}
+              <a href={`mailto:${props.contactData.email}`}>
+                {props.contactData.email}
+              </a>
             </span>
           </div>
         </InfoWindow>
@@ -242,7 +246,7 @@ class ContactForm extends React.Component {
                 role="submit"
                 aria-label="Submit"
                 type="submit"
-                className="btn-primary"
+                className="rectButton"
               >
                 Submit
               </button>

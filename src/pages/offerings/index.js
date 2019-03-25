@@ -24,7 +24,7 @@ class Offerings extends React.Component {
             <button className="rectButton">Talk to us</button>
           </Link>
         </div>
-        <section name="services" className="tracking-normal leading-loose">
+        <section name="services" className="tracking-normal leading-normal">
           {posts.map(({ node: post }) => (
             <div key={post.id} className="sm:px-4 md:px-12 lg:px-16">
               <a
@@ -37,7 +37,7 @@ class Offerings extends React.Component {
               </h2>
               <div className="two-column pb-4">
                 <PageContent
-                  className="primary text-lg tracking-normal leading-loose"
+                  className="primary text-lg tracking-normal leading-normal"
                   content={post.html}
                 />
               </div>

@@ -1,7 +1,6 @@
 .maps * {
   /* google maps */
-  @apply font-neptune;
-  border-style: none;
+  @apply font-neptune text-sm text-fl-primary;
 }
 .profile-pic {
   @apply border-primary border-solid border-4 rounded-full;
@@ -74,7 +73,7 @@
 }
 
 .rectButton {
-  @apply text-lg text-fl-secondary-accent py-1 px-3 bg-primary-alternate rounded-lg uppercase;
+  @apply text-lg leading-normal text-fl-secondary-accent py-1 px-3 bg-primary-alternate rounded-lg uppercase;
 }
 
 .rectButton:hover {
@@ -98,10 +97,10 @@
   @apply mx-5;
 }
 .input-field {
-  @apply bg-secondary-alternate appearance-none border-2 border-primary-alternate rounded w-full py-2 px-4 text-primary leading-tight;
+  @apply bg-fl-secondary-accent border-fl-primary border-2 rounded w-full py-2 px-4 text-primary;
 }
 .input-field:hover {
-  @apply border-primary;
+  @apply border-fl-primary-alternate;
 }
 
 .portfolio-list {
