@@ -10,7 +10,7 @@ teamDescription: >-
   product development and consulting expertise. We listen, learn, and lead.
 team:
   - person:
-      avatar: /img/team/Anand.jpg
+      avatar: /img/anand_2.jpg
       background: slategray
       fbsiteurl: test
       githubsiteurl: test
