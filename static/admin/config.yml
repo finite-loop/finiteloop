@@ -3,8 +3,8 @@ backend:
   repo: https://github.com/finite-loop/finiteloop-systems-v2
   branch: master
 
-site_url: https://finiteloop.netlify.com/
-display_url: https://finiteloop.netlify.com/
+site_url: https://finiteloop.io/
+display_url: https://finiteloop.io/
 logo_url: /img/flLogo.png
 
 publish_mode: editorial_workflow

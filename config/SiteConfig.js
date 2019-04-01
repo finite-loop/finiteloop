@@ -5,7 +5,7 @@ module.exports = {
   siteLongTitle:
     'Experts in Technical / Cloud Advisory, Architecture & Salesforce',
   siteTitleAlt: 'FiniteLoop', // Alternative Site title for SEO
-  siteUrl: 'https://finiteloop.netlify.com', // Domain of your site. No trailing slash!
+  siteUrl: 'https://finiteloop.io', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/img/flLogo.png', // Used for SEO and manifest
   googleAnalyticsID: 'UA-115473854-1', // GA tracking ID.
@@ -18,11 +18,11 @@ module.exports = {
   //ogSiteName: 'minimal', // Facebook Site Name
 
   // Manifest and Progress color
-  themeColor: '#3498DB',
+  themeColor: '#A83723',
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
-  headerFontFamily: 'Neptune-Regular',
-  bodyFontFamily: 'Neptune-Regular',
+  headerFontFamily: 'Neptune-Light',
+  bodyFontFamily: 'Neptune-Light',
   baseFontSize: '18px',
 }
