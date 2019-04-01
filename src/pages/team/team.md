@@ -83,7 +83,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Sharad.jpg
+      avatar: /img/sharad.jpg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
