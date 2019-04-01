@@ -10,7 +10,7 @@ teamDescription: >-
   product development and consulting expertise. We listen, learn, and lead.
 team:
   - person:
-      avatar: /img/team/Anand.jpg
+      avatar: /img/anand_2.jpg
       background: slategray
       fbsiteurl: test
       githubsiteurl: test
@@ -25,18 +25,20 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Mohita.jpg
+      avatar: /img/mohita.jpg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
       lnkdnsiteurl: 'https://www.linkedin.com/in/mohita-janbandhu-6812261b/'
       name: Mohita
       quote: >-
-        Born creative. Calligraphy, Binding and coffee. Can represent complex ideas with simple and extra-ordinary visuals. Original works creator, with intense customer focus, and loads of experience.
+        Born creative. Calligraphy, Binding and coffee. Can represent complex
+        ideas with simple and extra-ordinary visuals. Original works creator,
+        with intense customer focus, and loads of experience.
       title: Experience Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Partha.jpg
+      avatar: /img/partha.png
       background: gray
       fbsiteurl: test
       githubsiteurl: test
@@ -52,7 +54,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Sapnil.jpg
+      avatar: /img/sapnil.jpg
       background: dimgray
       fbsiteurl: test
       githubsiteurl: test
@@ -67,18 +69,21 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Shobha.jpg
+      avatar: /img/shobha_2.jpeg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
       lnkdnsiteurl: 'https://www.linkedin.com/in/shobha-srikantaswamy-3104985/'
       name: Shobha
       quote: >-
-        Knows all about integrating systems, and building large scale enterprise applications. Quick learner, Hands-on, and a pragmatic architect with exceptional customer focus. Active interest and efforts in contributing to the improvement of the society.
+        Knows all about integrating systems, and building large scale enterprise
+        applications. Quick learner, Hands-on, and a pragmatic architect with
+        exceptional customer focus. Active interest and efforts in contributing
+        to the improvement of the society.
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Sharad.jpg
+      avatar: /img/sharad.jpg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
@@ -91,7 +96,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Shashi.jpg
+      avatar: /img/shashi_2.jpg
       background: darkslategray
       fbsiteurl: test
       githubsiteurl: test
@@ -107,7 +112,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Subbu.jpg
+      avatar: /img/subbu2.jpg
       background: darkslategray
       fbsiteurl: test
       githubsiteurl: test
@@ -122,7 +127,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Sudarshan.jpg
+      avatar: /img/sudarshan-0039.jpg
       background: dimgray
       fbsiteurl: test
       githubsiteurl: test
@@ -137,7 +142,7 @@ team:
       title: Architect – Service Design
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Umesh.jpg
+      avatar: /img/umesh.png
       background: slategray
       fbsiteurl: test
       githubsiteurl: test
