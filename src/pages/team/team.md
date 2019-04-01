@@ -32,11 +32,13 @@ team:
       lnkdnsiteurl: 'https://www.linkedin.com/in/mohita-janbandhu-6812261b/'
       name: Mohita
       quote: >-
-        Born creative. Calligraphy, Binding and coffee. Can represent complex ideas with simple and extra-ordinary visuals. Original works creator, with intense customer focus, and loads of experience.
+        Born creative. Calligraphy, Binding and coffee. Can represent complex
+        ideas with simple and extra-ordinary visuals. Original works creator,
+        with intense customer focus, and loads of experience.
       title: Experience Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Partha.jpg
+      avatar: /img/partha.png
       background: gray
       fbsiteurl: test
       githubsiteurl: test
@@ -74,7 +76,10 @@ team:
       lnkdnsiteurl: 'https://www.linkedin.com/in/shobha-srikantaswamy-3104985/'
       name: Shobha
       quote: >-
-        Knows all about integrating systems, and building large scale enterprise applications. Quick learner, Hands-on, and a pragmatic architect with exceptional customer focus. Active interest and efforts in contributing to the improvement of the society.
+        Knows all about integrating systems, and building large scale enterprise
+        applications. Quick learner, Hands-on, and a pragmatic architect with
+        exceptional customer focus. Active interest and efforts in contributing
+        to the improvement of the society.
       title: Architect
       twtrsiteurl: test
   - person:
