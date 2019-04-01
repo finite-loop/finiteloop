@@ -3,7 +3,9 @@
   @apply font-neptune text-sm text-fl-primary;
 }
 .profile-pic {
-  @apply border-primary border-solid border-4 rounded-full;
+  @apply border-fl-secondary border-solid border-2 rounded-full;
+  height: 20rem;
+  width: 20rem;
 }
 
 .heading1 {
@@ -138,12 +140,6 @@
 
 /* Mobile View */
 @screen sm {
-  /* #offerings {
-    @apply pt-24 -mt-16;
-  } */
-  .profile-pic {
-    @apply w-48 h-48;
-  }
   .offerings-right {
     @apply p-2;
   }
@@ -164,10 +160,6 @@
     column-gap: 2em;
     column-rule: 1px solid $accent-color;
   }
-  .profile-pic {
-    @apply w-64 h-64;
-  }
-
   .offerings-right {
     @apply p-12;
   }
@@ -188,9 +180,6 @@
     column-gap: 2em;
     column-rule: 1px solid $accent-color;
   }
-  .profile-pic {
-    @apply w-64 h-64;
-  }
   .offerings-right {
     @apply px-16 py-10;
   }
@@ -209,9 +198,6 @@
     columns: 2;
     column-gap: 2em;
     column-rule: 1px solid $accent-color;
-  }
-  .profile-pic {
-    @apply w-64 h-64;
   }
   .offerings-right {
     @apply px-16
