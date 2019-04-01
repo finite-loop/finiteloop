@@ -25,7 +25,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Mohita.jpg
+      avatar: /img/mohita.jpg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
@@ -54,7 +54,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Sapnil.jpg
+      avatar: /img/sapnil.jpg
       background: dimgray
       fbsiteurl: test
       githubsiteurl: test
@@ -69,7 +69,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Shobha.jpg
+      avatar: /img/shobha_2.jpeg
       background: gray
       fbsiteurl: test
       githubsiteurl: test
@@ -96,7 +96,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Shashi.jpg
+      avatar: /img/shashi_2.jpg
       background: darkslategray
       fbsiteurl: test
       githubsiteurl: test
@@ -112,7 +112,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Subbu.jpg
+      avatar: /img/subbu2.jpg
       background: darkslategray
       fbsiteurl: test
       githubsiteurl: test
@@ -127,7 +127,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Sudarshan.jpg
+      avatar: /img/sudarshan-0039.jpg
       background: dimgray
       fbsiteurl: test
       githubsiteurl: test
@@ -142,7 +142,7 @@ team:
       title: Architect – Service Design
       twtrsiteurl: test
   - person:
-      avatar: /img/team/Umesh.jpg
+      avatar: /img/umesh.png
       background: slategray
       fbsiteurl: test
       githubsiteurl: test
