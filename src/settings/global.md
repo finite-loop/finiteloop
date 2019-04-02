@@ -1,7 +1,7 @@
 ---
 templateKey: global-settings
 siteTitle: FiniteLoop
-siteLongTitle: 'Experts in Technical / Cloud Advisory, Architecture & Salesforce'
+siteLongTitle: 'Technology, Design, Social Impact'
 siteUrl: 'https://finiteloop.io'
 siteDescription: >-
   FiniteLoop - We are a boutique consulting firm focusing on experience design
