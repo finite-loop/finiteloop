@@ -38,7 +38,8 @@ exports.createPages = ({ actions, graphql }) => {
         node.frontmatter.templateKey != 'nav-links' &&
         node.frontmatter.templateKey != 'service-carousel' &&
         node.frontmatter.templateKey != 'offering' &&
-        node.frontmatter.templateKey != 'way-sections'
+        node.frontmatter.templateKey != 'way-sections' &&
+        node.frontmatter.templateKey != 'product'
       ) {
         createPage({
           path: pagePath,
