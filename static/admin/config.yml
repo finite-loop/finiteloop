@@ -242,7 +242,7 @@ collections:
             }
 
   - name: 'offerings'
-    label: 'Offering'
+    label: 'Offerings'
     folder: 'src/pages/offerings'
     create: true
     editor:
@@ -273,6 +273,24 @@ collections:
           options: ['left', 'right'],
           required: true,
         }
+
+  - name: 'products'
+    label: 'Products'
+    folder: 'src/pages/products'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'product',
+        }
+      - { label: Image, name: image, widget: image }
+      - { label: 'Path', name: 'path', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'pages'
     label: 'Pages'

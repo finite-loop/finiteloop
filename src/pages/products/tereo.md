@@ -3,8 +3,6 @@ templateKey: product
 image: /img/sales_tracking.png
 path: tereo
 title: Tereo
-order: 1
-align: left
 ---
 
 Tereo is a blockchain based Sales Tracker platform. It is available both as a standalone product, and also as an application programming interface for other solutions to integrate to.
