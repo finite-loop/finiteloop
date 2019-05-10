@@ -10,7 +10,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
 
 <h2 class="text-center pb-4 text-md">Features</h2>
 
-<div class="flex flex-wrap xl:flex-wrap justify-center text-center">
+<div class="flex flex-wrap xl:flex-wrap justify-center text-center pb-2">
     <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Sales Tracking
