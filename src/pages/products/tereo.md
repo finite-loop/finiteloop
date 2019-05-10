@@ -66,41 +66,41 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
         </div>
     </div>
 </div>
-<hr class="line w-full" />
+<hr class="line w-full p-2" />
 <h2 class="text-center pb-4 text-md">Industries</h2>
 
 <div class="flex flex-wrap xl:flex-no-wrap justify-around text-center">
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Retail
         </p>
         <img class="w-24" src="/img/retail.png" alt="Retail"/> 
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Luxury Goods
         </p>
         <img class="w-24" src="/img/luxury.png" alt="Luxury Goods"/> 
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Dairy
         </p>
         <img class="w-24" src="/img/dairy.png" alt="Dairy"/> 
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Automotive
         </p>
         <img class="w-24" src="/img/automotive.png" alt="Automotive"/> 
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Pharma
         </p>
         <img class="w-24" src="/img/pharma.png" alt="Pharma"/> 
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Vintage
         </p>
