@@ -12,7 +12,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
 
 <div class="flex flex-wrap xl:flex-wrap justify-center text-center">
     <div class="flex-col max-w-xs pb-4 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Sales Tracking
         </p>
         <img class="w-24" src="/img/sales_tracking.png" alt="Sales Tracking"/> 
@@ -21,7 +21,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
         </div>
     </div>
     <div class="flex-col max-w-xs pb-4 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Stock Transfers
         </p>
         <img class="w-24" src="/img/stock_transfers.png" alt="Stock Transfers"/> 
@@ -30,7 +30,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
         </div>
     </div>
     <div class="flex-col max-w-xs pb-4 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Sales Returns
         </p>
         <img class="w-24" src="/img/sales_returns.png" alt="Sales Returns"/> 
@@ -39,7 +39,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
         </div>
     </div>
     <div class="flex-col max-w-xs pb-4 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Withdrawals
         </p>
         <img class="w-24" src="/img/withdrawals.png" alt="Withdrawals"/> 
@@ -48,7 +48,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
         </div>
     </div>
     <div class="flex-col max-w-xs pb-4 px-4">
-        <p class="text-center text-md whitespace-no-wrap text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl whitespace-no-wrap text-fl-primary-alternate pb-2">
                 Expiry Management
         </p>
         <img class="w-24" src="/img/expiry_mgmt.png" alt="Expiry Management"/> 
@@ -57,7 +57,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
         </div>
     </div>
     <div class="flex-col max-w-xs pb-4 px-4">
-        <p class="whitespace-no-wrap text-center text-md text-fl-primary-alternate pb-2">
+        <p class="whitespace-no-wrap text-center text-xl text-fl-primary-alternate pb-2">
                 Counterfeit Prevention
         </p>
         <img class="w-24" src="/img/counterfiet.png" alt="Counterfeit Prevention"/> 
@@ -71,37 +71,37 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
 
 <div class="flex flex-wrap xl:flex-no-wrap justify-around text-center">
     <div class="flex-col max-w-xs pb-2 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Retail
         </p>
         <img class="w-24" src="/img/retail.png" alt="Retail"/> 
     </div>
     <div class="flex-col max-w-xs pb-2 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Luxury Goods
         </p>
         <img class="w-24" src="/img/luxury.png" alt="Luxury Goods"/> 
     </div>
     <div class="flex-col max-w-xs pb-2 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Dairy
         </p>
         <img class="w-24" src="/img/dairy.png" alt="Dairy"/> 
     </div>
     <div class="flex-col max-w-xs pb-2 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Automotive
         </p>
         <img class="w-24" src="/img/automotive.png" alt="Automotive"/> 
     </div>
     <div class="flex-col max-w-xs pb-2 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Pharma
         </p>
         <img class="w-24" src="/img/pharma.png" alt="Pharma"/> 
     </div>
     <div class="flex-col max-w-xs pb-2 px-4">
-        <p class="text-center text-md text-fl-primary-alternate pb-2">
+        <p class="text-center text-xl text-fl-primary-alternate pb-2">
                 Vintage
         </p>
         <img class="w-24" src="/img/vintage.png" alt="Vintage"/> 
