@@ -4,7 +4,6 @@ image: /img/sales_tracking.png
 path: tereo
 title: Tereo
 ---
-
 Tereo is a blockchain based Sales Tracker platform. It is available both as a standalone product, and also as an application programming interface for other solutions to integrate to.
 
 <hr class="line w-full" />
@@ -12,7 +11,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
 <h2 class="text-center pb-4 text-md">Features</h2>
 
 <div class="flex flex-wrap xl:flex-wrap justify-center text-center">
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-md text-fl-primary-alternate pb-2">
                 Sales Tracking
         </p>
@@ -21,7 +20,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
                 Track sales to the level of Batches
         </div>
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-md text-fl-primary-alternate pb-2">
                 Stock Transfers
         </p>
@@ -30,7 +29,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
                 End to End tracking of stock transfers
         </div>
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-md text-fl-primary-alternate pb-2">
                 Sales Returns
         </p>
@@ -39,7 +38,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
                 Manage sales returns and associated business functions
         </div>
     </div>
-    <div class="flex-col max-w-xs pb-2 px-4">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-md text-fl-primary-alternate pb-2">
                 Withdrawals
         </p>
@@ -48,7 +47,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
                 Enable withdrawal of goods from a multi-country sales channel easily
         </div>
     </div>
-    <div class="flex-col max-w-xs pb-2">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="text-center text-md whitespace-no-wrap text-fl-primary-alternate pb-2">
                 Expiry Management
         </p>
@@ -57,7 +56,7 @@ Tereo is a blockchain based Sales Tracker platform. It is available both as a st
                 Track expiry of perishable goods and do targeted sales
         </div>
     </div>
-    <div class="flex-col max-w-xs pb-2">
+    <div class="flex-col max-w-xs pb-4 px-4">
         <p class="whitespace-no-wrap text-center text-md text-fl-primary-alternate pb-2">
                 Counterfeit Prevention
         </p>
