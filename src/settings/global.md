@@ -7,7 +7,7 @@ siteDescription: >-
   FiniteLoop - We are a boutique consulting firm focusing on experience design
   and highly scalable architecture.
 logo: /img/flLogo.png
-trademark: 'Finiteloop® is the registered trademark of Khyateh Consulting Pvt Ltd'
+trademark: 'FiniteLoop® is the registered trademark of Khyateh Consulting Pvt Ltd'
 introText: >-
   We are a boutique consulting firm focusing on experience design and highly
   scalable architecture.

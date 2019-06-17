@@ -39,6 +39,7 @@ collections:
               required: false,
             }
           - { label: Logo, name: logo, widget: image, required: true }
+          - { label: Trademark Text, name: trademark, widget: string }
           - { label: Intro Text, name: introText, widget: string }
           - { label: Intro Text 2, name: introText2, widget: string }
           - {
