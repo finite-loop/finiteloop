@@ -22,6 +22,7 @@ const HomeLayout = ({ children }) => (
               }
             }
             logoTitle
+            trademark
             templateKey
             siteUrl
             siteTitle
@@ -64,7 +65,12 @@ const HomeLayout = ({ children }) => (
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.headerlinks}
         />
-        <div className="mx-auto">{children}</div>
+        <div className="fixed z-10 w-full py-2 sm:pl-2 md:pl-10 lg:pl-34 sm:text-center md:text-left shadow-sm rounded bg-white">
+          <span className="text-fl-primary-alternate text-md no-underline ">
+            {data.global.frontmatter.trademark}
+          </span>
+        </div>
+        <div className="sm:mt-10 md:mt-4 mx-auto">{children}</div>
         <Footer
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}
