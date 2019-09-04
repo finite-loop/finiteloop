@@ -112,7 +112,7 @@ team:
       title: Architect
       twtrsiteurl: test
   - person:
-      avatar: /img/subbu2.jpg
+      avatar: /img/subbu.png
       background: darkslategray
       fbsiteurl: test
       githubsiteurl: test
