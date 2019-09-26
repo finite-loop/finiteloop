@@ -2,9 +2,6 @@
 templateKey: nav-links
 headerlinks:
   - item:
-      title: Products
-      url: /products/
-  - item:
       title: Services
       url: /offerings/
   - item:
