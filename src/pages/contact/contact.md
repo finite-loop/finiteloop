@@ -8,9 +8,9 @@ heading: >-
 subheading: >-
   Write to us, share your business needs, give us feedback, and we will get back
   to you the soonest.
-address1: '45 & 46, 7th B Main Rd'
-address2: '4th Block, Jayanagar'
-cityPIN: Bangalore - 560011
+address1: '#45, 46 (New No: 14), ''BLN Arcade'''
+address2: '7th B Main Road, 4th Block, Jayanagar'
+cityPIN: Bengaluru - 560011
 stateCountry: 'Karnataka, India'
 phone: +91 9880310676
 email: contact@finiteloop.io
