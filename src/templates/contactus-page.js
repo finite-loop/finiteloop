@@ -167,8 +167,8 @@ class ContactForm extends React.Component {
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
-        <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap my-24">
-          <div className="flex px-38 py-32 bg-white mr-20 flex-wrap">
+        <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
+          <div className="flex sm:px-20 sm:py-24 lg:px-38 lg:py-32 bg-white flex-wrap">
             <div className="flex-col opacity-75" style={{ color: '#E05455' }}>
               <h1 className="text-4xl mb-10">Contact Us</h1>
               <h3 className="text-xl pb-2 font-semibold">
@@ -190,7 +190,7 @@ class ContactForm extends React.Component {
               </span>
             </div>
           </div>
-          <div className="flex ml-16 mt-16" style={{ maxWidth: '50rem' }}>
+          <div className="flex ml-16 mt-16" style={{ maxWidth: '55rem' }}>
             <div className="flex-col text-white">
               <h1 className="text-left sm:p-3 md:p-4 sm:text-xl md:text-2xl lg:pt-10">
                 {contactus.frontmatter.heading}

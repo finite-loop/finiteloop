@@ -27,14 +27,14 @@ class Header extends React.Component {
           <Link to="/">
             <div className="flex justify-center mb-2">
               <img
-                className="sm:w-16 md:w-16 lg:w-auto"
+                className="sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-auto lg:h-auto"
                 src="/img/finiteloop_logo.png"
                 alt="Logo"
               />
             </div>
             <div className="flex justify-center">
               <img
-                className="sm:w-24 lg:w-auto"
+                className="w-auto"
                 src="/img/finiteloop_logo_text.png"
                 alt="Logo"
               />
