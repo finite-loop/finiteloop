@@ -39,6 +39,7 @@ export const TeamsPageTemplate = ({ teams }) => (
                 <a href={person.lnkdnsiteurl} target="_new">
                   <LnkdnIcon
                     className="w-10 h-10 absolute"
+                    fill="black"
                     style={{
                       marginTop: '5px',
                       marginLeft: '270px',

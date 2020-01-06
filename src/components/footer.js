@@ -20,7 +20,7 @@ class Footer extends React.Component {
   render() {
     const { social } = this.props
     return (
-      <div className="footer px-24 py-6">
+      <div className="footer sm:px-8 lg:px-24 py-6">
         <div className="flex justify-between">
           <div className="flex-col flex-wrap">
             {this.props.links.map(({ item: footerLinks }) => (
@@ -49,7 +49,7 @@ class Footer extends React.Component {
               target="_new"
               className="link-secondary px-2"
             >
-              <LnkdnIcon alt="LinkedIn" />
+              <LnkdnIcon alt="LinkedIn" fill="#F5F6F4" />
             </a>
             <a
               href={social.twtrUrl}
