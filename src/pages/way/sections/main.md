@@ -4,14 +4,4 @@ filename: main
 title: Our Way
 ---
 
-Our working methods are organised in five spaces. It is cyclic, non-linear, interconnected, and progressive.
-
-- Purpose space
-
-- Problem space
-
-- Solution space
-
-- Reflection space
-
-- Service space
+<div class="text-xl font-semibold uppercase">Purpose space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Problem space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solution space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reflection space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Service space</div>

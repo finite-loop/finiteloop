@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Keys from '../../config/APIKeys'
-import Layout from '../components/layout'
+import FullLayout from '../components/layout.full'
 import { compose, withStateHandlers } from 'recompose'
 import {
   withScriptjs,
@@ -161,98 +161,126 @@ class ContactForm extends React.Component {
     } = this.state
 
     return (
-      <Layout>
+      <FullLayout>
         <Helmet
           title={
             global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
           }
         />
-        <h1 className="text-left lg:px-10 sm:p-3 md:p-4 sm:text-xl md:text-2xl">
-          {contactus.frontmatter.heading}
-        </h1>
-        <p className="text-left lg:px-10 py-4 sm:px-2 sm:text-xl md:text-2xl">
-          {contactus.frontmatter.subheading}
-        </p>
-        <div className="flex flex-col lg:px-10 sm:px-2">
-          <ValidatorForm
-            onSubmit={this.handleSubmit}
-            onError={errors => console.log(errors)}
-            name="Contact"
-            ref={f => (this.form = f)}
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            className="pb-5"
-          >
-            {submitError && <p className="">{submitError}</p>}
-            <TextValidator
-              id="firstname"
-              name="firstname"
-              placeholder="First Name"
-              value={firstname}
-              onChange={this.handleChange}
-              validators={['required']}
-              errorMessages={['This field is required']}
-              margin="normal"
-              className="input-field"
-            />
-            <TextValidator
-              id="lastname"
-              name="lastname"
-              placeholder="Last Name"
-              value={lastname}
-              onChange={this.handleChange}
-              validators={['required']}
-              errorMessages={['This field is required']}
-              margin="normal"
-              className="input-field"
-            />
-            <TextValidator
-              id="email"
-              name="email"
-              placeholder="E-mail"
-              value={email}
-              onChange={this.handleChange}
-              validators={['required', 'isEmail']}
-              errorMessages={['This field is required', 'E-mail is not valid']}
-              margin="normal"
-              className="input-field"
-            />
-            <TextValidator
-              id="company"
-              name="company"
-              placeholder="Company Name"
-              value={company}
-              onChange={this.handleChange}
-              margin="normal"
-              className="input-field"
-            />
-            <TextValidator
-              id="message"
-              name="message"
-              placeholder="Message"
-              multiLine
-              rows={4}
-              value={message}
-              onChange={this.handleChange}
-              validators={['required']}
-              errorMessages={['This field is required']}
-              margin="normal"
-              className="input-field"
-            />
-            <input name="bot-field" style={{ display: 'none' }} />
-            <br />
-            <div style={{ alignItems: 'center' }}>
-              <button
-                role="submit"
-                aria-label="Submit"
-                type="submit"
-                className="rectButton"
-              >
-                Submit
-              </button>
+        <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap my-24">
+          <div className="flex px-38 py-32 bg-white mr-20 flex-wrap">
+            <div className="flex-col opacity-75" style={{ color: '#E05455' }}>
+              <h1 className="text-4xl mb-10">Contact Us</h1>
+              <h3 className="text-xl pb-2 font-semibold">
+                {global.frontmatter.siteTitle}
+              </h3>
+              <span className="text-lg leading-normal">
+                {contactus.frontmatter.address1}
+                <br />
+                {contactus.frontmatter.address2}
+                <br />
+                {contactus.frontmatter.cityPIN} <br />
+                {contactus.frontmatter.stateCountry}
+                <br />
+                <br />
+                {contactus.frontmatter.phone} <br />
+                <a href={`mailto:${contactus.frontmatter.email}`}>
+                  {contactus.frontmatter.email}
+                </a>
+              </span>
             </div>
-          </ValidatorForm>
-          <div className="maps">
+          </div>
+          <div className="flex ml-16 mt-16" style={{ maxWidth: '50rem' }}>
+            <div className="flex-col text-white">
+              <h1 className="text-left sm:p-3 md:p-4 sm:text-xl md:text-2xl lg:pt-10">
+                {contactus.frontmatter.heading}
+              </h1>
+              <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">
+                {contactus.frontmatter.subheading}
+              </p>
+              <div className="flex flex-col sm:px-2">
+                <ValidatorForm
+                  onSubmit={this.handleSubmit}
+                  onError={errors => console.log(errors)}
+                  name="Contact"
+                  ref={f => (this.form = f)}
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  className="pb-5"
+                >
+                  {submitError && <p className="">{submitError}</p>}
+                  <TextValidator
+                    id="firstname"
+                    name="firstname"
+                    placeholder="First Name *"
+                    value={firstname}
+                    onChange={this.handleChange}
+                    validators={['required']}
+                    errorMessages={['This field is required']}
+                    margin="normal"
+                    className="input-field"
+                  />
+                  <TextValidator
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Last Name *"
+                    value={lastname}
+                    onChange={this.handleChange}
+                    validators={['required']}
+                    errorMessages={['This field is required']}
+                    margin="normal"
+                    className="input-field"
+                  />
+                  <TextValidator
+                    id="email"
+                    name="email"
+                    placeholder="E-mail *"
+                    value={email}
+                    onChange={this.handleChange}
+                    validators={['required', 'isEmail']}
+                    errorMessages={[
+                      'This field is required',
+                      'E-mail is not valid',
+                    ]}
+                    margin="normal"
+                    className="input-field"
+                  />
+                  <TextValidator
+                    id="company"
+                    name="company"
+                    placeholder="Company Name"
+                    value={company}
+                    onChange={this.handleChange}
+                    margin="normal"
+                    className="input-field"
+                  />
+                  <TextValidator
+                    id="message"
+                    name="message"
+                    placeholder="Message *"
+                    multiLine
+                    rows={4}
+                    value={message}
+                    onChange={this.handleChange}
+                    validators={['required']}
+                    errorMessages={['This field is required']}
+                    margin="normal"
+                    className="input-field"
+                  />
+                  <input name="bot-field" style={{ display: 'none' }} />
+                  <br />
+                  <div className="float-right">
+                    <button
+                      role="submit"
+                      aria-label="Submit"
+                      type="submit"
+                      className="rectButton"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </ValidatorForm>
+                {/* <div className="maps">
             <MapWithAMakredInfoWindow
               googleMapURL={GoogleMapsUrl}
               loadingElement={<div style={{ height: '100%' }} />}
@@ -261,19 +289,23 @@ class ContactForm extends React.Component {
               contactData={contactus.frontmatter}
               siteTitle={global.frontmatter.siteTitle}
             />
+          </div> */}
+              </div>
+              <SEO
+                postPath={contactus.frontmatter.path}
+                postNode={contactus}
+                postSEO
+              />
+              {showMessage &&
+                this.displayAlert(contactus.frontmatter.submitMsg)}
+              {showError &&
+                this.displayAlert(
+                  'Sorry, we have trouble submitting your form. Please try again later'
+                )}
+            </div>
           </div>
         </div>
-        <SEO
-          postPath={contactus.frontmatter.path}
-          postNode={contactus}
-          postSEO
-        />
-        {showMessage && this.displayAlert(contactus.frontmatter.submitMsg)}
-        {showError &&
-          this.displayAlert(
-            'Sorry, we have trouble submitting your form. Please try again later'
-          )}
-      </Layout>
+      </FullLayout>
     )
   }
 }

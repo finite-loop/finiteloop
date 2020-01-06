@@ -35,7 +35,7 @@ team:
         Born creative. Calligraphy, Binding and coffee. Can represent complex
         ideas with simple and extra-ordinary visuals. Original works creator,
         with intense customer focus, and loads of experience.
-      title: Experience Architect
+      title: Experience Designer
       twtrsiteurl: test
   - person:
       avatar: /img/partha.png
@@ -82,19 +82,19 @@ team:
         to the improvement of the society.
       title: Architect
       twtrsiteurl: test
-  - person:
-      avatar: /img/sharad.jpg
-      background: gray
-      fbsiteurl: test
-      githubsiteurl: test
-      lnkdnsiteurl: 'https://www.linkedin.com/in/sharadbaliyan/'
-      name: Sharad
-      quote: >-
-        Easy-going. Intense. How he manages to be both? Meet him and you’ll find
-        out. Ex-Adobe and NID Alum. If you find him to be more angsty about your
-        service and user experience than you, it’s ok. He’s like that.
-      title: Architect
-      twtrsiteurl: test
+  # - person:
+  #     avatar: /img/sharad.jpg
+  #     background: gray
+  #     fbsiteurl: test
+  #     githubsiteurl: test
+  #     lnkdnsiteurl: 'https://www.linkedin.com/in/sharadbaliyan/'
+  #     name: Sharad
+  #     quote: >-
+  #       Easy-going. Intense. How he manages to be both? Meet him and you’ll find
+  #       out. Ex-Adobe and NID Alum. If you find him to be more angsty about your
+  #       service and user experience than you, it’s ok. He’s like that.
+  #     title: Experiance Architect
+  #     twtrsiteurl: test
   - person:
       avatar: /img/shashi_2.jpg
       background: darkslategray
@@ -155,6 +155,81 @@ team:
         story telling. Very good with nurturing teams. Most wanted by customers
         worldwide. Update : Not driving the fiat anymore.
       title: Architect
+      twtrsiteurl: test
+  - person:
+      avatar: /img/shashank.jpg
+      background: slategray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/shashank-rawat-975b6739/'
+      name: Shashank
+      quote: >-
+        Previously a lead solutions architect for an IT major. Avid
+        photographer. Drives an old Fiat and still thinks its the best car in
+        the world. Focussed. Hard core architect and very hands-on. Expert in
+        story telling. Very good with nurturing teams. Most wanted by customers
+        worldwide. Update : Not driving the fiat anymore.
+      title: Technical Lead
+      twtrsiteurl: test
+  - person:
+      avatar: /img/meghana.jpeg
+      background: slategray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/meghana-kumaraswamy-a63496a8/'
+      name: Meghana
+      quote: >-
+        Previously a lead solutions architect for an IT major. Avid
+        photographer. Drives an old Fiat and still thinks its the best car in
+        the world. Focussed. Hard core architect and very hands-on. Expert in
+        story telling. Very good with nurturing teams. Most wanted by customers
+        worldwide. Update : Not driving the fiat anymore.
+      title: Experiance Designer
+      twtrsiteurl: test
+  - person:
+      avatar: /img/vaidehei.jpeg
+      background: slategray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/vaidehie-chiplunkar-25b069141/'
+      name: Vaidehie
+      quote: >-
+        Previously a lead solutions architect for an IT major. Avid
+        photographer. Drives an old Fiat and still thinks its the best car in
+        the world. Focussed. Hard core architect and very hands-on. Expert in
+        story telling. Very good with nurturing teams. Most wanted by customers
+        worldwide. Update : Not driving the fiat anymore.
+      title: Product Designer
+      twtrsiteurl: test
+  - person:
+      avatar: /img/vishwa.jpeg
+      background: slategray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/arjun-vishwa-65b602b3/'
+      name: Arjun Vishwa
+      quote: >-
+        Previously a lead solutions architect for an IT major. Avid
+        photographer. Drives an old Fiat and still thinks its the best car in
+        the world. Focussed. Hard core architect and very hands-on. Expert in
+        story telling. Very good with nurturing teams. Most wanted by customers
+        worldwide. Update : Not driving the fiat anymore.
+      title: Visual Artist
+      twtrsiteurl: test
+  - person:
+      avatar: /img/archishman.jpg
+      background: slategray
+      fbsiteurl: test
+      githubsiteurl: test
+      lnkdnsiteurl: 'https://www.linkedin.com/in/archishman-durbha/'
+      name: Archishman
+      quote: >-
+        Previously a lead solutions architect for an IT major. Avid
+        photographer. Drives an old Fiat and still thinks its the best car in
+        the world. Focussed. Hard core architect and very hands-on. Expert in
+        story telling. Very good with nurturing teams. Most wanted by customers
+        worldwide. Update : Not driving the fiat anymore.
+      title: Design Intern
       twtrsiteurl: test
 ---
 

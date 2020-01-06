@@ -41,7 +41,7 @@ class TextValidator extends ValidatorComponent {
       return null
     }
 
-    return <div style={{ color: 'red' }}>{this.getErrorMessage()}</div>
+    return <div className="text-white">{this.getErrorMessage()}</div>
   }
 }
 

@@ -1,9 +1,9 @@
 .maps * {
   /* google maps */
-  @apply font-neptune text-sm text-fl-primary;
+  @apply font-sans text-sm text-fl-primary;
 }
 .profile-pic {
-  @apply border-fl-secondary border-solid border-2 rounded-full;
+  @apply border-fl-secondary border-solid border;
   height: 20rem;
   width: 20rem;
 }
@@ -12,14 +12,14 @@
   @apply primary tracking-wide p-2 text-4xl text-center no-underline;
 }
 .logo {
-  @apply w-12 m-2;
+  @apply flex flex-col;
 }
 .line {
   @apply w-4/5 border-t;
 }
 
 .nav {
-  @apply z-50 flex items-center justify-between flex-wrap bg-white pin-t w-full sticky shadow;
+  @apply z-50 flex items-center justify-between flex-wrap pin-t w-full  p-4;
 }
 .nav:after {
   @apply block border-b;
@@ -27,7 +27,8 @@
   width: 110%;
 }
 .footer {
-  @apply pin-b bg-primary text-white p-2 mt-1 w-full h-auto;
+  @apply pin-b pb-0 text-white h-auto;
+  background: rgba(0, 0, 0, 0.1);
 }
 .btn-primary {
   @apply bg-primary text-white font-bold py-2 px-4 rounded;
@@ -38,20 +39,19 @@
 }
 
 .link-primary {
-  @apply text-primary font-semibold uppercase text-sm no-underline tracking-wide py-6 px-3;
+  @apply text-primary font-semibold uppercase text-base no-underline tracking-wide;
 }
 
 .link-primary:hover {
-  @apply shadow-flPrimary border-primary text-primary-alternate;
+  @apply text-fl-secondary-accent-alternate;
 }
 
 .active-link {
-  @apply shadow-flPrimary border-primary text-primary-alternate;
+  @apply text-fl-secondary-accent-alternate;
 }
 
 .link-secondary {
-  @apply text-white font-medium uppercase text-sm no-underline
-    tracking-wide px-4 py-2;
+  @apply text-white font-medium uppercase text-sm no-underline tracking-wide;
 }
 
 .link-secondary:hover {
@@ -99,7 +99,7 @@
   @apply mx-5;
 }
 .input-field {
-  @apply bg-fl-secondary-accent border-fl-primary border-2 rounded w-full py-2 px-4 text-primary;
+  @apply border-fl-primary border-2 rounded w-full py-2 px-4 opacity-75;
 }
 .input-field:hover {
   @apply border-fl-primary-alternate;

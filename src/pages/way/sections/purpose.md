@@ -1,8 +1,8 @@
 ---
 templateKey: way-sections
-title: The purpose space
+title: Purpose space
 filename: purpose
-image: /img/khyateh_final_CMYK-03.jpg
+image: /img/seek.png
 ---
 
 Seeking

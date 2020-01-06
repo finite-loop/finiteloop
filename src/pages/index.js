@@ -19,23 +19,27 @@ class IndexPage extends React.Component {
             this.props.data.global.frontmatter.siteLongTitle
           }
         />
-        <section className="pb-6" name="introduction">
-          <h1 className="heroText text-center">
+        <section
+          className="pb-6 sm:mx-5 lg:mx-auto"
+          style={{ maxWidth: 'fit-content' }}
+          name="introduction"
+        >
+          <h1 className="heroText">
             {this.props.data.global.frontmatter.introText}
           </h1>
-          <h1 className="text-primary sm:text-2xl md:text-3xl xl:text-4xl text-center">
+          <h2 className="text-primary font-thin max-w-lg text-3xl">
             {this.props.data.global.frontmatter.introText2}
-          </h1>
+          </h2>
           <hr className="line" />
         </section>
 
         <Offerrings offeringsData={this.props.data.Offerings.edges} />
-        <div className="mx-auto text-center pb-4">
+        {/* <div className="mx-auto text-center pb-4">
           <Link to="/contact">
             <button className="roundedButton">Start a Project !</button>
           </Link>
         </div>
-        <ServicesCarousel carouselData={this.props.data.Carousel.frontmatter} />
+        <ServicesCarousel carouselData={this.props.data.Carousel.frontmatter} /> */}
         <SEO postPath="/" postNode={this.props} postSEO={false} />
       </HomeLayout>
     )

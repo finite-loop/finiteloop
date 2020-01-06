@@ -1,13 +1,13 @@
 h1 {
-  @apply primary text-5xl font-semibold tracking-normal antialiased pb-2;
+  @apply text-5xl font-semibold tracking-normal antialiased pb-2;
 }
 
 h2 {
-  @apply primary uppercase text-xl font-semibold tracking-normal antialiased py-2;
+  @apply text-xl font-semibold tracking-normal antialiased py-2;
 }
 
 .heroText {
-  @apply text-primary font-light tracking-normal leading-normal mx-auto;
+  @apply text-primary font-bold tracking-normal leading-normal;
 }
 
 .logoText {
@@ -15,7 +15,7 @@ h2 {
 }
 
 .para-primary {
-  @apply primary rounded tracking-normal leading-normal bg-primary-accent;
+  @apply primary rounded tracking-normal leading-normal bg-transperant font-thin;
 }
 .para-secondary {
   @apply secondary font-medium tracking-wide leading-normal;
@@ -24,16 +24,16 @@ h2 {
 /* Mobile View */
 @screen sm {
   .heroText {
-    @apply max-w-xl text-2xl px-4 py-4;
+    @apply max-w-xl text-3xl;
   }
   .para-primary {
-    @apply m-4 p-4 text-xl text-center;
+    @apply m-4 p-4 text-2xl text-center;
   }
 }
 /* Tablet View */
 @screen md {
   .heroText {
-    @apply max-w-3xl text-3xl px-10 py-4;
+    @apply max-w-3xl text-3xl;
   }
   .para-primary {
     @apply m-6 p-6 text-2xl text-center;
@@ -42,17 +42,18 @@ h2 {
 /* Large Displays */
 @screen lg {
   .heroText {
-    @apply max-w-4xl text-4xl px-10 py-8;
+    @apply max-w-md text-4xl;
   }
   .para-primary {
-    @apply m-8 p-8 text-2xl text-center;
+    @apply m-8 p-8 text-3xl text-center;
   }
 }
 @screen xl {
   .heroText {
-    @apply max-w-4xl text-4xl px-10 py-8;
+    @apply max-w-lg;
+    font-size: 3rem;
   }
   .para-primary {
-    @apply m-12 p-12 text-3xl text-center;
+    @apply mx-12 px-12 mb-1 text-4xl text-center;
   }
 }

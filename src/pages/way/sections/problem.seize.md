@@ -1,8 +1,8 @@
 ---
 templateKey: way-sections
-title: The purpose space
+title: Purpose space
 filename: problem.seize
-image: /img/khyateh_final_CMYK-06.jpg
+image: /img/seize.png
 ---
 
 Seizing

@@ -5,21 +5,25 @@ import Img from 'gatsby-image'
 
 export const OfferingsPageTemplate = ({ offering }) => (
   <div>
-    <div className="flex max-w-sm items-center flex-col pb-4">
+    <div className="flex max-w-xs m-4 items-center flex-col">
       <div className="flex min-h-full items-center flex-col">
-        <h2 className="text-md mb-2 text-fl-primary font-medium">
-          {offering.frontmatter.title}
-        </h2>
-        <Link to={`offerings#${offering.frontmatter.path}`}>
+        {/* <Link to={`offerings#${offering.frontmatter.path}`}> */}
+        <div className="flex h-48">
           <Img
             fixed={offering.frontmatter.image.childImageSharp.fixed}
             alt={offering.frontmatter.title}
           />
-        </Link>
-        <div className="leading-normal tracking-normal text-lg w-auto px-5 text-center py-2">
-          {offering.excerpt}
         </div>
-        <Link
+        {/* </Link> */}
+        <div className="flex-col px-8">
+          <h2 className="text-md mb-2 text-fl-primary font-medium">
+            {offering.frontmatter.title}
+          </h2>
+          <div className="leading-normal tracking-normal font-light text-md w-auto text-white">
+            {offering.excerpt}
+          </div>
+        </div>
+        {/* <Link
           to={`offerings#${offering.frontmatter.path}`}
           style={{ float: 'right' }}
           className="secondary text-center no-underline text-lg p-1"
@@ -28,14 +32,14 @@ export const OfferingsPageTemplate = ({ offering }) => (
           <i className="material-icons align-middle text-2xl">
             keyboard_arrow_right
           </i>
-        </Link>
+        </Link> */}
       </div>
     </div>
   </div>
 )
 
 const Offerrings = ({ offeringsData }) => (
-  <section name="offerings" className="flex justify-center flex-wrap">
+  <section name="offerings" className="pt-10 flex justify-center flex-wrap">
     {offeringsData.sort(compare).map(({ node }) => (
       <OfferingsPageTemplate key={node.frontmatter.title} offering={node} />
     ))}

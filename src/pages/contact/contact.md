@@ -8,7 +8,7 @@ heading: >-
 subheading: >-
   Write to us, share your business needs, give us feedback, and we will get back
   to you the soonest.
-address1: '#45, 46 (New No: 14), ''BLN Arcade'''
+address1: '#45, 46 (New No: 14),'
 address2: '7th B Main Road, 4th Block, Jayanagar'
 cityPIN: Bengaluru - 560011
 stateCountry: 'Karnataka, India'
@@ -23,4 +23,5 @@ map:
     lat: 12.930431
     long: 77.582394
 ---
+
 Write to us, share your business needs, give us feedback, and we will get back to you the soonest.

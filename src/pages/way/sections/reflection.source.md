@@ -1,8 +1,8 @@
 ---
 templateKey: way-sections
-title: The purpose space
+title: Purpose space
 filename: relection.source
-image: /img/khyateh_final_CMYK-11.jpg
+image: /img/source.png
 ---
 
 Back to Source

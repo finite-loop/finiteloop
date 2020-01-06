@@ -22,31 +22,33 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
         className="para-primary"
         content={wayData.frontmatter.header}
       />
-      <section name="The Way" className="sm:px-2 md:px-4 lg:px-10 xl:px-12">
-        <div className="flex sm:flex-wrap lg:flex-no-wrap justify-center mb-4">
-          <Img
+      <section
+        name="The Way"
+        className="sm:px-2 md:px-4 lg:px-10 xl:px-12 text-white"
+      >
+        <div className="flex sm:flex-wrap lg:flex-no-wrap justify-start font-semibold mb-4">
+          {/* <Img
             className="sm:w-full sm:h-full lg:w-3/5 rounded-lg"
             fluid={wayData.frontmatter.main.image.childImageSharp.fluid}
             alt="Main Image"
-          />
+          /> */}
           <PageContent
-            className="mx-4 leading-normal tracking-normal sm:text-lg md:text-xl"
+            className="leading-normal tracking-normal sm:text-lg md:text-xl mx-auto"
             content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
           />
         </div>
         {wayData.frontmatter.sections.map(items => (
           <div key={items.title}>
-            <h2 className="text-left p-4 text-2xl bg-secondary-alternate w-full">
-              {items.title}
-            </h2>
-            <div className="flex sm:flex-wrap md:flex-no-wrap justify-between">
+            <h2 className="text-left py-6 text-3xl w-full">{items.title}</h2>
+            <div className="flex sm:flex-wrap md:flex-no-wrap justify-start">
               {items.children.map(item => (
                 <React.Fragment key={item.title}>
                   {Object.keys(items.children).length === 1 && (
-                    <div className="flex sm:flex-wrap md:flex-no-wrap max-w-full w-full pb-2 px-2">
-                      <div className="flex-none w-full sm:max-w-full md:max-w-xs lg:max-w-sm">
+                    <div className="flex sm:flex-wrap md:flex-no-wrap pb-2 px-2">
+                      <div className="flex-none w-64 sm:max-w-full md:max-w-xs lg:max-w-sm">
                         <Img
-                          className="w-full rounded"
+                          className="rounded"
+                          style={{ width: '14rem' }}
                           fluid={
                             item.desc.childMarkdownRemark.frontmatter.image
                               .childImageSharp.fluid
@@ -55,15 +57,16 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                         />
                       </div>
                       <PageContent
-                        className="ml-4 flex-grow sm:text-lg lg:text-xl leading-normal tracking-normal"
+                        className="ml-10 mt-10 flex-grow sm:text-lg lg:text-xl leading-normal tracking-normal"
                         content={item.desc.childMarkdownRemark.html}
                       />
                     </div>
                   )}
                   {Object.keys(items.children).length > 1 && (
-                    <div className="flex-col max-w-md pb-2 px-4">
+                    <div className="flex-col max-w-sm pb-2 px-4">
                       <Img
-                        className="max-w-full rounded"
+                        className="rounded"
+                        style={{ width: '14rem' }}
                         fluid={
                           item.desc.childMarkdownRemark.frontmatter.image
                             .childImageSharp.fluid
@@ -71,7 +74,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                         alt={item.title}
                       />
                       <PageContent
-                        className="sm:text-lg lg:text-lg leading-normal tracking-normal"
+                        className="sm:text-lg lg:text-lg mt-6 leading-normal tracking-normal"
                         content={item.desc.childMarkdownRemark.html}
                       />
                     </div>

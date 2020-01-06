@@ -21,36 +21,36 @@ export const TeamsPageTemplate = ({ teams }) => (
   <div>
     <div className="flex flex-wrap justify-center items-stretch">
       {teams.team.sort(compare).map(({ person }) => (
-        <div key={person.name} className="shadow-md m-3 rounded-lg">
-          <div className="flex items-center flex-col">
-            <div className="flex max-w-sm min-h-full items-center flex-col">
-              <h3 className="text-center text-xl text-fl-primary-alternate p-2">
-                {person.name}
-              </h3>
+        <div
+          key={person.name}
+          className="m-3 rounded-lg"
+          style={{ backgroundColor: '#f7ded7' }}
+        >
+          <div className="flex flex-col p-4">
+            <div className="flex max-w-xs flex-col">
               <div>
                 <Img
                   alt={person.name}
                   fluid={person.avatar.childImageSharp.fluid}
-                  className="profile-pic align-center"
+                  className="profile-pic align-center rounded-lg"
                 />
               </div>
-              <a href={person.lnkdnsiteurl} target="_new">
-                <LnkdnIcon
-                  className="w-12 h-12"
-                  style={{
-                    marginTop: '-30px',
-                    marginLeft: '270px',
-                  }}
-                  alt="LinkedIn"
-                />
-              </a>
-              <div className="px-6 text-left">
-                <h3 className="text-primary text-xl text-center">
-                  {person.title}
-                </h3>
-                <p className="para-primary text-left tracking-normal bg-white p-0 mx-0 my-2 sm:text-lg lg:text-lg md:text-lg">
+              <div className="py-2">
+                <a href={person.lnkdnsiteurl} target="_new">
+                  <LnkdnIcon
+                    className="w-10 h-10 absolute"
+                    style={{
+                      marginTop: '5px',
+                      marginLeft: '270px',
+                    }}
+                    alt="LinkedIn"
+                  />
+                </a>
+                <h3 className="text-2xl">{person.name}</h3>
+                <h3 className="text-base font-light">{person.title}</h3>
+                {/* <p className="para-primary text-left tracking-normal bg-white p-0 mx-0 my-2 sm:text-lg lg:text-lg md:text-lg">
                   {person.quote}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

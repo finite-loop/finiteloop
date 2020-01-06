@@ -22,6 +22,7 @@ const Layout = ({ children }) => (
               }
             }
             logoTitle
+            trademark
             templateKey
             siteUrl
             siteTitle
@@ -57,14 +58,21 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="relative min-h-screen">
+      <div
+        className="relative min-h-screen"
+        style={{
+          backgroundColor: '#E05455',
+          // backgroundImage: 'url(/img/team-bg.png)',
+          // backgroundBlendMode: 'hard-light',
+        }}
+      >
         <Helmet title={data.global.frontmatter.siteTitle} />
         <Header
           title={data.global.frontmatter.logoTitle}
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.headerlinks}
         />
-        <div className="sm:max-w-4/5 md:max-w-3/4 my-8 py-4 mx-auto rounded shadow-lg">
+        <div className="sm:max-w-4/5 md:max-w-3/4 my-8 py-4 mx-auto">
           {children}
         </div>
         <Footer
@@ -73,6 +81,7 @@ const Layout = ({ children }) => (
           hashTag={data.global.frontmatter.socialMediaCard.hashTag}
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.footerlinks}
+          trademark={data.global.frontmatter.trademark}
         />
       </div>
     )}

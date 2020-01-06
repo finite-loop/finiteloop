@@ -8,7 +8,12 @@
 @import 'typography';
 @import 'tab';
 body {
-  @apply font-neptune antialiased overflow-x-hidden scrolling-touch;
+  @apply font-sans antialiased overflow-x-hidden scrolling-touch border-none;
+}
+*,
+*::after,
+*::before {
+  @apply border-none;
 }
 img {
   max-width: initial;

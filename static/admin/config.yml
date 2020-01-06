@@ -274,7 +274,7 @@ collections:
           options: ['left', 'right'],
           required: true,
         }
-
+      
   - name: 'products'
     label: 'Products'
     folder: 'src/pages/products'
@@ -380,6 +380,50 @@ collections:
                       widget: string,
                       required: false,
                     }
+
+      - file: 'src/pages/clients/clients.md'
+        label: 'Clients'
+        name: 'clients'
+        editor:
+          preview: false
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'clients-page',
+            }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/clients' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Clients title', name: 'clientsTitle', widget: 'text' }
+          - {
+              label: 'Client Description',
+              name: 'clientsDescription',
+              widget: 'text',
+            }
+          - label: 'Clients'
+            name: 'clients'
+            widget: 'list'
+            fields:
+              - label: Client
+                name: client
+                widget: object
+                fields:
+                  - {
+                      label: Name,
+                      name: name,
+                      widget: string,
+                      default: 'Emmet',
+                    }
+                  - {
+                      label: Logo,
+                      name: logo,
+                      widget: image,
+                      default: '/img/emmet.jpg',
+                    }                         
+
       - file: 'src/pages/contact/contact.md'
         label: 'Contact Us'
         name: 'contactus'
