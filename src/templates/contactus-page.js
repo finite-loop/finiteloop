@@ -190,7 +190,10 @@ class ContactForm extends React.Component {
               </span>
             </div>
           </div>
-          <div className="flex ml-16 mt-16" style={{ maxWidth: '55rem' }}>
+          <div
+            className="flex sm:ml-2 lg:ml-16 mt-16"
+            style={{ maxWidth: '55rem' }}
+          >
             <div className="flex-col text-white">
               <h1 className="text-left sm:p-3 md:p-4 sm:text-xl md:text-2xl lg:pt-10">
                 {contactus.frontmatter.heading}

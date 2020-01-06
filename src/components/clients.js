@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { LnkdnIcon } from './icons/icons'
 
 function compare(a, b) {
   // Use toUpperCase() to ignore character casing
@@ -22,7 +21,7 @@ export const ClientsPageTemplate = ({ clients }) => (
     <div className="flex flex-wrap justify-center items-center">
       {clients.clients.sort(compare).map(({ client }) => (
         <div key={client.name}>
-          <div className="flex max-w-xs px-20 py-8 flex-col">
+          <div className="flex max-w-xs px-20 pb-10 flex-col">
             <div>
               <Img
                 alt={client.name}

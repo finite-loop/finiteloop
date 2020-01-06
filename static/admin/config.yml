@@ -422,8 +422,55 @@ collections:
                       name: logo,
                       widget: image,
                       default: '/img/emmet.jpg',
-                    }                         
-
+                    }
+      - file: 'src/pages/work/work.md'
+        label: 'Work'
+        name: 'work'
+        editor:
+          preview: false
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'work-page',
+            }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/work' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Work title', name: 'workTitle', widget: 'text' }
+          - {
+              label: 'Work Description',
+              name: 'workDescription',
+              widget: 'text',
+            }
+          - label: 'Work'
+            name: 'work'
+            widget: 'list'
+            fields:
+              - label: Project
+                name: project
+                widget: object
+                fields:
+                  - {
+                      label: Name,
+                      name: name,
+                      widget: string,
+                      default: 'Emmet',
+                    }
+                  - {
+                      label: Image,
+                      name: image,
+                      widget: image,
+                      default: '/img/emmet.jpg',
+                    }
+                  - {
+                    label: Summary,
+                    name: summary,
+                    widget: text,
+                    default: 'Project Summary',
+                  }                                               
       - file: 'src/pages/contact/contact.md'
         label: 'Contact Us'
         name: 'contactus'

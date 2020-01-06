@@ -41,7 +41,6 @@ class Footer extends React.Component {
                 )}
               </div>
             ))}
-            <div className="flex opacity-50">{this.props.trademark}</div>
           </div>
           <div className="flex">
             <a
@@ -67,6 +66,7 @@ class Footer extends React.Component {
             </a>
           </div>
         </div>
+        <div className="opacity-50">{this.props.trademark}</div>
       </div>
     )
   }

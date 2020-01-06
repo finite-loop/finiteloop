@@ -23,7 +23,7 @@ class Header extends React.Component {
 
     return (
       <nav className="nav" role="navigation">
-        <div className="logo sm:sticky lg:absolute absolute sm:mt-8 sm:ml-5 lg:mt-16 lg:ml-32">
+        <div className="logo sm:sticky lg:absolute absolute sm:mt-2 sm:ml-4 lg:mt-16 lg:ml-32">
           <Link to="/">
             <div className="flex justify-center mb-2">
               <img
