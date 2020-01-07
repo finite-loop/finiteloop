@@ -6,7 +6,6 @@ import HomeLayout from '../components/layout.home'
 import '../styles/index.css'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
-import ServicesCarousel from '../components/carousel'
 
 class IndexPage extends React.Component {
   render() {
@@ -60,6 +59,7 @@ export const teamsPageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 80)
+          html
           id
           frontmatter {
             order
