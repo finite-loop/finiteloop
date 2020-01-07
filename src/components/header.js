@@ -25,16 +25,16 @@ class Header extends React.Component {
       <nav className="nav" role="navigation">
         <div className="logo sm:sticky lg:absolute absolute sm:mt-2 sm:ml-4 lg:mt-16 lg:ml-32">
           <Link to="/">
-            <div className="flex justify-center mb-2">
+            <div className="sm:flex md:flex justify-center mb-2">
               <img
-                className="sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-auto lg:h-auto"
+                className="sm:w-1/3 lg:w-auto lg:h-auto"
                 src="/img/finiteloop_logo.png"
                 alt="Logo"
               />
             </div>
-            <div className="flex justify-center">
+            <div className="sm:flex lg:flex justify-center">
               <img
-                className="sm:w-32 lg:w-auto"
+                className="sm:w-3/4 lg:w-auto"
                 src="/img/finiteloop_logo_text.png"
                 alt="Logo"
               />

@@ -19,7 +19,7 @@ class IndexPage extends React.Component {
           }
         />
         <section
-          className="pb-6 sm:mx-5 lg:mx-auto"
+          className="py-6 sm:mx-5 lg:mx-auto"
           style={{ maxWidth: 'fit-content' }}
           name="introduction"
         >

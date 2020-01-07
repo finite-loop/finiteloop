@@ -7,4 +7,4 @@ order: 4
 align: left
 ---
 
-We handcraft software products that are beautiful inside out. At heart we are coders.
+We handcraft software that is beautiful inside out. At heart we are coders.

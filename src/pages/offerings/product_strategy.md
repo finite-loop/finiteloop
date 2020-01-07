@@ -7,4 +7,4 @@ align: right
 order: 2
 ---
 
-We create new product lines for our customers that helped them acquire global brands.
+We create new product lines for our customers that helps them grow into new market and business paradigms.

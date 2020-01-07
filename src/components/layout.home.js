@@ -6,6 +6,7 @@ import '../styles/index.css'
 import Header from './header'
 import Footer from './footer'
 import Img from 'gatsby-image'
+import Work from '../components/work'
 
 const HomeLayout = ({ children }) => (
   <StaticQuery
@@ -56,6 +57,43 @@ const HomeLayout = ({ children }) => (
             }
           }
         }
+        Work: allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "work-page" } } }
+        ) {
+          edges {
+            node {
+              html
+              id
+              excerpt
+              frontmatter {
+                path
+                title
+                image {
+                  childImageSharp {
+                    fluid(quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                workTitle
+                workDescription
+                work {
+                  project {
+                    name
+                    summary
+                    image {
+                      childImageSharp {
+                        fluid(quality: 100) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -77,8 +115,13 @@ const HomeLayout = ({ children }) => (
             {data.global.frontmatter.trademark}
           </span>
         </div> */}
-        <div className="sm:my-24 lg:my-32 mx-auto">{children}</div>
-
+        <div className="lg:mt-32 mx-auto">{children}</div>
+        <hr
+          className="sm:mx-4 lg:mx-32 my-20"
+          style={{ height: '0.1rem' }}
+          color="white"
+        />
+        <Work workData={data} />
         <Footer
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}

@@ -7,4 +7,4 @@ order: 3
 align: left
 ---
 
-We work with organizations to help realize their strategic business goals through fantastic customer experiences.
+We work with organizations to realize your strategic business goals through fantastic customer experiences.

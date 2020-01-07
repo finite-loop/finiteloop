@@ -7,4 +7,4 @@ order: 1
 align: left
 ---
 
-We have built scalable architectures that support a billion people.
+We build scalable architectures that can support a billion people.

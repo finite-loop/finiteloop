@@ -9,16 +9,16 @@ workDescription: >-
 work:
   - project:
       image: /img/gangway.png
-      name: Gangway Desk
-      summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis commodo sem. Fusce metus lectus, vehicula id viverra eget, hendrerit a metus.
+      name: Gangway interaction desk
+      summary: We designed a reception desk to be used on ships, rigs and factories which enables a safety culture, while creating a pleasant first interaction point for your brand..
   - project:
       image: /img/signage.png
-      name: Unified Signage System
-      summary: We created the worlds first social data infrastructure. A framework for worlds non-profits to make meaningful connections among different datasets
+      name: Human-centered signages
+      summary: We have rethought narratives in hazardous maritime environments and helped people-friendly redesign signages that are centered around seafarers instead of regulations.
   - project:
       image: /img/seafarers.png
-      name: Seafarer Proffesional App
-      summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis commodo sem. Fusce metus lectus, vehicula id viverra eget, hendrerit a metus.
+      name: AHOY! - Seafarer’s companion app
+      summary: We have brought the shipping industry to the mobile age with AHOY. We designed and architected a mobile app with backend admin system, for low data usage, scalable architecture and human centered designs.
   - project:
       image: /img/super_compute.png
       name: Super compute processing

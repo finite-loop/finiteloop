@@ -18,12 +18,12 @@ export const OfferingsPageTemplate = ({ offering }) => {
             />
           </div>
           {/* </Link> */}
-          <div className="flex-col px-8">
+          <div className="flex-col px-8 sm:text-center lg:text-left">
             <h2 className="text-md mb-2 text-fl-primary font-medium">
               {offering.frontmatter.title}
             </h2>
             <PageContent
-              className="leading-normal tracking-normal font-light text-md w-auto text-white"
+              className="leading-normal tracking-normal font-light text-lg w-auto text-white"
               content={offering.html}
             />
           </div>

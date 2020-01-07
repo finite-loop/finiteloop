@@ -38,8 +38,9 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
           />
         </div>
         {wayData.frontmatter.sections.map(items => (
-          <div key={items.title}>
-            <h2 className="text-left py-6 text-3xl w-full">{items.title}</h2>
+          <div className="pb-6" key={items.title}>
+            <h2 className="text-left text-3xl w-full">{items.title}</h2>
+            <hr className="mb-6" style={{ height: '0.05rem' }} color="white" />
             <div className="flex sm:flex-wrap md:flex-no-wrap justify-start">
               {items.children.map(item => (
                 <React.Fragment key={item.title}>
@@ -57,7 +58,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                         />
                       </div>
                       <PageContent
-                        className="ml-10 mt-10 flex-grow sm:text-lg lg:text-xl leading-normal tracking-normal"
+                        className="lg:ml-10 mt-10 flex-grow sm:text-lg lg:text-xl leading-normal tracking-normal"
                         content={item.desc.childMarkdownRemark.html}
                       />
                     </div>
