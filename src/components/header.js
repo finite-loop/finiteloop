@@ -34,7 +34,7 @@ class Header extends React.Component {
             </div>
             <div className="sm:flex lg:flex justify-center">
               <img
-                className="sm:w-3/4 lg:w-auto"
+                className="lg:w-auto"
                 src="/img/finiteloop_logo_text.png"
                 alt="Logo"
               />
