@@ -185,7 +185,9 @@ class ContactForm extends React.Component {
                 <a
                   className="font-medium"
                   style={{ color: '#424242' }}
-                  href="https://goo.gl/maps/MXm5GU1HDkSQyXpKAhttps://goo.gl/maps/MXm5GU1HDkSQyXpKA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/FiniteLoop/@12.9299324,77.5794589,16.12z/data=!4m12!1m6!3m5!1s0x0:0x3f38249791403c9a!2sFiniteLoop!8m2!3d12.9304017!4d77.5824309!3m4!1s0x0:0x3f38249791403c9a!8m2!3d12.9304017!4d77.5824309"
                 >
                   Get Directions
                 </a>
