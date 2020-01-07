@@ -24,7 +24,7 @@ export const WorkPageTemplate = ({
         }
       />
       <PageContent className="para-primary" content={content} />
-      <Work workData={props} />
+      <Work workData={props.data} />
       <SEO postPath={workData.frontmatter.path} postNode={workData} postSEO />
     </Layout>
   )
