@@ -7,7 +7,7 @@ teamTitle: Our Team
 teamDescription: >-
   We are a team of passionate business,design and technology professionals who
   respect quality, and simplicity. We have a good blend of design, solutions,
-  product development and consulting expertise. We listen, learn, and lead.
+  product development and consulting expertise.
 team:
   - person:
       avatar: /img/anand_2.jpg
@@ -184,7 +184,7 @@ team:
         the world. Focussed. Hard core architect and very hands-on. Expert in
         story telling. Very good with nurturing teams. Most wanted by customers
         worldwide. Update : Not driving the fiat anymore.
-      title: Experiance Designer
+      title: Experience Designer
       twtrsiteurl: test
   - person:
       avatar: /img/vaidehei.jpeg
@@ -234,5 +234,3 @@ team:
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
->
-> **We listen, learn, and lead.**

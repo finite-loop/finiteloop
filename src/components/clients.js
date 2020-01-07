@@ -18,10 +18,10 @@ function compare(a, b) {
 
 export const ClientsPageTemplate = ({ clients }) => (
   <div>
-    <div className="flex flex-wrap justify-center items-center">
+    <div className="flex flex-wrap bg-white pt-20 rounded-lg justify-center items-center">
       {clients.clients.sort(compare).map(({ client }) => (
         <div key={client.name}>
-          <div className="flex max-w-xs px-20 pb-10 flex-col">
+          <div className="flex max-w-xs px-20 pb-20 flex-col">
             <div>
               <Img
                 alt={client.name}

@@ -182,9 +182,21 @@ class ContactForm extends React.Component {
                 {contactus.frontmatter.cityPIN} <br />
                 {contactus.frontmatter.stateCountry}
                 <br />
+                <a
+                  className="font-medium"
+                  style={{ color: '#424242' }}
+                  href="https://goo.gl/maps/MXm5GU1HDkSQyXpKAhttps://goo.gl/maps/MXm5GU1HDkSQyXpKA"
+                >
+                  Get Directions
+                </a>
+                <br />
                 <br />
                 {contactus.frontmatter.phone} <br />
-                <a href={`mailto:${contactus.frontmatter.email}`}>
+                <a
+                  href={`mailto:${contactus.frontmatter.email}`}
+                  className="font-medium"
+                  style={{ color: '#424242' }}
+                >
                   {contactus.frontmatter.email}
                 </a>
               </span>

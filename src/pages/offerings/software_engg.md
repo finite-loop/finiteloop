@@ -7,4 +7,4 @@ order: 4
 align: left
 ---
 
-We work with organizations to help realize their strategic business goals through fantastic customer experiences.
+We handcraft software products that are beautiful inside out. At heart we are coders.

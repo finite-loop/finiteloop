@@ -8,11 +8,10 @@ export const WorkPageTemplate = ({ work }) => (
       {work.work.map(({ project }) => (
         <div key={project.name}>
           <div className="flex max-w-sm px-10 pb-10 flex-col">
-            <div className="bg-white opacity-75">
+            <div style={{ backgroundColor: '#F0F6FA' }}>
               <Img
                 alt={project.name}
                 fluid={project.image.childImageSharp.fluid}
-                className="align-center"
               />
             </div>
             <div className="flex flex-col bg-white p-2 opacity-50">

@@ -4,7 +4,7 @@ path: /contact
 title: Get In Touch
 heading: >-
   We would like to hear from you. If you are around the corner, we will be more
-  than happy to share a cup of coffee with you.
+  than happy to meet you.
 subheading: >-
   Write to us, share your business needs, give us feedback, and we will get back
   to you the soonest.
