@@ -115,10 +115,10 @@ const HomeLayout = ({ children }) => (
             {data.global.frontmatter.trademark}
           </span>
         </div> */}
-        <div className="lg:mt-32 mx-auto">{children}</div>
+        <div className="sm:mt-12 lg:mt-24 mx-auto">{children}</div>
         <hr
           className="sm:mx-4 lg:mx-32 my-20"
-          style={{ height: '0.1rem' }}
+          style={{ borderTop: '0.1rem solid white' }}
           color="white"
         />
         <Work workData={data} />

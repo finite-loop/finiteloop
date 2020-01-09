@@ -23,7 +23,7 @@ class Header extends React.Component {
 
     return (
       <nav className="nav" role="navigation">
-        <div className="logo sm:sticky lg:absolute absolute sm:mt-2 sm:ml-4 lg:mt-16 lg:ml-32">
+        <div className="logo sm:mt-2 sm:ml-4 lg:ml-32">
           <Link to="/">
             <div className="sm:flex md:flex justify-center mb-2">
               <img
@@ -41,7 +41,7 @@ class Header extends React.Component {
             </div>
           </Link>
         </div>
-        <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto flex flex-1">
+        <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto py-6 flex flex-1">
           <MenuLinks
             classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
             social={social}

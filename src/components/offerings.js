@@ -8,17 +8,17 @@ export const OfferingsPageTemplate = ({ offering }) => {
   const PageContent = HTMLContent || content
   return (
     <div>
-      <div className="flex max-w-xs m-4 items-center flex-col">
-        <div className="flex min-h-full items-center flex-col">
+      <div className="flex max-w-xs mx-4 items-center flex-col">
+        <div className="flex min-h-full sm:items-center lg:items-start flex-col">
           {/* <Link to={`offerings#${offering.frontmatter.path}`}> */}
-          <div className="flex h-48">
+          <div className="flex h-48 items-center">
             <Img
               fixed={offering.frontmatter.image.childImageSharp.fixed}
               alt={offering.frontmatter.title}
             />
           </div>
           {/* </Link> */}
-          <div className="flex-col px-8 sm:text-center lg:text-left">
+          <div className="flex-col sm:text-center lg:text-left">
             <h2 className="text-md mb-2 text-fl-primary font-medium">
               {offering.frontmatter.title}
             </h2>

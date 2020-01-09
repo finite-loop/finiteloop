@@ -10,7 +10,7 @@ const MenuLinks = ({ links, social, classes }) => (
       <Link
         activeClassName="active-link"
         key={item.title}
-        className="link-primary lg:pl-10 py-6"
+        className="link-primary py-6 lg:pl-10"
         to={item.url}
       >
         <span>{item.title}</span>

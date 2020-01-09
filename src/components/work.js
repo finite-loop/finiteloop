@@ -4,10 +4,10 @@ import Img from 'gatsby-image'
 
 export const WorkPageTemplate = ({ work }) => (
   <div style={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}>
-    <div className="flex flex-wrap justify-center items-strech">
+    <div className="flex flex-wrap mx-10 justify-center items-strech">
       {work.work.map(({ project }) => (
         <div key={project.name}>
-          <div className="flex max-w-sm px-10 pb-10 flex-col">
+          <div className="flex max-w-sm px-12 pb-10 flex-col">
             <div style={{ backgroundColor: '#F0F6FA' }}>
               <Img
                 alt={project.name}
