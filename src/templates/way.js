@@ -40,7 +40,11 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
         {wayData.frontmatter.sections.map(items => (
           <div className="pb-6" key={items.title}>
             <h2 className="text-left text-3xl w-full">{items.title}</h2>
-            <hr className="mb-6" style={{ height: '0.05rem' }} color="white" />
+            <hr
+              className="mb-6"
+              style={{ borderTop: '0.05rem solid white' }}
+              color="white"
+            />
             <div className="flex sm:flex-wrap md:flex-no-wrap justify-start">
               {items.children.map(item => (
                 <React.Fragment key={item.title}>
