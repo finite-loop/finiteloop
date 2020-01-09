@@ -7,7 +7,7 @@ export const WorkPageTemplate = ({ work }) => (
     <div className="flex flex-wrap mx-10 justify-center items-strech">
       {work.work.map(({ project }) => (
         <div key={project.name}>
-          <div className="flex max-w-sm px-12 pb-10 flex-col">
+          <div className="flex max-w-sm lg:px-12 pb-10 flex-col">
             <div style={{ backgroundColor: '#F0F6FA' }}>
               <Img
                 alt={project.name}
