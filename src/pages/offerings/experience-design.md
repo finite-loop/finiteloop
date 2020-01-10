@@ -3,7 +3,7 @@ templateKey: offering
 image: /img/experiance_design.png
 path: experience-design
 title: Experience Design
-order: 3
+order: 1
 align: left
 ---
 
