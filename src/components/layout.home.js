@@ -57,43 +57,6 @@ const HomeLayout = ({ children }) => (
             }
           }
         }
-        Work: allMarkdownRemark(
-          filter: { frontmatter: { templateKey: { eq: "work-page" } } }
-        ) {
-          edges {
-            node {
-              html
-              id
-              excerpt
-              frontmatter {
-                path
-                title
-                image {
-                  childImageSharp {
-                    fluid(quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                workTitle
-                workDescription
-                work {
-                  project {
-                    name
-                    summary
-                    image {
-                      childImageSharp {
-                        fluid(quality: 100) {
-                          ...GatsbyImageSharpFluid
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
       }
     `}
     render={data => (
@@ -116,12 +79,6 @@ const HomeLayout = ({ children }) => (
           </span>
         </div> */}
         <div className="sm:mt-12 lg:mt-24 mx-auto">{children}</div>
-        <hr
-          className="sm:mx-4 lg:mx-32 my-20"
-          style={{ borderTop: '0.1rem solid white' }}
-          color="white"
-        />
-        <Work workData={data} />
         <Footer
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}

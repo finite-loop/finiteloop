@@ -3,25 +3,24 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
 export const WorkPageTemplate = ({ work }) => (
-  <div style={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}>
-    <div className="flex flex-wrap mx-10 justify-center items-strech">
+  <div className="flex" style={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}>
+    <div className="flex flex-wrap justify-center items-stretch">
       {work.work.map(({ project }) => (
-        <div key={project.name}>
-          <div className="flex max-w-sm lg:px-12 pb-10 flex-col">
-            <div style={{ backgroundColor: '#F0F6FA' }}>
-              <Img
-                alt={project.name}
-                fluid={project.image.childImageSharp.fluid}
-              />
-            </div>
+        <div key={project.name} className="flex p-4">
+          <div className="flex max-w-sm lg:px-10 flex-col">
+            <Img
+              alt={project.name}
+              fluid={project.image.childImageSharp.fluid}
+              className="h-full w-full"
+            />
             <div
-              className="flex flex-col p-4 border-t-2 border-solid border-fl-secondary" // #E05455
+              className="p-4 border-t-2 border-solid border-fl-secondary" // #E05455
               style={{ backgroundColor: 'white', color: '#424242' }}
             >
-              <div className="text-xl font-semibold py-2">{project.name}</div>
-              <div className="max-w-sm text-md leading-normal font-light">
+              <h2 className="text-xl font-semibold py-2">{project.name}</h2>
+              <p className="p-0 mx-0 max-w-sm text-md leading-normal font-light">
                 {project.summary}
-              </div>
+              </p>
             </div>
           </div>
         </div>

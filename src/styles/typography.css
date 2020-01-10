@@ -24,7 +24,7 @@ h2 {
 /* Mobile View */
 @screen sm {
   .heroText {
-    @apply max-w-xl text-3xl;
+    @apply text-3xl;
   }
   .para-primary {
     @apply m-4 p-4 text-2xl text-center;
@@ -33,7 +33,7 @@ h2 {
 /* Tablet View */
 @screen md {
   .heroText {
-    @apply max-w-3xl text-3xl;
+    @apply text-3xl;
   }
   .para-primary {
     @apply m-6 p-6 text-2xl text-center;
@@ -42,7 +42,7 @@ h2 {
 /* Large Displays */
 @screen lg {
   .heroText {
-    @apply max-w-md text-4xl;
+    @apply text-4xl;
   }
   .para-primary {
     @apply m-8 p-8 text-3xl text-center;
@@ -50,7 +50,6 @@ h2 {
 }
 @screen xl {
   .heroText {
-    @apply max-w-lg;
     font-size: 3rem;
   }
   .para-primary {

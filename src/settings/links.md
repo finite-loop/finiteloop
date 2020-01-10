@@ -12,7 +12,7 @@ headerlinks:
       url: /way/
       newwindow: false
   - item:
-      title: Clients
+      title: Customers
       url: /clients/
       newwindow: false
   - item:
