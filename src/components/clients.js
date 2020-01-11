@@ -19,15 +19,13 @@ function compare(a, b) {
 export const ClientsPageTemplate = ({ clients }) => (
   <div>
     <div className="flex flex-wrap bg-white pt-20 rounded-lg justify-center items-center">
-      {clients.clients.sort(compare).map(({ client }) => (
+      {clients.clients.map(({ client }) => (
         <div key={client.name}>
           <div className="flex max-w-xs px-20 pb-20 flex-col">
             <div>
               <Img
                 alt={client.name}
                 fixed={client.logo.childImageSharp.fixed}
-                className="align-center"
-                style={{ objectFit: 'contain' }}
               />
             </div>
           </div>

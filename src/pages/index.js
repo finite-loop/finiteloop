@@ -36,12 +36,6 @@ class IndexPage extends React.Component {
           color="white"
         />
         <Work workData={this.props.data} />
-        {/* <div className="mx-auto text-center pb-4">
-          <Link to="/contact">
-            <button className="roundedButton">Start a Project !</button>
-          </Link>
-        </div>
-        <ServicesCarousel carouselData={this.props.data.Carousel.frontmatter} /> */}
         <SEO postPath="/" postNode={this.props} postSEO={false} />
       </HomeLayout>
     )

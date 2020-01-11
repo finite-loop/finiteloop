@@ -9,7 +9,7 @@ export const OfferingsPageTemplate = ({ offering }) => {
   return (
     <div>
       <div className="flex max-w-xs items-center flex-col">
-        <div className="flex px-10 py-6 min-h-full sm:items-center xl:items-start flex-col">
+        <div className="flex px-10 pt-6 min-h-full sm:items-center xl:items-start flex-col">
           {/* <Link to={`offerings#${offering.frontmatter.path}`}> */}
           <div className="flex h-32 mb-2 items-center">
             <Img

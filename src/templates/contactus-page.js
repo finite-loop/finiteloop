@@ -168,7 +168,7 @@ class ContactForm extends React.Component {
           }
         />
         <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
-          <div className="flex sm:px-20 sm:py-24 lg:px-38 lg:py-32 bg-white flex-wrap">
+          <div className="flex sm:px-10 sm:py-24 lg:px-38 lg:py-32 sm:w-full lg:w-auto bg-white flex-wrap">
             <div className="flex-col opacity-75" style={{ color: '#E05455' }}>
               <h1 className="text-4xl mb-10">Contact Us</h1>
               <h3 className="text-xl pb-2 font-semibold">
@@ -205,11 +205,11 @@ class ContactForm extends React.Component {
             </div>
           </div>
           <div
-            className="flex sm:ml-2 lg:ml-16 mt-16"
+            className="flex sm:mx-2 lg:mx-16 mt-16"
             style={{ maxWidth: '55rem' }}
           >
             <div className="flex-col text-white">
-              <h1 className="text-left sm:p-3 md:p-4 sm:text-xl md:text-2xl lg:pt-10">
+              <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">
                 {contactus.frontmatter.heading}
               </h1>
               <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">

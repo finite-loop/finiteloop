@@ -73,11 +73,6 @@ const HomeLayout = ({ children }) => (
           social={data.global.frontmatter.socialMediaCard}
           links={data.links.frontmatter.headerlinks}
         />
-        {/* <div className="w-full py-2 sm:pl-2 md:pl-10 lg:pl-34 sm:text-center md:text-left">
-          <span className="text-fl-primary-alternate text-md no-underline ">
-            {data.global.frontmatter.trademark}
-          </span>
-        </div> */}
         <div className="sm:mt-12 lg:mt-24 mx-auto">{children}</div>
         <Footer
           url={data.global.frontmatter.siteUrl}
