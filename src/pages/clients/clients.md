@@ -4,21 +4,29 @@ path: /clients
 title: Clients
 image: /img/OrgTrans.png
 clientsTitle: Our Clients
-clientsDescription: >-
-  Our Clients
+clientsDescription: Our Clients
 clients:
   - client:
       logo: /img/ashoka.png
       name: Ashok Foundation
   - client:
-      logo: /img/bestmed.png
-      name: Bestmed
+      logo: /img/Volvo_logo.png
+      name: Volvo
   - client:
-      logo: /img/dercopperbowl.png
-      name: der copper bowl
+      logo: /img/synergy.png
+      name: Ashok Foundation
+  - client:
+      logo: /img/Thepublicsradio-logo.png
+      name: Ashok Foundation
+  - client:
+      logo: /img/ivymobility.png
+      name: Ashok Foundation
   - client:
       logo: /img/ET Marlabs Logo2.png
       name: Ashok Foundation
+  - client:
+      logo: /img/bestmed.png
+      name: Bestmed
   - client:
       logo: /img/EWB.png
       name: Ashok Foundation
@@ -29,16 +37,10 @@ clients:
       logo: /img/ihf.png
       name: Ashok Foundation
   - client:
-      logo: /img/ivymobility.png
-      name: Ashok Foundation
-  - client:
       logo: /img/mindtree-logo.png
       name: Ashok Foundation
   - client:
       logo: /img/reapbenefit.png
-      name: Ashok Foundation
-  - client:
-      logo: /img/synergy.png
       name: Ashok Foundation
   - client:
       logo: /img/tavant.png
@@ -47,12 +49,10 @@ clients:
       logo: /img/terredeshommes.png
       name: Ashok Foundation
   - client:
-      logo: /img/Thepublicsradio-logo.png
-      name: Ashok Foundation
-  - client:
       logo: /img/trees.png
       name: Ashok Foundation
   - client:
-      logo: /img/Volvo_logo.png
-      name: Volvo
+      logo: /img/dercopperbowl.png
+      name: der copper bowl
 ---
+\-
