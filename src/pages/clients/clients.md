@@ -11,7 +11,7 @@ clients:
       name: Ashok Foundation
   - client:
       logo: /img/Volvo_logo.png
-      name: Volvo
+      name: AVolvo
   - client:
       logo: /img/synergy.png
       name: Ashok Foundation
@@ -53,6 +53,6 @@ clients:
       name: Ashok Foundation
   - client:
       logo: /img/dercopperbowl.png
-      name: der copper bowl
+      name: Ader copper bowl
 ---
-\-
+Our Customers
