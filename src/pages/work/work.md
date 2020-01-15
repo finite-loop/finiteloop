@@ -7,19 +7,19 @@ workTitle: Our Work
 workDescription: Our Work
 work:
   - project:
-      image: /img/gangway.png
-      name: Gangway interaction desk
-      summary: >-
-        We designed a reception desk to be used on ships, rigs and factories
-        which enables a safety culture, while creating a pleasant first
-        interaction point for your brand..
-  - project:
       image: /img/signage.png
       name: Human-centered signages
       summary: >-
         We have rethought narratives in hazardous maritime environments and
         helped people-friendly redesign signages that are centered around
         seafarers instead of regulations.
+  - project:
+      image: /img/gangway.png
+      name: Gangway interaction desk
+      summary: >-
+        We designed a reception desk to be used on ships, rigs and factories
+        which enables a safety culture, while creating a pleasant first
+        interaction point for your brand..
   - project:
       image: /img/seafarers.png
       name: AHOY! - Seafarer’s companion app
