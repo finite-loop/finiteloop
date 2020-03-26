@@ -2,24 +2,32 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
+import content, { HTMLContent } from '../components/content'
 
-export const OfferingsPageTemplate = ({ offering }) => (
-  <div>
-    <div className="flex max-w-sm items-center flex-col pb-4">
-      <div className="flex min-h-full items-center flex-col">
-        <h2 className="text-md mb-2 text-fl-primary font-medium">
-          {offering.frontmatter.title}
-        </h2>
-        <Link to={`offerings#${offering.frontmatter.path}`}>
-          <Img
-            fixed={offering.frontmatter.image.childImageSharp.fixed}
-            alt={offering.frontmatter.title}
-          />
-        </Link>
-        <div className="leading-normal tracking-normal text-lg w-auto px-5 text-center py-2">
-          {offering.excerpt}
-        </div>
-        <Link
+export const OfferingsPageTemplate = ({ offering }) => {
+  const PageContent = HTMLContent || content
+  return (
+    <div>
+      <div className="flex max-w-xs items-center flex-col">
+        <div className="flex px-10 pt-6 min-h-full sm:items-center xl:items-start flex-col">
+          {/* <Link to={`offerings#${offering.frontmatter.path}`}> */}
+          <div className="flex h-32 mb-2 items-center">
+            <Img
+              fixed={offering.frontmatter.image.childImageSharp.fixed}
+              alt={offering.frontmatter.title}
+            />
+          </div>
+          {/* </Link> */}
+          <div className="flex-col sm:text-center xl:text-left">
+            <h2 className="text-md mt-4 text-fl-primary font-medium">
+              {offering.frontmatter.title}
+            </h2>
+            <PageContent
+              className="leading-normal tracking-normal font-light text-lg w-auto text-white"
+              content={offering.html}
+            />
+          </div>
+          {/* <Link
           to={`offerings#${offering.frontmatter.path}`}
           style={{ float: 'right' }}
           className="secondary text-center no-underline text-lg p-1"
@@ -28,14 +36,15 @@ export const OfferingsPageTemplate = ({ offering }) => (
           <i className="material-icons align-middle text-2xl">
             keyboard_arrow_right
           </i>
-        </Link>
+        </Link> */}
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 const Offerrings = ({ offeringsData }) => (
-  <section name="offerings" className="flex justify-center flex-wrap">
+  <section name="offerings" className="pt-10 flex justify-center flex-wrap">
     {offeringsData.sort(compare).map(({ node }) => (
       <OfferingsPageTemplate key={node.frontmatter.title} offering={node} />
     ))}

@@ -1,8 +1,8 @@
 ---
 templateKey: way-sections
-title: The discover space
+title: Discover space
 filename: problem.discover
-image: /img/khyateh_final_CMYK-04.jpg
+image: /img/discover.png
 ---
 
 Discovering

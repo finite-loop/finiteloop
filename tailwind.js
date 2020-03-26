@@ -180,7 +180,7 @@ module.exports = {
   */
 
   screens: {
-    sm: '310px',
+    sm: '210px',
     md: '768px',
     lg: '992px',
     xl: '1200px',
@@ -222,6 +222,7 @@ module.exports = {
       'sans-serif',
     ],
     sans: [
+      'Open Sans',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -367,10 +368,10 @@ module.exports = {
   textColors: {
     transperant: colors['transparent'],
     white: colors['white'],
-    'fl-primary': colors['fl-primary'],
-    'fl-primary-alternate': colors['fl-primary-alternate'],
+    'fl-primary': colors['white'],
+    'fl-primary-alternate': colors['white'],
     'fl-primary-accent': colors['fl-primary-accent'],
-    'fl-secondary': colors['fl-secondary'],
+    'fl-secondary': colors['white'],
     'fl-secondary-alternate': colors['fl-secondary-alternate'],
     'fl-secondary-accent': colors['fl-secondary-accent'],
     'fl-secondary-accent-alternate': colors['fl-secondary-accent-alternate'],

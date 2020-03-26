@@ -23,10 +23,25 @@ class Header extends React.Component {
 
     return (
       <nav className="nav" role="navigation">
-        <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto flex flex-1">
+        <div className="sm:mt-2 sm:ml-4 lg:ml-32">
           <Link to="/">
-            <img className="logo" src="/img/WhiteFLLogo.jpg" alt="Logo" />
+            <div className="sm:flex md:flex justify-center mb-2">
+              <img
+                className="sm:w-3/4 lg:w-auto lg:h-auto"
+                src="/img/finiteloop_logo.png"
+                alt="Logo"
+              />
+            </div>
+            <div className="sm:flex lg:flex justify-center">
+              <img
+                className="lg:w-auto"
+                src="/img/finiteloop_logo_text.png"
+                alt="Logo"
+              />
+            </div>
           </Link>
+        </div>
+        <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto items-start flex flex-1 mr-24">
           <MenuLinks
             classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
             social={social}

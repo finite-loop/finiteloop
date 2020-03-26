@@ -6,7 +6,7 @@ import HomeLayout from '../components/layout.home'
 import '../styles/index.css'
 import SEO from '../components/seo'
 import Offerrings from '../components/offerings'
-import ServicesCarousel from '../components/carousel'
+import Work from '../components/work'
 
 class IndexPage extends React.Component {
   render() {
@@ -19,23 +19,23 @@ class IndexPage extends React.Component {
             this.props.data.global.frontmatter.siteLongTitle
           }
         />
-        <section className="pb-6" name="introduction">
-          <h1 className="heroText text-center">
+        <section className="sm:mx-5 lg:mx-auto max-w-lg" name="introduction">
+          <h1 className="heroText">
             {this.props.data.global.frontmatter.introText}
           </h1>
-          <h1 className="text-primary sm:text-2xl md:text-3xl xl:text-4xl text-center">
+          <h2 className="text-primary font-thin text-3xl">
             {this.props.data.global.frontmatter.introText2}
-          </h1>
+          </h2>
           <hr className="line" />
         </section>
 
         <Offerrings offeringsData={this.props.data.Offerings.edges} />
-        <div className="mx-auto text-center pb-4">
-          <Link to="/contact">
-            <button className="roundedButton">Start a Project !</button>
-          </Link>
-        </div>
-        <ServicesCarousel carouselData={this.props.data.Carousel.frontmatter} />
+        <hr
+          className="sm:mx-4 lg:mx-32 my-20"
+          style={{ borderTop: '0.1rem solid white' }}
+          color="white"
+        />
+        <Work workData={this.props.data} />
         <SEO postPath="/" postNode={this.props} postSEO={false} />
       </HomeLayout>
     )
@@ -56,6 +56,7 @@ export const teamsPageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 80)
+          html
           id
           frontmatter {
             order
@@ -105,6 +106,43 @@ export const teamsPageQuery = graphql`
         introText
         introText2
         services
+      }
+    }
+    Work: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "work-page" } } }
+    ) {
+      edges {
+        node {
+          html
+          id
+          excerpt
+          frontmatter {
+            path
+            title
+            image {
+              childImageSharp {
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            workTitle
+            workDescription
+            work {
+              project {
+                name
+                summary
+                image {
+                  childImageSharp {
+                    fluid(quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

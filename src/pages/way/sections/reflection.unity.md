@@ -1,8 +1,8 @@
 ---
 templateKey: way-sections
-title: The purpose space
+title: Purpose space
 filename: reflection.unity
-image: /img/khyateh_final_CMYK-10.jpg
+image: /img/unity.png
 ---
 
 Unity
