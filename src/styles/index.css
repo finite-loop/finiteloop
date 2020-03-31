@@ -1,5 +1,4 @@
-@tailwind preflight;
-@tailwind components;
+@tailwind base;
 
 @import 'neptune';
 @import 'color';
@@ -7,6 +6,9 @@
 @import 'animation';
 @import 'typography';
 @import 'tab';
+
+@tailwind components;
+
 body {
   @apply font-sans antialiased overflow-x-hidden scrolling-touch border-none;
 }
@@ -24,6 +26,24 @@ img:hover {
 p {
   @apply pb-2;
 }
+
+/* Fixed header and footer.
+	* --------------------------------------- */
+#header,
+#footer {
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 9;
+}
+
+#header {
+  top: 0px;
+}
+#footer {
+  bottom: 0px;
+}
+
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');

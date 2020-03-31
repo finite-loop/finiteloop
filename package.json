@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "author": "Parthasarathy S",
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.17",
     "ajv": "6.9.0",
     "gatsby": "^2.0.115",
     "gatsby-image": "^2.0.29",
@@ -21,7 +22,7 @@
     "gatsby-transformer-remark": "^2.2.4",
     "gatsby-transformer-sharp": "^2.1.13",
     "netlify-cms": "^2.3.3",
-    "postcss-cli": "^6.1.1",
+    "postcss-cli": "^7.1.0",
     "postcss-cssnext": "^3.1.0",
     "precss": "^4.0.0",
     "prop-types": "^15.6.2",
@@ -55,7 +56,7 @@
     "eslint-config-prettier": "^4.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "prettier": "^1.16.4",
-    "tailwindcss": "^0.7.4"
+    "tailwindcss": "^1.0"
   },
   "repository": {
     "type": "git",
