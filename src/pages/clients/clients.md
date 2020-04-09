@@ -22,8 +22,14 @@ clients:
       logo: /img/cgi.png
       name: CGI
   - client:
+      logo: /img/polarcus.jpg
+      name: Polarcus
+  - client:
       logo: /img/ivymobility.png
       name: Ashok Foundation
+  - client:
+      logo: /img/ckare.png
+      name: CavinKare
   - client:
       logo: /img/mindtree-logo.png
       name: Ashok Foundation
