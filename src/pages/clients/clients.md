@@ -8,7 +8,7 @@ clientsDescription: Our Clients
 clients:
   - client:
       logo: /img/ashoka.png
-      name: Ashok Foundation
+      name: Ashoka Foundation
   - client:
       logo: /img/Volvo_logo.png
       name: AVolvo
@@ -19,7 +19,16 @@ clients:
       logo: /img/Thepublicsradio-logo.png
       name: Ashok Foundation
   - client:
+      logo: /img/cgi.png
+      name: CGI
+  - client:
       logo: /img/ivymobility.png
+      name: Ashok Foundation
+  - client:
+      logo: /img/mindtree-logo.png
+      name: Ashok Foundation
+  - client:
+      logo: /img/tavant.png
       name: Ashok Foundation
   - client:
       logo: /img/ET Marlabs Logo2.png
@@ -28,6 +37,9 @@ clients:
       logo: /img/bestmed.png
       name: Bestmed
   - client:
+      logo: /img/reapbenefit.png
+      name: Ashok Foundation
+  - client:
       logo: /img/EWB.png
       name: Ashok Foundation
   - client:
@@ -35,15 +47,6 @@ clients:
       name: Ashok Foundation
   - client:
       logo: /img/ihf.png
-      name: Ashok Foundation
-  - client:
-      logo: /img/mindtree-logo.png
-      name: Ashok Foundation
-  - client:
-      logo: /img/reapbenefit.png
-      name: Ashok Foundation
-  - client:
-      logo: /img/tavant.png
       name: Ashok Foundation
   - client:
       logo: /img/terredeshommes.png
