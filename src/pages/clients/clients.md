@@ -49,9 +49,6 @@ clients:
       logo: /img/EWB.png
       name: Ashok Foundation
   - client:
-      logo: /img/i-enabler.png
-      name: Ashok Foundation
-  - client:
       logo: /img/ihf.png
       name: Ashok Foundation
   - client:
@@ -59,6 +56,9 @@ clients:
       name: Ashok Foundation
   - client:
       logo: /img/trees.png
+      name: Ashok Foundation
+  - client:
+      logo: /img/i-enabler.png
       name: Ashok Foundation
   - client:
       logo: /img/dercopperbowl.png
