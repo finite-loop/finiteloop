@@ -57,5 +57,8 @@ clients:
   - client:
       logo: /img/dercopperbowl.png
       name: Ader copper bowl
+  - client:
+      logo: /img/polarcus.jpg
+      name: Polarcus
 ---
 Our Customers
