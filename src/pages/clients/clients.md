@@ -60,5 +60,8 @@ clients:
   - client:
       logo: /img/polarcus.jpg
       name: Polarcus
+  - client:
+      logo: /img/ckare.png
+      name: CavinKare
 ---
 Our Customers
