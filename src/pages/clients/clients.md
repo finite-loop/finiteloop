@@ -19,11 +19,11 @@ clients:
       logo: /img/Thepublicsradio-logo.png
       name: Ashok Foundation
   - client:
-      logo: /img/ivymobility.png
-      name: Ashok Foundation
-  - client:
       logo: /img/cgi.png
       name: CGI
+  - client:
+      logo: /img/ivymobility.png
+      name: Ashok Foundation
   - client:
       logo: /img/mindtree-logo.png
       name: Ashok Foundation
