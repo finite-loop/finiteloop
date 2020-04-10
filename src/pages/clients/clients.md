@@ -52,6 +52,9 @@ clients:
       logo: /img/ihf.png
       name: Ashok Foundation
   - client:
+      logo: /img/isha.png
+      name: Isha Foundation
+  - client:
       logo: /img/terredeshommes.png
       name: Ashok Foundation
   - client:
@@ -63,9 +66,6 @@ clients:
   - client:
       logo: /img/dercopperbowl.png
       name: Ader copper bowl
-  - client:
-      logo: /img/isha.png
-      name: Isha Foundation
 ---
 
 Our Customers
