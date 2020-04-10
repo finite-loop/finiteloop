@@ -63,6 +63,9 @@ clients:
   - client:
       logo: /img/dercopperbowl.png
       name: Ader copper bowl
+  - client:
+      logo: /img/isha.png
+      name: Isha Foundation
 ---
 
 Our Customers
