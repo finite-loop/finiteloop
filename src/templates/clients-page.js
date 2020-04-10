@@ -36,6 +36,7 @@ export const ClientsPageTemplate = ({
 
 const ClientsPageTemplateWrapper = props => {
   const { edges: aboutus } = props.data.Clients
+  console.log(aboutus)
   return (
     <div>
       {aboutus.map(({ node: aboutusData }) => (
@@ -96,8 +97,8 @@ export const ClientsPageQuery = graphql`
                 name
                 logo {
                   childImageSharp {
-                    fixed(quality: 100) {
-                      ...GatsbyImageSharpFixed
+                    fluid(quality: 100) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }

@@ -13,7 +13,7 @@ headerlinks:
       newwindow: false
   - item:
       title: Customers
-      url: /clients/
+      url: /customers/
       newwindow: false
   - item:
       title: Team

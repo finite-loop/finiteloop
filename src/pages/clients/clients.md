@@ -1,10 +1,10 @@
 ---
 templateKey: clients-page
-path: /clients
-title: Clients
+path: /customers
+title: Customers
 image: /img/OrgTrans.png
-clientsTitle: Our Clients
-clientsDescription: Our Clients
+clientsTitle: Our Customers
+clientsDescription: Our Customers
 clients:
   - client:
       logo: /img/ashoka.png
@@ -64,4 +64,5 @@ clients:
       logo: /img/dercopperbowl.png
       name: Ader copper bowl
 ---
+
 Our Customers
