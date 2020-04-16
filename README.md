@@ -25,30 +25,30 @@ gatsby develop
 
 ## Using Docker
 
-https://hub.docker.com/r/partha360/finiteloop-systems-v2/
+https://hub.docker.com/r/finitelooplabs/website
 
 ```sh
-git clone https://github.com/finite-loop/finiteloop-systems-v2.git (https)
+git clone https://github.com/finite-loop/finiteloop.git (https)
 
     or
 
-git clone git@github.com:finite-loop/finiteloop-systems-v2.git (ssh)
+git clone git@github.com:finite-loop/finiteloop.git (ssh)
 
-cd finiteloop-systems-v2
+cd finiteloop
 
 # Dev Environment
 
-docker run --rm -it -p 8000:8000 -v $(pwd):/site partha360/finiteloop-systems-v2 develop
+docker run --rm -p 8000:8000 -it -v $(pwd):/site finitelooplabs/website develop
 
 # Production Build
 
-docker run --rm -it -v $(pwd):/site partha360/finiteloop-systems-v2 build
+docker run --rm -p 8000:8000 -it -v $(pwd):/site finitelooplabs/website build
 
 #Staging Environment
 
-docker run --rm -it -p 8000:8000 -v $(pwd):/site partha360/finiteloop-systems-v2 stage #
+docker run --rm -p 8000:8000 -it -v $(pwd):/site finitelooplabs/website stage
 ```
 
 ## Deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/finite-loop/finiteloop-systems-v2)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/finite-loop/finiteloop)
