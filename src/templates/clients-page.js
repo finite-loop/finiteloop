@@ -36,7 +36,6 @@ export const ClientsPageTemplate = ({
 
 const ClientsPageTemplateWrapper = props => {
   const { edges: aboutus } = props.data.Clients
-  console.log(aboutus)
   return (
     <div>
       {aboutus.map(({ node: aboutusData }) => (

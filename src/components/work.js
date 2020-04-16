@@ -31,7 +31,6 @@ export const WorkPageTemplate = ({ work }) => (
 )
 
 const Work = ({ workData }) => {
-  console.log(workData)
   const { edges: work } = workData.Work
   return (
     <section name="work">
