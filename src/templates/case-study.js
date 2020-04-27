@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import {
   LinkedinShareButton,
   TwitterShareButton,
@@ -193,7 +193,6 @@ export default CaseStudy
 export const pageQuery = graphql`
   query CaseStudyByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
       excerpt
       frontmatter {
         path

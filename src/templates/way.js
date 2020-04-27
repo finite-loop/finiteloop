@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
@@ -140,7 +140,6 @@ export const WayPageQuery = graphql`
     ) {
       edges {
         node {
-          html
           id
           excerpt
           frontmatter {

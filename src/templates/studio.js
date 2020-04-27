@@ -1,12 +1,13 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import ReactFullpage from '@fullpage/react-fullpage'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Content, { HTMLContent } from '../components/content'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import FullLayout from '../components/layout.full'
 
 export const StudioPageTemplate = ({
   props,
@@ -16,7 +17,7 @@ export const StudioPageTemplate = ({
 }) => {
   const PageContent = contentComponent || Content
   return (
-    <div>
+    <FullLayout>
       <Helmet
         title={
           props.data.global.frontmatter.siteTitle +
@@ -82,7 +83,7 @@ export const StudioPageTemplate = ({
         postNode={studioData}
         postSEO
       />
-    </div>
+    </FullLayout>
   )
 }
 
