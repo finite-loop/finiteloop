@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../../components/content'
@@ -15,10 +15,7 @@ class Offerings extends React.Component {
     return (
       <Layout>
         <Helmet title={`${data.global.frontmatter.siteTitle} | Services`} />
-        <PageContent
-          className="para-primary"
-          content={data.global.frontmatter.offeringText}
-        />
+        <PageContent className="para-primary" content={data.global.frontmatter.offeringText} />
         <div className="mx-auto text-center pb-4">
           <Link to="/contact">
             <button className="rectButton">Talk to us</button>
@@ -27,19 +24,12 @@ class Offerings extends React.Component {
         <section name="services" className="tracking-normal leading-normal">
           {posts.map(({ node: post }) => (
             <div key={post.id} className="sm:px-4 md:px-12 lg:px-16">
-              <a
-                className="block relative"
-                style={{ top: '-100px' }}
-                id={post.frontmatter.path}
-              />
+              <a className="block relative" style={{ top: '-100px' }} id={post.frontmatter.path} />
               <h2 className="text-2xl pb-4">
                 <span id={post.frontmatter.path}>{post.frontmatter.title}</span>
               </h2>
               <div className="two-column pb-4">
-                <PageContent
-                  className="primary text-lg tracking-normal leading-normal"
-                  content={post.html}
-                />
+                <PageContent className="primary text-lg tracking-normal leading-normal" content={post.html} />
               </div>
               <hr className="line w-full" />
             </div>
@@ -69,13 +59,9 @@ export default Offerings
 
 export const offeringsQuery = graphql`
   query Offertings {
-    Offerings: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___order] }
-      filter: { frontmatter: { templateKey: { eq: "offering" } } }
-    ) {
+    Offerings: allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }, filter: { frontmatter: { templateKey: { eq: "offering" } } }) {
       edges {
         node {
-          html
           id
           frontmatter {
             image {
@@ -93,9 +79,7 @@ export const offeringsQuery = graphql`
         }
       }
     }
-    global: markdownRemark(
-      frontmatter: { templateKey: { eq: "global-settings" } }
-    ) {
+    global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
       frontmatter {
         siteTitle
         offeringText
