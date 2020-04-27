@@ -12,6 +12,17 @@
 body {
   @apply font-sans antialiased overflow-x-hidden scrolling-touch border-none;
 }
+
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
+div[role='group'][tabindex] {
+  height: 100%;
+}
+
 *,
 *::after,
 *::before {

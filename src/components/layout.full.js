@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import '../styles/index.css'
 import Header from './header'
 import Footer from './footer'
+import StudioHeader from './headerStudio'
+import StudioFooter from './footerStudio'
 
 const FullLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SettingsQuery1 {
-        global: markdownRemark(
-          frontmatter: { templateKey: { eq: "global-settings" } }
-        ) {
+        global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
           frontmatter {
             logo {
               childImageSharp {
@@ -35,9 +35,7 @@ const FullLayout = ({ children }) => (
             }
           }
         }
-        links: markdownRemark(
-          frontmatter: { templateKey: { eq: "nav-links" } }
-        ) {
+        links: markdownRemark(frontmatter: { templateKey: { eq: "nav-links" } }) {
           frontmatter {
             headerlinks {
               item {
@@ -57,23 +55,19 @@ const FullLayout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div
         className="relative min-h-screen"
-        style={{
-          backgroundColor: '#E05455',
-          // backgroundImage: 'url(/img/team-bg.png)',
-          // backgroundBlendMode: 'hard-light',
-        }}
+        style={
+          {
+            // backgroundColor: 'rgba(247, 222, 215, 0.6)',
+          }
+        }
       >
         <Helmet title={data.global.frontmatter.siteTitle} />
-        <Header
-          title={data.global.frontmatter.logoTitle}
-          social={data.global.frontmatter.socialMediaCard}
-          links={data.links.frontmatter.headerlinks}
-        />
-        <div className="py-4">{children}</div>
-        <Footer
+        <StudioHeader title={data.global.frontmatter.logoTitle} social={data.global.frontmatter.socialMediaCard} links={data.links.frontmatter.headerlinks} />
+        <div>{children}</div>
+        <StudioFooter
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}
           hashTag={data.global.frontmatter.socialMediaCard.hashTag}
