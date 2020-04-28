@@ -2,8 +2,8 @@
 templateKey: nav-links
 headerlinks:
   - item:
-      title: Studio
-      url: /studio/
+      title: Design
+      url: /design/
       newWindow: false
   #   - item:
   #       title: Labs

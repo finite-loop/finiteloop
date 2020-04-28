@@ -1,18 +1,16 @@
 import React from 'react'
-import propTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import ReactFullpage from '@fullpage/react-fullpage'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Content, { HTMLContent } from '../components/content'
-import StudioHeader from '../components/headerStudio'
-import Footer from '../components/footer'
-import FullLayout from '../components/layout.full'
+import StudioLayout from '../components/layout.studio'
 
 export const StudioPageTemplate = ({ props, content, contentComponent, studioData }) => {
   const PageContent = contentComponent || Content
+  console.log(studioData)
   return (
-    <FullLayout>
+    <StudioLayout>
       <Helmet title={props.data.global.frontmatter.siteTitle + ' | ' + studioData.frontmatter.title} />
       {/* <ReactFullpage
         navigation
@@ -180,7 +178,7 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
         }} 
       /> */}
       <SEO postPath={studioData.frontmatter.path} postNode={studioData} postSEO />
-    </FullLayout>
+    </StudioLayout>
   )
 }
 
@@ -202,18 +200,6 @@ const StudioPageTemplateWrapper = (props) => {
   )
 }
 
-StudioPageTemplate.propTypes = {
-  props: propTypes.object.isRequired,
-  data: propTypes.object,
-  studioData: propTypes.object.isRequired,
-  content: propTypes.string.isRequired,
-  contentComponent: propTypes.func.isRequired,
-}
-
-StudioPageTemplateWrapper.propTypes = {
-  data: propTypes.object.isRequired,
-}
-
 export default StudioPageTemplateWrapper
 
 export const StudioPageQuery = graphql`
@@ -221,7 +207,6 @@ export const StudioPageQuery = graphql`
     Studio: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "studio" } } }) {
       edges {
         node {
-          html
           id
           excerpt
           frontmatter {
@@ -229,6 +214,50 @@ export const StudioPageQuery = graphql`
             title
             header
             footer
+            main {
+              desc {
+                childMarkdownRemark {
+                  html
+                  frontmatter {
+                    title
+                  }
+                }
+              }
+              image {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            projects {
+              title
+              details {
+                childMarkdownRemark {
+                  html
+                  frontmatter {
+                    title
+                    image {
+                      childImageSharp {
+                        fluid(quality: 100) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                    showcase {
+                      image {
+                        childImageSharp {
+                          fluid(quality: 100) {
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -253,24 +282,6 @@ export const StudioPageQuery = graphql`
           twtrUrl
           lnkdnUrl
           githubUrl
-        }
-      }
-    }
-    links: markdownRemark(frontmatter: { templateKey: { eq: "nav-links" } }) {
-      frontmatter {
-        headerlinks {
-          item {
-            title
-            url
-            newwindow
-          }
-        }
-        footerlinks {
-          item {
-            title
-            url
-            newwindow
-          }
         }
       }
     }
