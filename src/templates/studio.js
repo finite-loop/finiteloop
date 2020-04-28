@@ -12,14 +12,6 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
   return (
     <StudioLayout>
       <Helmet title={props.data.global.frontmatter.siteTitle + ' | ' + studioData.frontmatter.title} />
-      {/* <ReactFullpage
-        navigation
-        licenseKey={process.env.GATSBY_FULLPAGE_LICENSE_KEY}
-        scrollingSpeed={1000}
-        sectionsColor={['rgba(247, 222, 215, 0.6)']}
-        // render={(comp) => {
-        //   return (
-        //     <ReactFullpage.Wrapper> */}
       <div
         className="flex flex-wrap justify-evenly items-center py-32"
         style={{
@@ -30,26 +22,7 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
           <img src="/img/finiteloop-branding-06.png" alt="Finiteloop logo"></img>
         </div>
         <div className="flex-col max-w-lg leading-relaxed">
-          <p>
-            <b>Finiteloop Design Studio</b> builds simple, sustainable design solutions that works best for our customers. Through human centered, design
-            thinking we bring clarity to complexities in business. We are a cutting edge, multidisciplinary studio specializing in converting large ideas into
-            scalable products and solutions.
-          </p>
-          <p>
-            Our principles are designed to optimize and simplify every step. The ability to empathize with our customers, to think big, and the ability to
-            achieve long term goals is important for us. There is a constant movement from chaos to order, from abstraction to clarity, and we drive this change
-            gracefully. We enter the market to solve design problems for our customers through detailed human centered design thinking. We co-create, teach,
-            share our knowledge, and work on projects that have a high level, positive impact for our customers.
-          </p>
-          <p>
-            Our approach is to apply human centered design to the overall customer experience and address the problem statement with empathy and analysis. We
-            apply Service design practices to analyze your entire service experience. We help build innovative products through our detailed Product Design
-            processes that brings positive impact to our customers.
-          </p>
-          <p>
-            Our top - notch expertise in User Experience and User Interface has helped us build meaningful practices for our partners.In essence, we transform
-            businesses through a complete user centric Experience Design platform we have developed through the years
-          </p>
+          <PageContent className="flex-col max-w-lg leading-relaxed" content={studioData.frontmatter.main.desc.childMarkdownRemark.html} />
         </div>
       </div>
       <section name="ahoy">
@@ -67,15 +40,11 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/ahoy_1.png" alt="Ahoy App"></img>
           </div>
-          <p className="xl:mx-32 font-bold mt-20">
-            Ahoy Admin
-          </p>
+          <p className="xl:mx-32 font-bold mt-20">Ahoy Admin</p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/ahoy_2.png" alt="Ahoy App"></img>
           </div>
-          <p className="xl:mx-32 font-bold mt-20">
-            Service Design Map
-          </p>
+          <p className="xl:mx-32 font-bold mt-20">Service Design Map</p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/ahoy_3.png" alt="Ahoy App"></img>
           </div>
@@ -98,9 +67,7 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/signages_2.png" alt="Signages"></img>
           </div>
-          <p className="xl:mx-32 font-bold mt-20">
-            Working Photos
-          </p>
+          <p className="xl:mx-32 font-bold mt-20">Working Photos</p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/signages_3.png" alt="Signages"></img>
           </div>
@@ -114,8 +81,8 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
             <span className="border-studio border-solid border-b-4 w-1/2"></span>
           </div>
           <p className="xl:mx-32">
-          A rugged interaction desk was built for use on ships under multiple weather conditions. We used rigorous user research, 
-          interaction study and creative industrial design process to keep the utility of the desk in mind along with the opportunity to create a favourable brand impression.
+            A rugged interaction desk was built for use on ships under multiple weather conditions. We used rigorous user research, interaction study and
+            creative industrial design process to keep the utility of the desk in mind along with the opportunity to create a favourable brand impression.
           </p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/gangwaydesk_1.png" alt="Gangway desk"></img>
@@ -130,8 +97,9 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
             <span className="border-studio border-solid border-b-4 w-full"></span>
           </div>
           <p className="xl:mx-32">
-          We studied one of the most respected FMCG companies in India to create a new product experience for our retail 
-          services client, Ivy Mobility. We understood the experience gaps across the sales organization and built solutions to unlock the productivity of the ﬁeld sales teams across the country.
+            We studied one of the most respected FMCG companies in India to create a new product experience for our retail services client, Ivy Mobility. We
+            understood the experience gaps across the sales organization and built solutions to unlock the productivity of the ﬁeld sales teams across the
+            country.
           </p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/nestle_1.png" alt="Nestle"></img>
@@ -149,34 +117,24 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
             <span className="border-studio border-solid border-b-4 w-1/2"></span>
           </div>
           <p className="xl:mx-32">
-          We created a passion-ﬁlled Service Experience that seamlessly merges online and ofﬂine - between delightful User eXperience on web+mobile and a memorable ofﬂine 
-          service experience through paid food walks, cooking classes etc. We merged User and market research, Digital + Physical experiences, and Community contributor experiences 
-          to form a holistic solution.
+            We created a passion-ﬁlled Service Experience that seamlessly merges online and ofﬂine - between delightful User eXperience on web+mobile and a
+            memorable ofﬂine service experience through paid food walks, cooking classes etc. We merged User and market research, Digital + Physical
+            experiences, and Community contributor experiences to form a holistic solution.
           </p>
-          <p className="xl:mx-32 font-bold mt-20">
-            Visual Design Option
-          </p>
+          <p className="xl:mx-32 font-bold mt-20">Visual Design Option</p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/talking_street_1.png" alt="Talking Street"></img>
           </div>
-          <p className="xl:mx-32 font-bold mt-20">
-            Creating responsive layouts
-          </p>
+          <p className="xl:mx-32 font-bold mt-20">Creating responsive layouts</p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/talking_street_2.png" alt="Talking Street"></img>
           </div>
-          <p className="xl:mx-32 font-bold mt-20">
-            Working photos
-          </p>
+          <p className="xl:mx-32 font-bold mt-20">Working photos</p>
           <div className="xl:mx-32 max-w-sm">
             <img src="/img/talking_street_3.png" alt="Talking Street"></img>
           </div>
         </div>
       </section>
-      {/* </ReactFullpage.Wrapper>
-          )
-        }} 
-      /> */}
       <SEO postPath={studioData.frontmatter.path} postNode={studioData} postSEO />
     </StudioLayout>
   )
