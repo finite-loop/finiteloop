@@ -12,10 +12,9 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
         ],
       },
-    });
+    })
   }
 }
-  ;
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -36,9 +35,9 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
+      result.errors.forEach((e) => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
     var id = 0
@@ -54,13 +53,12 @@ exports.createPages = ({ actions, graphql }) => {
         node.frontmatter.templateKey != 'service-carousel' &&
         node.frontmatter.templateKey != 'offering' &&
         node.frontmatter.templateKey != 'way-sections' &&
-        node.frontmatter.templateKey != 'product'
+        node.frontmatter.templateKey != 'product' &&
+        node.frontmatter.templateKey != 'studio-projects'
       ) {
         createPage({
           path: pagePath,
-          component: path.resolve(
-            `src/templates/${String(node.frontmatter.templateKey)}.js`
-          ),
+          component: path.resolve(`src/templates/${String(node.frontmatter.templateKey)}.js`),
           // additional data can be passed via context
           context: {},
         })
@@ -69,7 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Portfolio Tagged pages:
     let portfolio = []
     // Iterate through each post, putting all found tags into `tags`
-    _.each(posts, edge => {
+    _.each(posts, (edge) => {
       if (_.get(edge, 'node.frontmatter.portfolio')) {
         portfolio = portfolio.concat(edge.node.frontmatter.portfolio)
       }
@@ -78,7 +76,7 @@ exports.createPages = ({ actions, graphql }) => {
     portfolio = _.uniq(portfolio)
 
     // Make Portfolio tag pages
-    portfolio.forEach(portfolio => {
+    portfolio.forEach((portfolio) => {
       createPage({
         path: `/portfolio/${_.kebabCase(portfolio)}/`,
         component: path.resolve('src/templates/portfolios.js'),
@@ -89,7 +87,7 @@ exports.createPages = ({ actions, graphql }) => {
       // Service Tagged pages:
       let service = []
       // Iterate through each post, putting all found tags into `tags`
-      _.each(posts, edge => {
+      _.each(posts, (edge) => {
         if (_.get(edge, 'node.frontmatter.service')) {
           service = service.concat(edge.node.frontmatter.service)
         }
@@ -98,7 +96,7 @@ exports.createPages = ({ actions, graphql }) => {
       service = _.uniq(service)
 
       // Make service tag pages
-      service.forEach(service => {
+      service.forEach((service) => {
         createPage({
           path: `/service/${_.kebabCase(service)}/`,
           component: path.resolve('src/templates/service-lines.js'),

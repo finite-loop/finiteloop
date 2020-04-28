@@ -5,11 +5,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import '../styles/index.css'
 import Header from './header'
 import Footer from './footer'
+import StudioHeader from './headerStudio'
+import StudioFooter from './footerStudio'
 
 const FullLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SettingsQueryFull {
+      query SettingsQueryStudio {
         global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
           frontmatter {
             logo {
@@ -56,14 +58,16 @@ const FullLayout = ({ children }) => (
     render={(data) => (
       <div
         className="relative min-h-screen"
-        style={{
-          backgroundColor: '#E05455',
-        }}
+        style={
+          {
+            // backgroundColor: 'rgba(247, 222, 215, 0.6)',
+          }
+        }
       >
         <Helmet title={data.global.frontmatter.siteTitle} />
-        <Header title={data.global.frontmatter.logoTitle} social={data.global.frontmatter.socialMediaCard} links={data.links.frontmatter.headerlinks} />
+        <StudioHeader title={data.global.frontmatter.logoTitle} social={data.global.frontmatter.socialMediaCard} links={data.links.frontmatter.headerlinks} />
         <div>{children}</div>
-        <Footer
+        <StudioFooter
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}
           hashTag={data.global.frontmatter.socialMediaCard.hashTag}
