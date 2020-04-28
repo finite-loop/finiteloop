@@ -54,35 +54,127 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
           </p>
         </div>
       </div>
-      <div className="flex flex-col px-32 bg-white py-4">
-        <div className="flex my-4">
-          <span className="border-studio border-solid border-b-4 w-32"></span>
-          <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;AHOY&nbsp;</span>
-          <span className="border-studio border-solid border-b-4 w-full"></span>
+      <section name="ahoy">
+        <div className="flex flex-col px-32 bg-white py-4">
+          <div className="flex my-4">
+            <span className="border-studio border-solid border-b-4 w-32"></span>
+            <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;AHOY&nbsp;</span>
+            <span className="border-studio border-solid border-b-4 w-full"></span>
+          </div>
+          <p className="xl:mx-32">
+            We worked with one of the largest ship fleet management companies in the world to create a mobile app for seafarers. The team put together our
+            varied experiences to design for an unfamiliar user group and work environment, requiring a deep immersive study into the world of shipping. The app
+            is a major component of ongoing learning and completion of tasks assigned to the Seafarers.
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/ahoy_1.png" alt="Ahoy App"></img>
+          </div>
+          <p className="xl:mx-32 font-bold mt-20">
+            Ahoy Admin
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/ahoy_2.png" alt="Ahoy App"></img>
+          </div>
+          <p className="xl:mx-32 font-bold mt-20">
+            Service Design Map
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/ahoy_3.png" alt="Ahoy App"></img>
+          </div>
         </div>
-        <p className="xl:mx-32">
-          We worked with one of the largest ship fleet management companies in the world to create a mobile app for seafarers. The team put together our varied
-          experiences to design for an unfamiliar user group and work environment, requiring a deep immersive study into the world of shipping. The app is a
-          major component of ongoing learning and completion of tasks assigned to the Seafarers.
-        </p>
-        <div className="xl:mx-32 max-w-sm">
-          <img src="/img/ahoy.png" alt="Ahoy App"></img>
+      </section>
+      <section name="signages">
+        <div className="flex flex-col px-32 bg-studio-color-alternate py-20">
+          <div className="flex my-4">
+            <span className="border-studio border-solid border-b-4 w-32"></span>
+            <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;SIGNAGES&nbsp;</span>
+            <span className="border-studio border-solid border-b-4 w-full"></span>
+          </div>
+          <p className="xl:mx-32">
+            We have rethought narratives in hazardous maritime environments and helped people-friendly redesign signages that are centered around seafarers
+            instead of regulations.
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/signages_1.png" alt="Signages"></img>
+          </div>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/signages_2.png" alt="Signages"></img>
+          </div>
+          <p className="xl:mx-32 font-bold mt-20">
+            Working Photos
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/signages_3.png" alt="Signages"></img>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col px-32 bg-studio-color-alternate py-4">
-        <div className="flex my-4">
-          <span className="border-studio border-solid border-b-4 w-32"></span>
-          <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;SIGNAGES&nbsp;</span>
-          <span className="border-studio border-solid border-b-4 w-full"></span>
+      </section>
+      <section name="gangwaydesk">
+        <div className="flex flex-col px-32 bg-white py-20">
+          <div className="flex my-4">
+            <span className="border-studio border-solid border-b-4 w-32"></span>
+            <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;GANGWAY DESK&nbsp;</span>
+            <span className="border-studio border-solid border-b-4 w-1/2"></span>
+          </div>
+          <p className="xl:mx-32">
+          A rugged interaction desk was built for use on ships under multiple weather conditions. We used rigorous user research, 
+          interaction study and creative industrial design process to keep the utility of the desk in mind along with the opportunity to create a favourable brand impression.
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/gangwaydesk_1.png" alt="Gangway desk"></img>
+          </div>
         </div>
-        <p className="xl:mx-32">
-          We have rethought narratives in hazardous maritime environments and helped people-friendly redesign signages that are centered around seafarers
-          instead of regulations.
-        </p>
-        <div className="xl:mx-32 max-w-sm">
-          <img src="/img/signages_1.png" alt="Signages"></img>
+      </section>
+      <section name="nestle">
+        <div className="flex flex-col px-32 bg-studio-color-alternate py-20">
+          <div className="flex my-4">
+            <span className="border-studio border-solid border-b-4 w-32"></span>
+            <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;NESTLE&nbsp;</span>
+            <span className="border-studio border-solid border-b-4 w-full"></span>
+          </div>
+          <p className="xl:mx-32">
+          We studied one of the most respected FMCG companies in India to create a new product experience for our retail 
+          services client, Ivy Mobility. We understood the experience gaps across the sales organization and built solutions to unlock the productivity of the ﬁeld sales teams across the country.
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/nestle_1.png" alt="Nestle"></img>
+          </div>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/nestle_2.png" alt="Nestle"></img>
+          </div>
         </div>
-      </div>
+      </section>
+      <section name="talkingstreet">
+        <div className="flex flex-col px-32 bg-studio-color-alternate py-20">
+          <div className="flex my-4">
+            <span className="border-studio border-solid border-b-4 w-32"></span>
+            <span className="studio-color text-6xl font-bold font-neptune leading-none">&nbsp;TALKING STREET&nbsp;</span>
+            <span className="border-studio border-solid border-b-4 w-1/2"></span>
+          </div>
+          <p className="xl:mx-32">
+          We created a passion-ﬁlled Service Experience that seamlessly merges online and ofﬂine - between delightful User eXperience on web+mobile and a memorable ofﬂine 
+          service experience through paid food walks, cooking classes etc. We merged User and market research, Digital + Physical experiences, and Community contributor experiences 
+          to form a holistic solution.
+          </p>
+          <p className="xl:mx-32 font-bold mt-20">
+            Visual Design Option
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/talking_street_1.png" alt="Talking Street"></img>
+          </div>
+          <p className="xl:mx-32 font-bold mt-20">
+            Creating responsive layouts
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/talking_street_2.png" alt="Talking Street"></img>
+          </div>
+          <p className="xl:mx-32 font-bold mt-20">
+            Working photos
+          </p>
+          <div className="xl:mx-32 max-w-sm">
+            <img src="/img/talking_street_3.png" alt="Talking Street"></img>
+          </div>
+        </div>
+      </section>
       {/* </ReactFullpage.Wrapper>
           )
         }} 
