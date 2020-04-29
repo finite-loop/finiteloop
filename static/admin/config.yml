@@ -382,8 +382,8 @@ collections:
                     }
 
       - file: 'src/pages/clients/clients.md'
-        label: 'Clients'
-        name: 'clients'
+        label: 'Customers'
+        name: 'customers'
         editor:
           preview: false
         fields:
@@ -393,7 +393,7 @@ collections:
               widget: 'hidden',
               default: 'clients-page',
             }
-          - { label: 'Path', name: 'path', widget: 'hidden', default: '/clients' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/customers' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Body', name: 'body', widget: 'markdown' }

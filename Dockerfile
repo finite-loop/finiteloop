@@ -1,4 +1,4 @@
-FROM node:8.11.3
+FROM node:10.13.0
 
 EXPOSE 8000
 
@@ -29,6 +29,6 @@ RUN mkdir -p /site
 WORKDIR /site
 VOLUME /site
 
-COPY ./docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT [ "/docker-entrypoint.sh" ]
+COPY ./entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]

@@ -96,8 +96,8 @@ export const ClientsPageQuery = graphql`
                 name
                 logo {
                   childImageSharp {
-                    fixed(quality: 100) {
-                      ...GatsbyImageSharpFixed
+                    fluid(quality: 100) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }

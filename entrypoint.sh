@@ -4,7 +4,7 @@ set -e
 export GATSBY_DIR="/site"
 export PATH="$PATH:/usr/local/bin/gatsby"
 
-# Initialize Gatsby or run yarn
+# # Initialize Gatsby or run yarn
 if [ ! -f "$GATSBY_DIR/package.json" ]
 then
   echo "Initializing Gatsby..."
@@ -22,9 +22,8 @@ fi
 if  [ "$1" = "develop" ]
 then
   rm -rf $GATSBY_DIR/public
-  rm -rf $GATSBY_DIR/.cache
   yarn
-  gatsby develop --host 0.0.0.0
+  gatsby develop -H 0.0.0.0
 
 elif  [ "$1" = "build" ]
 then
@@ -36,7 +35,7 @@ then
 elif  [ "$1" = "stage" ]
 then
   # rm -rf $GATSBY_DIR/public
-  # ]rm -rf $GATSBY_DIR/node_modules
+  # rm -rf $GATSBY_DIR/node_modules
   yarn
   yarn build
   gatsby serve --port 8000

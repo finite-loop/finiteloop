@@ -112,7 +112,6 @@ class ContactForm extends React.Component {
       body: encode({ 'form-name': 'Contact', ...this.state }),
     })
       .then(() => {
-        console.log('Form submission success')
         this.setState({
           showError: false,
           showMessage: true,

@@ -40,7 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
       result.errors.forEach((e) => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
-    var id = 0
+    let id = 0
 
     const posts = result.data.allMarkdownRemark.edges
 

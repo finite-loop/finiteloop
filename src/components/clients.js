@@ -2,32 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-function compare(a, b) {
-  // Use toUpperCase() to ignore character casing
-  const genreA = a.client.name.toUpperCase()
-  const genreB = b.client.name.toUpperCase()
-
-  let comparison = 0
-  if (genreA > genreB) {
-    comparison = 1
-  } else if (genreA < genreB) {
-    comparison = -1
-  }
-  return comparison
-}
-
 export const ClientsPageTemplate = ({ clients }) => (
   <div>
-    <div className="flex flex-wrap bg-white pt-20 rounded-lg justify-center items-center">
+    <div className="flex flex-wrap justify-center items-center bg-white rounded-lg">
       {clients.clients.map(({ client }) => (
-        <div key={client.name}>
-          <div className="flex max-w-xs px-20 pb-20 flex-col">
-            <div>
-              <Img
-                alt={client.name}
-                fixed={client.logo.childImageSharp.fixed}
-              />
-            </div>
+        <div className="flex flex-col px-20 py-10" key={client.name}>
+          <div className="flex flex-col">
+            <Img
+              alt={client.name}
+              fluid={client.logo.childImageSharp.fluid}
+              className="w-48 h-48 align-center"
+              imgStyle={{
+                objectFit: 'contain',
+              }}
+            />
           </div>
         </div>
       ))}
