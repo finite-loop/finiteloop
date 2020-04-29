@@ -1,5 +1,23 @@
 $accent-color: #e6f2f2;
 
+$studio-color: #e1605f;
+
+.studio-color {
+  color: $studio-color;
+}
+
+.stuio-color-alternate {
+  color: rgba(143, 157, 156, 0.15);
+}
+
+.bg-studio-color-alternate {
+  background-color: rgba(143, 157, 156, 0.15);
+}
+
+.border-studio {
+  border-color: $studio-color;
+}
+
 .primary {
   @apply text-fl-primary;
 }

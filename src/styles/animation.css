@@ -8,8 +8,7 @@
 }
 
 .anim-typewriter {
-  animation: typewriter 2s steps(24) 1s 1 normal both,
-    blinkTextCursor 500ms steps(24) infinite normal;
+  animation: typewriter 2s steps(24) 1s 1 normal both, blinkTextCursor 500ms steps(24) infinite normal;
 }
 
 @keyframes typewriter {
@@ -74,6 +73,19 @@
   transition: all 0.3s ease-in;
 }
 .hamburger:hover {
+  cursor: pointer;
+}
+.hamburgerStudio .line {
+  width: 40px;
+  height: 5px;
+  @apply bg-fl-primary-alternate;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 0.3s ease-in;
+}
+.hamburgerStudio:hover {
   cursor: pointer;
 }
 #hamburger-menu.is-active .line:nth-child(2) {

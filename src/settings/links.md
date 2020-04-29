@@ -1,9 +1,10 @@
 ---
 templateKey: nav-links
 headerlinks:
-  #   - item:
-  #       title: Services
-  #       url: /offerings/
+  - item:
+      title: Design
+      url: /design/
+      newWindow: false
   #   - item:
   #       title: Labs
   #       url: /labs/

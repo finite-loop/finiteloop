@@ -19,7 +19,7 @@
 }
 
 .nav {
-  @apply z-50 flex justify-between flex-wrap pin-t w-full  p-4;
+  @apply z-50 flex justify-between flex-wrap top-0 w-full  p-4;
 }
 .nav:after {
   @apply block border-b;
@@ -27,8 +27,8 @@
   width: 110%;
 }
 .footer {
-  @apply pin-b pb-0 text-white h-auto;
-  background: rgba(0, 0, 0, 0.1);
+  @apply bottom-0 pb-0 text-white h-auto;
+  background: rgba(0, 0, 0, 0.3);
 }
 .btn-primary {
   @apply bg-primary text-white font-bold py-2 px-4 rounded;
@@ -46,8 +46,20 @@
   @apply text-fl-secondary-accent-alternate;
 }
 
+.link-primary-studio {
+  @apply font-semibold uppercase text-base no-underline tracking-wide;
+  color: #e1605f;
+}
+
+.link-primary-studio:hover {
+  color: gray;
+}
+
 .active-link {
   @apply text-fl-secondary-accent-alternate;
+}
+.active-link-studio {
+  color: gray;
 }
 
 .link-secondary {

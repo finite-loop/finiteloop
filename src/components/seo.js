@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import config from '../../config/SiteConfig'
 import PropTypes from 'prop-types'
 class SEO extends Component {

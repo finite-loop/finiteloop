@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import { graphql } from 'gatsby'
 import Clients from '../components/clients'
 import SEO from '../components/seo'

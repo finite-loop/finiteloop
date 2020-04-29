@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
@@ -11,21 +11,9 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
   const PageContent = contentComponent || Content
   return (
     <Layout>
-      <Helmet
-        title={
-          props.data.global.frontmatter.siteTitle +
-          ' | ' +
-          wayData.frontmatter.title
-        }
-      />
-      <PageContent
-        className="para-primary"
-        content={wayData.frontmatter.header}
-      />
-      <section
-        name="The Way"
-        className="sm:px-2 md:px-4 lg:px-10 xl:px-12 text-white"
-      >
+      <Helmet title={props.data.global.frontmatter.siteTitle + ' | ' + wayData.frontmatter.title} />
+      <PageContent className="para-primary" content={wayData.frontmatter.header} />
+      <section name="The Way" className="sm:px-2 md:px-4 lg:px-10 xl:px-12 text-white">
         <div className="flex sm:flex-wrap lg:flex-no-wrap justify-start font-semibold mb-4">
           {/* <Img
             className="sm:w-full sm:h-full lg:w-3/5 rounded-lg"
@@ -37,16 +25,12 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
             content={wayData.frontmatter.main.desc.childMarkdownRemark.html}
           />
         </div>
-        {wayData.frontmatter.sections.map(items => (
+        {wayData.frontmatter.sections.map((items) => (
           <div className="pb-6" key={items.title}>
             <h2 className="text-left text-3xl w-full">{items.title}</h2>
-            <hr
-              className="mb-6"
-              style={{ borderTop: '0.05rem solid white' }}
-              color="white"
-            />
+            <hr className="mb-6" style={{ borderTop: '0.05rem solid white' }} color="white" />
             <div className="flex sm:flex-wrap md:flex-no-wrap justify-start">
-              {items.children.map(item => (
+              {items.children.map((item) => (
                 <React.Fragment key={item.title}>
                   {Object.keys(items.children).length === 1 && (
                     <div className="flex sm:flex-wrap md:flex-no-wrap pb-2 px-2">
@@ -54,10 +38,7 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                         <Img
                           className="rounded"
                           style={{ width: '14rem' }}
-                          fluid={
-                            item.desc.childMarkdownRemark.frontmatter.image
-                              .childImageSharp.fluid
-                          }
+                          fluid={item.desc.childMarkdownRemark.frontmatter.image.childImageSharp.fluid}
                           alt={item.title}
                         />
                       </div>
@@ -72,16 +53,10 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
                       <Img
                         className="rounded"
                         style={{ width: '14rem' }}
-                        fluid={
-                          item.desc.childMarkdownRemark.frontmatter.image
-                            .childImageSharp.fluid
-                        }
+                        fluid={item.desc.childMarkdownRemark.frontmatter.image.childImageSharp.fluid}
                         alt={item.title}
                       />
-                      <PageContent
-                        className="sm:text-lg lg:text-lg mt-6 leading-normal tracking-normal"
-                        content={item.desc.childMarkdownRemark.html}
-                      />
+                      <PageContent className="sm:text-lg lg:text-lg mt-6 leading-normal tracking-normal" content={item.desc.childMarkdownRemark.html} />
                     </div>
                   )}
                 </React.Fragment>
@@ -89,19 +64,14 @@ export const WayPageTemplate = ({ props, contentComponent, wayData }) => {
             </div>
           </div>
         ))}
-        {wayData.frontmatter.footer && (
-          <PageContent
-            className="para-primary"
-            content={wayData.frontmatter.footer}
-          />
-        )}
+        {wayData.frontmatter.footer && <PageContent className="para-primary" content={wayData.frontmatter.footer} />}
       </section>
       <SEO postPath={wayData.frontmatter.path} postNode={wayData} postSEO />
     </Layout>
   )
 }
 
-const WayPageTemplateWrapper = props => {
+const WayPageTemplateWrapper = (props) => {
   const { edges: way } = props.data.way
   return (
     <div>
@@ -135,12 +105,9 @@ export default WayPageTemplateWrapper
 
 export const WayPageQuery = graphql`
   query WayPage {
-    way: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "way" } } }
-    ) {
+    way: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "way" } } }) {
       edges {
         node {
-          html
           id
           excerpt
           frontmatter {
@@ -189,9 +156,7 @@ export const WayPageQuery = graphql`
         }
       }
     }
-    global: markdownRemark(
-      frontmatter: { templateKey: { eq: "global-settings" } }
-    ) {
+    global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
       frontmatter {
         siteTitle
       }
