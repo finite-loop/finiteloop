@@ -43,10 +43,8 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
               <div className="flex flex-wrap sm:justify-center xl:justify-start items-start">
                 {project.details.childMarkdownRemark.frontmatter.showcase.map((image) => (
                   <div key={image.image.childImageSharp.fluid.originalName} className="flex flex-col">
-                    <div className="flex flex-col">
-                      <figcaption className="text-center font-sans font-bold">{image.title || ''}</figcaption>
-                      <Img className="xl:max-w-lg sm:max-w-sm w-screen mb-2" fluid={image.image.childImageSharp.fluid} />
-                    </div>
+                    <figcaption className="text-center font-sans font-bold">{image.title || ''}</figcaption>
+                    <Img className="xl:max-w-lg sm:max-w-sm w-screen mb-2" fluid={image.image.childImageSharp.fluid} />
                   </div>
                 ))}
               </div>

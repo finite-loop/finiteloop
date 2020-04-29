@@ -55,7 +55,7 @@ class StudioHeader extends React.Component {
           <div className="sm:mx-2 md:px-5 flex lg:hidden">
             <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
               <div className="three col">
-                <div className={this.state.menu ? 'hamburger is-active' : 'hamburger'} id="hamburger-menu">
+                <div className={this.state.menu ? 'hamburgerStudio is-active' : 'hamburgerStudio'} id="hamburger-menu">
                   <span className="line" />
                   <span className="line" />
                   <span className="line" />
