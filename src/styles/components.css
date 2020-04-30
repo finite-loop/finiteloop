@@ -57,6 +57,11 @@
   color: #e1605f;
 }
 
+.link-primary-header-studio {
+  @apply font-semibold uppercase text-base no-underline tracking-wide;
+  color: #e1605f;
+}
+
 .link-primary-studio:hover {
   color: gray;
 }

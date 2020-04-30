@@ -7,12 +7,7 @@ const StudioMenuLinks = ({ links, social, classes }) => (
   <div className={classes}>
     <div className="flex-grow" />
     {links.map(({ item }) => (
-      <Link
-        activeClassName="active-link-studio"
-        key={item.title}
-        className="link-primary-studio py-6 lg:pl-10"
-        to={item.url}
-      >
+      <Link activeClassName="active-link-studio" key={item.title} className="link-primary-header-studio py-6 lg:pl-10" to={item.url}>
         <span>{item.title}</span>
       </Link>
     ))}
