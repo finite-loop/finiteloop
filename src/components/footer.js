@@ -32,11 +32,7 @@ class Footer extends React.Component {
                     </Link>
                   )}
                   {footerLinks.newwindow && (
-                    <a
-                      href={footerLinks.url}
-                      target="_new"
-                      className="link-secondary"
-                    >
+                    <a href={footerLinks.url} target="_new" className="link-secondary">
                       {footerLinks.title}
                     </a>
                   )}
@@ -44,26 +40,14 @@ class Footer extends React.Component {
               ))}
             </div>
             <div className="flex">
-              <a
-                href={social.lnkdnUrl}
-                target="_new"
-                className="link-secondary px-2"
-              >
+              <a href={social.lnkdnUrl} target="_new" className="link-secondary px-2">
                 <LnkdnIcon alt="LinkedIn" fill="#F5F6F4" />
               </a>
-              <a
-                href={social.twtrUrl}
-                target="_new"
-                className="link-secondary px-2"
-              >
-                <TwtrIcon alt="Twitter" />
+              <a href={social.twtrUrl} target="_new" className="link-secondary px-2">
+                <TwtrIcon alt="Twitter" fill="#F5F6F4" />
               </a>
-              <a
-                href={social.githubUrl}
-                target="_new"
-                className="link-secondary px-2"
-              >
-                <GitHubIcon alt="Github" />
+              <a href={social.githubUrl} target="_new" className="link-secondary px-2">
+                <GitHubIcon alt="Github" fill="#F5F6F4" />
               </a>
             </div>
           </div>

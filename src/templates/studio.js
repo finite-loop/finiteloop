@@ -21,7 +21,7 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
         <div className="flex max-w-xs">
           <Img className="xl:w-64 sm:w-48 xs:w-32" fluid={studioData.frontmatter.main.image.childImageSharp.fluid} />
         </div>
-        <div className="sm:m-2 flex-col max-w-lg leading-relaxed">
+        <div className="sm:m-4 flex-col max-w-lg leading-relaxed">
           <PageContent
             className="flex-col max-w-lg sm:text-sm xl:text-base leading-relaxed"
             content={studioData.frontmatter.main.desc.childMarkdownRemark.html}
@@ -31,10 +31,10 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
       {studioData.frontmatter.projects.map((project) => (
         <React.Fragment key={project.title}>
           <section name={project.title} style={{ backgroundColor: `${project.bgColor}` }}>
-            <div className="flex flex-col sm:mx-2 lg:mx-auto xl:max-w-5xl sm:max-w-sm py-4">
+            <div className="flex flex-col sm:mx-4 lg:mx-auto xl:max-w-5xl sm:max-w-sm py-4">
               <div className="flex my-4">
                 <span className="border-studio border-solid border-b-4 w-32"></span>
-                <span className="studio-color sm:text-4xl xl:text-6xl font-bold font-neptune leading-none text-center uppercase">
+                <span className="studio-color sm:text-4xl xl:text-6xl font-bold font-neptune leading-none text-center whitespace-no-wrap uppercase">
                   &nbsp;{project.title}&nbsp;
                 </span>
                 <span className="border-studio border-solid border-b-4 w-full"></span>
@@ -42,9 +42,9 @@ export const StudioPageTemplate = ({ props, content, contentComponent, studioDat
               <PageContent className="flex-col max-w-xl sm:text-sm xl:text-base" content={project.details.childMarkdownRemark.html} />
               <div className="flex flex-wrap sm:justify-center xl:justify-start items-start">
                 {project.details.childMarkdownRemark.frontmatter.showcase.map((image) => (
-                  <div key={image.image.childImageSharp.fluid.originalName} className="flex flex-col">
-                    <figcaption className="text-center font-sans font-bold">{image.title || ''}</figcaption>
-                    <Img className="xl:max-w-lg sm:max-w-sm w-screen mb-2" fluid={image.image.childImageSharp.fluid} />
+                  <div key={image.image.childImageSharp.fluid.originalName} className="studioImages">
+                    <figcaption className="text-center font-sans font-bold mb-1">{image.title || ''}</figcaption>
+                    <Img className="xl:max-w-md sm:max-w-sm w-screen mb-2 mr-2" fluid={image.image.childImageSharp.fluid} />
                   </div>
                 ))}
               </div>

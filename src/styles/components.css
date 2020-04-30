@@ -27,9 +27,15 @@
   width: 110%;
 }
 .footer {
+  background: rgba(0, 0, 0, 0.15);
   @apply bottom-0 pb-0 text-white h-auto;
-  background: rgba(0, 0, 0, 0.3);
 }
+
+.footerStudio {
+  @apply bottom-0 pb-0 h-auto;
+  background: rgba(247, 222, 215, 0.6);
+}
+
 .btn-primary {
   @apply bg-primary text-white font-bold py-2 px-4 rounded;
 }
@@ -47,7 +53,7 @@
 }
 
 .link-primary-studio {
-  @apply font-semibold uppercase text-base no-underline tracking-wide;
+  @apply font-medium uppercase text-sm no-underline tracking-wide;
   color: #e1605f;
 }
 
@@ -164,6 +170,9 @@
   .caption {
     @apply p-1 text-left max-h-full max-w-xs text-xs;
   }
+  .studioImages {
+    display: contents;
+  }
 }
 /* Tablet View */
 @screen md {
@@ -183,6 +192,9 @@
   }
   .caption {
     @apply p-3 max-w-xs text-lg;
+  }
+  .studioImages {
+    display: block;
   }
 }
 /* Large Displays */
@@ -204,6 +216,9 @@
   .caption {
     @apply p-3 max-w-xs text-xl;
   }
+  .studioImages {
+    display: block;
+  }
 }
 @screen xl {
   .two-column {
@@ -223,5 +238,8 @@
   }
   .caption {
     @apply leading-normal tracking-normal p-3 max-w-sm text-2xl;
+  }
+  .studioImages {
+    display: block;
   }
 }

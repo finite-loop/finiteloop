@@ -75,21 +75,3 @@ $studio-color: #e1605f;
 ::selection {
   @apply text-white bg-fl-primary;
 }
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  @apply shadow-flPrimary rounded-sm;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  @apply bg-fl-primary rounded-sm;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-fl-primary;
-}
