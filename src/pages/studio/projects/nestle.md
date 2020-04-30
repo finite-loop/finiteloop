@@ -10,4 +10,4 @@ showcase:
     title: ''
 ---
 
-A rugged interaction desk was built for use on ships under multiple weather conditions. We used rigorous user research, interaction study and creative industrial design process to keep the utility of the desk in mind along with the opportunity to create a favourable brand impression.
+We studied one of the most respected FMCG companies in India to create a new product experience for our retail services client, Ivy Mobility. We understood the experience gaps across the sales organization and built solutions to unlock the productivity of the ﬁeld sales teams across the country.

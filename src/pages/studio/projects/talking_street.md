@@ -9,7 +9,7 @@ showcase:
   - image: /img/studio/talking_street_2.png
     title: 'Creating responsive layouts'
   - image: /img/studio/talking_street_3.png
-    title: 'Working photos'
+    title: 'Working photoes'
 ---
 
-A rugged interaction desk was built for use on ships under multiple weather conditions. We used rigorous user research, interaction study and creative industrial design process to keep the utility of the desk in mind along with the opportunity to create a favourable brand impression.
+We created a passion-ﬁlled Service Experience that seamlessly merges online and ofﬂine - between delightful User eXperience on web+mobile and a memorable ofﬂine service experience through paid food walks, cooking classes etc. We merged User and market research, Digital + Physical experiences, and Community contributor experiences to form a holistic solution.

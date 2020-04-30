@@ -4,8 +4,7 @@ filename: main
 title: Projects
 ---
 
-**Finiteloop Design Studio** builds simple, sustainable design solutions that works best for our customers. Through human centered, design
-thinking we bring clarity to complexities in business. We are a cutting edge, multidisciplinary studio specializing in converting large ideas into scalable products and solutions.
+**Finiteloop Design Studio** builds simple, sustainable design solutions that works best for our customers. Through human-centred design thinking we bring clarity to complexities in business. We are a cutting edge, multidisciplinary studio specializing in converting large ideas into scalable products and solutions.
 
 Our principles are designed to optimize and simplify every step. The ability to empathize with our customers, to think big, and the ability to
 achieve long term goals is important for us. There is a constant movement from chaos to order, from abstraction to clarity, and we drive this change
