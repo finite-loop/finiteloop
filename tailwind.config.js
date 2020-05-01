@@ -252,14 +252,7 @@ module.exports = {
         'Georgia',
         'serif',
       ],
-      mono: [
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        'Liberation Mono',
-        'Courier New',
-        'monospace',
-      ],
+      mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
     },
 
     /*
@@ -474,8 +467,7 @@ module.exports = {
         'fl-secondary': colors['fl-secondary'],
         'fl-secondary-alternate': colors['fl-secondary-alternate'],
         'fl-secondary-accent': colors['fl-secondary-accent'],
-        'fl-secondary-accent-alternate':
-          colors['fl-secondary-accent-alternate'],
+        'fl-secondary-accent-alternate': colors['fl-secondary-accent-alternate'],
       }
     ),
 

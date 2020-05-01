@@ -31,7 +31,7 @@ class StudioHeader extends React.Component {
             backgroundColor: 'rgba(247, 222, 215, 0.6)',
           }}
         >
-          <div className="sm:mt-2 sm:ml-4 lg:ml-32">
+          <div className="sm:mt-2 sm:ml-4 md:ml-10 lg:ml-20">
             <Link to="/">
               {/* <div className="sm:flex md:flex justify-center mb-2">
                 <img className="sm:w-3/4 lg:w-auto lg:h-auto" src="/img/finiteloop_logo.png" alt="Logo" />
