@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: https://github.com/finite-loop/finiteloop-systems-v2
+  repo: https://github.com/finite-loop/finiteloop
   branch: master
 
 site_url: https://finiteloop.io/
@@ -23,96 +23,31 @@ collections:
         label: 'Global Settings'
         name: 'global-params'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'global-settings',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'global-settings' }
           - { label: Site Title, name: siteTitle, widget: string }
           - { label: Site Long Title, name: siteLongTitle, widget: string }
           - { label: Site Url, name: siteUrl, widget: string, required: false }
-          - {
-              label: Site Description,
-              name: siteDescription,
-              widget: text,
-              required: false,
-            }
+          - { label: Site Description, name: siteDescription, widget: text, required: false }
           - { label: Logo, name: logo, widget: image, required: true }
           - { label: Trademark Text, name: trademark, widget: string }
           - { label: Intro Text, name: introText, widget: string }
           - { label: Intro Text 2, name: introText2, widget: string }
-          - {
-              label: Logo Title,
-              name: logoTitle,
-              widget: string,
-              required: true,
-            }
-          - {
-              label: 'Service Lines',
-              name: 'services',
-              widget: 'list',
-              field: { label: 'Title', name: title, widget: string }
-          }
+          - { label: Logo Title, name: logoTitle, widget: string, required: true }
+          - { label: 'Service Lines', name: 'services', widget: 'list', field: { label: 'Title', name: title, widget: string } }
           - { label: Offering Intro Text, name: offeringText, widget: markdown }
           - label: Social Media
             name: socialMediaCard
             widget: object
             fields:
-              - {
-                  label: Twitter Site Account,
-                  name: twitterSiteAccount,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Twitter Creator Account,
-                  name: twitterCreatorAccount,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Hash Tag,
-                  name: hashTag,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Twitter Url,
-                  name: twtrUrl,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Linked Url,
-                  name: lnkdnUrl,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Github Url,
-                  name: githubUrl,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Facebook Url,
-                  name: fbUrl,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Medium Url,
-                  name: mediumUrl,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Header Meta / Scripts,
-                  name: headerScripts,
-                  widget: text,
-                  required: false,
-                }
+              - { label: Twitter Site Account, name: twitterSiteAccount, widget: string, required: false }
+              - { label: Twitter Creator Account, name: twitterCreatorAccount, widget: string, required: false }
+              - { label: Hash Tag, name: hashTag, widget: string, required: false }
+              - { label: Twitter Url, name: twtrUrl, widget: string, required: false }
+              - { label: Linked Url, name: lnkdnUrl, widget: string, required: false }
+              - { label: Github Url, name: githubUrl, widget: string, required: false }
+              - { label: Facebook Url, name: fbUrl, widget: string, required: false }
+              - { label: Medium Url, name: mediumUrl, widget: string, required: false }
+              - { label: Header Meta / Scripts, name: headerScripts, widget: text, required: false }
   - name: 'components'
     label: 'Components'
     editor:
@@ -122,12 +57,7 @@ collections:
         label: 'Carousel'
         name: 'carousel'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'service-carousel',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'service-carousel' }
           - label: 'Carousel List'
             name: 'carouselList'
             widget: 'list'
@@ -137,12 +67,7 @@ collections:
                 widget: object
                 fields:
                   - { label: Background Image, name: image, widget: image }
-                  - {
-                      label: 'Overlay Text',
-                      name: imageText,
-                      widget: markdown,
-                      required: false,
-                    }
+                  - { label: 'Overlay Text', name: imageText, widget: markdown, required: false }
                   - { label: Top %, name: top, widget: string }
                   - { label: Left Position %, name: left, widget: string }
 
@@ -155,12 +80,7 @@ collections:
         label: 'Links'
         name: 'navlinks'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'nav-links',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'nav-links' }
           - label: 'Header Links'
             name: 'headerlinks'
             widget: 'list'
@@ -171,13 +91,8 @@ collections:
                 fields:
                   - { label: 'Title', name: title, widget: string }
                   - { label: 'URL', name: url, widget: string, default: '/' }
-                  - {
-                      label: 'Open in new window?',
-                      name: newwindow,
-                      widget: 'boolean',
-                      default: false,
-                    }
-                  - { label: 'Glyph Icon', name: icon, widget: 'string' }
+                  - { label: 'Open in new window?', name: newwindow, widget: 'boolean', default: false }
+                  - { label: 'Glyph Icon', name: icon, widget: 'string', required: false }
           - label: 'Footer Links'
             name: 'footerlinks'
             widget: 'list'
@@ -188,13 +103,8 @@ collections:
                 fields:
                   - { label: 'Title', name: title, widget: string }
                   - { label: 'URL', name: url, widget: string, default: '/' }
-                  - {
-                      label: 'Open in new window?',
-                      name: newwindow,
-                      widget: 'boolean',
-                      default: 'false',
-                    }
-                  - { label: 'Glyph Icon', name: icon, widget: 'string' }
+                  - { label: 'Open in new window?', name: newwindow, widget: 'boolean', default: 'false' }
+                  - { label: 'Glyph Icon', name: icon, widget: 'string', required: false }
   - name: 'casestudy'
     label: 'Case Study'
     folder: 'src/pages/case-studies'
@@ -202,45 +112,26 @@ collections:
     editor:
       preview: false
     fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'case-study',
-        }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'case-study' }
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: Image, name: image, widget: image }
       - { label: 'Portfolio', name: portfolio, widget: list }
       - { label: 'Service Line', name: service, widget: list }
       - { label: 'Date', name: date, widget: datetime, default: 'Date' }
-      - {
-          label: 'Display in homepage?',
-          name: 'homepage',
-          widget: 'boolean',
-          default: false,
-        }
+      - { label: 'Display in homepage?', name: 'homepage', widget: 'boolean', default: false }
       - label: 'Customer'
         name: 'customer'
         widget: object
         fields:
           - { label: 'Name', name: name, widget: string, default: 'Emmet' }
-          - {
-              label: 'Profile',
-              name: profile,
-              widget: text,
-              default: 'Customer Profile',
-            }
+          - { label: 'Profile', name: profile, widget: text, default: 'Customer Profile' }
           - { label: 'Web', name: web, widget: string, default: 'url' }
       - label: 'Case Study'
         name: 'casestudy'
         widget: object
         fields:
-          - {
-              label: 'Body',
-              name: body,
-              widget: markdown
-            }
+          - { label: 'Body', name: body, widget: markdown }
 
   - name: 'offerings'
     label: 'Offerings'
@@ -249,32 +140,14 @@ collections:
     editor:
       preview: false
     fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'offering',
-        }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'offering' }
       - { label: Image, name: image, widget: image }
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - {
-          label: 'Order (Priotity)',
-          name: 'order',
-          widget: 'number',
-          default: 1,
-          valueType: 'int',
-          required: true,
-        }
-      - {
-          label: 'Align Content',
-          name: 'align',
-          widget: 'select',
-          options: ['left', 'right'],
-          required: true,
-        }
-      
+      - { label: 'Order (Priotity)', name: 'order', widget: 'number', default: 1, valueType: 'int', required: true }
+      - { label: 'Align Content', name: 'align', widget: 'select', options: ['left', 'right'], required: true }
+
   - name: 'products'
     label: 'Products'
     folder: 'src/pages/products'
@@ -282,12 +155,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'product',
-        }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'product' }
       - { label: Image, name: image, widget: image }
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -302,22 +170,13 @@ collections:
         editor:
           preview: false
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'teams-page',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'teams-page' }
           - { label: 'Path', name: 'path', widget: 'hidden', default: '/teams' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Team title', name: 'teamTitle', widget: 'text' }
-          - {
-              label: 'Team Description',
-              name: 'teamDescription',
-              widget: 'text',
-            }
+          - { label: 'Team Description', name: 'teamDescription', widget: 'text' }
           - label: 'Team'
             name: 'team'
             widget: 'list'
@@ -326,60 +185,15 @@ collections:
                 name: person
                 widget: object
                 fields:
-                  - {
-                      label: Name,
-                      name: name,
-                      widget: string,
-                      default: 'Emmet',
-                    }
-                  - {
-                      label: Title,
-                      name: title,
-                      widget: string,
-                      default: 'Solution Architect',
-                    }
-                  - {
-                      label: Avatar,
-                      name: avatar,
-                      widget: image,
-                      default: '/img/emmet.jpg',
-                    }
-                  - {
-                      label: Quote,
-                      name: quote,
-                      widget: 'text',
-                      default: 'About me',
-                    }
-                  - {
-                      label: Background,
-                      name: background,
-                      widget: string,
-                      default: 'darkgray',
-                    }
-                  - {
-                      label: 'Facebook Site url',
-                      name: 'fbsiteurl',
-                      widget: string,
-                      required: false,
-                    }
-                  - {
-                      label: 'Twitter Site url',
-                      name: 'twtrsiteurl',
-                      widget: string,
-                      required: false,
-                    }
-                  - {
-                      label: 'Linkedin Site url',
-                      name: 'lnkdnsiteurl',
-                      widget: string,
-                      required: false,
-                    }
-                  - {
-                      label: 'Github Site url',
-                      name: 'githubsiteurl',
-                      widget: string,
-                      required: false,
-                    }
+                  - { label: Name, name: name, widget: string, default: 'Emmet' }
+                  - { label: Title, name: title, widget: string, default: 'Solution Architect' }
+                  - { label: Avatar, name: avatar, widget: image, default: '/img/emmet.jpg' }
+                  - { label: Quote, name: quote, widget: 'text', default: 'About me' }
+                  - { label: Background, name: background, widget: string, default: 'darkgray' }
+                  - { label: 'Facebook Site url', name: 'fbsiteurl', widget: string, required: false }
+                  - { label: 'Twitter Site url', name: 'twtrsiteurl', widget: string, required: false }
+                  - { label: 'Linkedin Site url', name: 'lnkdnsiteurl', widget: string, required: false }
+                  - { label: 'Github Site url', name: 'githubsiteurl', widget: string, required: false }
 
       - file: 'src/pages/clients/clients.md'
         label: 'Customers'
@@ -387,22 +201,13 @@ collections:
         editor:
           preview: false
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'clients-page',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'clients-page' }
           - { label: 'Path', name: 'path', widget: 'hidden', default: '/customers' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Clients title', name: 'clientsTitle', widget: 'text' }
-          - {
-              label: 'Client Description',
-              name: 'clientsDescription',
-              widget: 'text',
-            }
+          - { label: 'Client Description', name: 'clientsDescription', widget: 'text' }
           - label: 'Clients'
             name: 'clients'
             widget: 'list'
@@ -411,40 +216,21 @@ collections:
                 name: client
                 widget: object
                 fields:
-                  - {
-                      label: Name,
-                      name: name,
-                      widget: string,
-                      default: 'Emmet',
-                    }
-                  - {
-                      label: Logo,
-                      name: logo,
-                      widget: image,
-                      default: '/img/emmet.jpg',
-                    }
+                  - { label: Name, name: name, widget: string, default: 'Emmet' }
+                  - { label: Logo, name: logo, widget: image, default: '/img/emmet.jpg' }
       - file: 'src/pages/work/work.md'
         label: 'Work'
         name: 'work'
         editor:
           preview: false
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'work-page',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'work-page' }
           - { label: 'Path', name: 'path', widget: 'hidden', default: '/work' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Work title', name: 'workTitle', widget: 'text' }
-          - {
-              label: 'Work Description',
-              name: 'workDescription',
-              widget: 'text',
-            }
+          - { label: 'Work Description', name: 'workDescription', widget: 'text' }
           - label: 'Work'
             name: 'work'
             widget: 'list'
@@ -453,42 +239,17 @@ collections:
                 name: project
                 widget: object
                 fields:
-                  - {
-                      label: Name,
-                      name: name,
-                      widget: string,
-                      default: 'Emmet',
-                    }
-                  - {
-                      label: Image,
-                      name: image,
-                      widget: image,
-                      default: '/img/emmet.jpg',
-                    }
-                  - {
-                    label: Summary,
-                    name: summary,
-                    widget: text,
-                    default: 'Project Summary',
-                  }                                               
+                  - { label: Name, name: name, widget: string, default: 'Emmet' }
+                  - { label: Image, name: image, widget: image, default: '/img/emmet.jpg' }
+                  - { label: Summary, name: summary, widget: text, default: 'Project Summary' }
       - file: 'src/pages/contact/contact.md'
         label: 'Contact Us'
         name: 'contactus'
         editor:
           preview: false
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'contactus-page',
-            }
-          - {
-              label: 'Path',
-              name: 'path',
-              widget: 'hidden',
-              default: '/contact',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'contactus-page' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/contact' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Heading', name: 'heading', widget: 'text' }
           - { label: 'Sub Heading', name: 'subheading', widget: 'text' }
@@ -510,79 +271,31 @@ collections:
                 name: 'position'
                 widget: object
                 fields:
-                  - {
-                      label: 'Lattitude',
-                      name: lat,
-                      widget: number,
-                      valueType: float,
-                      default: 0.00,
-                    }
-                  - {
-                      label: 'Longitude',
-                      name: long,
-                      widget: number,
-                      valueType: float,
-                      default: 0.00,
-                    }
+                  - { label: 'Lattitude', name: lat, widget: number, valueType: float, default: 0.00 }
+                  - { label: 'Longitude', name: long, widget: number, valueType: float, default: 0.00 }
               - label: 'Center Postion'
                 name: 'center'
                 widget: object
                 fields:
-                  - {
-                      label: 'Lattitude',
-                      name: lat,
-                      widget: number,
-                      valueType: float,
-                      default: 0.00,
-                    }
-                  - {
-                      label: 'Longitude',
-                      name: long,
-                      widget: number,
-                      valueType: float,
-                      default: 0.00,
-                    }
+                  - { label: 'Lattitude', name: lat, widget: number, valueType: float, default: 0.00 }
+                  - { label: 'Longitude', name: long, widget: number, valueType: float, default: 0.00 }
       - file: 'src/pages/privacy/privacy-policy.md'
         label: 'Privacy Policy'
         name: 'privacy-policy'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'privacy-policy',
-            }
-          - {
-              label: 'Path',
-              name: 'path',
-              widget: 'hidden',
-              default: '/privacy-policy',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'privacy-policy' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/privacy-policy' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Header', name: header, widget: 'string', required: false }
           - { label: 'Footer', name: footer, widget: 'string', required: false }
-          - {
-              label: 'Image',
-              name: image,
-              widget: 'Image',
-            }
+          - { label: 'Image', name: image, widget: 'Image' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/careers/careers.md'
         label: 'Careers'
         name: 'Careers'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'careers',
-            }
-          - {
-              label: 'Path',
-              name: 'path',
-              widget: 'hidden',
-              default: '/careers',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'careers' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/careers' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Header', name: header, widget: 'string', required: false }
           - { label: 'Footer', name: footer, widget: 'string', required: false }
@@ -591,18 +304,8 @@ collections:
         label: 'Labs'
         name: 'Labs'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'labs',
-            }
-          - {
-              label: 'Path',
-              name: 'path',
-              widget: 'hidden',
-              default: '/labs',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'labs' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/labs' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Header', name: header, widget: 'string', required: false }
           - { label: 'Footer', name: footer, widget: 'string', required: false }
@@ -611,37 +314,27 @@ collections:
         label: 'The Way'
         name: 'TheWay'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'way',
-            }
-          - {
-              label: 'Path',
-              name: 'path',
-              widget: 'hidden',
-              default: '/way',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'way' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/way' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Header', name: header, widget: 'string', required: false }
           - { label: 'Footer', name: footer, widget: 'string', required: false }
-          - label: 'Main / Heading' 
+          - label: 'Main / Heading'
             name: main
             widget: object
             fields:
-              - { label: 'Image', name: 'image', widget: image}
-              - { label: 'Description', name: 'desc', widget: string}
+              - { label: 'Image', name: 'image', widget: image }
+              - { label: 'Description', name: 'desc', widget: string }
           - label: 'Sections'
             name: sections
             widget: list
             fields:
-              - { label: 'Title', name: title, widget: string}
+              - { label: 'Title', name: title, widget: string }
               - label: 'Children'
                 name: children
                 widget: list
                 fields:
-                  - { label: 'Description - Link to markdown file', name: 'desc', widget: string}
+                  - { label: 'Description - Link to markdown file', name: 'desc', widget: string }
 
   - name: 'way-sections'
     label: 'Way Sections'
@@ -650,8 +343,8 @@ collections:
     identifier_field: filename
     editor:
       preview: false
-    fields: 
-      - { label: 'Template Key',name: 'templateKey',widget: 'hidden', default: 'way-sections'}
-      - { label: 'File Name', name: 'filename', widget: string}
-      - { label: 'Image', name: 'image', widget: image}
-      - { label: 'Description', name: 'body', widget: markdown}
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'way-sections' }
+      - { label: 'File Name', name: 'filename', widget: string }
+      - { label: 'Image', name: 'image', widget: image }
+      - { label: 'Description', name: 'body', widget: markdown }
