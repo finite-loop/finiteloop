@@ -2,6 +2,14 @@
 templateKey: nav-links
 headerlinks:
   - item:
+      title: AEBox
+      url: https://aebox.webflow.io
+      newwindow: true
+  - item:
+      title: Design
+      url: /design/
+      newwindow: false
+  - item:
       title: The Way
       url: /way/
       newwindow: false
