@@ -7,14 +7,18 @@ const MenuLinks = ({ links, social, classes }) => (
   <div className={classes}>
     <div className="flex-grow" />
     {links.map(({ item }) => (
-      <Link
-        activeClassName="active-link"
-        key={item.title}
-        className="link-primary py-6 lg:pl-10"
-        to={item.url}
-      >
-        <span>{item.title}</span>
-      </Link>
+      <>
+        {!item.newwindow && (
+          <Link activeClassName="active-link" key={item.title} className="link-primary py-6 lg:pl-10" to={item.url}>
+            <span>{item.title}</span>
+          </Link>
+        )}
+        {item.newwindow && (
+          <a key={item.title} className="link-primary py-6 lg:pl-10" href={item.url} rel="noopener noreferrer" target="_blank">
+            <span>{item.title}</span>
+          </a>
+        )}
+      </>
     ))}
 
     {/* <a href={social.githubUrl} target="_new" className="py-5 px-3">
