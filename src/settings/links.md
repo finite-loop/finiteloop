@@ -3,7 +3,7 @@ templateKey: nav-links
 headerlinks:
   - item:
       title: AEBox
-      url: https://aebox.webflow.io
+      url: https://aebox.finiteloop.io
       newwindow: true
   - item:
       title: Design
