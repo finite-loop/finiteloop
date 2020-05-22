@@ -53,7 +53,7 @@
 }
 
 .link-primary-studio {
-  @apply font-medium uppercase text-sm no-underline tracking-wide;
+  @apply text-base uppercase font-semibold no-underline tracking-wide;
   color: #e1605f;
 }
 

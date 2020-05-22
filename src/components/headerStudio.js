@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import MenuLinks from './menuLinks'
 import StudioMenuLinks from './studioMenuLinks'
 class StudioHeader extends React.Component {
   state = {
