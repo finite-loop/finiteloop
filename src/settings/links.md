@@ -6,10 +6,6 @@ headerlinks:
       url: https://aebox.finiteloop.io
       newwindow: true
   - item:
-      title: Design
-      url: /design/
-      newwindow: false
-  - item:
       title: The Way
       url: /way/
       newwindow: false
