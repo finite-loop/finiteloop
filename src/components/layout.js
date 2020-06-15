@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import '../styles/index.css'
 import Header from './header'
@@ -10,9 +10,7 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SettingsQuery {
-        global: markdownRemark(
-          frontmatter: { templateKey: { eq: "global-settings" } }
-        ) {
+        global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
           frontmatter {
             logo {
               childImageSharp {
@@ -35,9 +33,7 @@ const Layout = ({ children }) => (
             }
           }
         }
-        links: markdownRemark(
-          frontmatter: { templateKey: { eq: "nav-links" } }
-        ) {
+        links: markdownRemark(frontmatter: { templateKey: { eq: "nav-links" } }) {
           frontmatter {
             headerlinks {
               item {
@@ -57,9 +53,9 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div
-        className="relative min-h-screen"
+        className="relative flex flex-col min-h-screen"
         style={{
           backgroundColor: '#E05455',
           // backgroundImage: 'url(/img/team-bg.png)',
@@ -67,12 +63,8 @@ const Layout = ({ children }) => (
         }}
       >
         <Helmet title={data.global.frontmatter.siteTitle} />
-        <Header
-          title={data.global.frontmatter.logoTitle}
-          social={data.global.frontmatter.socialMediaCard}
-          links={data.links.frontmatter.headerlinks}
-        />
-        <div className="sm:max-w-4/5 md:max-w-3/4 my-8 mx-auto">{children}</div>
+        <Header title={data.global.frontmatter.logoTitle} social={data.global.frontmatter.socialMediaCard} links={data.links.frontmatter.headerlinks} />
+        <div className="sm:max-w-4/5 md:max-w-3/4 my-8 mx-auto mb-auto">{children}</div>
         <Footer
           url={data.global.frontmatter.siteUrl}
           title={data.global.frontmatter.siteTitle}
