@@ -2,11 +2,12 @@
 templateKey: way
 path: /way
 title: The Way
-header: >-
-  The Way – We understand what makes or breaks projects. Our principles are
-  designed around simple processes, merged roles, and quality delivery. We
-  optimise and simplify every step. Our working methods are organised in five spaces. It is cyclic, non-linear, interconnected, and progressive.
-footer:
+header: "The Way – We understand what makes or breaks projects. Our principles
+  are designed around simple processes, merged roles, and quality delivery. We
+  optimise and simplify every step. Our working methods are organised in five
+  spaces. It is cyclic, non-linear, interconnected, progressive, and based on
+  the foundations of universal Indic value systems. "
+footer: null
 main:
   desc: ./sections/main.md
   image: /img/khyateh_final_CMYK-02.jpg
