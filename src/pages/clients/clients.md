@@ -66,6 +66,9 @@ clients:
   - client:
       logo: /img/dercopperbowl.png
       name: Ader copper bowl
+  - client:
+      name: CarbonBase
+      logo: /img/carbonbase.png
 ---
 
 Our Customers
