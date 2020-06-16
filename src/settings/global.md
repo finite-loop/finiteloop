@@ -1,7 +1,7 @@
 ---
 templateKey: global-settings
 siteTitle: FiniteLoop
-siteLongTitle: Digital, Design, Data
+siteLongTitle: Design, Digital, Data
 siteUrl: https://finiteloop.io
 siteDescription: FiniteLoop - We are a boutique consulting firm focusing on
   experience design and highly scalable architecture.
