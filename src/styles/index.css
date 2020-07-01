@@ -23,6 +23,10 @@ div[role='group'][tabindex] {
   height: 100%;
 }
 
+a {
+  text-decoration: underline;
+}
+
 *,
 *::after,
 *::before {
