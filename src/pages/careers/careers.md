@@ -10,9 +10,20 @@ footer: That said, there are no limits to what you can do at FiniteLoop
 ---
 ## Current Openings
 
-* Service / Experience Designer
-* Interaction / UI Designer
-* UX & Content Write
-* Frontend Engineer
+•	Service / Experience Designer 
 
-  > **Apply Now @** [careers@finiteloop.io](mailto:careers@finiteloop.io)
+•	Interaction / UI Designer
+
+•	Product Designer
+
+•	UX & Content Writer
+
+•	Frontend Engineer
+
+•	Senior Engineer – Java Stack
+
+•	Senior Engineer - .Net Stack
+
+•	Data Scientist
+
+Apply Now @ careers@finiteloop.io
