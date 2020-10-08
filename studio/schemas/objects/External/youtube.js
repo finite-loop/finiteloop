@@ -1,7 +1,7 @@
 import React from "react";
 // import getYouTubeId from "get-youtube-id";
 // import YouTube from "react-youtube";
-import { FaYoutube } from "react-icons/lib/fa";
+import { FaYoutube } from "react-icons/fa";
 const Preview = ({ value }) => {
   const { url } = value;
   //const id = getYouTubeId(url);

@@ -9,10 +9,10 @@
  *  }
  */
 import React from "react";
-import { FaPaperclip } from "react-icons/lib/fa";
+import { FaPaperclip } from "react-icons/fa";
 
 const highlightIcon = () => <span style={{ fontWeight: "bold" }}>H</span>;
-const highlightRender = (props) => (
+const highlightRender = props => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
@@ -43,13 +43,13 @@ export default {
             value: "highlight",
             blockEditor: {
               icon: highlightIcon,
-              render: highlightRender,
-            },
-          },
+              render: highlightRender
+            }
+          }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
-        annotations: [],
-      },
-    },
-  ],
+        annotations: []
+      }
+    }
+  ]
 };

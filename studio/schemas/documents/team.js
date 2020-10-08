@@ -1,4 +1,4 @@
-import MdPerson from "react-icons/lib/md/person";
+import MdPerson from "react-icons/md";
 
 export default {
   type: "document",
@@ -9,7 +9,7 @@ export default {
     {
       title: "Name",
       name: "name",
-      type: "string",
+      type: "string"
     },
     {
       title: "Slug",
@@ -17,56 +17,56 @@ export default {
       type: "slug",
       options: {
         source: "name",
-        maxLength: 96,
-      },
+        maxLength: 96
+      }
     },
     {
       title: "Role",
       name: "role",
-      type: "string",
+      type: "string"
     },
     {
       title: "Experience",
       name: "experience",
-      type: "string",
+      type: "string"
     },
     {
       title: "Projects",
       name: "projects",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "string" }]
     },
     {
       title: "Image",
       name: "image",
-      type: "figure",
+      type: "figure"
     },
     {
       title: "Bio",
       name: "bio",
-      type: "bioPortableText",
+      type: "bioPortableText"
     },
     {
       title: "Linkedin Profile",
       name: "linkedin",
-      type: "url",
+      type: "url"
     },
     {
       title: "Twitter Handle",
       name: "twitter",
-      type: "url",
+      type: "url"
     },
     {
       title: "Facebook Profile",
       name: "facebook",
-      type: "url",
-    },
+      type: "url"
+    }
   ],
   preview: {
     select: {
       title: "name",
       subtitle: "role",
-      media: "image",
-    },
-  },
+      media: "image"
+    }
+  }
 };
