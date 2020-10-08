@@ -1,10 +1,10 @@
 {
-  "name": "finiteloop",
+  "name": "finiteloop-studio",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Swetha Ganapathy <swethaganapathysubramanian2@gmail.com>",
+  "author": "Parthasarathy S, Adarsh Menon, Swetha Ganapathy Subramanian",
   "license": "UNLICENSED",
   "scripts": {
     "dev": "sanity start",
