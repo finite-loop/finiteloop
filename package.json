@@ -12,7 +12,7 @@
     "postinstall": "lerna bootstrap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Swetha",
+  "author": "Parthasarathy S, Adarsh Menon, Swetha Ganapathy Subramanian",
   "license": "ISC",
   "devDependencies": {
     "lerna": "^3.22.1"
