@@ -34,7 +34,7 @@ export default {
       title: "Projects",
       name: "projects",
       type: "array",
-      of: [{ type: "string" }]
+      of: [{ type: "reference", to: { type: "projects" } }]
     },
     {
       title: "Image",
