@@ -1,11 +1,8 @@
-# Project dependencies
-.cache
-node_modules
-yarn-error.log
-
-# Build directory
-/public
+# Mac files
 .DS_Store
 
-/.env.development
-/.env.production
+# Dependency directories
+/node_modules
+
+# lerna files
+/lerna-debug.log
