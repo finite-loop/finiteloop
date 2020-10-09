@@ -1,0 +1,28 @@
+.blog a {
+  text-decoration: underline;
+  color: -webkit-link;
+}
+
+.blog ul {
+  list-style-type: disc;
+  padding-inline-start: 40px;
+  margin: 30px 0;
+}
+
+.blog li {
+  font-size: 90%;
+}
+
+.blog {
+  font-size: 100%;
+}
+
+.blog hr {
+  height: 1px;
+}
+
+.blog h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 5px 0;
+}
