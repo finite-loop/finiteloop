@@ -12,6 +12,9 @@ const previewURL =
 const hiddenDocTypes = listItem =>
   !["blog", "team", "menu", "projects"].includes(listItem.getId());
 
+const innerListTypes = listItem =>
+  !["page", "page1", "page2"].includes(listItem.getId());
+
 export default () =>
   S.list()
     .title("Content")
@@ -47,5 +50,33 @@ export default () =>
         .title("Projects")
         .schemaType("projects")
         .child(S.documentTypeList("projects").title("Projects")),
-      ...S.documentTypeListItems().filter(hiddenDocTypes)
+      S.listItem()
+        .title("Pages")
+        .child(
+          S.list()
+            .title("Pages")
+            .items([
+              S.listItem()
+                .title("About Page")
+                .schemaType("about")
+                .child(S.documentTypeList("about").title("About")),
+              S.listItem()
+                .title("Relationship Page")
+                .schemaType("relationship")
+                .child(
+                  S.documentTypeList("relationship").title("Relationship")
+                ),
+              S.listItem()
+                .title("Work Page")
+                .schemaType("work")
+                .child(S.documentTypeList("work").title("Work")),
+              S.listItem()
+                .title("Initiatives")
+                .schemaType("initiatives")
+                .child(S.documentTypeList("initiatives").title("Initiatives"))
+
+              //...S.documentTypeListItems().filter(innerListTypes)
+            ])
+        )
+      //...S.documentTypeListItems().filter(hiddenDocTypes)
     ]);

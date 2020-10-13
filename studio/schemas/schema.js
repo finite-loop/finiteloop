@@ -9,7 +9,12 @@ import team from "./documents/team";
 import menu from "./documents/menu";
 import projects from "./documents/project";
 import blog from "./documents/blog";
+import relationship from "./documents/pages/relationship";
+import work from "./documents/pages/work";
+import initiatives from "./documents/pages/Initiatives";
+import about from "./documents/pages/about";
 //Object types
+
 import figure from "./objects/Common/figure";
 import bioPortableText from "./objects/PortableTextEditors/bioPortableText";
 import projectMember from "./objects/Common/projectMember";
@@ -51,5 +56,9 @@ export default createSchema({
     menu,
     projects,
     blog,
-  ]),
+    relationship,
+    work,
+    initiatives,
+    about
+  ])
 });

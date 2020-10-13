@@ -8,9 +8,9 @@ export default {
       title: "Content and Image",
       options: {
         collapsible: true,
-        collapsed: true,
-      },
-    },
+        collapsed: true
+      }
+    }
   ],
 
   fields: [
@@ -18,19 +18,20 @@ export default {
       title: "Name",
       name: "name",
       type: "string",
-      fieldset: "content",
+      fieldset: "content"
     },
     {
       title: "Main image",
       name: "mainImage",
       type: "figure",
-      fieldset: "content",
+      fieldset: "content"
     },
     {
       title: "Content",
       name: "content",
-      type: "simplePortableText",
-      fieldset: "content",
-    },
-  ],
+      type: "text",
+      rows: "5",
+      fieldset: "content"
+    }
+  ]
 };
