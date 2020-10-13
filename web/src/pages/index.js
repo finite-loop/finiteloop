@@ -17,8 +17,9 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
+    <Link to="/project">Project Page</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    <div class="font-bold text-red-600">tailwind test</div>
+    <div className="font-bold text-red-600">tailwind test</div>
   </Layout>
 )
 
