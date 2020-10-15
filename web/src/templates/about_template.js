@@ -30,7 +30,7 @@ const about = ({ data }) => {
               <div className="p-5">
                 <Img
                   fluid={member.image.asset.fluid}
-                  className="w-16 h-16 mr-2 rounded-full"
+                  className="w-20 h-20 mr-2 rounded-full"
                 />
                 <h3 style={{ marginBottom: 0 }}>
                   <strong>{member.name}</strong>

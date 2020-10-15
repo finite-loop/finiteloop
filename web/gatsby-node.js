@@ -17,16 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
           slug {
             current
           }
-          heroContent
-          heroButtons
-          heroMainImage {
-            asset {
-              _id
-            }
-          }
-          studioCultureLeft
-          studioCultureRight
-          title
+    
         }
       }
     }
