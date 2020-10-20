@@ -12,18 +12,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const about_data = await graphql(`
     {
-      allSanityAbout {
+      about: allSanityAbout {
         nodes {
           slug {
             current
           }
-    
         }
       }
     }
   `)
 
-  about_data.data.allSanityAbout.nodes.forEach(about => {
+  about_data.data.about.nodes.forEach(about => {
     createPage({
       path: `/about`,
       component: path.resolve(`src/templates/about_template.js`),

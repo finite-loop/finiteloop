@@ -13,6 +13,7 @@ import relationship from "./documents/pages/relationship";
 import work from "./documents/pages/work";
 import initiatives from "./documents/pages/Initiatives";
 import about from "./documents/pages/about";
+
 //Object types
 
 import figure from "./objects/Common/figure";
@@ -28,6 +29,7 @@ import submenu from "./objects/Menu/subMenu";
 import secondarysubmenu from "./objects/Menu/secondarySubMenu";
 import titleslug from "./objects/Menu/titleslug";
 import contentAndImage from "./objects/Common/contentAndImage";
+import jobs from "./objects/Common/jobs"
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -50,6 +52,7 @@ export default createSchema({
     titleslug,
     secondarysubmenu,
     contentAndImage,
+    jobs,
     //documents
 
     team,

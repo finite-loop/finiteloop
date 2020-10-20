@@ -18,6 +18,14 @@ export default {
         collapsible: true,
         collapsed: false
       }
+    },
+    {
+      title: "Careers Section",
+      name: "careers",
+      options: {
+        collapsible: true,
+        collapsed: false
+      }
     }
   ],
   fields: [
@@ -65,6 +73,44 @@ export default {
       type: "text",
       rows: "5",
       fieldset: "studioCulture"
+    },
+
+     {
+      title: "Careers Title",
+      name: "careersTitle",
+      type: "text",
+      rows: "2",
+      fieldset: "careers"
+    },
+     {
+      title: "Careers Description",
+      name: "careersDescription",
+      type: "text",
+      rows: "5",
+      fieldset: "careers"
+    },
+    {
+      title: "Jobs",
+      name: "jobsList",
+      type: "array",
+      of: [{ type: "jobs" }]
+    },
+      {
+      title: "Our Story",
+      name: "story",
+      type: "text",
+      rows: "5",
+    },
+    {
+      title: "Story image",
+      name: "storyImage",
+      type: "figure",
+    },
+    {
+      title:"Our Way Steps",
+      name:"ourWay",
+      type:"array",
+      of:[{type:"contentAndImage"}]
     }
   ],
   preview: {
