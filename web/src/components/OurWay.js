@@ -119,6 +119,7 @@ const OurWay = () => {
                 .fill()
                 .map((_, i) => (
                   <span
+                    key={i}
                     className="mb-6"
                     style={{
                       borderBottom: "1px solid orange",
@@ -132,6 +133,7 @@ const OurWay = () => {
                 .fill()
                 .map((_, i) => (
                   <span
+                    key={i}
                     className="mb-6"
                     style={{
                       borderBottom: "1px solid white",

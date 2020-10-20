@@ -26,29 +26,29 @@ const SampleBlog = ({ data }) => {
   return (
     <article className="m-2">
       <div>
-        {data.sanityBlog.mainImage && data.sanityBlog.mainImage.asset && (
+        {data.blog.mainImage && data.blog.mainImage.asset && (
           <img
-            src={imageUrlFor(buildImageObj(data.sanityBlog.mainImage))
+            src={imageUrlFor(buildImageObj(data.blog.mainImage))
               // .width(1400)
               // .height(Math.floor((9 / 16) * 1200))
               .fit("crop")
               .url()}
-            alt={data.sanityBlog.mainImage.alt}
-            className="h-auto object-contain sm:object-cover md:object-fill lg:object-none xl:object-cover text-center"
+            alt={data.blog.mainImage.alt}
+            className="h-auto object-contain sm:object-cover md:object-fill lg:object-none xl:object-cover text-center w-full"
           />
         )}
       </div>
       <div className="m-10">
         <h1 className="text-3xl font-semibold text-center m-5">
-          {data.sanityBlog.title}
+          {data.blog.title}
         </h1>
         <h3 className="text-2xl font-semibold text-center">
-          {data.sanityBlog.author.name}
+          {data.blog.author.name}
         </h3>
       </div>
       <div className="mt-8 sm:mr-6 md:mb-4 lg:ml-2 xl:m-20 bg-yellow-200-md mx-auto">
-        {data.sanityBlog._rawBody && (
-          <BlockContent blocks={data.sanityBlog._rawBody || []} />
+        {data.blog._rawBody && (
+          <BlockContent blocks={data.blog._rawBody || []} />
         )}
       </div>
     </article>
@@ -56,8 +56,8 @@ const SampleBlog = ({ data }) => {
 }
 
 export const query = graphql`
-  {
-    sanityBlog {
+  query getBlog($slug: String) {
+    blog: sanityBlog(slug: { current: { eq: $slug } }) {
       _rawBody
       title
       mainImage {

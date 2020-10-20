@@ -135,7 +135,7 @@ const about = ({ data }) => {
                 <div className="relative">
                   <strong className="text-sm font-bold">Unmatched </strong>
                   <span
-                    class="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
+                    className="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
                     style={{ right: 0 }}
                   >
                     4
@@ -151,7 +151,7 @@ const about = ({ data }) => {
                 <div className="relative">
                   <strong className="text-sm font-bold">Life Advice</strong>
                   <span
-                    class="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
+                    className="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
                     style={{ right: 0 }}
                   >
                     4
@@ -167,7 +167,7 @@ const about = ({ data }) => {
                 <div className="relative">
                   <strong className="text-sm font-bold">How to Excel </strong>
                   <span
-                    class="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
+                    className="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
                     style={{ right: 0 }}
                   >
                     4
@@ -183,7 +183,7 @@ const about = ({ data }) => {
                 <div className="relative">
                   <strong className="text-sm font-bold">Party Jokes </strong>
                   <span
-                    class="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
+                    className="absolute bg-orange-500 rounded-full h-5 w-6 inline-flex items-center justify-center"
                     style={{ right: 0 }}
                   >
                     4

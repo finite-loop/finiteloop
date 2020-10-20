@@ -17,8 +17,8 @@ export default ({ node }) => {
   )
 
   return (
-    <figure className="">
-      <Img fluid={fluidProps} alt={node.alt} />
+    <figure className="container w-2/3 mx-auto">
+      <Img fluid={fluidProps} alt={node.alt} className="w-auto" />
       {node.caption && <figcaption>{node.caption}</figcaption>}
     </figure>
   )

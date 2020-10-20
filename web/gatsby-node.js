@@ -31,4 +31,26 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const blog_data = await graphql(`
+    {
+      blogs: allSanityBlog {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  blog_data.data.blogs.nodes.forEach(blog => {
+    createPage({
+      path: `/blog/${blog.slug.current}`,
+      component: path.resolve(`src/templates/blog_template.js`),
+      context: {
+        slug: blog.slug.current,
+      },
+    })
+  })
 }
