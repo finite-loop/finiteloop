@@ -39,9 +39,47 @@ const ProjectTemplate = ({ data: { project } }) => {
               conduct and changes in weather to the moon.
             </p>
           </div>
-          <div className="pl-16 border-l-2 border-gray-600">
-            <div className="text-2xl font-bold">aa</div>
+          <div
+            className="pl-16 border-l-2 border-gray-600"
+            style={{ width: "40%" }}
+          >
+            <div className="pb-10 border-b-2 border-gray-600">
+              <div className="text-2xl font-bold">Problem Statement</div>
+              <div>
+                The moon works its way into our way of thinking, our feelings
+                about romance, our poetry and literature and even how we feel
+                about our day in day out lives in many cases.{" "}
+              </div>
+            </div>
+            <div className="pt-10 pb-10 border-b-2 border-gray-600">
+              <div className="text-2xl font-bold">The Outcome</div>
+              <div>
+                The moon works its way into our way of thinking, our feelings
+                about romance, our poetry and literature and even how we feel
+                about our day in day out lives in many cases.{" "}
+              </div>
+            </div>
+            <div className="pt-10 pb-10 border-b-2 border-gray-600">
+              <div className="text-2xl font-bold">Tags</div>
+              <div>#abc #def #efg</div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-16">
+        <div className="w-full h-64 bg-gray-200">text area</div>
+      </div>
+
+      <div className="w-full flex pt-16 ">
+        <div className="pl-16 pb-8" style={{ width: "60%" }}>
+          The moon works its way into our way of thinking, our feelings about
+          romance, our poetry and literature and even how we feel about our day
+          in day out lives in many cases. It is not only primitive societies
+          that ascribe mood swings, changes in social conduct and changes in
+          weather to the moon.{" "}
+        </div>
+        <div className="h-64 bg-gray-200" style={{ width: "40%" }}>
+          text area
         </div>
       </div>
     </div>
