@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import bgimage from "./finiteloop_bg_home.png"
 import logo from "../images/flLogo.png"
 import OurWay from "../components/OurWay"
+import "../pages/index.css"
 
 const about = ({ data }) => {
   console.log(data)
