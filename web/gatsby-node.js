@@ -53,4 +53,26 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const work_data = await graphql(`
+    {
+      works: allSanityWork {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  work_data.data.works.nodes.forEach(work => {
+    createPage({
+      path: `/work`,
+      component: path.resolve(`src/templates/work_template.js`),
+      context: {
+        slug: work.slug.current,
+      },
+    })
+  })
 }

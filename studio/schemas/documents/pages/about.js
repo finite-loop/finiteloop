@@ -38,7 +38,11 @@ export default {
     {
       name: "slug",
       title: "Slug",
-      type: "slug"
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96
+      }
     },
     {
       title: "Hero Content",
@@ -75,14 +79,14 @@ export default {
       fieldset: "studioCulture"
     },
 
-     {
+    {
       title: "Careers Title",
       name: "careersTitle",
       type: "text",
       rows: "2",
       fieldset: "careers"
     },
-     {
+    {
       title: "Careers Description",
       name: "careersDescription",
       type: "text",
@@ -95,22 +99,22 @@ export default {
       type: "array",
       of: [{ type: "jobs" }]
     },
-      {
+    {
       title: "Our Story",
       name: "story",
       type: "text",
-      rows: "5",
+      rows: "5"
     },
     {
       title: "Story image",
       name: "storyImage",
-      type: "figure",
+      type: "figure"
     },
     {
-      title:"Our Way Steps",
-      name:"ourWay",
-      type:"array",
-      of:[{type:"contentAndImage"}]
+      title: "Our Way Steps",
+      name: "ourWay",
+      type: "array",
+      of: [{ type: "contentAndImage" }]
     }
   ],
   preview: {
