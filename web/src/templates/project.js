@@ -1,4 +1,5 @@
 import React from "react"
+import "../pages/index.css"
 
 const ProjectTemplate = ({ data: { project } }) => {
   return (
