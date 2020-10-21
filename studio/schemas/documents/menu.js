@@ -1,4 +1,4 @@
-import MdMenu from "react-icons/lib/md/menu";
+import MdMenu from "react-icons/md";
 export default {
   name: "menu",
   type: "document",
@@ -8,7 +8,7 @@ export default {
     {
       title: "Menu Name",
       name: "name",
-      type: "string",
+      type: "string"
     },
     {
       title: "Slug",
@@ -19,8 +19,8 @@ export default {
         "Some frontend will require a slug to be set to be able to show the menu",
       options: {
         source: "name",
-        maxLength: 96,
-      },
+        maxLength: 96
+      }
     },
     {
       title: "Responsiveness",
@@ -32,20 +32,20 @@ export default {
         list: [
           { title: "Desktop", value: "desktop" },
           { title: "Tablet", value: "tablet" },
-          { title: "Mobile", value: "mobile" },
-        ],
-      },
+          { title: "Mobile", value: "mobile" }
+        ]
+      }
     },
     {
       title: "Sub Menu",
       name: "submenu",
       type: "array",
-      of: [{ type: "submenu" }],
-    },
+      of: [{ type: "submenu" }]
+    }
   ],
   preview: {
     select: {
-      title: "name",
-    },
-  },
+      title: "name"
+    }
+  }
 };
