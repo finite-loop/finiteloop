@@ -20,13 +20,77 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
   result.data.projects.nodes.forEach(project => {
     createPage({
       path: `/project/${project.slug.current}`,
       component: path.resolve("src/templates/project.js"),
       context: {
         slug: project.slug.current,
+      },
+    })
+  })
+
+  const about_data = await graphql(`
+    {
+      about: allSanityAbout {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  about_data.data.about.nodes.forEach(about => {
+    createPage({
+      path: `/about`,
+      component: path.resolve(`src/templates/about_template.js`),
+      context: {
+        slug: about.slug.current,
+      },
+    })
+  })
+
+  const blog_data = await graphql(`
+    {
+      blogs: allSanityBlog {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  blog_data.data.blogs.nodes.forEach(blog => {
+    createPage({
+      path: `/blog/${blog.slug.current}`,
+      component: path.resolve(`src/templates/blog_template.js`),
+      context: {
+        slug: blog.slug.current,
+      },
+    })
+  })
+
+  const work_data = await graphql(`
+    {
+      works: allSanityWork {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+  work_data.data.works.nodes.forEach(work => {
+    createPage({
+      path: `/work`,
+      component: path.resolve(`src/templates/work_template.js`),
+      context: {
+        slug: work.slug.current,
       },
     })
   })

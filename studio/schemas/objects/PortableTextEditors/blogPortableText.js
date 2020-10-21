@@ -1,20 +1,20 @@
 import React from "react";
-import { FaPaperclip } from "react-icons/lib/fa";
+import { FaPaperclip } from "react-icons/fa";
 
 const highlightIcon = () => <span style={{ fontWeight: "bold" }}>H</span>;
-const highlightRender = (props) => (
+const highlightRender = props => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
 const fontIcon = () => <span style={{ fontWeight: "bold" }}>Font-sans</span>;
-const fontRender = (props) => (
+const fontRender = props => (
   <span style={{ fontFamily: "sans-serif" }}>{props.children}</span>
 );
 
 const fontSerifIcon = () => (
   <span style={{ fontWeight: "bold" }}>Font-Serif</span>
 );
-const fontSerifRender = (props) => (
+const fontSerifRender = props => (
   <span style={{ fontFamily: "Times New Roman" }}>{props.children}</span>
 );
 
@@ -38,12 +38,12 @@ export default {
         { title: "H4", value: "h4" },
         { title: "H5", value: "h5" },
         { title: "H6", value: "h6" },
-        { title: "Quote", value: "blockquote" },
+        { title: "Quote", value: "blockquote" }
       ],
 
       lists: [
         { title: "Bullet", value: "bullet" },
-        { title: "Numbered", value: "number" },
+        { title: "Numbered", value: "number" }
       ],
       // Marks let you mark up inline text in the block editor.
       marks: {
@@ -57,8 +57,8 @@ export default {
             value: "highlight",
             blockEditor: {
               icon: highlightIcon,
-              render: highlightRender,
-            },
+              render: highlightRender
+            }
           },
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" },
@@ -68,17 +68,17 @@ export default {
             value: "fontsans",
             blockEditor: {
               icon: fontIcon,
-              render: fontRender,
-            },
+              render: fontRender
+            }
           },
           {
             title: "Font-serif",
             value: "fontserif",
             blockEditor: {
               icon: fontSerifIcon,
-              render: fontSerifRender,
-            },
-          },
+              render: fontSerifRender
+            }
+          }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -90,51 +90,51 @@ export default {
               {
                 title: "URL",
                 name: "href",
-                type: "url",
-              },
-            ],
+                type: "url"
+              }
+            ]
           },
           {
             name: "internalLink",
             type: "object",
             title: "Internal link",
             blockEditor: {
-              icon: FaPaperclip,
+              icon: FaPaperclip
             },
             fields: [
               {
                 name: "reference",
                 type: "reference",
                 to: [
-                  { type: "post" },
+                  { type: "post" }
                   // other types you may want to link to
-                ],
-              },
-            ],
-          },
-        ],
-      },
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: "youtube",
+      type: "youtube"
     },
     {
-      type: "figure",
+      type: "figure"
     },
     {
-      type: "line",
+      type: "line"
     },
     {
-      type: "tweet",
+      type: "tweet"
     },
     {
-      type: "instagram",
+      type: "instagram"
     },
     {
-      type: "code",
-    },
-  ],
+      type: "code"
+    }
+  ]
 };

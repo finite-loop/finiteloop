@@ -1,4 +1,4 @@
-import { MdImage } from "react-icons/lib/md";
+import { MdImage } from "react-icons/md";
 
 export default {
   name: "figure",
@@ -6,7 +6,7 @@ export default {
   type: "image",
   icon: MdImage,
   options: {
-    hotspot: true,
+    hotspot: true
   },
   fields: [
     {
@@ -14,25 +14,25 @@ export default {
       name: "caption",
       type: "string",
       options: {
-        isHighlighted: true,
-      },
+        isHighlighted: true
+      }
     },
     {
       name: "alt",
       type: "string",
       title: "Alternative text",
-      validation: (Rule) =>
+      validation: Rule =>
         Rule.error("You have to fill out the alternative text.").required(),
       description: "Important for SEO and accessiblity.",
       options: {
-        isHighlighted: true,
-      },
-    },
+        isHighlighted: true
+      }
+    }
   ],
   preview: {
     select: {
       imageUrl: "asset.url",
-      title: "caption",
-    },
-  },
+      title: "caption"
+    }
+  }
 };

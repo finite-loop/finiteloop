@@ -1,7 +1,7 @@
 import React from "react";
 // import getYouTubeId from "get-youtube-id";
 // import YouTube from "react-youtube";
-import { FaYoutube } from "react-icons/lib/fa";
+import { FaYoutube } from "react-icons/fa";
 const Preview = ({ value }) => {
   const { url } = value;
   //const id = getYouTubeId(url);
@@ -13,6 +13,7 @@ const Preview = ({ value }) => {
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
+      title="youtube video"
     ></iframe>
   );
 };
