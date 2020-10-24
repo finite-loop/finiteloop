@@ -89,7 +89,7 @@ const OurWay = () => {
 
   const previous = event => {
     event.preventDefault()
-    if (currNum == items.length - 1) {
+    if (currNum === items.length - 1) {
       setCurrNum(currNum - 1)
       setEnd(false)
     } else if (currNum > 1) {
@@ -156,6 +156,9 @@ const OurWay = () => {
             className="absolute p-10 m-10 text-white"
             style={{ left: "0", bottom: "0", cursor: "pointer" }}
             onClick={previous}
+            onKeyDown={previous}
+            role="button"
+            tabIndex="0"
           >
             {" < "}
           </span>
@@ -163,6 +166,9 @@ const OurWay = () => {
             className="absolute p-10 m-10 text-white"
             style={{ right: "0", bottom: "0", cursor: "pointer" }}
             onClick={goNext}
+            onKeyDown={goNext}
+            role="button"
+            tabIndex="0"
           >
             {" > "}
           </span>

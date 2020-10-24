@@ -30,26 +30,16 @@ export default {
       rows: "5"
     },
     {
-      title: "Field/Area",
-      name: "field",
+      title: "Categories",
+      name: "categories",
       type: "array",
-      of: [{ type: "string" }],
-      options: {
-        list: [
-          // "Technology",
-          // "Design",
-          // "Data Science"
-          { title: "Technology", value: "technology" },
-          { title: "Design", value: "design" },
-          { title: "Data Science", value: "data_science" }
-        ]
-      }
+      of: [{ type: "projectAndCategory" }]
     },
     {
       title: "Projects",
       name: "field_projects",
       type: "array",
-      of: [{ type: "projects" }]
+      of: [{ type: "reference", to: [{ type: "projects" }] }]
     },
     {
       title: "Field content",
