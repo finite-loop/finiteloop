@@ -13,10 +13,10 @@ const about = ({ data }) => {
     <Layout>
       <div className="font-sans font-light">
         <section
-          className="bg-cover h-half bg-center"
+          className="relative bg-cover h-half bg-center"
           style={{ backgroundImage: `url(${bgimage})` }}
         >
-          <p className="text-white absolute text-2xl top-1/4 left-1/5 w-1/2 ">
+          <p className="text-white absolute text-2xl top-1/3 left-1/5 w-2/5 ">
             Ad eos saepe lucilius, noster postulant philosophia ea usu, qui
             dicta sadipscing te.
           </p>
