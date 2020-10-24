@@ -40,6 +40,22 @@ export default {
       type: "string"
     },
     {
+      title: "Field/Area",
+      name: "field",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: [
+          // "Technology",
+          // "Design",
+          // "Data Science"
+          { title: "Technology", value: "technology" },
+          { title: "Design", value: "design" },
+          { title: "Data Science", value: "data_science" }
+        ]
+      }
+    },
+    {
       title: "Members",
       name: "members",
       type: "array",
