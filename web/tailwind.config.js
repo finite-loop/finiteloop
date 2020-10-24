@@ -13,7 +13,11 @@ module.exports = {
         thirtyfive: "35vh",
         forty: "40vh",
       },
+      maxWidth: {
+        "screen-2lg": "1200px",
+      },
     },
+
     inset: {
       "1/2": "50%",
       "1/5": "15%",

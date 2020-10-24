@@ -113,14 +113,14 @@ const ProjectsList = ({ type }) => {
   }
   console.log(list[type])
   return (
-    <div className="max-w-screen-lg mx-auto text-white">
+    <div className="max-w-screen-2lg mx-auto text-white">
       <div
         className="grid grid-flow-row gap-1 auto-rows-auto p-3"
         style={{
-          gridTemplateColumns: "repeat(auto-fill, minmax(230px, 2fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(250px, 2fr))",
           gridAutoRows: "minmax(180px, auto)",
           gridAutoFlow: "dense",
-          padding: "10px",
+          padding: "8px",
         }}
       >
         {" "}
