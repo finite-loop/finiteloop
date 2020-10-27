@@ -140,7 +140,7 @@ const Initiatives_template = () => {
             <div className="font-bold text-center text-3xl w-3/6 mx-auto leading-snug">
               Addiction When Gambling Becomes A Problem
             </div>
-            <div className="text-gray-700  text-center text-sm mx-auto w-2/5 m-8">
+            <div className="text-gray-700  text-center text-sm mx-auto w-3/5 m-8">
               Are you considering buying a compatible inkjet cartridge for your
               printer? There are many reputed companies like Canon, Epson, Dell,
               and Lexmark.
@@ -159,7 +159,7 @@ const Initiatives_template = () => {
           <hr className="mt-10" />
           <section className=" w-10/12 mx-auto">
             <h2 className="text-xl text-center p-10 m-2">Projects</h2>
-            <div className="text-gray-700  text-center text-sm mx-auto w-2/5">
+            <div className="text-gray-700  text-center text-sm mx-auto w-3/5">
               I’m not really sure how old I was when I got the gift for
               Christmas, but I remember thinking it was a pretty impressive
               piece of electronic hardware.
@@ -167,6 +167,7 @@ const Initiatives_template = () => {
             <div className="text-center m-4 ">
               {Object.keys(list).map(item => (
                 <span
+                  className="font-bold"
                   style={{
                     borderBottom: "1px solid",
                     paddingBottom: "3px",
@@ -211,7 +212,7 @@ const Initiatives_template = () => {
             <div className="font-bold text-center text-3xl w-3/6 mx-auto leading-snug">
               Help Finding Information Online
             </div>
-            <div className="text-gray-700  text-center text-sm mx-auto w-2/5 m-8">
+            <div className="text-gray-700  text-center text-sm mx-auto w-3/5 m-8">
               I can change any and everything in my life by simply changing
               myself. This puts me in the driving seat of my life and makes
             </div>
@@ -228,6 +229,7 @@ const Initiatives_template = () => {
                     >
                       <MdStarBorder
                         style={{ color: "white", textAlign: "center" }}
+                        className="text-3xl"
                       />
                     </div>
                     <p className="font-bold text-center text-sm">
@@ -244,11 +246,16 @@ const Initiatives_template = () => {
                 </div>
               ))}
             </div>
+            <div className="w-full flex justify-center ">
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 text-sm font-bold py-1 px-2 rounded inline-flex items-center">
+                Button
+              </button>
+            </div>
           </section>
           <hr className="mt-10" />
           <section className=" w-10/12 mx-auto">
             <h2 className="text-xl text-center p-8 m-1">Buy From us</h2>
-            <div className="text-gray-700  text-center text-sm mx-auto w-2/5 mb-4">
+            <div className="text-gray-700  text-center text-sm mx-auto w-3/5 mb-4">
               I can change any and everything in my life by simply changing
               myself. This puts me in the driving seat of my life and makes
             </div>
