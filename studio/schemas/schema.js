@@ -31,6 +31,7 @@ import titleslug from "./objects/Menu/titleslug";
 import contentAndImage from "./objects/Common/contentAndImage";
 import jobs from "./objects/Common/jobs";
 import projectAndCategory from "./objects/projectCategories";
+import contentAndHeading from "./objects/Common/contentAndHeading";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -55,6 +56,7 @@ export default createSchema({
     contentAndImage,
     jobs,
     projectAndCategory,
+    contentAndHeading,
     //documents
 
     team,

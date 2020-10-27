@@ -4,18 +4,18 @@ import "../pages/index.css"
 const Navbar = () => {
   return (
     <div>
-      <div className="relative pt-6 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="relative pt-2 px-4 sm:px-6 lg:px-8 font-sans">
         <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
-          <div class="lg:w-0 lg:flex-1">
-            <a href="#" class="flex">
+          <div className="lg:w-0 lg:flex-1">
+            <a href="#" className="flex items-center">
               <img
-                className="h-5 rounded w-auto sm:h-10"
+                className="h-3 rounded w-auto sm:h-10 lg:h-8 my-auto"
                 src={logo}
                 alt="Logo"
               />
             </a>
           </div>
-          <div classNameName="hidden md:block md:ml-10 md:pr-4 ml-4">
+          <div className="hidden md:block md:ml-10 md:pr-4 ml-4">
             <a
               href="/about"
               className="no-underline font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
