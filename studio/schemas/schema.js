@@ -9,7 +9,13 @@ import team from "./documents/team";
 import menu from "./documents/menu";
 import projects from "./documents/project";
 import blog from "./documents/blog";
+import relationship from "./documents/pages/relationship";
+import work from "./documents/pages/work";
+import initiatives from "./documents/pages/Initiatives";
+import about from "./documents/pages/about";
+
 //Object types
+
 import figure from "./objects/Common/figure";
 import bioPortableText from "./objects/PortableTextEditors/bioPortableText";
 import projectMember from "./objects/Common/projectMember";
@@ -23,6 +29,8 @@ import submenu from "./objects/Menu/subMenu";
 import secondarysubmenu from "./objects/Menu/secondarySubMenu";
 import titleslug from "./objects/Menu/titleslug";
 import contentAndImage from "./objects/Common/contentAndImage";
+import jobs from "./objects/Common/jobs";
+import projectAndCategory from "./objects/projectCategories";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -45,11 +53,17 @@ export default createSchema({
     titleslug,
     secondarysubmenu,
     contentAndImage,
+    jobs,
+    projectAndCategory,
     //documents
 
     team,
     menu,
     projects,
     blog,
-  ]),
+    relationship,
+    work,
+    initiatives,
+    about
+  ])
 });

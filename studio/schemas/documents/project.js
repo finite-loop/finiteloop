@@ -8,15 +8,15 @@ export default {
       title: "Content and Image",
       options: {
         collapsible: true,
-        collapsed: true,
-      },
-    },
+        collapsed: true
+      }
+    }
   ],
   fields: [
     {
       title: "Project Title",
       name: "title",
-      type: "string",
+      type: "string"
     },
     {
       title: "Slug",
@@ -26,97 +26,118 @@ export default {
         "Some frontend will require a slug to be set to be able to show the project",
       options: {
         source: "title",
-        maxLength: 96,
-      },
+        maxLength: 96
+      }
     },
     {
       title: "Client",
       name: "client",
-      type: "string",
+      type: "string"
     },
     {
       title: "Industry",
       name: "industry",
-      type: "string",
+      type: "string"
+    },
+    {
+      title: "Field/Area",
+      name: "field",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: [
+          // "Technology",
+          // "Design",
+          // "Data Science"
+          { title: "Technology", value: "technology" },
+          { title: "Design", value: "design" },
+          { title: "Data Science", value: "data_science" }
+        ]
+      }
     },
     {
       title: "Members",
       name: "members",
       type: "array",
-      of: [{ type: "projectMember" }],
+      of: [{ type: "projectMember" }]
     },
     {
       title: "Tags",
       name: "tags",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "string" }]
     },
     {
       title: "Impact",
       name: "impact",
-      type: "simplePortableText",
+      type: "text",
+      rows: "5"
     },
     {
       title: "Intend",
       name: "intend",
-      type: "simplePortableText",
+      type: "text",
+      rows: "5"
     },
     {
       title: "Approach",
       name: "approach",
-      type: "simplePortableText",
+      type: "text",
+      rows: "5"
     },
     {
       title: "Problem Statement",
       name: "problemStatement",
-      type: "simplePortableText",
+      type: "text",
+      rows: "5"
     },
     {
       title: "Outcome",
       name: "outcome",
-      type: "simplePortableText",
+      type: "text",
+      rows: "5"
     },
     {
       title: "Competency",
       name: "competency",
-      type: "contentAndImage",
+      type: "contentAndImage"
     },
     {
       title: "Context of Relationship",
       name: "context",
-      type: "contentAndImage",
+      type: "contentAndImage"
     },
     {
       title: "Process",
       name: "process",
-      type: "contentAndImage",
+      type: "contentAndImage"
     },
     {
       title: "Geographies",
       name: "geographies",
-      type: "contentAndImage",
+      type: "contentAndImage"
     },
     {
       title: "Tools",
       name: "tools",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "string" }]
     },
     {
       title: "Started at",
       name: "startedAt",
-      type: "datetime",
+      type: "datetime"
     },
     {
       title: "Ended at",
       name: "endedAt",
-      type: "datetime",
+      type: "datetime"
     },
     {
       title: "Related projects",
       name: "relatedProjects",
       type: "array",
-      of: [{ type: "reference", to: { type: "projects" } }],
-    },
-  ],
+      of: [{ type: "reference", to: { type: "projects" } }]
+    }
+  ]
 };
