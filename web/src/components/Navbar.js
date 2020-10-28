@@ -47,6 +47,12 @@ const Navbar = () => {
               Initiatives
             </a>
             <a
+              href="/relationships"
+              className="no-underline ml-8 font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+            >
+              Relationships
+            </a>
+            <a
               href="/blog/first-blog"
               className="no-underline ml-8 font-medium text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
             >
