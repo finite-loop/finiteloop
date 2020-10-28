@@ -94,4 +94,25 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const initiatives_data = await graphql(`
+    {
+      initiatives: allSanityInitiatives {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+  initiatives_data.data.initiatives.nodes.forEach(initiative => {
+    createPage({
+      path: `/initiatives`,
+      component: path.resolve(`src/templates/initiatives_template.js`),
+      context: {
+        slug: initiative.slug.current,
+      },
+    })
+  })
 }

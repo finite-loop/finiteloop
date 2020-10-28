@@ -6,6 +6,7 @@ import logo from "../images/flLogo.png"
 import OurWay from "../components/OurWay"
 import "../pages/index.css"
 import Layout from "../components/layout"
+import { IoLogoFacebook, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io"
 
 const about = ({ data }) => {
   console.log(data)
@@ -16,18 +17,18 @@ const about = ({ data }) => {
           className="relative bg-cover h-half bg-center"
           style={{ backgroundImage: `url(${bgimage})` }}
         >
-          <p className="text-white absolute text-2xl top-1/3 left-1/5 w-2/5 ">
+          <p className="text-white absolute text-2xl top-1/3 left-1/5 w-2/6 ">
             Ad eos saepe lucilius, noster postulant philosophia ea usu, qui
             dicta sadipscing te.
           </p>
         </section>
-        <div className="w-11/12 mx-auto">
+        <div className="w-10/12 mx-auto">
           <section className="">
             <h2 className="text-2xl text-center p-10 m-2"> Studio Culture</h2>
             <div className="grid grid-cols-2 m-8 items-center">
               <div className="col-span-1 ">
-                <article className="w-2/3 text-xl mx-auto">
-                  <p className="m-auto">
+                <article className="w-2/3 text-2xl mx-auto leading-normal">
+                  <p className="m-auto font-semibold">
                     Like anything else, can go from the simple to the very
                     complex. To gaze at the moon with the naked eye, making
                     yourself.
@@ -54,7 +55,7 @@ const about = ({ data }) => {
           </section>
           <section>
             <h2 className="text-2xl text-center p-10 m-2">Our Team</h2>
-            <div className="mx-auto w-1/3 ">
+            <div className="mx-auto w-2/3 ">
               <p className="text-md text-center ">
                 I’m not really sure how old I was when I got the gift for
                 Christmas, but I remember thinking it was a pretty impressive
@@ -86,18 +87,24 @@ const about = ({ data }) => {
           <section>
             <div>
               <div
-                className="flex border border-solid border-gray-300 mx-auto rounded"
-                style={{ maxWidth: "80%" }}
+                className="flex  mx-auto rounded  "
+                style={{ maxWidth: "80%", backgroundColor: "#F3F3F3" }}
               >
-                <div className=" bg-white rounded p-4 flex flex-col justify-between leading-normal m-12">
+                <div className=" rounded p-4 flex flex-col justify-between leading-normal m-12">
                   <div className="m-8 my-auto">
                     <div className="mb-4">
                       <div className="text-gray-900 font-bold text-xl ">
                         Marc Jensen
                       </div>
-                      <div className="text-gray-600 text-sm">
+                      <div className="text-gray-600 text-sm mb-3 relative">
                         UI/UX Designer
+                        <span className="absolute text-lg" style={{ right: 0 }}>
+                          <IoLogoFacebook />
+                          <IoLogoLinkedin />
+                          <IoLogoTwitter />
+                        </span>
                       </div>
+                      <hr></hr>
                     </div>
                     <span>
                       <p className="text-gray-700 text-xs ">
@@ -124,11 +131,11 @@ const about = ({ data }) => {
           </section>
           <section>
             <h2 className="text-2xl text-center p-10 m-2">Careers</h2>
-            <div className="font-bold text-center text-2xl m-4 w-2/4 mx-auto">
+            <div className="font-bold text-center text-2xl m-4 w-2/4 mx-auto leading-normal">
               Freelance Design Tricks How To Get Away With Murder In The
               Workplace
             </div>
-            <div className="text-gray-700 text-md mx-auto w-2/4 m-8">
+            <div className="text-gray-700 text-md mx-auto w-8/12 m-8 text-center">
               A Pocket PC is a handheld computer, which features many of the
               same capabilities as a modern PC. These handy little devices allow
               individuals to retrieve and store e-mail messages, create a
