@@ -2,36 +2,23 @@ export default {
   type: "object",
   title: "Content with Image",
   name: "contentAndImage",
-  fieldsets: [
-    {
-      name: "content",
-      title: "Content and Image",
-      options: {
-        collapsible: true,
-        collapsed: true
-      }
-    }
-  ],
 
   fields: [
     {
       title: "Name",
       name: "name",
-      type: "string",
-      fieldset: "content"
+      type: "string"
     },
     {
       title: "Main image",
       name: "mainImage",
-      type: "figure",
-      fieldset: "content"
+      type: "figure"
     },
     {
       title: "Content",
       name: "content",
       type: "text",
-      rows: "5",
-      fieldset: "content"
+      rows: "5"
     }
   ]
 };
