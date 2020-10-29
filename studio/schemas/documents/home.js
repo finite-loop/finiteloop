@@ -4,6 +4,20 @@ export default {
   title: "Home",
   fields: [
     {
+      title: "Page Title",
+      name: "title",
+      type: "string"
+    },
+    {
+      title: "Slug",
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96
+      }
+    },
+    {
       title: "Offerings",
       name: "offeringsList",
       type: "array",
