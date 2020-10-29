@@ -1,6 +1,6 @@
 import React from "react"
 import logo from "../images/flLogo.png"
-import "../pages/index.css"
+// import "../pages/index.css"
 const Navbar = () => {
   return (
     <div>

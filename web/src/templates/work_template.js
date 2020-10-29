@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import ProjectsList from "../components/ProjectsList"
-import "../pages/index.css"
+// import "../pages/index.css"
 import { MdStarBorder } from "react-icons/md"
 import system from "../images/system.jpg"
 import noimage from "../images/noimage.png"

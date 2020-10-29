@@ -1,0 +1,64 @@
+@tailwind base;
+
+@import "./neptune.css";
+/* @import "color"; */
+/* @import "components"; */
+/* @import "animation"; */
+@import "./typography.css";
+/* @import "tab"; */
+
+@tailwind components;
+
+body {
+  @apply font-sans antialiased overflow-x-hidden scrolling-touch border-none;
+}
+
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
+}
+
+a {
+  text-decoration: underline;
+}
+
+*,
+*::after,
+*::before {
+  @apply border-none;
+}
+img {
+  max-width: initial;
+}
+img:hover {
+  opacity: 0.75;
+}
+p {
+  @apply pb-2;
+}
+
+/* Fixed header and footer.
+	* --------------------------------------- */
+#header,
+#footer {
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 9;
+}
+
+#header {
+  top: 0px;
+}
+#footer {
+  bottom: 0px;
+}
+
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");

@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import "./index.css"
+import "../styles/index.css"
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <SEO title="Finiteloop" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -21,7 +21,9 @@ const IndexPage = () => (
     <div className="font-bold text-fl-secondary">tailwind test</div>
     <Link to="/project/finiteloop">Project - finiteloop</Link>
     <Link to="/project/cirrus">Project - cirrus</Link>
-  </Layout>
+  </div>
+
+  // <Layout>hello</Layout>
 )
 
 export default IndexPage
