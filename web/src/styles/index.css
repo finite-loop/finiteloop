@@ -1,13 +1,13 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import "./neptune.css";
 /* @import "color"; */
-/* @import "components"; */
+@import "./components.css";
 /* @import "animation"; */
 @import "./typography.css";
 /* @import "tab"; */
-
-@tailwind components;
 
 body {
   @apply font-sans antialiased overflow-x-hidden scrolling-touch border-none;
@@ -17,6 +17,7 @@ html,
 body,
 #___gatsby {
   height: 100%;
+  margin: 0px;
 }
 
 div[role="group"][tabindex] {
@@ -46,7 +47,7 @@ p {
 	* --------------------------------------- */
 #header,
 #footer {
-  position: fixed;
+  /* position: fixed; */
   display: block;
   width: 100%;
   z-index: 9;
@@ -58,7 +59,5 @@ p {
 #footer {
   bottom: 0px;
 }
-
-@tailwind utilities;
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");

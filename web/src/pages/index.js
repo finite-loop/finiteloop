@@ -8,9 +8,9 @@ import SEO from "../components/seo"
 import "../styles/index.css"
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <SEO title="Finiteloop" />
-    <h1>Hi people</h1>
+    <h1 className="heroText">Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
@@ -21,7 +21,7 @@ const IndexPage = () => (
     <div className="font-bold text-fl-secondary">tailwind test</div>
     <Link to="/project/finiteloop">Project - finiteloop</Link>
     <Link to="/project/cirrus">Project - cirrus</Link>
-  </div>
+  </Layout>
 
   // <Layout>hello</Layout>
 )
