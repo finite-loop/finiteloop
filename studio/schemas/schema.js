@@ -13,7 +13,12 @@ import relationship from "./documents/pages/relationship";
 import work from "./documents/pages/work";
 import initiatives from "./documents/pages/Initiatives";
 import about from "./documents/pages/about";
-
+import siteSettings from "./documents/siteSettings";
+import customers from "./documents/customers";
+import careers from "./documents/careers";
+import theWay from "./documents/theWay";
+import contactUs from "./documents/contact";
+import home from "./documents/home";
 //Object types
 
 import figure from "./objects/Common/figure";
@@ -32,6 +37,7 @@ import contentAndImage from "./objects/Common/contentAndImage";
 import jobs from "./objects/Common/jobs";
 import projectAndCategory from "./objects/projectCategories";
 import contentAndHeading from "./objects/Common/contentAndHeading";
+import theWayObject from "./objects/theWayObject";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -57,6 +63,7 @@ export default createSchema({
     jobs,
     projectAndCategory,
     contentAndHeading,
+    theWayObject,
     //documents
 
     team,
@@ -66,6 +73,12 @@ export default createSchema({
     relationship,
     work,
     initiatives,
-    about
-  ])
+    about,
+    siteSettings,
+    customers,
+    careers,
+    theWay,
+    contactUs,
+    home,
+  ]),
 });
