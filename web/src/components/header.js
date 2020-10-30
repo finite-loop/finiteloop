@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import React from "react"
 import MenuLinks from "./MenuLinks"
 //import Navbar from "../components/Navbar"
-const Header = ({ siteTitle, id, logo }) => {
+const Header = ({ siteTitle, logo }) => {
   return (
-    <div id={id}>
+    <div id="header">
       <nav className="nav" role="navigation">
         <div className="sm:mt-2 sm:ml-4 lg:ml-32">
           <Link to="/">
