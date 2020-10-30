@@ -38,6 +38,7 @@ import jobs from "./objects/Common/jobs";
 import projectAndCategory from "./objects/projectCategories";
 import contentAndHeading from "./objects/Common/contentAndHeading";
 import theWayObject from "./objects/theWayObject";
+import stringAndUrl from "./objects/Common/stringAndUrl";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -64,6 +65,7 @@ export default createSchema({
     projectAndCategory,
     contentAndHeading,
     theWayObject,
+    stringAndUrl,
     //documents
 
     team,
@@ -79,6 +81,6 @@ export default createSchema({
     careers,
     theWay,
     contactUs,
-    home,
-  ]),
+    home
+  ])
 });

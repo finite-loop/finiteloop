@@ -127,7 +127,7 @@ const Initiatives_template = () => {
               your services.
             </p>
             <a
-              href="#"
+              href="/"
               className="text-orange-600  text-xs font-bold no-underline"
             >
               learn more {" > "}
@@ -153,6 +153,7 @@ const Initiatives_template = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullFcreen
+                title="unique"
               ></iframe>
             </div>
           </section>
@@ -237,7 +238,7 @@ const Initiatives_template = () => {
                     </p>
                     <p className="text-sm text-center">{info.text}</p>
                     <a
-                      href="#"
+                      href="/"
                       className="text-orange-600 text-center text-xs font-bold no-underline"
                     >
                       learn more {" > "}
@@ -272,7 +273,7 @@ const Initiatives_template = () => {
                     <p className="font-bold text-sm">{content.title}</p>
                     <p className="text-sm">{content.text}</p>
                     <a
-                      href="#"
+                      href="/"
                       className="text-orange-600  text-xs font-bold no-underline"
                     >
                       learn more {" > "}

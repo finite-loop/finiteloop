@@ -11,6 +11,11 @@ export default {
       type: "string"
     },
     {
+      title: "Order",
+      name: "order",
+      type: "number"
+    },
+    {
       title: "Slug",
       name: "slug",
       type: "slug",
@@ -35,6 +40,11 @@ export default {
           { title: "Mobile", value: "mobile" }
         ]
       }
+    },
+    {
+      title: "New Window",
+      name: "newwindow",
+      type: "string"
     },
     {
       title: "Sub Menu",

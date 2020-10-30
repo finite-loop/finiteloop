@@ -1,0 +1,58 @@
+h1 {
+  @apply text-5xl font-semibold tracking-normal antialiased pb-2;
+}
+
+h2 {
+  @apply text-xl font-semibold tracking-normal antialiased py-2;
+}
+
+.heroText {
+  @apply text-fl-primary font-bold tracking-normal leading-normal;
+}
+
+.logoText {
+  @apply text-fl-secondary font-medium text-4xl no-underline;
+}
+
+.para-primary {
+  @apply text-fl-primary rounded tracking-normal leading-normal bg-transperant font-thin;
+}
+.para-secondary {
+  @apply text-fl-secondary font-medium tracking-wide leading-normal;
+}
+
+/* Mobile View */
+@screen sm {
+  .heroText {
+    @apply text-3xl;
+  }
+  .para-primary {
+    @apply m-4 p-4 text-2xl text-center;
+  }
+}
+/* Tablet View */
+@screen md {
+  .heroText {
+    @apply text-3xl;
+  }
+  .para-primary {
+    @apply m-6 p-6 text-2xl text-center;
+  }
+}
+/* Large Displays */
+@screen lg {
+  .heroText {
+    @apply text-4xl;
+  }
+  .para-primary {
+    @apply m-8 p-8 text-3xl text-center;
+  }
+}
+@screen xl {
+  .heroText {
+    font-size: 3rem;
+  }
+  .para-primary {
+    @apply mx-12 px-12 mb-1 text-4xl text-center;
+  }
+}

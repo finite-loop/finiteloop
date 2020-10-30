@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import ProjectsList from "../components/ProjectsList"
-import "../pages/index.css"
+// import "../pages/index.css"
 import { MdStarBorder } from "react-icons/md"
 import system from "../images/system.jpg"
 import noimage from "../images/noimage.png"
@@ -106,7 +106,7 @@ const Work_template = ({ data }) => {
                   <p className="font-bold text-sm">{content.title}</p>
                   <p className="text-sm">{content.text}</p>
                   <a
-                    href="#"
+                    href="/"
                     className="text-orange-600  text-xs font-bold no-underline"
                   >
                     learn more {" > "}
