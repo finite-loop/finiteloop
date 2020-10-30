@@ -33,7 +33,7 @@ export default {
       title: "Current Openings",
       name: "openings",
       type: "array",
-      of: [{ type: "string" }]
+      of: [{ type: "stringAndUrl" }]
     },
     {
       title: "Apply",

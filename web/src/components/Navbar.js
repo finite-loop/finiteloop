@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="relative pt-2 px-4 sm:px-6 lg:px-8 font-sans">
         <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
           <div className="lg:w-0 lg:flex-1">
-            <a href="#" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img
                 className="h-3 rounded w-auto sm:h-10 lg:h-8 my-auto"
                 src={logo}

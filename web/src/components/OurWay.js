@@ -4,6 +4,7 @@ import discover from "../images/dicsover.png"
 import percieve from "../images/percieve.png"
 
 const OurWay = () => {
+  const [currNum, setCurrNum] = useState(0)
   var items = [
     {
       title: "Our Way",
@@ -64,7 +65,6 @@ const OurWay = () => {
     },
   ]
 
-  const [currNum, setCurrNum] = useState(0)
   const [active, setActive] = useState(items[currNum])
   const [start, setStart] = useState(true)
   const [end, setEnd] = useState(false)
@@ -80,10 +80,14 @@ const OurWay = () => {
     event.preventDefault()
     if (currNum < items.length - 1) {
       setCurrNum(currNum + 1)
-      setStart(false)
+      if (start !== false) {
+        setStart(false)
+      }
     } else {
       setCurrNum(items.length - 1)
-      setEnd(true)
+      if (end !== true) {
+        setEnd(true)
+      }
     }
   }
 

@@ -106,7 +106,7 @@ const Work_template = ({ data }) => {
                   <p className="font-bold text-sm">{content.title}</p>
                   <p className="text-sm">{content.text}</p>
                   <a
-                    href="#"
+                    href="/"
                     className="text-orange-600  text-xs font-bold no-underline"
                   >
                     learn more {" > "}

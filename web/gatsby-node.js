@@ -9,6 +9,49 @@
 const path = require("path")
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+
+  const careers_data = await graphql(`
+    query GetCareers {
+      careers: allSanityCareers {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+  careers_data.data.careers.nodes.forEach(career => {
+    createPage({
+      path: `/careers`,
+      component: path.resolve(`src/templates/careers_template.js`),
+      context: {
+        slug: career.slug.current,
+      },
+    })
+  })
+
+  const customers_data = await graphql(`
+    query getCustomers {
+      customers: allSanityCustomers {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+  customers_data.data.customers.nodes.forEach(customer => {
+    createPage({
+      path: `/customers`,
+      component: path.resolve(`src/templates/customers_template.js`),
+      context: {
+        slug: customer.slug.current,
+      },
+    })
+  })
+
   const result = await graphql(`
     query GetProjects {
       projects: allSanityProjects {

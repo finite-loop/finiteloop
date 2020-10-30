@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Navbar from "../components/Navbar"
+import MenuLinks from "./MenuLinks"
+//import Navbar from "../components/Navbar"
 const Header = ({ siteTitle, id, logo }) => {
   return (
     <div id={id}>
@@ -26,14 +27,10 @@ const Header = ({ siteTitle, id, logo }) => {
           </Link>
         </div>
         <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto items-start flex flex-1 mr-24">
-          {/* <MenuLinks
-            classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
-            social={social}
-            links={links}
-          /> */}
+          <MenuLinks classes="menu-links xl:flex lg:flex sm:hidden md:hidden" />
         </div>
-        <div className="sm:mx-2 md:px-5 flex lg:hidden">
-          {/* <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
+        {/* <div className="sm:mx-2 md:px-5 flex lg:hidden">
+          <button role="menu" aria-label="Menu">
             <div className="three col">
               <div
                 className={
@@ -46,16 +43,14 @@ const Header = ({ siteTitle, id, logo }) => {
                 <span className="line" />
               </div>
             </div>
-          </button> */}
+          </button>
         </div>
-        {/* <MenuLinks
+        <MenuLinks
           classes={
             this.state.menu
               ? "menu-items is-active flex flex-col lg:hidden"
               : "menu-items flex-col lg:hidden"
           }
-          social={social}
-          links={links}
         /> */}
       </nav>
     </div>
