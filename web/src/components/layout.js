@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/index.css"
 import Header from "./header"
-// import Footer from "./footer"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const { sanitySiteSettings: settings } = useStaticQuery(graphql`
@@ -48,14 +48,23 @@ const Layout = ({ children }) => {
       <div className="sm:max-w-4/5 md:max-w-3/4 my-8 mx-auto mb-auto">
         {children}
       </div>
-      {/* <Footer
-        url={data.global.frontmatter.siteUrl}
-        title={data.global.frontmatter.siteTitle}
-        hashTag={data.global.frontmatter.socialMediaCard.hashTag}
-        social={data.global.frontmatter.socialMediaCard}
-        links={data.links.frontmatter.footerlinks}
-        trademark={data.global.frontmatter.trademark}
-      /> */}
+      <Footer
+        // url={data.global.frontmatter.siteUrl}
+        // title={data.global.frontmatter.siteTitle}
+        // hashTag={data.global.frontmatter.socialMediaCard.hashTag}
+        socialUrls={{
+          linked: settings.linkedin,
+          twitter: settings.twitter,
+          github: settings.github,
+        }}
+        links={[
+          {
+            title: "Privacy Policy",
+            url: "https://finiteloop.io/privacy-policy/",
+          },
+        ]}
+        trademark={settings.trademark}
+      />
     </div>
   )
 }
