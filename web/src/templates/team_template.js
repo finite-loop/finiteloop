@@ -31,7 +31,7 @@ export const TeamsPageTemplate = ({
               >
                 <Img
                   fluid={member.image.asset.fluid}
-                  className="h-24 w-24 md:h-32 md:w-32 justify-center lg:h-48 lg:w-48 mr-2 rounded-full border-solid border-8"
+                  className="h-40 w-40 md:h-32 md:w-32 justify-center lg:h-48 lg:w-48 mr-2 rounded-full border-solid border-8"
                   style={{ borderColor: "rgb(247, 222, 215)" }}
                 />
                 <div className="relative w-56">
