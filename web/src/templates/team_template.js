@@ -23,10 +23,10 @@ export const TeamsPageTemplate = ({
           <p className="text-md text-center ">{teamDescription}</p>
         </div>
         <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:grid-cols-3 xl:grid-cols-4  justify-items-center ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-3 xl:grid-cols-4  justify-items-center ">
             {teamData.nodes.map(member => (
               <div
-                className="p-5 a flex flex-col justify-items-center items-center"
+                className="p-5 a flex flex-col items-start"
                 key={member.name}
               >
                 <Img
@@ -34,29 +34,35 @@ export const TeamsPageTemplate = ({
                   className="h-24 w-24 md:h-32 md:w-32 justify-center lg:h-48 lg:w-48 mr-2 rounded-full border-solid border-8"
                   style={{ borderColor: "rgb(247, 222, 215)" }}
                 />
-                <p
-                  className="text-2xl py-0 font-semibold"
-                  style={{ marginBottom: 0 }}
-                >
-                  {member.name}
-                </p>
-                <p
-                  className="text-base font-light my-0"
-                  style={{ marginTop: 0 }}
-                >
-                  {member.role}
-                </p>
-                <p className="text-base font-light" style={{ marginTop: 0 }}>
-                  <a href={member.facebook} className="text-white">
-                    <IoLogoFacebook className="mx-2" />
-                  </a>
-                  <a href={member.linkedin} className="text-white">
-                    <IoLogoLinkedin className="mx-2" />
-                  </a>
-                  <a href={member.twitter} className="text-white">
-                    <IoLogoTwitter className="mx-2" />
-                  </a>
-                </p>
+                <div className="relative w-56">
+                  <span
+                    className="absolute"
+                    style={{
+                      right: 0,
+                      top: "-40%",
+                      marginTop: "0px",
+                    }}
+                  >
+                    <p className="text-4xl font-light" style={{ marginTop: 0 }}>
+                      <a href={member.linkedin} className="text-white">
+                        <IoLogoLinkedin className="mx-2" />
+                      </a>
+                    </p>
+                  </span>
+
+                  <p
+                    className="text-2xl py-0 font-semibold"
+                    style={{ marginBottom: 0 }}
+                  >
+                    {member.name}
+                  </p>
+                  <p
+                    className="text-base font-light my-0"
+                    style={{ marginTop: 0 }}
+                  >
+                    {member.role}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
