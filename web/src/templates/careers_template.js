@@ -6,10 +6,10 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 // import { FaDiceFive } from "react-icons/fa"
 
-export const CareersPageTemplate = ({ props, title, careersData }) => {
+export const CareersPageTemplate = ({ title, careersData, siteTitle }) => {
   return (
     <Layout>
-      <Helmet title={title} />
+      <Helmet title={siteTitle + " | " + title} />
       <div className="para-primary">{careersData.header}</div>
       <div className="mx-auto text-left text-white leading-normal tracking-normal sm:text-lg lg:px-12 sm:px-8 pt-4 font-light">
         <h2 className="font-semibold m-0">Current Openings</h2>
@@ -66,21 +66,21 @@ export const CareersPageTemplate = ({ props, title, careersData }) => {
 
 const CareersPageTemplateWrapper = ({ data }) => {
   const careers = data.Careers
+  const siteTitle = data.sanitySiteSettings.siteTitle
   console.log(careers.apply)
   return (
     <div>
       <CareersPageTemplate
         key={careers.title}
         title={careers.title}
-        props={data}
         careersData={careers}
+        siteTitle={siteTitle}
       />
     </div>
   )
 }
 
 CareersPageTemplate.propTypes = {
-  props: propTypes.object.isRequired,
   data: propTypes.object,
   careersData: propTypes.object.isRequired,
 }
@@ -110,6 +110,9 @@ export const careersPageQuery = graphql`
       slug {
         current
       }
+    }
+    sanitySiteSettings {
+      siteTitle
     }
   }
 `

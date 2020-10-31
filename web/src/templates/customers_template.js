@@ -23,10 +23,10 @@ function buildImageObj(source) {
   return imageObj
 }
 
-export const ClientsPageTemplate = ({ title, customers }) => {
+export const ClientsPageTemplate = ({ title, customers, siteTitle }) => {
   return (
     <Layout>
-      <Helmet title={title} />
+      <Helmet title={siteTitle + " | " + title} />
       {/* <PageContent className="para-primary" content={content} /> */}
       <div>
         <div className="flex flex-wrap justify-center items-center bg-white rounded-lg">
@@ -60,6 +60,7 @@ export const ClientsPageTemplate = ({ title, customers }) => {
 
 const ClientsPageTemplateWrapper = props => {
   const customers = props.data.customers
+  const siteTitle = props.data.sanitySiteSettings.siteTitle
   console.log(customers)
   return (
     <div>
@@ -67,6 +68,7 @@ const ClientsPageTemplateWrapper = props => {
         key={customers.title}
         title={customers.title}
         customers={customers}
+        siteTitle={siteTitle}
       />
     </div>
   )
@@ -115,6 +117,9 @@ export const ClientsPageQuery = graphql`
         }
         name
       }
+    }
+    sanitySiteSettings {
+      siteTitle
     }
   }
 `

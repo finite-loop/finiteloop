@@ -52,9 +52,9 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const result = await graphql(`
-    query GetProjects {
-      projects: allSanityProjects {
+  const team_data = await graphql(`
+    query getTeamData {
+      teamPage: allSanityTeamPageContent {
         nodes {
           slug {
             current
@@ -63,19 +63,18 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.projects.nodes.forEach(project => {
+  team_data.data.teamPage.nodes.forEach(teamPage => {
     createPage({
-      path: `/project/${project.slug.current}`,
-      component: path.resolve("src/templates/project.js"),
+      path: `/team`,
+      component: path.resolve(`src/templates/team_template.js`),
       context: {
-        slug: project.slug.current,
+        slug: teamPage.slug.current,
       },
     })
   })
-
-  const about_data = await graphql(`
-    {
-      about: allSanityAbout {
+  const theWay_data = await graphql(`
+    query getWayData {
+      way: allSanityTheWay {
         nodes {
           slug {
             current
@@ -84,16 +83,57 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
-  about_data.data.about.nodes.forEach(about => {
+  theWay_data.data.way.nodes.forEach(way => {
     createPage({
-      path: `/about`,
-      component: path.resolve(`src/templates/about_template.js`),
+      path: `/way`,
+      component: path.resolve(`src/templates/the_way_template.js`),
       context: {
-        slug: about.slug.current,
+        slug: way.slug.current,
       },
     })
   })
+  // const result = await graphql(`
+  //   query GetProjects {
+  //     projects: allSanityProjects {
+  //       nodes {
+  //         slug {
+  //           current
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // result.data.projects.nodes.forEach(project => {
+  //   createPage({
+  //     path: `/project/${project.slug.current}`,
+  //     component: path.resolve("src/templates/project.js"),
+  //     context: {
+  //       slug: project.slug.current,
+  //     },
+  //   })
+  // })
+
+  // const about_data = await graphql(`
+  //   {
+  //     about: allSanityAbout {
+  //       nodes {
+  //         slug {
+  //           current
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
+  // about_data.data.about.nodes.forEach(about => {
+  //   createPage({
+  //     path: `/about`,
+  //     component: path.resolve(`src/templates/about_template.js`),
+  //     context: {
+  //       slug: about.slug.current,
+  //     },
+  //   })
+  // })
 
   const blog_data = await graphql(`
     {
@@ -117,45 +157,45 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const work_data = await graphql(`
-    {
-      works: allSanityWork {
-        nodes {
-          slug {
-            current
-          }
-        }
-      }
-    }
-  `)
-  work_data.data.works.nodes.forEach(work => {
-    createPage({
-      path: `/work`,
-      component: path.resolve(`src/templates/work_template.js`),
-      context: {
-        slug: work.slug.current,
-      },
-    })
-  })
+  // const work_data = await graphql(`
+  //   {
+  //     works: allSanityWork {team
+  //       nodes {
+  //         slug {
+  //           current
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // work_data.data.works.nodes.forEach(work => {
+  //   createPage({
+  //     path: `/work`,
+  //     component: path.resolve(`src/templates/work_template.js`),
+  //     context: {
+  //       slug: work.slug.current,
+  //     },
+  //   })
+  // })
 
-  const initiatives_data = await graphql(`
-    {
-      initiatives: allSanityInitiatives {
-        nodes {
-          slug {
-            current
-          }
-        }
-      }
-    }
-  `)
-  initiatives_data.data.initiatives.nodes.forEach(initiative => {
-    createPage({
-      path: `/initiatives`,
-      component: path.resolve(`src/templates/initiatives_template.js`),
-      context: {
-        slug: initiative.slug.current,
-      },
-    })
-  })
+  // const initiatives_data = await graphql(`
+  //   {
+  //     initiatives: allSanityInitiatives {
+  //       nodes {
+  //         slug {
+  //           current
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // initiatives_data.data.initiatives.nodes.forEach(initiative => {
+  //   createPage({
+  //     path: `/initiatives`,
+  //     component: path.resolve(`src/templates/initiatives_template.js`),
+  //     context: {
+  //       slug: initiative.slug.current,
+  //     },
+  //   })
+  // })
 }
