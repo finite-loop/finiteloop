@@ -26,7 +26,9 @@ export const WayPageTemplate = ({ props, wayData, siteTitle }) => {
         </div> */}
           {wayData.spaces.map(items => (
             <div className="pb-6" key={items.parentTitle}>
-              <h2 className="text-left text-3xl w-full">{items.parentTitle}</h2>
+              <h2 className="text-left text-3xl w-full my-0">
+                {items.parentTitle}
+              </h2>
               <hr
                 className="mb-6"
                 style={{ borderTop: "0.05rem solid white" }}
@@ -46,8 +48,8 @@ export const WayPageTemplate = ({ props, wayData, siteTitle }) => {
                           />
                         </div>
                         <div className="lg:ml-10 mt-10 flex-grow sm:text-lg lg:text-xl leading-normal tracking-normal">
-                          <p>{item.name && item.name}</p>
-                          <p> {item.content}</p>
+                          <p className="my-0">{item.name && item.name}</p>
+                          <p className="my-0"> {item.content}</p>
                         </div>
                       </div>
                     )}
@@ -60,8 +62,8 @@ export const WayPageTemplate = ({ props, wayData, siteTitle }) => {
                           alt={item.name}
                         />
                         <div className="sm:text-lg lg:text-lg mt-6 leading-normal tracking-normal">
-                          <p>{item.name}</p>
-                          <p>{item.content}</p>
+                          <p className="my-0">{item.name}</p>
+                          <p className="my-0">{item.content}</p>
                         </div>
                       </div>
                     )}

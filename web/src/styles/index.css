@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import "./neptune.css";
-/* @import "color"; */
+/* @import "./color.css"; */
 @import "./components.css";
 /* @import "animation"; */
 @import "./typography.css";

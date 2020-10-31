@@ -27,7 +27,9 @@ export const ClientsPageTemplate = ({ title, customers, siteTitle }) => {
   return (
     <Layout>
       <Helmet title={siteTitle + " | " + title} />
-      {/* <PageContent className="para-primary" content={content} /> */}
+      <div className="para-primary">
+        <p>{title}</p>{" "}
+      </div>
       <div>
         <div className="flex flex-wrap justify-center items-center bg-white rounded-lg">
           {customers.customersList.map(client => {
