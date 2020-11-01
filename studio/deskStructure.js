@@ -14,10 +14,10 @@ const localURL = "http://localhost:8000";
 const previewURL =
   window.location.hostname === "localhost" ? localURL : remoteURL;
 
-const hiddenDocTypes = (listItem) =>
+const hiddenDocTypes = listItem =>
   !["blog", "team", "menu", "projects"].includes(listItem.getId());
 
-const innerListTypes = (listItem) =>
+const innerListTypes = listItem =>
   !["page", "page1", "page2"].includes(listItem.getId());
 
 export default () =>
@@ -46,6 +46,12 @@ export default () =>
         .icon(IoIosPeople),
       ,
       S.listItem()
+        .title("Team Page Content")
+        .schemaType("teamPageContent")
+        .child(S.documentTypeList("teamPageContent").title("Team Page Content"))
+        .icon(IoIosPeople),
+      ,
+      S.listItem()
         .title("Menu")
         .schemaType("menu")
         .child(S.documentTypeList("menu").title("Menu"))
@@ -55,7 +61,10 @@ export default () =>
         .title("The Way")
         .schemaType("theWay")
         .child(
-          S.editor().schemaType("theWay").title("The Way").documentId("theWay")
+          S.editor()
+            .schemaType("theWay")
+            .title("The Way")
+            .documentId("theWay")
         )
         .icon(GiPathDistance),
       ,
@@ -104,7 +113,7 @@ export default () =>
               S.listItem()
                 .title("Initiatives")
                 .schemaType("initiatives")
-                .child(S.documentTypeList("initiatives").title("Initiatives")),
+                .child(S.documentTypeList("initiatives").title("Initiatives"))
 
               //...S.documentTypeListItems().filter(innerListTypes)
             ])
@@ -115,7 +124,7 @@ export default () =>
         .child(
           S.documentTypeList("blog")
             .title("Blogs")
-            .child((documentId) =>
+            .child(documentId =>
               S.document(documentId)
                 .schemaType("blog")
                 .views([
@@ -124,9 +133,9 @@ export default () =>
                     .component(IframePreview)
                     .options({ previewURL })
                     .title("Web Preview")
-                    .icon(EyeIcon),
+                    .icon(EyeIcon)
                 ])
             )
-        ),
+        )
       //...S.documentTypeListItems().filter(hiddenDocTypes)
     ]);

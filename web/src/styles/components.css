@@ -207,7 +207,7 @@
   .two-column {
     columns: 2;
     column-gap: 2em;
-    column-rule: 1px solid $accent-color;
+    column-rule: 1px solid #e6f2f2;
   }
   .offerings-right {
     @apply px-16 py-10;
@@ -229,7 +229,7 @@
   .two-column {
     columns: 2;
     column-gap: 2em;
-    column-rule: 1px solid $accent-color;
+    column-rule: 1px solid #e6f2f2;
   }
   .offerings-right {
     @apply px-16
