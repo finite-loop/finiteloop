@@ -1,0 +1,107 @@
+/* Text Animation */
+.animate-text {
+  @apply border-fl-primary text-2xl border-r-2 mx-auto overflow-hidden text-center;
+  top: 50%;
+  white-space: nowrap;
+  transform: translateY(-50%);
+  width: 14em;
+}
+
+.anim-typewriter {
+  animation: typewriter 2s steps(24) 1s 1 normal both,
+    blinkTextCursor 500ms steps(24) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0em;
+  }
+  to {
+    width: 11em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    @apply border-fl-primary border-r-2;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* menu links animation */
+.menu-items {
+  max-height: 0;
+  @apply w-full text-center flex;
+  transition-duration: 0.5s;
+  overflow-y: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.09, 0.96);
+}
+.menu-items.is-active {
+  @apply w-full text-center;
+  visibility: visible;
+  max-height: 100vh;
+  overflow-y: hidden;
+  transition-duration: 0.5s;
+  transition: max-height 1s cubic-bezier(0.4, 0, 0.09, 0.96);
+}
+/* hamburger menu animation */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+.three {
+  @apply px-2 py-1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+.hamburger .line {
+  width: 40px;
+  height: 5px;
+  @apply bg-white;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 0.3s ease-in;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+.hamburgerStudio .line {
+  width: 40px;
+  height: 5px;
+  @apply bg-fl-primary-alternate;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 0.3s ease-in;
+}
+.hamburgerStudio:hover {
+  cursor: pointer;
+}
+#hamburger-menu.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+#hamburger-menu.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+
+#hamburger-menu.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}

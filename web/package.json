@@ -20,6 +20,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-form-validator-core": "^1.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "react-instagram-embed": "^1.5.0",

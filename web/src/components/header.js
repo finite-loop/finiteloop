@@ -1,9 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState} from "react"
 import MenuLinks from "./MenuLinks"
-//import Navbar from "../components/Navbar"
+import SEO from "./seo"
+import flLogoText from '../images/finiteloop_logo_text.png'
 const Header = ({ siteTitle, logo }) => {
+
+  const [menuActive, setMenuActive] = useState(false);
+  
   return (
     <div id="header">
       <nav className="nav" role="navigation">
@@ -17,24 +21,23 @@ const Header = ({ siteTitle, logo }) => {
               />
             </div>
             <div className="sm:flex lg:flex justify-center">
-              <div className="text-white no-underline">FiniteLoop</div>
-              {/* <img
+              <img
                 className="lg:w-auto"
-                src="/img/finiteloop_logo_text.png"
+                src={flLogoText}
                 alt="Logo"
-              /> */}
+              />
             </div>
           </Link>
         </div>
         <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto items-start flex flex-1 mr-24">
           <MenuLinks classes="menu-links xl:flex lg:flex sm:hidden md:hidden" />
         </div>
-        {/* <div className="sm:mx-2 md:px-5 flex lg:hidden">
-          <button role="menu" aria-label="Menu">
+        <div className="sm:mx-2 md:px-5 flex lg:hidden">
+          <button role="menu" aria-label="Menu" style={{background: 'none'}} onClick={() => setMenuActive(!menuActive)}>
             <div className="three col">
               <div
                 className={
-                  this.state.menu ? "hamburger is-active" : "hamburger"
+                  menuActive ? "hamburger is-active" : "hamburger"
                 }
                 id="hamburger-menu"
               >
@@ -47,12 +50,13 @@ const Header = ({ siteTitle, logo }) => {
         </div>
         <MenuLinks
           classes={
-            this.state.menu
+            menuActive
               ? "menu-items is-active flex flex-col lg:hidden"
               : "menu-items flex-col lg:hidden"
           }
-        /> */}
+        />
       </nav>
+      <SEO />
     </div>
   )
 }

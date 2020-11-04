@@ -5,8 +5,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../styles/index.css"
 import Header from "./header"
 import Footer from "./footer"
+import bg from '../images/finiteloop_bg_home.png'
 
-const Layout = ({ children }) => {
+const Layout = ({ bgImg, children }) => {
   const { sanitySiteSettings: settings } = useStaticQuery(graphql`
     {
       sanitySiteSettings {
@@ -39,8 +40,7 @@ const Layout = ({ children }) => {
       className="relative flex flex-col min-h-screen"
       style={{
         backgroundColor: "#E05455",
-        // backgroundImage: 'url(/img/team-bg.png)',
-        // backgroundBlendMode: 'hard-light',
+        backgroundImage: bgImg ? `url(${bg})` : null,
       }}
     >
       <Helmet title={settings.siteTitle} />
@@ -49,9 +49,6 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer
-        // url={data.global.frontmatter.siteUrl}
-        // title={data.global.frontmatter.siteTitle}
-        // hashTag={data.global.frontmatter.socialMediaCard.hashTag}
         socialUrls={{
           linked: settings.linkedin,
           twitter: settings.twitter,
