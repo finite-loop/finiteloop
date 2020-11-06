@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useRef} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
@@ -24,9 +24,38 @@ const ContactPage = () => {
   `)
 
   const contactData = data.sanityContactUs
+    
+  const formRef = useRef()
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    message: '',
+    company: '',
+  });
+
+  const handleChange = (event) => {
+    setFormData({...onloadeddata, [event.target.name]: event.target.value})
+  }
+
+  const handleSubmit = (e) => {
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'Contact', ...formData }),
+      })
+        .then(() => {
+          alert("Thank you for submitting your valuable inputs, we will get back to you soon.");
+        })
+        .catch(error => {
+          console.error('Form submission error:', error);
+          alert("Sorry, we have trouble submitting your form. Please try again later");
+        })
+    e.preventDefault()
+  }
 
   return (
-    <Layout>
+    <Layout container>
       <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
           <div className="flex sm:px-10 sm:py-24 lg:px-38 lg:py-32 sm:w-full lg:w-auto bg-white flex-wrap">
             <div className="flex-col opacity-75" style={{ color: '#E05455' }}>
@@ -74,34 +103,34 @@ const ContactPage = () => {
               <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">
                 {contactData.SubHeading}
               </p>
-              {/* <div className="flex flex-col sm:px-2">
+              <div className="flex flex-col sm:px-2">
                 <ValidatorForm
-                  onSubmit={this.handleSubmit}
+                  onSubmit={handleSubmit}
                   onError={errors => console.log(errors)}
                   name="Contact"
-                  ref={f => (this.form = f)}
+                  ref={formRef}
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   className="pb-5"
                 >
-                  {submitError && <p className="">{submitError}</p>}
                   <TextValidator
                     id="firstname"
                     name="firstname"
                     placeholder="First Name *"
-                    value={firstname}
-                    onChange={this.handleChange}
+                    value={formData.firstname}
+                    onChange={handleChange}
                     validators={['required']}
                     errorMessages={['This field is required']}
                     margin="normal"
                     className="input-field"
                   />
+                  
                   <TextValidator
                     id="lastname"
                     name="lastname"
                     placeholder="Last Name *"
-                    value={lastname}
-                    onChange={this.handleChange}
+                    value={formData.lastname}
+                    onChange={handleChange}
                     validators={['required']}
                     errorMessages={['This field is required']}
                     margin="normal"
@@ -111,8 +140,8 @@ const ContactPage = () => {
                     id="email"
                     name="email"
                     placeholder="E-mail *"
-                    value={email}
-                    onChange={this.handleChange}
+                    value={formData.email}
+                    onChange={handleChange}
                     validators={['required', 'isEmail']}
                     errorMessages={[
                       'This field is required',
@@ -125,8 +154,8 @@ const ContactPage = () => {
                     id="company"
                     name="company"
                     placeholder="Company Name"
-                    value={company}
-                    onChange={this.handleChange}
+                    value={formData.company}
+                    onChange={handleChange}
                     margin="normal"
                     className="input-field"
                   />
@@ -136,8 +165,8 @@ const ContactPage = () => {
                     placeholder="Message *"
                     multiLine
                     rows={4}
-                    value={message}
-                    onChange={this.handleChange}
+                    value={formData.message}
+                    onChange={handleChange}
                     validators={['required']}
                     errorMessages={['This field is required']}
                     margin="normal"
@@ -156,18 +185,10 @@ const ContactPage = () => {
                     </button>
                   </div>
                 </ValidatorForm>
-              </div> */}
-              {/* <SEO
-                postPath={contactus.frontmatter.path}
-                postNode={contactus}
-                postSEO
-              /> */}
-              {/* {showMessage &&
-                this.displayAlert(contactus.frontmatter.submitMsg)}
-              {showError &&
-                this.displayAlert(
-                  'Sorry, we have trouble submitting your form. Please try again later'
-                )} */}
+              </div> 
+              <SEO
+                postPath={'/contact'}
+              />
             </div>
           </div>
         </div>   
@@ -176,3 +197,10 @@ const ContactPage = () => {
 }
 
 export default ContactPage
+
+
+function encode(data) {
+return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
