@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "../components/SanityTextEditorComponents/block-content"
 import clientConfig from "../../client-config"
@@ -25,8 +26,38 @@ const SampleBlog = ({ data }) => {
 
   return (
     <Layout>
-      <article className="m-2">
-        <div>
+      <article className="m-2 bg-white">
+        <div className="m-10 w-2/3 mx-auto">
+          <h1 className="text-5xl font-semibold pt-10 mb-4">
+            {data.blog.title}
+          </h1>
+          <div class="flex items-center">
+            <Img
+              fluid={data.blog.author.image.asset.fluid}
+              className="h-12 w-12 md:h-14 md:w-14 justify-center lg:h-12 lg:w-12 mr-2 rounded-full border-solid border-2"
+              style={{
+                borderColor: "rgb(247, 222, 215)",
+                display: "inline-block",
+              }}
+            />
+            <span>
+              <span className=" inline text-2xl font-semibold text-gray-900 leading-none">
+                {data.blog.author.name}
+              </span>
+              <p className="text-gray-600 my-0 py-0 text-sm">
+                {data.blog.publishedAt}{" "}
+                <span className="">
+                  {" - "}
+                  <li className="inline-block">
+                    {" "}
+                    {data.blog.read_time} min read
+                  </li>{" "}
+                </span>{" "}
+              </p>
+            </span>
+          </div>
+        </div>
+        <div className="container w-2/3 mx-auto">
           {data.blog.mainImage && data.blog.mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(data.blog.mainImage))
@@ -35,22 +66,16 @@ const SampleBlog = ({ data }) => {
                 // .fit("crop")
                 .url()}
               alt={data.blog.mainImage.alt}
-              className="h-auto object-contain sm:object-cover md:object-cover lg:object-cover xl:object-cover text-center w-full"
+              className="h-auto object-contain sm:object-contain md:object-contain lg:object-contain xl:object-contain text-center w-full"
             />
           )}
         </div>
-        <div className="m-10">
-          <h1 className="text-3xl font-semibold text-center m-5">
-            {data.blog.title}
-          </h1>
-          <h3 className="text-2xl font-semibold text-center">
-            {data.blog.author.name}
-          </h3>
-        </div>
-        <div className="mt-8 sm:mr-6 md:mb-4 lg:ml-2 xl:m-20 bg-yellow-200-md mx-auto">
-          {data.blog._rawBody && (
-            <BlockContent blocks={data.blog._rawBody || []} />
-          )}
+        <div className=" w-5/6 mx-auto">
+          <div className="mt-8 sm:mr-6 md:mb-4 lg:ml-2 xl:m-20 bg-yellow-200-md">
+            {data.blog._rawBody && (
+              <BlockContent blocks={data.blog._rawBody || []} />
+            )}
+          </div>
         </div>
       </article>
     </Layout>
@@ -84,8 +109,20 @@ export const query = graphql`
         }
         alt
       }
+      publishedAt(formatString: "MMMM DD, YYYY")
+      read_time
       author {
         name
+        image {
+          asset {
+            fixed(width: 125, height: 125) {
+              ...GatsbySanityImageFixed
+            }
+            fluid {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
       }
     }
   }

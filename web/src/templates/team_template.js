@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { IoLogoFacebook, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io"
+import { IoLogoLinkedin } from "react-icons/io"
 
 export const TeamsPageTemplate = ({
   title,
