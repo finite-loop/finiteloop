@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
-
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import BlogList from "../components/BlogList"
@@ -13,131 +12,85 @@ const ContactPage = ({ data }) => {
   )
   const [filteredBlogs, setFilteredBlogs] = React.useState(blogs)
   const [filters, setFilters] = React.useState([])
-  const [tagFilter, setTagFilter] = React.useState("")
-  const [authorFilter, setAuthorFilter] = React.useState("")
 
-  const filterDataByTag = tagFilter => {
-    console.log(tagFilter)
-    if (tagFilter !== "") {
-      var newBlogs = filteredBlogs.filter(blog => blog.tags.includes(tagFilter))
-      setTagFilter(tagFilter)
-      setFilteredBlogs(newBlogs)
-      //var filter = { name: tagFilter, type: "tag" }
-      if (!filters.includes(tagFilter)) {
-        setFilters(filters.concat(tagFilter))
-      }
-    }
-  }
-
-  const filterDataByAuthor = authorFilter => {
-    if (authorFilter !== "") {
-      var newBlogs = filteredBlogs.filter(
-        blog => blog.author.name === authorFilter
-      )
-      setAuthorFilter(authorFilter)
-      setFilteredBlogs(newBlogs)
-      //var filter = { name: authorFilter, type: "author" }
-      if (!filters.includes(authorFilter)) {
-        setFilters(filters.concat(authorFilter))
-      }
-    }
-  }
-  const clearFilter = () => {
+  useEffect(() => {
     setFilteredBlogs(blogs)
-    setFilters([])
+    var newBlogs
+    if (filters !== []) {
+      filters.forEach(filter => {
+        if (filter.type === "tag") {
+          newBlogs = filteredBlogs.filter(blog =>
+            blog.tags.includes(filter.name)
+          )
+          setFilteredBlogs(newBlogs)
+        } else {
+          newBlogs = filteredBlogs.filter(
+            blog => blog.author.name === filter.name
+          )
+
+          setFilteredBlogs(newBlogs)
+        }
+      })
+    }
+  }, [filters])
+
+  function containsObject(newFilter) {
+    var contains = false
+    filters.forEach(item => {
+      console.log(item.name === newFilter.name)
+      if (item.name === newFilter.name) {
+        console.log("yes")
+        contains = true
+      }
+    })
+    return contains
   }
-  const clearTagFilter = () => {
-    setTagFilter("")
-    if (authorFilter) {
-      filterDataByAuthor(authorFilter)
+  const filterData = data => {
+    const newFilter = data
+    console.log(newFilter)
+
+    if (containsObject(newFilter)) {
+      console.log("Already there")
     } else {
-      setFilteredBlogs(blogs)
+      setFilters(filters.concat(newFilter))
     }
   }
-  const clearAuthorFilter = () => {
-    setAuthorFilter("")
-    if (tagFilter) {
-      filterDataByAuthor(tagFilter)
-    } else {
-      setFilteredBlogs(blogs)
-    }
+
+  const clearFilter = filter => {
+    console.log(filter)
+    setFilteredBlogs(blogs)
+    setFilters(filters.filter(filterData => filterData !== filter))
   }
-  console.log(filteredBlogs)
+  console.log(filters, filteredBlogs)
   return (
     <Layout>
       <Helmet title="Blogs" />
       <div className="para-primary m-0">
         <p className="m-0">Blogs</p>{" "}
-        {/* {filters ? (
-          <>
-            {filters.map((filter, i) => (
-              <span
-                //className="inline-block  bg-white rounded-full  px-10 py-1 text-lg font-light text-grey-600 mr-2 mb-2"
-                className="m-0 p-0 capitalize"
-                style={{ cursor: "pointer" }}
-                onClick={clearFilter}
-              >
-                {i != 0 ? "and" : ""} {filter}{" "}
-              </span>
-            ))}
-          </>
-        ) : (
-          <></>
-        )} */}
       </div>
-      {tagFilter !== "" ? (
-        <span
-          className=" relative capitalize inline-block bg-white rounded-full pr-8 pl-5 py-2 text-lg font-semibold text-black mr-2 mb-2"
-          style={{ cursor: "pointer" }}
-          onClick={clearTagFilter}
-        >
-          {tagFilter}
-          <IoIosCloseCircleOutline
-            className=" absolute py-1 mb-0 mx-2"
-            style={{ right: 0 }}
-          />
-        </span>
-      ) : (
-        <></>
-      )}
-      {authorFilter !== "" ? (
-        <span
-          className=" relative capitalize inline-block bg-white rounded-full pr-8 pl-5 py-2 text-lg font-semibold text-black mr-2 mb-2"
-          style={{ cursor: "pointer" }}
-          onClick={clearAuthorFilter}
-        >
-          {authorFilter}
-          <IoIosCloseCircleOutline
-            className=" absolute py-1 mb-0 mx-2"
-            style={{ right: 0 }}
-          />
-        </span>
-      ) : (
-        <></>
-      )}
-      {/* {filters ? (
+
+      {filters ? (
         <>
           {filters.map(filter => (
             <span
-              className="inline-block  bg-white rounded-full  px-10 py-1 text-lg font-light text-grey-600 mr-2 mb-2"
+              className="pl-2 py-1 pr-5 text-xs relative capitalize inline-block bg-white rounded-full md:pr-8 md:pl-5 md:py-2 lg:pr-8 lg:pl-5 lg:py-2 xl:pr-8 xl:pl-5 xl:py-2 md:text-lg lg:text-lg xl:text-lg font-bold text-black mr-2 mb-2"
               style={{ cursor: "pointer" }}
-              onClick={clearFilter}
+              onClick={() => clearFilter(filter)}
             >
               {filter.name}
+              <IoIosCloseCircleOutline
+                className=" absolute py-1 mb-0 mx-2"
+                style={{ right: 0 }}
+              />
             </span>
           ))}
         </>
       ) : (
         <></>
-      )} */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      )}
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12">
         {filteredBlogs.map(blog => (
-          <BlogList
-            blog={blog}
-            filterDataByAuthor={filterDataByAuthor}
-            filterDataByTag={filterDataByTag}
-            filters={filters}
-          />
+          <BlogList blog={blog} filterData={filterData} />
         ))}
       </div>
       <SEO />
@@ -179,6 +132,9 @@ export const query = graphql`
               ...GatsbySanityImageFluid
             }
             fixed(width: 370, height: 200) {
+              ...GatsbySanityImageFixed
+            }
+            smallImage: fixed(width: 300, height: 170) {
               ...GatsbySanityImageFixed
             }
             url

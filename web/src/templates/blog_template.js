@@ -28,20 +28,20 @@ const SampleBlog = ({ data }) => {
     <Layout>
       <article className="m-2 bg-white">
         <div className="m-10 w-2/3 mx-auto">
-          <h1 className="text-5xl font-semibold pt-10 mb-4">
+          <h1 className="text-2xl font-semibold pt-10 mb-4 md:text-3xl lg:text-5xl">
             {data.blog.title}
           </h1>
-          <div class="flex items-center">
+          <div class="w-full flex items-center  lg:w-2/3 xl:w-2/3">
             <Img
               fluid={data.blog.author.image.asset.fluid}
-              className="h-12 w-12 md:h-14 md:w-14 justify-center lg:h-12 lg:w-12 mr-2 rounded-full border-solid border-2"
+              className="h-10 w-10 md:h-14 md:w-14 justify-center lg:h-12 lg:w-12 mr-2 rounded-full border-solid border-2"
               style={{
                 borderColor: "rgb(247, 222, 215)",
                 display: "inline-block",
               }}
             />
             <span>
-              <span className=" inline text-2xl font-semibold text-gray-900 leading-none">
+              <span className=" text-sm inline lg:text-2xl font-semibold text-gray-900 leading-none">
                 {data.blog.author.name}
               </span>
               <p className="text-gray-600 my-0 py-0 text-sm">
