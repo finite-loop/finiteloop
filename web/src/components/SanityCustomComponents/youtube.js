@@ -5,8 +5,6 @@ import React from "react"
 const Youtube = props => {
   const url = props.node.url
 
-  console.log()
-
   return (
     <div
       style={{

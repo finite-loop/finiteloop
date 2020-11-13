@@ -22,8 +22,6 @@ function buildImageObj(source) {
 }
 
 const SampleBlog = ({ data }) => {
-  console.log(data)
-
   return (
     <Layout>
       <article className="m-2 bg-white">

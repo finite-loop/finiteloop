@@ -67,7 +67,7 @@ export const CareersPageTemplate = ({ title, careersData, siteTitle }) => {
 const CareersPageTemplateWrapper = ({ data }) => {
   const careers = data.Careers
   const siteTitle = data.sanitySiteSettings.siteTitle
-  console.log(careers.apply)
+
   return (
     <div>
       <CareersPageTemplate

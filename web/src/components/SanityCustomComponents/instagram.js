@@ -1,13 +1,17 @@
-import React from "react";
-import InstagramEmbed from "react-instagram-embed";
+import React from "react"
+import InstagramEmbed from "react-instagram-embed"
 
 const Instagram = props => {
-  const url = props.node.url;
-
-  console.log();
+  const url = props.node.url
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <InstagramEmbed
         url={url}
         maxWidth="100%"
@@ -21,7 +25,7 @@ const Instagram = props => {
         onFailure={() => {}}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Instagram;
+export default Instagram

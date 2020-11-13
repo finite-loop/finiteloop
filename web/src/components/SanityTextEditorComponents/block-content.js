@@ -5,8 +5,6 @@ import serializers from "./serializers"
 import "./blockContent.css"
 
 const BlockContent = ({ blocks }) => {
-  console.log(blocks)
-  console.log(serializers)
   return (
     <BaseBlockContent
       blocks={blocks}

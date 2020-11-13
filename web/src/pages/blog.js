@@ -7,11 +7,11 @@ import BlogList from "../components/BlogList"
 import { IoIosCloseCircleOutline } from "react-icons/io"
 
 const ContactPage = ({ data }) => {
+  const [filters, setFilters] = React.useState([])
   const blogs = data.allBlogs.nodes.sort((a, b) =>
     a.publishedAt < b.publishedAt ? 1 : -1
   )
   const [filteredBlogs, setFilteredBlogs] = React.useState(blogs)
-  const [filters, setFilters] = React.useState([])
 
   useEffect(() => {
     setFilteredBlogs(blogs)
@@ -37,9 +37,7 @@ const ContactPage = ({ data }) => {
   function containsObject(newFilter) {
     var contains = false
     filters.forEach(item => {
-      console.log(item.name === newFilter.name)
       if (item.name === newFilter.name) {
-        console.log("yes")
         contains = true
       }
     })
@@ -47,21 +45,17 @@ const ContactPage = ({ data }) => {
   }
   const filterData = data => {
     const newFilter = data
-    console.log(newFilter)
 
     if (containsObject(newFilter)) {
-      console.log("Already there")
     } else {
       setFilters(filters.concat(newFilter))
     }
   }
 
   const clearFilter = filter => {
-    console.log(filter)
     setFilteredBlogs(blogs)
     setFilters(filters.filter(filterData => filterData !== filter))
   }
-  console.log(filters, filteredBlogs)
   return (
     <Layout>
       <Helmet title="Blogs" />
@@ -76,6 +70,9 @@ const ContactPage = ({ data }) => {
               className="pl-2 py-1 pr-5 text-xs relative capitalize inline-block bg-white rounded-full md:pr-8 md:pl-5 md:py-2 lg:pr-8 lg:pl-5 lg:py-2 xl:pr-8 xl:pl-5 xl:py-2 md:text-lg lg:text-lg xl:text-lg font-bold text-black mr-2 mb-2"
               style={{ cursor: "pointer" }}
               onClick={() => clearFilter(filter)}
+              role="button"
+              tabIndex="0"
+              onKeyPress={() => clearFilter(filter)}
             >
               {filter.name}
               <IoIosCloseCircleOutline

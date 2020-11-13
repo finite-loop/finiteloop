@@ -63,7 +63,7 @@ export const ClientsPageTemplate = ({ title, customers, siteTitle }) => {
 const ClientsPageTemplateWrapper = props => {
   const customers = props.data.customers
   const siteTitle = props.data.sanitySiteSettings.siteTitle
-  console.log(customers)
+
   return (
     <div>
       <ClientsPageTemplate

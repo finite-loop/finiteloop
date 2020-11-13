@@ -36,9 +36,12 @@ const BlogList = ({ blog, filterData }) => {
             {blog.tags &&
               blog.tags.map(tag => (
                 <span
-                  className="text-xs mr-1 mb-0 px-2 inline-block bg-gray-400 rounded-full md:px-5 lg:px-5 xl:px-5 py-1 lg:text-sm font-semibold text-gray-800 lg:mr-2 lg:mb-2"
+                  className="text-xs mr-1 mb-0 px-2 inline-block bg-gray-400 rounded-full md:px-2 lg:px-2 xl:px-2 py-1 lg:text-sm font-semibold text-gray-800 lg:mr-2 lg:mb-2"
                   style={{ cursor: "pointer" }}
                   onClick={() => filterByTag(tag)}
+                  role="button"
+                  tabIndex="0"
+                  onKeyPress={() => filterByTag(tag)}
                 >
                   #{tag}
                 </span>
@@ -50,17 +53,23 @@ const BlogList = ({ blog, filterData }) => {
             style={{ textDecoration: "none" }}
           >
             <h2
-              className="text-sm md:text-lg lg:text-lg xl:text-lg font-semibold my-0 py-0 whitespace-pre-wrap"
+              className="text-base md:text-lg lg:text-lg xl:text-lg font-semibold my-0 py-0 whitespace-pre-wrap"
               // style={{ whiteSpace: "pre" }}
             >
               {blog.title.length < 100 && blog.tags.length <= 3
                 ? "\n" + blog.title + "\n"
                 : blog.title}
             </h2>
-            <p className="py-0 my-1">
+            <p className="py-0 my-1 hidden md:block">
               {(
                 blog.body[0].children[0].text + blog.body[1].children[0].text
               ).slice(0, 80)}{" "}
+              ...
+            </p>
+            <p className="py-0 my-1 md:hidden lg:hidden xl:hidden">
+              {(
+                blog.body[0].children[0].text + blog.body[1].children[0].text
+              ).slice(0, 50)}{" "}
               ...
             </p>
           </Link>
@@ -78,6 +87,9 @@ const BlogList = ({ blog, filterData }) => {
                   className="text-gray-900 leading-none my-0 py-1 px-2 font-bold"
                   style={{ cursor: "pointer" }}
                   onClick={() => filterByAuthor(blog.author.name)}
+                  role="button"
+                  tabIndex="0"
+                  onKeyDown={() => filterByAuthor(blog.author.name)}
                 >
                   {blog.author.name}
                 </p>
