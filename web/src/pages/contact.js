@@ -1,9 +1,9 @@
-import React from "react"
+import React, {useState, useRef} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import { ValidatorForm } from "react-form-validator-core"
-import TextValidator from "../components/TextValidator"
+import { useForm } from "react-hook-form";
+
 
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,8 +25,25 @@ const ContactPage = () => {
 
   const contactData = data.sanityContactUs
 
+  const { handleSubmit, register, errors } = useForm();
+
+  const onSubmit = (formData) => {
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'Contact', ...formData }),
+      })
+        .then(() => {
+          alert("Thank you for submitting your valuable inputs, we will get back to you soon.");
+        })
+        .catch(error => {
+          console.error('Form submission error:', error);
+          alert("Sorry, we have trouble submitting your form. Please try again later");
+        })
+  }
+
   return (
-    <Layout>
+    <Layout container>
       <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
         <div className="flex sm:px-10 sm:py-24 lg:px-38 lg:py-32 sm:w-full lg:w-auto bg-white flex-wrap">
           <div className="flex-col opacity-75" style={{ color: "#E05455" }}>
@@ -60,112 +77,92 @@ const ContactPage = () => {
               </a>
             </span>
           </div>
-        </div>
-        <div
-          className="flex sm:mx-2 lg:mx-16 mt-16"
-          style={{ maxWidth: "55rem" }}
-        >
-          <div className="flex-col text-white">
-            <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">
-              {contactData.heading}
-            </h1>
-            <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">
-              {contactData.SubHeading}
-            </p>
-            {/* <div className="flex flex-col sm:px-2">
-                <ValidatorForm
-                  onSubmit={this.handleSubmit}
-                  onError={errors => console.log(errors)}
-                  name="Contact"
-                  ref={f => (this.form = f)}
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  className="pb-5"
-                >
-                  {submitError && <p className="">{submitError}</p>}
-                  <TextValidator
+          <div
+            className="flex sm:mx-2 lg:mx-16 mt-16"
+            style={{ maxWidth: '55rem' }}
+          >
+            <div className="flex-col text-white">
+              <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">
+                {contactData.heading}
+              </h1>
+              <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">
+                {contactData.SubHeading}
+              </p>
+              <div className="flex flex-col sm:px-2">
+                <form className="pb-5" onSubmit={handleSubmit(onSubmit)}>
+                  <input
                     id="firstname"
                     name="firstname"
                     placeholder="First Name *"
-                    value={firstname}
-                    onChange={this.handleChange}
-                    validators={['required']}
-                    errorMessages={['This field is required']}
                     margin="normal"
-                    className="input-field"
+                    className="input-field mb-1"
+                    ref={register({
+                      required: "This field is required"
+                    })}
                   />
-                  <TextValidator
+                  {errors.firstname && errors.firstname.message}
+                  <input
                     id="lastname"
                     name="lastname"
                     placeholder="Last Name *"
-                    value={lastname}
-                    onChange={this.handleChange}
-                    validators={['required']}
-                    errorMessages={['This field is required']}
                     margin="normal"
-                    className="input-field"
+                    className="input-field mt-2 mb-1"
+                    ref={register({
+                      required: "This field is required"
+                    })}
                   />
-                  <TextValidator
+                  {errors.lastname && errors.lastname.message}
+                  <input 
                     id="email"
-                    name="email"
+                    name="email" 
                     placeholder="E-mail *"
-                    value={email}
-                    onChange={this.handleChange}
-                    validators={['required', 'isEmail']}
-                    errorMessages={[
-                      'This field is required',
-                      'E-mail is not valid',
-                    ]}
                     margin="normal"
-                    className="input-field"
-                  />
-                  <TextValidator
+                    className="input-field mt-2 mb-1" 
+                    ref={register({
+                      required: "This field is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "E-mail is not valid"
+                      }
+                    })}/>
+                    {errors.email && errors.email.message}
+                  <input
                     id="company"
                     name="company"
                     placeholder="Company Name"
-                    value={company}
-                    onChange={this.handleChange}
                     margin="normal"
-                    className="input-field"
+                    className="input-field mt-2 mb-1"
+                    ref={register()}
                   />
-                  <TextValidator
+                  <textarea
                     id="message"
                     name="message"
                     placeholder="Message *"
-                    multiLine
                     rows={4}
-                    value={message}
-                    onChange={this.handleChange}
-                    validators={['required']}
-                    errorMessages={['This field is required']}
                     margin="normal"
-                    className="input-field"
+                    className="input-field mt-2 mb-1"
+                    ref={register({
+                      required: "This field is required"
+                    })}
                   />
-                  <input name="bot-field" style={{ display: 'none' }} />
-                  <br />
+                  {errors.message && errors.message.message}
                   <div className="float-right">
                     <button
                       role="submit"
                       aria-label="Submit"
                       type="submit"
                       className="rectButton"
+                      style={{cursor: "pointer"}}
                     >
                       Submit
                     </button>
                   </div>
-                </ValidatorForm>
-              </div> */}
-            {/* <SEO
-                postPath={contactus.frontmatter.path}
-                postNode={contactus}
-                postSEO
-              /> */}
-            {/* {showMessage &&
-                this.displayAlert(contactus.frontmatter.submitMsg)}
-              {showError &&
-                this.displayAlert(
-                  'Sorry, we have trouble submitting your form. Please try again later'
-                )} */}
+                </form>
+              </div>
+              <SEO
+                postPath={'/contact'}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -174,3 +171,10 @@ const ContactPage = () => {
 }
 
 export default ContactPage
+
+
+function encode(data) {
+return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}

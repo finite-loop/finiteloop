@@ -7,7 +7,7 @@ import Header from "./header"
 import Footer from "./footer"
 import bg from '../images/finiteloop_bg_home.png'
 
-const Layout = ({ bgImg, children }) => {
+const Layout = ({ bgImg, container, children }) => {
   const { sanitySiteSettings: settings } = useStaticQuery(graphql`
     {
       sanitySiteSettings {
@@ -45,7 +45,7 @@ const Layout = ({ bgImg, children }) => {
     >
       <Helmet title={settings.siteTitle} />
       <Header id="header" logo={settings.logo} />
-      <div className="sm:max-w-4/5 md:max-w-3/4 my-8 mx-auto mb-auto">
+      <div className={`${container ? '' : `sm:max-w-4/5 md:max-w-3/4 mx-auto`} my-8 mb-auto`}>
         {children}
       </div>
       <Footer
