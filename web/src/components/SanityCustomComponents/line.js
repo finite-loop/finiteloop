@@ -1,17 +1,15 @@
-import React from "react";
+import React from "react"
 
 const HorizontalLine = props => {
-  const height = props.node.height;
-
-  console.log(props);
+  const height = props.node.height
 
   return (
     <hr
       style={{
-        height: { height }
+        height: { height },
       }}
     />
-  );
-};
+  )
+}
 
-export default HorizontalLine;
+export default HorizontalLine

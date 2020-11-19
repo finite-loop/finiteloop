@@ -1,3 +1,6 @@
+/* .blog {
+  text-align: left;
+}
 .blog a {
   text-decoration: underline;
   color: -webkit-link;
@@ -10,7 +13,7 @@
 }
 
 .blog li {
-  font-size: 90%;
+  font-size: 100%;
 }
 
 .blog {
@@ -23,11 +26,26 @@
 
 .blog h2 {
   font-size: 1.5rem;
-  text-align: center;
   margin: 5px 0;
 }
 
 .blog img {
   height: auto;
   width: auto;
+}
+
+.blog p {
+  /* line letter-spacing: line height text spacing; */
+/* line-height: 1.5;
+}
+*/
+.blog h1 {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .blog h2,
+  .blog h1 {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
 }

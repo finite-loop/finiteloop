@@ -39,6 +39,17 @@ export default {
       to: { type: "team" }
     },
     {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "string" }]
+    },
+    {
+      name: "read_time",
+      title: "Time to read(in minutes)",
+      type: "number"
+    },
+    {
       name: "startedAt",
       title: "Started at",
       type: "datetime"

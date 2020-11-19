@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { IoLogoFacebook, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io"
+import { IoLogoLinkedin } from "react-icons/io"
 
 export const TeamsPageTemplate = ({
   title,
@@ -26,12 +26,12 @@ export const TeamsPageTemplate = ({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-3 xl:grid-cols-4  justify-items-center ">
             {teamData.nodes.map(member => (
               <div
-                className="p-5 a flex flex-col items-start"
+                className="p-5 a flex flex-col align-center items-start"
                 key={member.name}
               >
                 <Img
                   fluid={member.image.asset.fluid}
-                  className="h-40 w-40 md:h-32 md:w-32 justify-center lg:h-48 lg:w-48 mr-2 rounded-full border-solid border-8"
+                  className="h-40 w-40 md:h-32 md:w-32 justify-center self-center lg:h-48 lg:w-48 mr-2 rounded-full border-solid border-8"
                   style={{ borderColor: "rgb(247, 222, 215)" }}
                 />
                 <div className="relative w-56">

@@ -6,7 +6,7 @@ export default ({ node }) => {
     return null
   }
   const { language, code } = node
-  console.log(language)
+
   return (
     <SyntaxHighlighter language={language || "text"} style={materialDark}>
       {code}
