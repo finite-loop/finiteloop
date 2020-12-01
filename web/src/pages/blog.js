@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import BlogLayout from "../components/BlogLayout"
+import BlogLayout from "../components/blogLayout"
 import { Helmet } from "react-helmet"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"

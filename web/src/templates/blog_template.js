@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "../components/SanityTextEditorComponents/block-content"
 import clientConfig from "../../client-config"
-import BlogLayout from "../components/BlogLayout"
+import BlogLayout from "../components/blogLayout"
 const builder = imageUrlBuilder(clientConfig.sanity)
 
 function imageUrlFor(source) {

@@ -3,10 +3,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/index.css"
-import Header from "./header"
 import Footer from "./footer"
 import bg from "../images/finiteloop_bg_home.png"
-import BlogHeader from "./BlogHeader"
+import BlogHeader from "./blogHeader"
 
 const BlogLayout = ({ bgImg, children }) => {
   const { sanitySiteSettings: settings } = useStaticQuery(graphql`
