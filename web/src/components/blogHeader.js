@@ -5,26 +5,32 @@ import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
 import flLogoText from "../images/finiteloop_logo_text.png"
 const BlogHeader = ({ siteTitle, logo }) => {
+  const isBrowser = typeof window !== `undefined`
+  let win = { pageYOffset: 0 }
+  if (isBrowser) {
+    win = window
+  }
+
   const [menuActive, setMenuActive] = useState(false)
-  const [currState, setCurrState] = useState(window.pageYOffset)
+  const [currState, setCurrState] = useState(win.pageYOffset)
   const [navClass, setNavClass] = useState("")
 
   useEffect(() => {
     console.log("1")
     const handleScroll = () => {
-      if (window.pageYOffset > currState) {
+      if (win.pageYOffset > currState) {
         setNavClass("")
-        setCurrState(window.pageYOffset)
-      } else if (window.pageYOffset < currState) {
-        if (window.pageYOffset !== 0) {
+        setCurrState(win.pageYOffset)
+      } else if (win.pageYOffset < currState) {
+        if (win.pageYOffset !== 0) {
           setNavClass("fixed")
         } else {
           setNavClass("")
         }
       }
-      setCurrState(window.pageYOffset)
+      setCurrState(win.pageYOffset)
     }
-    window.addEventListener("scroll", handleScroll)
+    win.addEventListener("scroll", handleScroll)
   })
 
   return (
