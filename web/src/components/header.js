@@ -5,8 +5,13 @@ import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
 import flLogoText from "../images/finiteloop_logo_text.png"
 const Header = ({ siteTitle, logo }) => {
+  const isBrowser = typeof window !== `undefined`
+  const val = 0
+  if (isBrowser) {
+    val = window.pageYOffset
+  }
   const [menuActive, setMenuActive] = useState(false)
-  const [currState, setCurrState] = useState(window.pageYOffset)
+  const [currState, setCurrState] = useState(val)
   const [navClass, setNavClass] = useState("")
   const [bg, setBackground] = useState("")
 
