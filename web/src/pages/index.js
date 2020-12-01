@@ -82,9 +82,9 @@ const IndexPage = () => {
         style={{ borderTop: "0.1rem solid white" }}
         color="white"
       />
-      <section
+      {/* <section
         name="work"
-        className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+        className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
       >
         {ourWork.map(work => (
           <div
@@ -92,7 +92,7 @@ const IndexPage = () => {
             style={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
           >
             <div key={work.name} className="flex p-4">
-              <div className="flex max-w-sm  flex-col">
+              <div className="flex max-w-sm flex-col">
                 <img
                   alt={work.mainImage.alt}
                   src={work.mainImage.asset.url}
@@ -104,6 +104,7 @@ const IndexPage = () => {
                     backgroundColor: "white",
                     color: "#424242",
                     borderTop: "solid #77878c",
+                    height: "100%",
                   }}
                 >
                   <h2 className="text-xl font-semibold py-2">{work.name}</h2>
@@ -115,6 +116,35 @@ const IndexPage = () => {
             </div>
           </div>
         ))}
+      </section> */}
+      <section name="work" className="flex">
+        <div className="flex flex-wrap justify-center items-stretch">
+          {ourWork.map(work => (
+            <div className="flex justify-center p-4" style={{ maxWidth: 300 }}>
+              <div key={work.name} className="flex max-w-sm flex-col">
+                <img
+                  alt={work.mainImage.alt}
+                  src={work.mainImage.asset.url}
+                  className="w-full"
+                />
+                <div // #E05455
+                  className="p-4"
+                  style={{
+                    backgroundColor: "white",
+                    color: "#424242",
+                    borderTop: "solid #77878c",
+                    height: "100%",
+                  }}
+                >
+                  <h2 className="text-xl font-semibold py-2">{work.name}</h2>
+                  <p className="p-0 mx-0 max-w-sm text-md leading-normal font-light">
+                    {work.content}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </Layout>
   )
