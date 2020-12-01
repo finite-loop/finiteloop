@@ -7,10 +7,10 @@ import flLogoText from "../images/finiteloop_logo_text.png"
 const Header = ({ siteTitle, logo }) => {
   const isBrowser = typeof window !== `undefined`
   const val = 0
+  let win = { pageYOffset: 0 }
   if (isBrowser) {
-    val = window.pageYOffset
-  } else {
-    let window = { pageYOffset: 0 }
+    win = window
+    val = win.pageYOffset
   }
   const [menuActive, setMenuActive] = useState(false)
   const [currState, setCurrState] = useState(val)
@@ -20,20 +20,20 @@ const Header = ({ siteTitle, logo }) => {
   useEffect(() => {
     console.log("1")
     const handleScroll = () => {
-      if (window.pageYOffset > currState) {
+      if (win.pageYOffset > currState) {
         setNavClass("")
-        setCurrState(window.pageYOffset)
-      } else if (window.pageYOffset < currState) {
-        if (window.pageYOffset !== 0) {
+        setCurrState(win.pageYOffset)
+      } else if (win.pageYOffset < currState) {
+        if (win.pageYOffset !== 0) {
           setNavClass("fixed")
           setBackground("#E05455")
         } else {
           setNavClass("")
         }
       }
-      setCurrState(window.pageYOffset)
+      setCurrState(win.pageYOffset)
     }
-    window.addEventListener("scroll", handleScroll)
+    win.addEventListener("scroll", handleScroll)
   })
 
   return (
