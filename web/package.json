@@ -22,7 +22,11 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-hook-form": "^6.12.1",
+=======
+    "react-hook-form": "^6.11.0",
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
 =======
     "react-hook-form": "^6.11.0",
 >>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
