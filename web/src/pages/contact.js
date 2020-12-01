@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { useForm } from "react-hook-form"
+=======
+import React, {useState, useRef} from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { useStaticQuery, graphql } from "gatsby"
+import { useForm } from "react-hook-form";
+
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
 
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
@@ -24,6 +33,7 @@ const ContactPage = () => {
 
   const contactData = data.sanityContactUs
 
+<<<<<<< HEAD
   const { handleSubmit, register, errors } = useForm()
 
   const onSubmit = formData => {
@@ -43,6 +53,23 @@ const ContactPage = () => {
           "Sorry, we have trouble submitting your form. Please try again later"
         )
       })
+=======
+  const { handleSubmit, register, errors } = useForm();
+
+  const onSubmit = (formData) => {
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'Contact', ...formData }),
+      })
+        .then(() => {
+          alert("Thank you for submitting your valuable inputs, we will get back to you soon.");
+        })
+        .catch(error => {
+          console.error('Form submission error:', error);
+          alert("Sorry, we have trouble submitting your form. Please try again later");
+        })
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
   }
 
   return (
@@ -82,7 +109,11 @@ const ContactPage = () => {
           </div>
           <div
             className="flex sm:mx-2 lg:mx-16 mt-16"
+<<<<<<< HEAD
             style={{ maxWidth: "55rem" }}
+=======
+            style={{ maxWidth: '55rem' }}
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
           >
             <div className="flex-col text-white">
               <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">
@@ -100,7 +131,11 @@ const ContactPage = () => {
                     margin="normal"
                     className="input-field mb-1"
                     ref={register({
+<<<<<<< HEAD
                       required: "This field is required",
+=======
+                      required: "This field is required"
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
                     })}
                   />
                   {errors.firstname && errors.firstname.message}
@@ -111,25 +146,44 @@ const ContactPage = () => {
                     margin="normal"
                     className="input-field mt-2 mb-1"
                     ref={register({
+<<<<<<< HEAD
                       required: "This field is required",
                     })}
                   />
                   {errors.lastname && errors.lastname.message}
                   <input
+=======
+                      required: "This field is required"
+                    })}
+                  />
+                  {errors.lastname && errors.lastname.message}
+                  <input 
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
                     id="email"
-                    name="email"
+                    name="email" 
                     placeholder="E-mail *"
                     margin="normal"
+<<<<<<< HEAD
                     className="input-field mt-2 mb-1"
+=======
+                    className="input-field mt-2 mb-1" 
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
                     ref={register({
                       required: "This field is required",
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+<<<<<<< HEAD
                         message: "E-mail is not valid",
                       },
                     })}
                   />
                   {errors.email && errors.email.message}
+=======
+                        message: "E-mail is not valid"
+                      }
+                    })}/>
+                    {errors.email && errors.email.message}
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
                   <input
                     id="company"
                     name="company"
@@ -146,7 +200,11 @@ const ContactPage = () => {
                     margin="normal"
                     className="input-field mt-2 mb-1"
                     ref={register({
+<<<<<<< HEAD
                       required: "This field is required",
+=======
+                      required: "This field is required"
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
                     })}
                   />
                   {errors.message && errors.message.message}
@@ -156,14 +214,24 @@ const ContactPage = () => {
                       aria-label="Submit"
                       type="submit"
                       className="rectButton"
+<<<<<<< HEAD
                       style={{ cursor: "pointer" }}
+=======
+                      style={{cursor: "pointer"}}
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
                     >
                       Submit
                     </button>
                   </div>
                 </form>
               </div>
+<<<<<<< HEAD
               <SEO postPath={"/contact"} />
+=======
+              <SEO
+                postPath={'/contact'}
+              />
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a
             </div>
           </div>
         </div>
@@ -174,8 +242,17 @@ const ContactPage = () => {
 
 export default ContactPage
 
+<<<<<<< HEAD
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
+=======
+
+function encode(data) {
+return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+>>>>>>> 36a32204348436f37daaef5cecd1c5dedb31832a

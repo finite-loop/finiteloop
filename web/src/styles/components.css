@@ -132,10 +132,40 @@
   @apply mx-5;
 }
 .input-field {
-  @apply border-fl-primary border-2 rounded w-full py-2 px-4 opacity-75;
+  @apply border-fl-primary border-2 rounded py-2 px-4 opacity-75;
+  width: calc(100% - 2rem);
+  min-height: 1.5rem;
 }
 .input-field:hover {
   @apply border-fl-primary-alternate;
+}
+
+textarea {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+input {
+  font-size: 1rem;
+}
+.input-field::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: sans-serif;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.input-field:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: sans-serif;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.input-field::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: sans-serif;
+  color: #aaa;
+  font-size: 1rem;
 }
 
 .portfolio-list {
