@@ -19,15 +19,21 @@
 }
 
 .nav {
-  @apply z-50 flex justify-between flex-wrap w-full p-4;
+  @apply z-50 flex justify-between flex-wrap w-full p-2;
 }
 .nav:after {
   @apply block border-b;
   content: "";
   width: 110%;
 }
+
 .footer {
   background: rgba(0, 0, 0, 0.15);
+  @apply pb-0 text-white h-auto;
+}
+
+.blogfooter {
+  background: #36374d;
   @apply pb-0 text-white h-auto;
 }
 
@@ -68,6 +74,10 @@
 
 .active-link {
   @apply text-fl-secondary-accent-alternate;
+}
+
+.active-link-blog {
+  color: #95a2b4;
 }
 .active-link-studio {
   color: gray;

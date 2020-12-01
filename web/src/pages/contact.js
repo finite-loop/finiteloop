@@ -1,9 +1,8 @@
-import React, {useState, useRef} from "react"
+import React, { useState, useRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import { useForm } from "react-hook-form";
-
+import { useForm } from "react-hook-form"
 
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,21 +24,25 @@ const ContactPage = () => {
 
   const contactData = data.sanityContactUs
 
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register, errors } = useForm()
 
-  const onSubmit = (formData) => {
-    fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'Contact', ...formData }),
+  const onSubmit = formData => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "Contact", ...formData }),
+    })
+      .then(() => {
+        alert(
+          "Thank you for submitting your valuable inputs, we will get back to you soon."
+        )
       })
-        .then(() => {
-          alert("Thank you for submitting your valuable inputs, we will get back to you soon.");
-        })
-        .catch(error => {
-          console.error('Form submission error:', error);
-          alert("Sorry, we have trouble submitting your form. Please try again later");
-        })
+      .catch(error => {
+        console.error("Form submission error:", error)
+        alert(
+          "Sorry, we have trouble submitting your form. Please try again later"
+        )
+      })
   }
 
   return (
@@ -79,7 +82,7 @@ const ContactPage = () => {
           </div>
           <div
             className="flex sm:mx-2 lg:mx-16 mt-16"
-            style={{ maxWidth: '55rem' }}
+            style={{ maxWidth: "55rem" }}
           >
             <div className="flex-col text-white">
               <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">
@@ -97,7 +100,7 @@ const ContactPage = () => {
                     margin="normal"
                     className="input-field mb-1"
                     ref={register({
-                      required: "This field is required"
+                      required: "This field is required",
                     })}
                   />
                   {errors.firstname && errors.firstname.message}
@@ -108,24 +111,25 @@ const ContactPage = () => {
                     margin="normal"
                     className="input-field mt-2 mb-1"
                     ref={register({
-                      required: "This field is required"
+                      required: "This field is required",
                     })}
                   />
                   {errors.lastname && errors.lastname.message}
-                  <input 
+                  <input
                     id="email"
-                    name="email" 
+                    name="email"
                     placeholder="E-mail *"
                     margin="normal"
-                    className="input-field mt-2 mb-1" 
+                    className="input-field mt-2 mb-1"
                     ref={register({
                       required: "This field is required",
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "E-mail is not valid"
-                      }
-                    })}/>
-                    {errors.email && errors.email.message}
+                        message: "E-mail is not valid",
+                      },
+                    })}
+                  />
+                  {errors.email && errors.email.message}
                   <input
                     id="company"
                     name="company"
@@ -142,7 +146,7 @@ const ContactPage = () => {
                     margin="normal"
                     className="input-field mt-2 mb-1"
                     ref={register({
-                      required: "This field is required"
+                      required: "This field is required",
                     })}
                   />
                   {errors.message && errors.message.message}
@@ -152,16 +156,14 @@ const ContactPage = () => {
                       aria-label="Submit"
                       type="submit"
                       className="rectButton"
-                      style={{cursor: "pointer"}}
+                      style={{ cursor: "pointer" }}
                     >
                       Submit
                     </button>
                   </div>
                 </form>
               </div>
-              <SEO
-                postPath={'/contact'}
-              />
+              <SEO postPath={"/contact"} />
             </div>
           </div>
         </div>
@@ -172,9 +174,8 @@ const ContactPage = () => {
 
 export default ContactPage
 
-
 function encode(data) {
-return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
 }

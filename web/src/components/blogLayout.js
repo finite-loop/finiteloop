@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/index.css"
-import Header from "./header"
 import Footer from "./footer"
 import bg from "../images/finiteloop_bg_home.png"
+import BlogHeader from "./blogHeader"
 
-const Layout = ({ bgImg, children }) => {
+const BlogLayout = ({ bgImg, children }) => {
   const { sanitySiteSettings: settings } = useStaticQuery(graphql`
     {
       sanitySiteSettings {
@@ -39,12 +39,12 @@ const Layout = ({ bgImg, children }) => {
     <div
       className="relative flex flex-col min-h-screen"
       style={{
-        backgroundColor: "#E05455",
+        backgroundColor: "#FFFFFF",
         backgroundImage: bgImg ? `url(${bg})` : null,
       }}
     >
       <Helmet title={settings.siteTitle} />
-      <Header id="header" logo={settings.logo} />
+      <BlogHeader id="header" logo={settings.logo} />
       <div className="sm:max-w-full md:max-w-3/4 my-8 mx-auto mb-auto">
         {children}
       </div>
@@ -61,14 +61,14 @@ const Layout = ({ bgImg, children }) => {
           },
         ]}
         trademark={settings.trademark}
-        opacity="50%"
+        blog={true}
       />
     </div>
   )
 }
 
-Layout.propTypes = {
+BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default BlogLayout
