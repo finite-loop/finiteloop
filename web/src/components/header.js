@@ -9,6 +9,8 @@ const Header = ({ siteTitle, logo }) => {
   const val = 0
   if (isBrowser) {
     val = window.pageYOffset
+  } else {
+    let window = { pageYOffset: 0 }
   }
   const [menuActive, setMenuActive] = useState(false)
   const [currState, setCurrState] = useState(val)
