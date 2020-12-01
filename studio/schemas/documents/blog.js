@@ -7,7 +7,8 @@ export default {
       name: "title",
       title: "Title",
       description: "Give the blog some title",
-      type: "string"
+      type: "string",
+      validation: Rule => Rule.required()
     },
     {
       name: "slug",
@@ -18,14 +19,17 @@ export default {
       options: {
         source: "title",
         maxLength: 96
-      }
+      },
+      validation: Rule => Rule.required()
     },
+
     {
       name: "publishedAt",
       title: "Published at",
       description:
         "You can use this field to schedule projects where you show them",
-      type: "datetime"
+      type: "datetime",
+      validation: Rule => Rule.required()
     },
     {
       name: "excerpt",
@@ -36,7 +40,8 @@ export default {
       name: "author",
       title: "Author",
       type: "reference",
-      to: { type: "team" }
+      to: { type: "team" },
+      validation: Rule => Rule.required()
     },
     {
       name: "tags",
@@ -47,7 +52,8 @@ export default {
     {
       name: "read_time",
       title: "Time to read(in minutes)",
-      type: "number"
+      type: "number",
+      validation: Rule => Rule.required()
     },
     {
       name: "startedAt",
@@ -62,7 +68,8 @@ export default {
     {
       name: "mainImage",
       title: "Main image",
-      type: "figure"
+      type: "figure",
+      validation: Rule => Rule.required()
     },
     // {
     //   name: "categories",

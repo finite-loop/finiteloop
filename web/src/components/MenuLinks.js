@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-const MenuLinks = ({ classes }) => {
+const MenuLinks = ({ classes, blog }) => {
   const data = useStaticQuery(graphql`
     {
       links: allSanityMenu {
@@ -20,6 +20,7 @@ const MenuLinks = ({ classes }) => {
     }
   `)
   data.links.nodes.sort((a, b) => (a.order > b.order ? 1 : -1))
+  console.log(blog)
   return (
     <div className={classes}>
       <div className="flex-grow" />
@@ -28,9 +29,9 @@ const MenuLinks = ({ classes }) => {
           <>
             {!item.newwindow && (
               <Link
-                activeClassName="active-link"
+                activeClassName={blog ? "active-link-blog" : "active-link"}
                 key={item.slug.current}
-                className="link-primary py-6 lg:pl-10"
+                className="link-primary py-4 lg:pl-10"
                 to={item.slug.current}
               >
                 <span>{item.name}</span>
@@ -39,7 +40,7 @@ const MenuLinks = ({ classes }) => {
             {item.newwindow && (
               <a
                 key={item.name}
-                className="link-primary py-6 lg:pl-10"
+                className="link-primary py-4 lg:pl-10"
                 href={item.slug.current}
                 rel="noopener noreferrer"
                 target="_blank"

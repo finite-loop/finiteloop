@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "../components/SanityTextEditorComponents/block-content"
 import clientConfig from "../../client-config"
-import Layout from "../components/layout"
+import BlogLayout from "../components/BlogLayout"
 const builder = imageUrlBuilder(clientConfig.sanity)
 
 function imageUrlFor(source) {
@@ -23,13 +23,13 @@ function buildImageObj(source) {
 
 const SampleBlog = ({ data }) => {
   return (
-    <Layout>
-      <article className="m-2 bg-white">
+    <BlogLayout>
+      <article className="m-0 md:m-2 bg-white">
         <div className="m-10 w-2/3 mx-auto">
-          <h1 className="text-2xl font-semibold pt-10 mb-4 md:text-3xl lg:text-5xl">
+          <h1 className="text-2xl font-semibold pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
             {data.blog.title}
           </h1>
-          <div class="w-full flex items-center  lg:w-2/3 xl:w-2/3">
+          <div class="w-full flex items-center lg:w-2/3 xl:w-2/3">
             <Img
               fluid={data.blog.author.image.asset.fluid}
               className="h-10 w-10 md:h-14 md:w-14 justify-center lg:h-12 lg:w-12 mr-2 rounded-full border-solid border-2"
@@ -55,7 +55,7 @@ const SampleBlog = ({ data }) => {
             </span>
           </div>
         </div>
-        <div className="container w-2/3 mx-auto">
+        <div className="w-11/12 md:container  md:w-2/3 mx-auto ">
           {data.blog.mainImage && data.blog.mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(data.blog.mainImage))
@@ -64,7 +64,7 @@ const SampleBlog = ({ data }) => {
                 // .fit("crop")
                 .url()}
               alt={data.blog.mainImage.alt}
-              className="h-auto object-contain sm:object-contain md:object-contain lg:object-contain xl:object-contain text-center w-full"
+              className="h-auto object-cover rounded sm:object-cover md:object-contain lg:object-contain xl:object-contain text-center w-full"
             />
           )}
         </div>
@@ -76,7 +76,7 @@ const SampleBlog = ({ data }) => {
           </div>
         </div>
       </article>
-    </Layout>
+    </BlogLayout>
   )
 }
 

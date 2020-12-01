@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-const BlogList = ({ blog, filterData }) => {
+const BlogListPage = ({ blog, filterData }) => {
   const filterByTag = tag => {
     const data = {
       type: "tag",
@@ -112,4 +112,4 @@ const BlogList = ({ blog, filterData }) => {
   )
 }
 
-export default BlogList
+export default BlogListPage
