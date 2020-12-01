@@ -1,32 +1,66 @@
-/* .blog {
+.blog {
   text-align: left;
+  font-size: 1.2rem;
+
+  letter-spacing: 0.025em;
+  padding-bottom: 2%;
+}
+.blog h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 0.5rem;
+  color: #e05455;
+}
+:-webkit-any(article, aside, nav, section) h1 {
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
 }
 .blog a {
   text-decoration: underline;
   color: -webkit-link;
 }
-
 .blog ul {
   list-style-type: disc;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   padding-inline-start: 40px;
-  margin: 30px 0;
 }
-
 .blog li {
   font-size: 100%;
 }
 
-.blog {
-  font-size: 100%;
+.blog p a {
+  color: #4a4e59;
+  font-style: italic;
+}
+.blog p a:hover {
+  color: #36374d;
+}
+
+.blog li a {
+  color: #4a4e59;
+  font-style: italic;
+}
+.blog li a:hover {
+  color: #36374d;
 }
 
 .blog hr {
-  height: 1px;
+  height: 2px;
 }
 
 .blog h2 {
-  font-size: 1.5rem;
-  margin: 5px 0;
+  font-size: 1.25rem;
+  padding-top: 0.5rem;
+  font-weight: 600;
 }
 
 .blog img {
@@ -36,16 +70,48 @@
 
 .blog p {
   /* line letter-spacing: line height text spacing; */
-/* line-height: 1.5;
+  line-height: 1.8;
 }
-*/
-.blog h1 {
-  font-size: 2rem;
+
+blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
 }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote p {
+  display: inline;
+}
+
+figcaption {
+  text-align: center;
+  color: gray;
+  opacity: 0.6;
+}
+
 @media only screen and (max-width: 600px) {
-  .blog h2,
   .blog h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 5px 0;
+  }
+  .blog h2 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+  .blog {
+    text-align: left;
+    font-size: 1rem;
+
+    letter-spacing: 0.025em;
+    padding-bottom: 2%;
   }
 }

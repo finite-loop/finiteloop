@@ -3,10 +3,16 @@ import { Link } from "gatsby"
 
 import { LinkedInIcon, TwitterIcon, GithubIcon } from "./icons/icons"
 
-function Footer({ links, socialUrls, trademark }) {
+function Footer({ links, socialUrls, trademark, opacity, blog }) {
   return (
     <div id="footer">
-      <div className="footer sm:px-8 lg:px-24 py-6">
+      <div
+        className={
+          blog
+            ? "blogfooter sm:px-8 lg:px-24 py-6"
+            : "footer sm:px-8 lg:px-24 py-6"
+        }
+      >
         <div className="flex justify-between">
           <div className="flex-col flex-wrap">
             {links.map(footerLinks => (
@@ -53,7 +59,7 @@ function Footer({ links, socialUrls, trademark }) {
           </div>
         </div>
         {/* <div className="opacity-50">{this.props.trademark}</div> */}
-        <div className="opacity-50">{trademark}</div>
+        <div className={opacity}>{trademark}</div>
       </div>
     </div>
   )
