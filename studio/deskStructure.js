@@ -40,6 +40,12 @@ export default () =>
         .icon(MdHome),
       ,
       S.listItem()
+        .title("Our Work")
+        .schemaType("ourWork")
+        .child(S.documentTypeList("ourWork").title("Our Work"))
+        .icon(GiStairsGoal),
+      ,
+      S.listItem()
         .title("Team")
         .schemaType("team")
         .child(S.documentTypeList("team").title("Team"))

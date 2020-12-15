@@ -19,6 +19,7 @@ import careers from "./documents/careers";
 import theWay from "./documents/theWay";
 import contactUs from "./documents/contact";
 import home from "./documents/home";
+import ourWork from "./documents/ourWork";
 import teamPageContent from "./documents/teamPageContent";
 //Object types
 
@@ -83,6 +84,7 @@ export default createSchema({
     theWay,
     contactUs,
     home,
-    teamPageContent
+    teamPageContent,
+    ourWork
   ])
 });

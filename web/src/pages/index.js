@@ -44,7 +44,7 @@ const IndexPage = () => {
   const ourWork = data.sanityHome.ourWork
 
   return (
-    <Layout bgImg>
+    <Layout bgImg home={true}>
       <SEO
         title={`${siteSettings.siteTitle} | ${siteSettings.siteLongTitle}`}
         description={siteSettings.siteDesc}

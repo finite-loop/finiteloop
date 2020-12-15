@@ -26,7 +26,7 @@ const SampleBlog = ({ data }) => {
     <BlogLayout>
       <article className="m-0 md:m-2 bg-white">
         <div className="m-10 w-2/3 mx-auto">
-          <h1 className="text-2xl font-semibold pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
+          <h1 className="text-2xl font-semibold md:pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
             {data.blog.title}
           </h1>
           <div class="w-full flex items-center lg:w-2/3 xl:w-2/3">
@@ -55,7 +55,7 @@ const SampleBlog = ({ data }) => {
             </span>
           </div>
         </div>
-        <div className="w-11/12 md:container  md:w-2/3 mx-auto ">
+        <div className="w-5/6 md:container  md:w-2/3 mx-auto ">
           {data.blog.mainImage && data.blog.mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(data.blog.mainImage))
