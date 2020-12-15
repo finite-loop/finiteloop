@@ -47,7 +47,7 @@ const ContactPage = () => {
 
   return (
     <Layout container>
-      <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
+      <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-10 lg:my-32">
         <div className="flex sm:px-10 sm:py-24 lg:px-38 lg:py-32 sm:w-full lg:w-auto bg-white flex-wrap">
           <div className="flex-col opacity-75" style={{ color: "#E05455" }}>
             <h1 className="text-4xl mb-10">Contact Us</h1>

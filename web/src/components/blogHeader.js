@@ -45,7 +45,7 @@ const BlogHeader = ({ siteTitle, logo }) => {
           <Link to="/">
             <div className="sm:flex md:flex  mb-2">
               <img
-                className="sm:w-11/12 lg:w-auto sm:h-12 md:h-12 lg:h-10"
+                className="sm:w-3/4 lg:w-auto sm:h-12 md:h-12 lg:h-10"
                 src={logo.asset.url}
                 alt="Logo"
               />

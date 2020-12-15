@@ -4,16 +4,15 @@ import React, { useState, useEffect } from "react"
 import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
 import flLogoText from "../images/finiteloop_logo_text.png"
-const Header = ({ siteTitle, logo }) => {
+const Header = ({ siteTitle, logo, home }) => {
   const isBrowser = typeof window !== `undefined`
   const val = 0
   let win = { pageYOffset: 0 }
   if (isBrowser) {
     win = window
-    val = win.pageYOffset
   }
   const [menuActive, setMenuActive] = useState(false)
-  const [currState, setCurrState] = useState(val)
+  const [currState, setCurrState] = useState(win.pageYOffset)
   const [navClass, setNavClass] = useState("")
   const [bg, setBackground] = useState("")
 
@@ -42,13 +41,13 @@ const Header = ({ siteTitle, logo }) => {
         className={`nav ${navClass}`}
         id="navbar"
         role="navigation"
-        style={{ backgroundColor: bg }}
+        style={{ backgroundColor: home ? "" : bg }}
       >
-        <div className="sm:mt-2 sm:ml-4 lg:ml-32">
+        <div className="sm:mt-2 sm:w-2/4 lg:w-auto sm:ml-4 lg:ml-32">
           <Link to="/">
-            <div className="sm:flex md:flex justify-center mb-2">
+            <div className="sm:flex md:flex mb-2">
               <img
-                className="sm:w-3/4 lg:w-auto lg:h-auto"
+                className="sm:w-3/4 lg:w-auto sm:h-12 md:h-12 lg:h-10"
                 src={logo.asset.url}
                 alt="Logo"
                 style={{ height: "40px" }}
