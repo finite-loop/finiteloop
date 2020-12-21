@@ -5,7 +5,7 @@ backend:
 
 site_url: https://finiteloop.io/
 display_url: https://finiteloop.io/
-logo_url: /img/flLogo.png
+logo_url: /img/logo_blue_bg.png
 
 publish_mode: editorial_workflow
 
@@ -70,7 +70,6 @@ collections:
                   - { label: 'Overlay Text', name: imageText, widget: markdown, required: false }
                   - { label: Top %, name: top, widget: string }
                   - { label: Left Position %, name: left, widget: string }
-
   - name: 'links'
     label: 'Links'
     editor:
@@ -132,7 +131,6 @@ collections:
         widget: object
         fields:
           - { label: 'Body', name: body, widget: markdown }
-
   - name: 'offerings'
     label: 'Offerings'
     folder: 'src/pages/offerings'
@@ -147,7 +145,6 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Order (Priotity)', name: 'order', widget: 'number', default: 1, valueType: 'int', required: true }
       - { label: 'Align Content', name: 'align', widget: 'select', options: ['left', 'right'], required: true }
-
   - name: 'products'
     label: 'Products'
     folder: 'src/pages/products'
@@ -160,7 +157,6 @@ collections:
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
   - name: 'pages'
     label: 'Pages'
     files:
@@ -262,7 +258,6 @@ collections:
           - { label: 'Phone', name: 'phone', widget: 'string' }
           - { label: 'Email', name: 'email', widget: 'string' }
           - { label: 'Submit Message', name: 'submitMsg', widget: 'string' }
-          - { label: 'Email', name: 'email', widget: 'string' }
           - label: 'Map'
             name: 'map'
             widget: object

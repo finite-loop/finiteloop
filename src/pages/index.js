@@ -20,8 +20,8 @@ class IndexPage extends React.Component {
         </section>
 
         <Offerrings offeringsData={this.props.data.Offerings.edges} />
-        <hr className="sm:mx-4 lg:mx-32 my-20" style={{ borderTop: '0.1rem solid white' }} color="white" />
-        <Work workData={this.props.data} />
+        <hr className="sm:mx-4 lg:mx-32 my-20" style={{ borderTop: '0.1rem  white' }} color="white" />
+        {/* <Work workData={this.props.data} /> */}
         <SEO postPath="/" postNode={this.props} postSEO={false} />
       </HomeLayout>
     )

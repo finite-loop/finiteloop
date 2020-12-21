@@ -1,22 +1,32 @@
 {
-  "name": "FiniteLoop",
-  "short_name": "FiniteLoop",
-  "lang": "en-US",
-  "icons": [
-    {
-      "src": "/img/favicons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/img/favicons/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "theme_color": "#e1605f",
-  "background_color": "#e6f2f2",
-  "start_url": "/",
-  "display": "standalone",
-  "scope": "/"
+    "theme_color": "#e1605f",
+    "background_color": "#36374d",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "app_name": "Finiteloop",
+    "short_name": "FL",
+    "description": "Finiteloop",
+    "icons": [
+        {
+            "src": "/img/favicons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }

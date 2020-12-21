@@ -27,37 +27,17 @@ class Header extends React.Component {
           <div className="sm:mt-2 sm:ml-4 lg:ml-32">
             <Link to="/">
               <div className="sm:flex md:flex justify-center mb-2">
-                <img
-                  className="sm:w-3/4 lg:w-auto lg:h-auto"
-                  src="/img/finiteloop_logo.png"
-                  alt="Logo"
-                />
-              </div>
-              <div className="sm:flex lg:flex justify-center">
-                <img
-                  className="lg:w-auto"
-                  src="/img/finiteloop_logo_text.png"
-                  alt="Logo"
-                />
+                <img className="sm:w-48 lg:w-48 h-full" src="/img/logo.png" alt="Logo" />
               </div>
             </Link>
           </div>
           <div className="sm:max-w-4/5 md:max-w-3/4 mx-auto items-start flex flex-1 mr-24">
-            <MenuLinks
-              classes="menu-links xl:flex lg:flex sm:hidden md:hidden"
-              social={social}
-              links={links}
-            />
+            <MenuLinks classes="menu-links xl:flex lg:flex sm:hidden md:hidden" social={social} links={links} />
           </div>
           <div className="sm:mx-2 md:px-5 flex lg:hidden">
             <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
               <div className="three col">
-                <div
-                  className={
-                    this.state.menu ? 'hamburger is-active' : 'hamburger'
-                  }
-                  id="hamburger-menu"
-                >
+                <div className={this.state.menu ? 'hamburger is-active' : 'hamburger'} id="hamburger-menu">
                   <span className="line" />
                   <span className="line" />
                   <span className="line" />
@@ -66,11 +46,7 @@ class Header extends React.Component {
             </button>
           </div>
           <MenuLinks
-            classes={
-              this.state.menu
-                ? 'menu-items is-active flex flex-col lg:hidden'
-                : 'menu-items flex-col lg:hidden'
-            }
+            classes={this.state.menu ? 'menu-items is-active flex flex-col lg:hidden' : 'menu-items flex-col lg:hidden'}
             social={social}
             links={links}
           />
