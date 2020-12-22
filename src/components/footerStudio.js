@@ -28,13 +28,13 @@ class StudioFooter extends React.Component {
             </div>
             <div className="flex">
               <a href={social.lnkdnUrl} target="_new" className="link-primary-studio px-2">
-                <LnkdnIcon alt="LinkedIn" fill="gray" />
+                <LnkdnIcon alt="LinkedIn" fill="#F5F6F4" />
               </a>
               <a href={social.twtrUrl} target="_new" className="link-primary-studio px-2">
-                <TwtrIcon alt="Twitter" fill="gray" />
+                <TwtrIcon alt="Twitter" fill="#F5F6F4" />
               </a>
               <a href={social.githubUrl} target="_new" className="link-primary-studio px-2">
-                <GitHubIcon alt="Github" fill="gray" />
+                <GitHubIcon alt="Github" fill="#F5F6F4" />
               </a>
             </div>
           </div>

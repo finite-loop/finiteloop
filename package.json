@@ -1,7 +1,7 @@
 {
   "name": "finiteloop",
   "description": "Finiteloop Site",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Parthasarathy S",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.17",
@@ -21,7 +21,6 @@
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-remark": "^2.7.4",
     "gatsby-transformer-sharp": "^2.4.6",
-    "netlify-cms": "^2.10.77",
     "netlify-cms-app": "^2.14.7",
     "postcss-cli": "^7.1.0",
     "postcss-cssnext": "^3.1.0",
@@ -42,7 +41,8 @@
   "keywords": [
     "gatsby",
     "netlify-cms",
-    "finiteloop"
+    "finiteloop",
+    "khyateh"
   ],
   "license": "MIT",
   "scripts": {

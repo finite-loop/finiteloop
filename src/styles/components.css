@@ -32,8 +32,8 @@
 }
 
 .footerStudio {
-  @apply bottom-0 pb-0 h-auto;
-  background: rgba(247, 222, 215, 0.6);
+  background: rgb(54, 55, 77, 0.7);
+  @apply bottom-0 pb-0 text-white h-auto;
 }
 
 .btn-primary {
@@ -54,12 +54,10 @@
 
 .link-primary-studio {
   @apply font-medium uppercase text-sm no-underline tracking-wide;
-  color: #e1605f;
 }
 
 .link-primary-header-studio {
   @apply font-semibold uppercase text-base no-underline tracking-wide;
-  color: #e1605f;
 }
 
 .link-primary-studio:hover {

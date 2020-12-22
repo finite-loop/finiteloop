@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import MenuLinks from './menuLinks'
 import StudioMenuLinks from './studioMenuLinks'
 class StudioHeader extends React.Component {
   state = {
@@ -28,16 +27,13 @@ class StudioHeader extends React.Component {
           className="nav"
           role="navigation"
           style={{
-            backgroundColor: 'rgba(247, 222, 215, 0.6)',
+            backgroundColor: '#36374d',
           }}
         >
           <div className="sm:mt-2 sm:ml-4 md:ml-10 lg:ml-20">
             <Link to="/">
-              {/* <div className="sm:flex md:flex justify-center mb-2">
-                <img className="sm:w-3/4 lg:w-auto lg:h-auto" src="/img/finiteloop_logo.png" alt="Logo" />
-              </div> */}
-              <div className="sm:flex lg:flex justify-center">
-                <img src="/img/logoconst-17.png" alt="Logo" />
+              <div className="sm:flex md:flex justify-center mb-2">
+                <img className="sm:w-48 lg:w-48 h-full" src="/img/logo.png" alt="Logo" />
               </div>
             </Link>
           </div>
