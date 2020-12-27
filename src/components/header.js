@@ -27,7 +27,7 @@ class Header extends React.Component {
           <div className="sm:mt-2 sm:ml-4 lg:ml-32">
             <Link to="/">
               <div className="sm:flex md:flex justify-center mb-2">
-                <img className="sm:w-48 lg:w-48 h-full" src="/img/logo.png" alt="Logo" />
+                <img className="sm:w-48 lg:w-48 h-full mt-2" src="/img/logo.png" alt="Logo" />
               </div>
             </Link>
           </div>

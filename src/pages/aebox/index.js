@@ -13,11 +13,7 @@ class Products extends React.Component {
     const PageContent = HTMLContent || Content
     return (
       <ProductLayout>
-        <Helmet title={`${data.global.frontmatter.siteTitle} | AEBOX`} />
-        {/* <PageContent
-          className="para-primary"
-          content={data.global.frontmatter.productText}
-        /> */}
+        <Helmet title={`${data.global.frontmatter.siteTitle} | AEBOX | Aerosol box to protect doctors in ICUs`} />
         <section name="products" className="tracking-normal leading-normal">
           {posts.map(({ node: post }) => (
             <div key={post.frontmatter.title}>
@@ -29,10 +25,10 @@ class Products extends React.Component {
           ))}
         </section>
         <SEO
-          postPath="/products"
+          postPath="/aebox"
           postNode={{
             frontmatter: {
-              title: data.global.frontmatter.siteTitle + ' | ' + 'AEBOX',
+              title: data.global.frontmatter.siteTitle + ' | ' + 'AEBOX | Aerosol box to protect doctors in ICUs',
               excerpt: data.global.frontmatter.productText,
               image: '',
             },

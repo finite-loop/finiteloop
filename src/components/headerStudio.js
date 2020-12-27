@@ -30,10 +30,10 @@ class StudioHeader extends React.Component {
             backgroundColor: '#36374d',
           }}
         >
-          <div className="sm:mt-2 sm:ml-4 md:ml-10 lg:ml-20">
+          <div className="sm:mt-2 sm:ml-4 lg:ml-32">
             <Link to="/">
               <div className="sm:flex md:flex justify-center mb-2">
-                <img className="sm:w-48 lg:w-48 h-full" src="/img/logo.png" alt="Logo" />
+                <img className="sm:w-48 lg:w-48 h-full mt-2" src="/img/logo.png" alt="Logo" />
               </div>
             </Link>
           </div>
@@ -43,7 +43,7 @@ class StudioHeader extends React.Component {
           <div className="sm:mx-2 md:px-5 flex lg:hidden">
             <button role="menu" aria-label="Menu" onClick={this.toggleMenu()}>
               <div className="three col">
-                <div className={this.state.menu ? 'hamburgerStudio is-active' : 'hamburgerStudio'} id="hamburger-menu">
+                <div className={this.state.menu ? 'hamburger is-active' : 'hamburger'} id="hamburger-menu">
                   <span className="line" />
                   <span className="line" />
                   <span className="line" />

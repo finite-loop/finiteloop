@@ -3,8 +3,7 @@ templateKey: nav-links
 headerlinks:
   - item:
       title: AEBox
-      url: https://aebox.finiteloop.io
-      newwindow: true
+      url: /aebox
   - item:
       title: The Way
       url: /way/
