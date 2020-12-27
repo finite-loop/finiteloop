@@ -14,7 +14,7 @@ const StudioMenuLinks = ({ links, social, classes }) => (
           </Link>
         )}
         {item.newwindow && (
-          <a key={item.title} className="link-primary py-6 lg:pl-10" href={item.url} rel="noopener noreferrer" target="_blank">
+          <a key={item.title} key={item.title} className="link-primary py-6 lg:pl-10" href={item.url} rel="noopener noreferrer" target="_blank">
             <span>{item.title}</span>
           </a>
         )}

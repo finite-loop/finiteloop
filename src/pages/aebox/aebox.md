@@ -4,7 +4,7 @@ image: /img/sales_tracking.png
 path: aebox
 title: AEBox
 ---
-<div class="pb-10">
+<div class="mb-2">
         <div class="flex sm:flex-col md:flex-col lg:flex-row justify-around sm:px-4 lg:px-0 lg:items-center">
                 <div class="flex-col">
                         <h1 class="font-neptune tracking-tight font-light sm:text-6xl">AEBOX</h1>
@@ -87,4 +87,7 @@ title: AEBox
                         </div>
                 </div>
         </section>
+        <div class="text-sm text-center mt-2""> This work is licensed under a  
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License.</a>
+        </div>
 </div>
