@@ -75,10 +75,9 @@ export const TeamsPageTemplate = ({
 }
 
 const TeamsPageTemplateWrapper = props => {
-  console.log(props)
   const title = props.data.pagecontent.nodes[0].title
   const pageContent = props.data.pagecontent.nodes[0].content
-  console.log(title, pageContent)
+
   const teamData = props.data.team
   const siteTitle = props.data.sanitySiteSettings.siteTitle
   const path = props.path

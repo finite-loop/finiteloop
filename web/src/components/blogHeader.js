@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
-import flLogoText from "../images/finiteloop_logo_text.png"
+
 const BlogHeader = ({ siteTitle, logo }) => {
   const isBrowser = typeof window !== `undefined`
   let win = { pageYOffset: 0 }
@@ -16,7 +16,6 @@ const BlogHeader = ({ siteTitle, logo }) => {
   const [navClass, setNavClass] = useState("")
 
   useEffect(() => {
-    console.log("1")
     const handleScroll = () => {
       if (win.pageYOffset > currState) {
         setNavClass("")

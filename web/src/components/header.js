@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
-import flLogoText from "../images/finiteloop_logo_text.png"
+
 const Header = ({ siteTitle, logo, home }) => {
   const isBrowser = typeof window !== `undefined`
-  const val = 0
+
   let win = { pageYOffset: 0 }
   if (isBrowser) {
     win = window
@@ -17,7 +17,6 @@ const Header = ({ siteTitle, logo, home }) => {
   const [bg, setBackground] = useState("")
 
   useEffect(() => {
-    console.log("1")
     const handleScroll = () => {
       if (win.pageYOffset > currState) {
         setNavClass("")

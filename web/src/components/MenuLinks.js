@@ -20,7 +20,7 @@ const MenuLinks = ({ classes, blog }) => {
     }
   `)
   data.links.nodes.sort((a, b) => (a.order > b.order ? 1 : -1))
-  console.log(blog)
+
   return (
     <div className={classes}>
       <div className="flex-grow" />
