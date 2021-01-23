@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
 
@@ -16,23 +16,23 @@ const Header = ({ siteTitle, logo, home }) => {
   const [navClass, setNavClass] = useState("")
   const [bg, setBackground] = useState("")
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (win.pageYOffset > currState) {
-        setNavClass("")
-        setCurrState(win.pageYOffset)
-      } else if (win.pageYOffset < currState) {
-        if (win.pageYOffset !== 0) {
-          setNavClass("fixed")
-          setBackground("#E05455")
-        } else {
-          setNavClass("")
-        }
-      }
-      setCurrState(win.pageYOffset)
-    }
-    win.addEventListener("scroll", handleScroll)
-  })
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (win.pageYOffset > currState) {
+  //       setNavClass("")
+  //       setCurrState(win.pageYOffset)
+  //     } else if (win.pageYOffset < currState) {
+  //       if (win.pageYOffset !== 0) {
+  //         setNavClass("fixed")
+  //         setBackground("#E05455")
+  //       } else {
+  //         setNavClass("")
+  //       }
+  //     }
+  //     setCurrState(win.pageYOffset)
+  //   }
+  //   win.addEventListener("scroll", handleScroll)
+  // })
 
   return (
     <div id="header h-full">

@@ -53,20 +53,20 @@ const BlogListPage = ({ blog, filterData }) => {
             style={{ textDecoration: "none" }}
           >
             <h2
-              className="text-base md:text-lg lg:text-lg xl:text-lg font-semibold my-0 py-0 whitespace-pre-wrap"
+              className="px-1 text-base md:text-lg lg:text-lg xl:text-lg font-semibold my-0 py-0 whitespace-pre-wrap"
               // style={{ whiteSpace: "pre" }}
             >
               {blog.title.length < 100 && blog.tags.length <= 3
                 ? "\n" + blog.title + "\n"
                 : blog.title}
             </h2>
-            <p className="py-0 my-1 hidden md:block">
+            <p className="px-1 py-0 my-1 hidden md:block">
               {(
                 blog.body[0].children[0].text + blog.body[1].children[0].text
               ).slice(0, 80)}{" "}
               ...
             </p>
-            <p className="py-0 my-1 md:hidden lg:hidden xl:hidden">
+            <p className="px-1 py-0 my-1 md:hidden lg:hidden xl:hidden">
               {(
                 blog.body[0].children[0].text + blog.body[1].children[0].text
               ).slice(0, 50)}{" "}

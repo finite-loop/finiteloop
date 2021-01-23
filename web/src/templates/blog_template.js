@@ -4,7 +4,10 @@ import Img from "gatsby-image"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "../components/SanityTextEditorComponents/block-content"
 import clientConfig from "../../client-config"
+import { Helmet } from "react-helmet"
 import BlogLayout from "../components/blogLayout"
+import SEO from "../components/seo"
+
 const builder = imageUrlBuilder(clientConfig.sanity)
 
 function imageUrlFor(source) {
@@ -24,6 +27,8 @@ function buildImageObj(source) {
 const SampleBlog = ({ data }) => {
   return (
     <BlogLayout>
+      <Helmet title={`Blog | ${data.blog.title}`} />
+
       <article className="m-0 md:m-2 bg-white">
         <div className="m-10 w-2/3 mx-auto">
           <h1 className="text-2xl font-semibold md:pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
@@ -76,12 +81,23 @@ const SampleBlog = ({ data }) => {
           </div>
         </div>
       </article>
+      <SEO
+        title={`Blogs | ${data.blog.title} `}
+        description={data.sanitySiteSettings.siteDesc}
+      />
     </BlogLayout>
   )
 }
 
 export const query = graphql`
   query getBlog($slug: String) {
+    sanitySiteSettings {
+      introText
+      introText2
+      siteDesc
+      siteLongTitle
+      siteTitle
+    }
     blog: sanityBlog(slug: { current: { eq: $slug } }) {
       _rawBody
       title

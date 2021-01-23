@@ -9,7 +9,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io"
 const BlogsPage = ({ data }) => {
   const [filters, setFilters] = React.useState([])
   const blogs = data.allBlogs.nodes.sort((a, b) =>
-    a.publishedAt < b.publishedAt ? 1 : -1
+    a.toSort < b.toSort ? 1 : -1
   )
   const [filteredBlogs, setFilteredBlogs] = React.useState(blogs)
   const siteSettings = data.sanitySiteSettings
@@ -59,10 +59,7 @@ const BlogsPage = ({ data }) => {
   return (
     <BlogLayout>
       <Helmet title="Blogs" />
-      <SEO
-        title={`${siteSettings.siteTitle} | ${siteSettings.siteLongTitle}`}
-        description={siteSettings.siteDesc}
-      />
+
       <div className="pb-20">
         <div
           className="para-primary m-0 font-semibold"
@@ -75,7 +72,7 @@ const BlogsPage = ({ data }) => {
           <>
             {filters.map(filter => (
               <span
-                className="pl-2 py-1 pr-5 text-xs relative capitalize inline-block bg-white rounded-full md:pr-8 md:pl-5 md:py-2 lg:pr-8 lg:pl-5 lg:py-2 xl:pr-8 xl:pl-5 xl:py-2 md:text-lg lg:text-lg xl:text-lg font-bold text-black mr-2 mb-2"
+                className="pl-2 py-1 pr-5 text-xs relative capitalize inline-block bg-gray-300 rounded-full md:pr-8 md:pl-5 md:py-2 lg:pr-8 lg:pl-5 lg:py-2 xl:pr-8 xl:pl-5 xl:py-2 md:text-lg lg:text-lg xl:text-lg font-bold text-black mr-2 mb-2"
                 style={{ cursor: "pointer" }}
                 onClick={() => clearFilter(filter)}
                 role="button"
@@ -84,8 +81,8 @@ const BlogsPage = ({ data }) => {
               >
                 {filter.name}
                 <IoIosCloseCircleOutline
-                  className=" absolute py-1 mb-0 mx-2"
-                  style={{ right: 0 }}
+                  className=" absolute py-0 mb-0 mx-2"
+                  style={{ right: 3, top: 14 }}
                 />
               </span>
             ))}
@@ -99,7 +96,10 @@ const BlogsPage = ({ data }) => {
           ))}
         </div>
       </div>
-      <SEO />
+      <SEO
+        title={`${siteSettings.siteTitle} | Blogs`}
+        description={siteSettings.siteDesc}
+      />
     </BlogLayout>
   )
 }
@@ -135,7 +135,8 @@ export const query = graphql`
             text
           }
         }
-        publishedAt(formatString: "MM/DD/YYYY")
+        publishedAt(formatString: "DD/MMM/YYYY")
+        toSort: publishedAt(formatString: "MM/DD/YYYY")
         time: publishedAt(difference: "hours")
         read_time
         mainImage {
