@@ -16,7 +16,7 @@ const BlogListPage = ({ blog, filterData }) => {
     }
     filterData(data)
   }
-  console.log(blog)
+
   return (
     <div className="h-450 relative md:h-500 lg:h-500 xl:h-500">
       <div className="w-300 bg-white rounded max-w-3xl shadow-lg h-full leading-relaxed flex flex-col content-center md:w-370 lg:w-370 xl:w-370">
