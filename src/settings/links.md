@@ -28,7 +28,7 @@ headerlinks:
   - item:
       url: https://blogs.finiteloop.io
       newwindow: false
-      title: Blogs
+      title: Blog
 footerlinks:
   - item:
       title: Privacy Policy
