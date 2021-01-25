@@ -4,6 +4,7 @@ headerlinks:
   - item:
       title: AEBox
       url: /aebox
+      newwindow: false
   - item:
       title: The Way
       url: /way/
@@ -24,6 +25,10 @@ headerlinks:
       title: Contact
       url: /contact/
       newwindow: false
+  - item:
+      url: https://blogs.finiteloop.io
+      newwindow: false
+      title: Blogs
 footerlinks:
   - item:
       title: Privacy Policy
