@@ -10,8 +10,9 @@ const BlogsPage = ({ data }) => {
   const [filters, setFilters] = React.useState([])
 
   const blogs = data.allBlogs.nodes.sort((a, b) => {
-    var dateA = new Date(a.createdTime)
-    var dateB = new Date(b.createdTime)
+    var dateA = new Date(a.createdTimewithHrs)
+    var dateB = new Date(b.createdTimewithHrs)
+    console.log(dateA, dateB)
     return dateB - dateA
   })
 
@@ -142,7 +143,7 @@ export const query = graphql`
         }
         createdTime: _createdAt(formatString: "DD-MMM-YYYY")
         publishedAt(formatString: "DD/MMM/YYYY")
-
+        createdTimewithHrs: _createdAt(formatString: "YYYY-MM-DDTHH:mm:ss.sssZ")
         read_time
         mainImage {
           alt
