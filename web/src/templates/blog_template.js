@@ -48,7 +48,7 @@ const SampleBlog = ({ data }) => {
                 {data.blog.author.name}
               </span>
               <p className="text-gray-600 my-0 py-0 text-sm">
-                {data.blog.publishedAt}{" "}
+                {data.blog.createdTime}{" "}
                 <span className="">
                   {" - "}
                   <li className="inline-block">
@@ -124,6 +124,7 @@ export const query = graphql`
         alt
       }
       publishedAt(formatString: "MMMM DD, YYYY")
+      createdTime: _createdAt(formatString: "MMMM DD, YYYY")
       read_time
       author {
         name
