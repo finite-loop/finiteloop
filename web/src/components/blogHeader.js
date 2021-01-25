@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import MenuLinks from "./MenuLinks"
 import SEO from "./seo"
 
@@ -12,8 +12,6 @@ const BlogHeader = ({ siteTitle, logo }) => {
   }
 
   const [menuActive, setMenuActive] = useState(false)
-  const [currState, setCurrState] = useState(win.pageYOffset)
-  const [navClass, setNavClass] = useState("")
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -41,7 +39,7 @@ const BlogHeader = ({ siteTitle, logo }) => {
         style={{ backgroundColor: "#36374D" }}
       >
         <div className="sm:mt-2 sm:ml-4 lg:ml-32">
-          <Link to="/">
+          <Link to="https://finiteloop.io/">
             <div className="sm:flex md:flex justify-center mb-2">
               <img
                 className="sm:w-48 lg:w-48 h-full mt-2"

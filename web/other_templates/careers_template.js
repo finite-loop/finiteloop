@@ -2,8 +2,8 @@ import React from "react"
 import propTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import SEO from "../src/components/seo"
+import Layout from "../src/components/layout"
 // import { FaDiceFive } from "react-icons/fa"
 
 export const CareersPageTemplate = ({ title, careersData, siteTitle }) => {

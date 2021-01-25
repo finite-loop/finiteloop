@@ -103,7 +103,7 @@ const BlogListPage = ({ blog, filterData }) => {
                   {blog.author.name}
                 </p>
                 <p className="text-gray-600 my-0 py-0 px-2">
-                  {blog.publishedAt}{" "}
+                  {blog.createdTime}{" "}
                   <span className="">
                     {" - "}
                     <li className="inline-block">

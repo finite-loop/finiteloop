@@ -3,8 +3,8 @@ import propTypes from "prop-types"
 import Img from "gatsby-image"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import SEO from "../src/components/seo"
+import Layout from "../src/components/layout"
 import { IoLogoLinkedin } from "react-icons/io"
 
 export const TeamsPageTemplate = ({

@@ -10,8 +10,8 @@ const BlogsPage = ({ data }) => {
   const [filters, setFilters] = React.useState([])
 
   const blogs = data.allBlogs.nodes.sort((a, b) => {
-    var dateA = new Date(a.publishedAt)
-    var dateB = new Date(b.publishedAt)
+    var dateA = new Date(a.createdTime)
+    var dateB = new Date(b.createdTime)
     return dateB - dateA
   })
 
@@ -76,7 +76,7 @@ const BlogsPage = ({ data }) => {
           <>
             {filters.map(filter => (
               <span
-                className="pl-2 py-1 pr-5 text-xs relative capitalize inline-block bg-gray-300 rounded-full md:pr-8 md:pl-5 md:py-2 lg:pr-8 lg:pl-5 lg:py-2 xl:pr-8 xl:pl-5 xl:py-2 md:text-lg lg:text-lg xl:text-lg font-bold text-black mr-2 mb-2"
+                className="pl-2 py-1 pr-5 text-xs relative capitalize inline-block bg-gray-300 rounded-full md:pr-8 md:pl-5 md:py-2 lg:pr-8 lg:pl-5 lg:py-2 xl:pr-8 xl:pl-5 xl:py-2 md:text-lg lg:text-lg xl:text-lg font-bold text-black md:mr-2 md:mb-2"
                 style={{ cursor: "pointer" }}
                 onClick={() => clearFilter(filter)}
                 role="button"
@@ -85,8 +85,8 @@ const BlogsPage = ({ data }) => {
               >
                 {filter.name}
                 <IoIosCloseCircleOutline
-                  className=" absolute py-0 mb-0 mx-2"
-                  style={{ right: 3, top: 14 }}
+                  className="absolute top-1/3 md:py-0 mb-0 mx-2"
+                  style={{ right: 0 }}
                 />
               </span>
             ))}
@@ -94,6 +94,7 @@ const BlogsPage = ({ data }) => {
         ) : (
           <></>
         )}
+        <br />
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12">
           {filteredBlogs.map(blog => (
             <BlogListPage blog={blog} filterData={filterData} />
@@ -139,9 +140,9 @@ export const query = graphql`
             text
           }
         }
+        createdTime: _createdAt(formatString: "DD-MMM-YYYY")
         publishedAt(formatString: "DD/MMM/YYYY")
-        toSort: publishedAt(formatString: "MM/DD/YYYY")
-        time: publishedAt(difference: "hours")
+
         read_time
         mainImage {
           alt
