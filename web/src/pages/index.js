@@ -8,9 +8,13 @@ import { IoIosCloseCircleOutline } from "react-icons/io"
 
 const BlogsPage = ({ data }) => {
   const [filters, setFilters] = React.useState([])
-  const blogs = data.allBlogs.nodes.sort((a, b) =>
-    a.toSort < b.toSort ? 1 : -1
-  )
+
+  const blogs = data.allBlogs.nodes.sort((a, b) => {
+    var dateA = new Date(a.publishedAt)
+    var dateB = new Date(b.publishedAt)
+    return dateB - dateA
+  })
+
   const [filteredBlogs, setFilteredBlogs] = React.useState(blogs)
   const siteSettings = data.sanitySiteSettings
   useEffect(() => {

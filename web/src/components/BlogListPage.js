@@ -16,6 +16,7 @@ const BlogListPage = ({ blog, filterData }) => {
     }
     filterData(data)
   }
+  console.log(blog)
   return (
     <div className="h-450 relative md:h-500 lg:h-500 xl:h-500">
       <div className="w-300 bg-white rounded max-w-3xl shadow-lg h-full leading-relaxed flex flex-col content-center md:w-370 lg:w-370 xl:w-370">
@@ -62,13 +63,21 @@ const BlogListPage = ({ blog, filterData }) => {
             </h2>
             <p className="px-1 py-0 my-1 hidden md:block">
               {(
-                blog.body[0].children[0].text + blog.body[1].children[0].text
+                blog.body &&
+                blog.body[0] &&
+                blog.body[0].children &&
+                blog.body[0].children[0].text +
+                  (blog.body[1] ? blog.body[1].children[0].text : "")
               ).slice(0, 80)}{" "}
               ...
             </p>
             <p className="px-1 py-0 my-1 md:hidden lg:hidden xl:hidden">
               {(
-                blog.body[0].children[0].text + blog.body[1].children[0].text
+                blog.body &&
+                blog.body[0] &&
+                blog.body[0].children &&
+                blog.body[0].children[0].text +
+                  (blog.body[1] ? blog.body[1].children[0].text : "")
               ).slice(0, 50)}{" "}
               ...
             </p>
