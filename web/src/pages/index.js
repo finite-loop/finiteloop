@@ -12,7 +12,7 @@ const BlogsPage = ({ data }) => {
   const blogs = data.allBlogs.nodes.sort((a, b) => {
     var dateA = new Date(a.createdTimewithHrs)
     var dateB = new Date(b.createdTimewithHrs)
-    console.log(dateA, dateB)
+
     return dateB - dateA
   })
 
@@ -141,9 +141,11 @@ export const query = graphql`
             text
           }
         }
-        createdTime: _createdAt(formatString: "DD-MMM-YYYY")
+        createdTime: publishedAt(formatString: "DD-MMM-YYYY")
         publishedAt(formatString: "DD/MMM/YYYY")
-        createdTimewithHrs: _createdAt(formatString: "YYYY-MM-DDTHH:mm:ss.sssZ")
+        createdTimewithHrs: publishedAt(
+          formatString: "YYYY-MM-DDTHH:mm:ss.sssZ"
+        )
         read_time
         mainImage {
           alt
