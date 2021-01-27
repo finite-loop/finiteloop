@@ -30,7 +30,7 @@ const SampleBlog = ({ data }) => {
       <Helmet title={`Blog | ${data.blog.title}`} />
 
       <article className="m-0 md:m-2 bg-white">
-        <div className="m-10 w-2/3 mx-auto">
+        <div className="m-10 sm:w-11/12 lg:w-5/6 mx-auto">
           <h1 className="text-2xl font-semibold md:pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
             {data.blog.title}
           </h1>
@@ -52,15 +52,14 @@ const SampleBlog = ({ data }) => {
                 <span className="">
                   {" - "}
                   <li className="inline-block">
-                    {" "}
                     {data.blog.read_time} min read
-                  </li>{" "}
-                </span>{" "}
+                  </li>
+                </span>
               </p>
             </span>
           </div>
         </div>
-        <div className="w-5/6 md:container  md:w-2/3 mx-auto ">
+        {/* <div className="mx-auto ">
           {data.blog.mainImage && data.blog.mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(data.blog.mainImage))
@@ -72,13 +71,11 @@ const SampleBlog = ({ data }) => {
               className="h-auto object-cover rounded sm:object-cover md:object-contain lg:object-contain xl:object-contain text-center w-full"
             />
           )}
-        </div>
-        <div className=" w-5/6 mx-auto">
-          <div className="mt-8 sm:mr-6 md:mb-4 lg:ml-2 xl:m-20 bg-yellow-200-md">
-            {data.blog._rawBody && (
-              <BlockContent blocks={data.blog._rawBody || []} />
-            )}
-          </div>
+        </div> */}
+        <div className="sm:w-11/12 lg:w-5/6 mx-auto">
+          {data.blog._rawBody && (
+            <BlockContent blocks={data.blog._rawBody || []} />
+          )}
         </div>
       </article>
       <SEO
@@ -130,7 +127,7 @@ export const query = graphql`
         name
         image {
           asset {
-            fixed(width: 125, height: 125) {
+            fixed(width: 150, height: 150) {
               ...GatsbySanityImageFixed
             }
             fluid {
