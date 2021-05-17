@@ -161,34 +161,6 @@ team:
         the world. Focussed. Hard core architect and very hands-on. Expert in
         story telling. Very good with nurturing teams. Most wanted by customers
         worldwide. Update : Not driving the fiat anymore."
-  - person:
-      githubsiteurl: test
-      twtrsiteurl: test
-      name: Vaidehie
-      fbsiteurl: test
-      background: slategray
-      lnkdnsiteurl: https://www.linkedin.com/in/vaidehie-chiplunkar-25b069141/
-      title: Product Designer
-      avatar: /img/vaidehei.jpeg
-      quote: "Previously a lead solutions architect for an IT major. Avid
-        photographer. Drives an old Fiat and still thinks its the best car in
-        the world. Focussed. Hard core architect and very hands-on. Expert in
-        story telling. Very good with nurturing teams. Most wanted by customers
-        worldwide. Update : Not driving the fiat anymore."
-  - person:
-      githubsiteurl: test
-      twtrsiteurl: test
-      name: Arjun Vishwa
-      fbsiteurl: test
-      background: slategray
-      lnkdnsiteurl: https://www.linkedin.com/in/arjun-vishwa-65b602b3/
-      title: Visual Artist
-      avatar: /img/vishwa.jpeg
-      quote: "Previously a lead solutions architect for an IT major. Avid
-        photographer. Drives an old Fiat and still thinks its the best car in
-        the world. Focussed. Hard core architect and very hands-on. Expert in
-        story telling. Very good with nurturing teams. Most wanted by customers
-        worldwide. Update : Not driving the fiat anymore."
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
