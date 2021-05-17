@@ -30,7 +30,7 @@ const SampleBlog = ({ data }) => {
       <Helmet title={`Blog | ${data.blog.title}`} />
 
       <article className="m-0 md:m-2 bg-white">
-        <div className="m-10 sm:w-11/12 lg:w-5/6 mx-auto">
+        <div className="m-10 sm:px-4 md:container mx-auto">
           <h1 className="text-2xl font-semibold md:pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
             {data.blog.title}
           </h1>
@@ -59,20 +59,20 @@ const SampleBlog = ({ data }) => {
             </span>
           </div>
         </div>
-        {/* <div className="mx-auto ">
+        <div className="mx-auto sm:px-4 md:container">
           {data.blog.mainImage && data.blog.mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(data.blog.mainImage))
-                // .width(1400)
-                // .height(Math.floor((9 / 16) * 1200))
-                // .fit("crop")
+                .width(1400)
+                .height(Math.floor((9 / 16) * 1200))
+                .fit("crop")
                 .url()}
               alt={data.blog.mainImage.alt}
               className="h-auto object-cover rounded sm:object-cover md:object-contain lg:object-contain xl:object-contain text-center w-full"
             />
           )}
-        </div> */}
-        <div className="sm:w-11/12 lg:w-5/6 mx-auto">
+        </div>
+        <div className="md:container sm:px-4 mx-auto">
           {data.blog._rawBody && (
             <BlockContent blocks={data.blog._rawBody || []} />
           )}
