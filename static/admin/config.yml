@@ -257,6 +257,9 @@ collections:
           - { label: 'State & Country', name: 'stateCountry', widget: 'string' }
           - { label: 'Phone', name: 'phone', widget: 'string' }
           - { label: 'Email', name: 'email', widget: 'string' }
+          - { label: 'Locate Us label', name: 'shareLinkLabel', widget: 'string' }
+          - { label: 'Locate Us link text', name: 'shareLinkText', widget: 'string' }
+          - { label: 'Locate Us', name: 'shareLink', widget: 'string' }
           - { label: 'Submit Message', name: 'submitMsg', widget: 'string' }
           - label: 'Map'
             name: 'map'

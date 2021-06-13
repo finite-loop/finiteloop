@@ -161,6 +161,46 @@ team:
         the world. Focussed. Hard core architect and very hands-on. Expert in
         story telling. Very good with nurturing teams. Most wanted by customers
         worldwide. Update : Not driving the fiat anymore."
+  - person:
+      githubsiteurl: test
+      twtrsiteurl: test
+      name: Monika
+      fbsiteurl: test
+      background: slategray
+      lnkdnsiteurl: https://www.linkedin.com/in/monika-iyer/
+      title: Data Scientist
+      avatar: /img/monika.jpeg
+      quote: 
+  - person:
+      githubsiteurl: test
+      twtrsiteurl: test
+      name: Venkat
+      fbsiteurl: test
+      background: slategray
+      lnkdnsiteurl: https://www.linkedin.com/in/venkateswarat/
+      title: Data Scientist
+      avatar: /img/venkat.jpeg
+      quote:    
+  - person:
+      githubsiteurl: test
+      twtrsiteurl: test
+      name: Madhura
+      fbsiteurl: test
+      background: slategray
+      lnkdnsiteurl: https://www.linkedin.com/in/madhura-prasanna-78b4498/
+      title: Architect
+      avatar: /img/madhura.jpeg
+      quote: 
+  - person:
+      githubsiteurl: test
+      twtrsiteurl: test
+      name: Neetha
+      fbsiteurl: test
+      background: slategray
+      lnkdnsiteurl: https://www.linkedin.com/in/neethamenon/
+      title: Business Solutions
+      avatar: /img/neetha.jpeg
+      quote: 
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.

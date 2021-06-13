@@ -1,17 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Keys from '../../config/APIKeys'
 import FullLayout from '../components/layout.full'
 import { compose, withStateHandlers } from 'recompose'
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-  InfoWindow,
-} from 'react-google-maps'
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps'
 import SEO from '../components/seo'
 import { ValidatorForm } from 'react-form-validator-core'
 import TextValidator from '../components/TextValidator'
@@ -29,7 +23,7 @@ const MapWithAMakredInfoWindow = compose(
   ),
   withScriptjs,
   withGoogleMap
-)(props => (
+)((props) => (
   <GoogleMap
     defaultZoom={16}
     defaultCenter={{
@@ -47,9 +41,7 @@ const MapWithAMakredInfoWindow = compose(
       {props.isOpen && (
         <InfoWindow onCloseClick={props.onToggleOpen}>
           <div>
-            <h3 className="text-fl-primary-alternate text-2xl pb-2 font-medium">
-              {props.siteTitle}
-            </h3>
+            <h3 className="text-fl-primary-alternate text-2xl pb-2 font-medium">{props.siteTitle}</h3>
             <span>
               {props.contactData.address1}
               <br />
@@ -58,10 +50,7 @@ const MapWithAMakredInfoWindow = compose(
               {props.contactData.cityPIN}, {props.contactData.stateCountry}
               <br />
               <br />
-              {props.contactData.phone} |{' '}
-              <a href={`mailto:${props.contactData.email}`}>
-                {props.contactData.email}
-              </a>
+              {props.contactData.phone} | <a href={`mailto:${props.contactData.email}`}>{props.contactData.email}</a>
             </span>
           </div>
         </InfoWindow>
@@ -70,14 +59,11 @@ const MapWithAMakredInfoWindow = compose(
   </GoogleMap>
 ))
 
-const GoogleMapsUrl =
-  'https://maps.googleapis.com/maps/api/js?key=' +
-  Keys.googleMapsAPIKey +
-  '&v=3.exp&libraries=geometry,drawing,places'
+const GoogleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=' + Keys.googleMapsAPIKey + '&v=3.exp&libraries=geometry,drawing,places'
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
@@ -93,7 +79,7 @@ class ContactForm extends React.Component {
     submitError: '',
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const target = event.target
     const value = target.value
     const name = target.name
@@ -123,7 +109,7 @@ class ContactForm extends React.Component {
           submitError: '',
         })
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Form submission error:', error)
         this.setState({
           showError: true,
@@ -141,38 +127,23 @@ class ContactForm extends React.Component {
     e.preventDefault()
   }
 
-  displayAlert = submitMsg => {
+  displayAlert = (submitMsg) => {
     alert(submitMsg)
     this.setState({ showMessage: false })
   }
 
   render() {
     const { contactus, global } = this.props.data
-    const {
-      showError,
-      showMessage,
-      email,
-      firstname,
-      lastname,
-      message,
-      company,
-      submitError,
-    } = this.state
+    const { showError, showMessage, email, firstname, lastname, message, company, submitError } = this.state
 
     return (
       <FullLayout>
-        <Helmet
-          title={
-            global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title
-          }
-        />
+        <Helmet title={global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title} />
         <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
           <div className="flex sm:px-10 sm:py-24 lg:px-38 lg:py-32 sm:w-full lg:w-auto bg-white flex-wrap">
             <div className="flex-col opacity-75" style={{ color: '#E05455' }}>
               <h1 className="text-4xl mb-10">Contact Us</h1>
-              <h3 className="text-xl pb-2 font-semibold">
-                {global.frontmatter.siteTitle}
-              </h3>
+              <h3 className="text-xl pb-2 font-semibold">{global.frontmatter.siteTitle}</h3>
               <span className="text-lg leading-normal">
                 {contactus.frontmatter.address1}
                 <br />
@@ -181,45 +152,32 @@ class ContactForm extends React.Component {
                 {contactus.frontmatter.cityPIN} <br />
                 {contactus.frontmatter.stateCountry}
                 <br />
-                <a
-                  className="font-medium"
-                  style={{ color: '#424242' }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.google.com/maps/place/FiniteLoop/@12.9299324,77.5794589,16.12z/data=!4m12!1m6!3m5!1s0x0:0x3f38249791403c9a!2sFiniteLoop!8m2!3d12.9304017!4d77.5824309!3m4!1s0x0:0x3f38249791403c9a!8m2!3d12.9304017!4d77.5824309"
-                >
-                  Get Directions
-                </a>
+                <br />
+                <span className="whitespace-no-wrap">
+                  {contactus.frontmatter.shareLinkLabel}
+                  <a className="font-medium" style={{ color: '#424242' }} target="_blank" rel="noopener noreferrer" href={contactus.frontmatter.shareLink}>
+                    {contactus.frontmatter.shareLinkText}
+                  </a>
+                </span>
                 <br />
                 <br />
                 {contactus.frontmatter.phone} <br />
-                <a
-                  href={`mailto:${contactus.frontmatter.email}`}
-                  className="font-medium"
-                  style={{ color: '#424242' }}
-                >
+                <a href={`mailto:${contactus.frontmatter.email}`} className="font-medium" style={{ color: '#424242' }}>
                   {contactus.frontmatter.email}
                 </a>
               </span>
             </div>
           </div>
-          <div
-            className="flex sm:mx-2 lg:mx-16 mt-16"
-            style={{ maxWidth: '55rem' }}
-          >
+          <div className="flex sm:mx-2 lg:mx-16 mt-16" style={{ maxWidth: '55rem' }}>
             <div className="flex-col text-white">
-              <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">
-                {contactus.frontmatter.heading}
-              </h1>
-              <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">
-                {contactus.frontmatter.subheading}
-              </p>
+              <h1 className="text-left sm:p-2 sm:text-xl md:text-2xl lg:pt-10">{contactus.frontmatter.heading}</h1>
+              <p className="text-left py-4 sm:px-2 sm:text-xl md:text-xl font-light">{contactus.frontmatter.subheading}</p>
               <div className="flex flex-col sm:px-2">
                 <ValidatorForm
                   onSubmit={this.handleSubmit}
-                  onError={errors => console.log(errors)}
+                  onError={(errors) => console.log(errors)}
                   name="Contact"
-                  ref={f => (this.form = f)}
+                  ref={(f) => (this.form = f)}
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   className="pb-5"
@@ -254,10 +212,7 @@ class ContactForm extends React.Component {
                     value={email}
                     onChange={this.handleChange}
                     validators={['required', 'isEmail']}
-                    errorMessages={[
-                      'This field is required',
-                      'E-mail is not valid',
-                    ]}
+                    errorMessages={['This field is required', 'E-mail is not valid']}
                     margin="normal"
                     className="input-field"
                   />
@@ -286,12 +241,7 @@ class ContactForm extends React.Component {
                   <input name="bot-field" style={{ display: 'none' }} />
                   <br />
                   <div className="float-right">
-                    <button
-                      role="submit"
-                      aria-label="Submit"
-                      type="submit"
-                      className="rectButton"
-                    >
+                    <button role="submit" aria-label="Submit" type="submit" className="rectButton">
                       Submit
                     </button>
                   </div>
@@ -307,17 +257,9 @@ class ContactForm extends React.Component {
             />
           </div> */}
               </div>
-              <SEO
-                postPath={contactus.frontmatter.path}
-                postNode={contactus}
-                postSEO
-              />
-              {showMessage &&
-                this.displayAlert(contactus.frontmatter.submitMsg)}
-              {showError &&
-                this.displayAlert(
-                  'Sorry, we have trouble submitting your form. Please try again later'
-                )}
+              <SEO postPath={contactus.frontmatter.path} postNode={contactus} postSEO />
+              {showMessage && this.displayAlert(contactus.frontmatter.submitMsg)}
+              {showError && this.displayAlert('Sorry, we have trouble submitting your form. Please try again later')}
             </div>
           </div>
         </div>
@@ -348,6 +290,9 @@ export const pageQuery = graphql`
         stateCountry
         phone
         email
+        shareLinkText
+        shareLinkLabel
+        shareLink
         submitMsg
         map {
           position {
@@ -361,9 +306,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    global: markdownRemark(
-      frontmatter: { templateKey: { eq: "global-settings" } }
-    ) {
+    global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
       frontmatter {
         siteTitle
       }

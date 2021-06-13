@@ -12,6 +12,9 @@ cityPIN: Bengaluru - 560011
 stateCountry: Karnataka, India
 phone: " "
 email: contact@finiteloop.io
+shareLinkLabel: "Directions "
+shareLinkText: ///nest.width.calm
+shareLink: https://w3w.co/nest.width.calm
 submitMsg: Thank you for submitting your valuable inputs, we will get back to you soon.
 map:
   center:
