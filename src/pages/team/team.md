@@ -170,7 +170,7 @@ team:
       lnkdnsiteurl: https://www.linkedin.com/in/monika-iyer/
       title: Data Scientist
       avatar: /img/monika.jpeg
-      quote: 
+      quote: "-"
   - person:
       githubsiteurl: test
       twtrsiteurl: test
@@ -180,7 +180,7 @@ team:
       lnkdnsiteurl: https://www.linkedin.com/in/venkateswarat/
       title: Data Scientist
       avatar: /img/venkat.jpeg
-      quote:    
+      quote: "-"
   - person:
       githubsiteurl: test
       twtrsiteurl: test
@@ -189,8 +189,8 @@ team:
       background: slategray
       lnkdnsiteurl: https://www.linkedin.com/in/madhura-prasanna-78b4498/
       title: Architect
-      avatar: /img/madhura.jpeg
-      quote: 
+      avatar: /img/dsc_4488.jpg
+      quote: "-"
   - person:
       githubsiteurl: test
       twtrsiteurl: test
@@ -200,7 +200,7 @@ team:
       lnkdnsiteurl: https://www.linkedin.com/in/neethamenon/
       title: Business Solutions
       avatar: /img/neetha.jpeg
-      quote: 
+      quote: "-"
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
