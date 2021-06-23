@@ -201,6 +201,13 @@ team:
       title: Business Solutions
       avatar: /img/neetha.jpeg
       quote: "-"
+  - person:
+      name: Nagaraj
+      title: Experience Designer
+      avatar: /img/nagaraj-2.png
+      quote: About me
+      background: darkgray
+      lnkdnsiteurl: https://www.linkedin.com/in/nagarajv/
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
