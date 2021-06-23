@@ -208,6 +208,13 @@ team:
       quote: About me
       background: darkgray
       lnkdnsiteurl: https://www.linkedin.com/in/nagarajv/
+  - person:
+      name: Saranya
+      title: Experience Designed
+      avatar: /img/saranya.jpg
+      quote: About me
+      background: darkgray
+      lnkdnsiteurl: https://www.linkedin.com/in/sarandesigns/
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
