@@ -210,7 +210,7 @@ team:
       lnkdnsiteurl: https://www.linkedin.com/in/nagarajv/
   - person:
       name: Saranya
-      title: Experience Designed
+      title: Experience Designer
       avatar: /img/saranya.jpg
       quote: About me
       background: darkgray
