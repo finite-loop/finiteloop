@@ -215,6 +215,13 @@ team:
       quote: About me
       background: darkgray
       lnkdnsiteurl: https://www.linkedin.com/in/sarandesigns/
+  - person:
+      name: Sandhya
+      title: Delivery Manager
+      avatar: /img/sandhya.jpeg
+      quote: About me
+      background: darkgray
+      lnkdnsiteurl: https://www.linkedin.com/in/sandhya-ravikeerthi-8553806/
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
