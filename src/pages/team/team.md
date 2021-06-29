@@ -222,6 +222,13 @@ team:
       quote: About me
       background: darkgray
       lnkdnsiteurl: https://www.linkedin.com/in/sandhya-ravikeerthi-8553806/
+  - person:
+      name: Sharath Nair
+      title: Solution Architect
+      avatar: /img/e62c9ed7-ddbe-44ae-bb41-b36d3d7ba55d.png
+      quote: About me
+      background: darkgray
+      lnkdnsiteurl: https://www.linkedin.com/in/sharath-nair
 ---
 
 > We are a team of passionate business,design and technology professionals who respect quality, and simplicity. We have a good blend of design, solutions, product development and consulting expertise.
