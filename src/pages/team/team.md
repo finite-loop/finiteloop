@@ -25,18 +25,6 @@ team:
   - person:
       githubsiteurl: test
       twtrsiteurl: test
-      name: Mohita
-      fbsiteurl: test
-      background: gray
-      lnkdnsiteurl: https://www.linkedin.com/in/mohita-janbandhu-6812261b/
-      title: Experience Designer
-      avatar: /img/mohita.jpg
-      quote: Born creative. Calligraphy, Binding and coffee. Can represent complex
-        ideas with simple and extra-ordinary visuals. Original works creator,
-        with intense customer focus, and loads of experience.
-  - person:
-      githubsiteurl: test
-      twtrsiteurl: test
       name: Partha
       fbsiteurl: test
       background: gray
@@ -128,20 +116,6 @@ team:
       lnkdnsiteurl: https://www.linkedin.com/in/umesh-nadig-687a67a9/
       title: Architect
       avatar: /img/umesh.png
-      quote: "Previously a lead solutions architect for an IT major. Avid
-        photographer. Drives an old Fiat and still thinks its the best car in
-        the world. Focussed. Hard core architect and very hands-on. Expert in
-        story telling. Very good with nurturing teams. Most wanted by customers
-        worldwide. Update : Not driving the fiat anymore."
-  - person:
-      githubsiteurl: test
-      twtrsiteurl: test
-      name: Shashank
-      fbsiteurl: test
-      background: slategray
-      lnkdnsiteurl: https://www.linkedin.com/in/shashank-rawat-975b6739/
-      title: Technical Lead
-      avatar: /img/shashank.jpg
       quote: "Previously a lead solutions architect for an IT major. Avid
         photographer. Drives an old Fiat and still thinks its the best car in
         the world. Focussed. Hard core architect and very hands-on. Expert in
