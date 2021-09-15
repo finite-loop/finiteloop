@@ -1,7 +1,7 @@
 ---
 templateKey: teams-page
 path: /team
-title: Team
+title: Our Team
 image: /img/OrgTrans.png
 teamTitle: Our Team
 teamDescription: We are a team of passionate business,design and technology
