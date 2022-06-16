@@ -1,5 +1,9 @@
 const path = require('path')
 const _ = require('lodash')
+const sharp = require('sharp')
+
+sharp.cache(false)
+sharp.simd(false)
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-html') {
