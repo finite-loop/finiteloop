@@ -1,20 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import '../styles/index.css'
 import Header from './header'
 import Footer from './footer'
-import Img from 'gatsby-image'
-import Work from '../components/work'
 
 const HomeLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HomeSettingsQuery {
-        global: markdownRemark(
-          frontmatter: { templateKey: { eq: "global-settings" } }
-        ) {
+        global: markdownRemark(frontmatter: { templateKey: { eq: "global-settings" } }) {
           frontmatter {
             logo {
               childImageSharp {
@@ -37,9 +33,7 @@ const HomeLayout = ({ children }) => (
             }
           }
         }
-        links: markdownRemark(
-          frontmatter: { templateKey: { eq: "nav-links" } }
-        ) {
+        links: markdownRemark(frontmatter: { templateKey: { eq: "nav-links" } }) {
           frontmatter {
             headerlinks {
               item {
@@ -59,7 +53,7 @@ const HomeLayout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div
         className="relative min-h-screen"
         style={{
@@ -68,11 +62,7 @@ const HomeLayout = ({ children }) => (
         }}
       >
         <Helmet title={data.global.frontmatter.siteTitle} />
-        <Header
-          title={data.global.frontmatter.logoTitle}
-          social={data.global.frontmatter.socialMediaCard}
-          links={data.links.frontmatter.headerlinks}
-        />
+        <Header title={data.global.frontmatter.logoTitle} social={data.global.frontmatter.socialMediaCard} links={data.links.frontmatter.headerlinks} />
         <div className="sm:mt-12 lg:mt-24 mx-auto">{children}</div>
         <Footer
           url={data.global.frontmatter.siteUrl}

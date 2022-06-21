@@ -12,9 +12,6 @@ class IndexPage extends React.Component {
     return (
       <HomeLayout>
         <Helmet title={this.props.data.global.frontmatter.siteTitle + ' | ' + this.props.data.global.frontmatter.siteLongTitle} />
-        <Helmet>
-          <script language="JavaScript" src="https://dunsregistered.dnb.com" type="text/javascript"></script>
-        </Helmet>
         <section className="sm:mx-5 lg:mx-auto max-w-lg" name="introduction">
           <h1 className="heroText">{this.props.data.global.frontmatter.introText}</h1>
           <h2 className="text-primary font-thin text-3xl">{this.props.data.global.frontmatter.introText2}</h2>

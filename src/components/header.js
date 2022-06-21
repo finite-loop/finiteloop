@@ -50,6 +50,16 @@ class Header extends React.Component {
             social={social}
             links={links}
           />
+          <iframe
+            className="sm:mx-auto"
+            src="https://profiles.dunsregistered.com/TpTpmsSeal.aspx?Domain=www.finiteloop.io&Directory="
+            id="TpTpmsSealIFrm"
+            width="160px"
+            height="100px"
+            frameBorder="0"
+            scrolling="no"
+            allowtransparency="true"
+          ></iframe>
         </nav>
       </div>
     )
