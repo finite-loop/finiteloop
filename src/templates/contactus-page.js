@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-invalid-this */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
@@ -16,9 +18,11 @@ const MapWithAMakredInfoWindow = compose(
       isOpen: true,
     }),
     {
-      onToggleOpen: ({ isOpen }) => () => ({
-        isOpen: !isOpen,
-      }),
+      onToggleOpen:
+        ({ isOpen }) =>
+        () => ({
+          isOpen: !isOpen,
+        }),
     }
   ),
   withScriptjs,
@@ -139,6 +143,22 @@ class ContactForm extends React.Component {
     return (
       <FullLayout>
         <Helmet title={global.frontmatter.siteTitle + ' | ' + contactus.frontmatter.title} />
+        <Helmet>
+          <script type="text/javascript" id="zsiqchat">{`
+            
+                var $zoho = $zoho || {};
+                $zoho.salesiq = $zoho.salesiq || {widgetcode: "4a9ea18f1fdb5ac4854f2ca012e90b42821fc746dcb67d80529f0a93cdcd60bd", values:{},ready:function(){}};
+                var d=document;
+                s=d.createElement("script");
+                s.type="text/javascript";
+                s.id="zsiqscript";
+                s.defer=true;
+                s.src="https://salesiq.zoho.in/widget";
+                t=d.getElementsByTagName("script")[0];
+                t.parentNode.insertBefore(s,t);
+            
+            `}</script>
+        </Helmet>
         <div className="flex xl:flex-no-wrap sm:flex-wrap lg:flex-wrap sm:my-16 lg:my-32">
           <div className="flex sm:px-10 sm:py-24 lg:px-38 lg:py-32 sm:w-full lg:w-auto bg-white flex-wrap">
             <div className="flex-col opacity-75" style={{ color: '#E05455' }}>
