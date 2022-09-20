@@ -2,10 +2,6 @@
 templateKey: nav-links
 headerlinks:
   - item:
-      title: AEBox
-      url: /aebox
-      newwindow: false
-  - item:
       title: The Way
       url: /way/
       newwindow: false
@@ -26,12 +22,16 @@ headerlinks:
       url: /contact/
       newwindow: false
   - item:
-      url: https://blogs.finiteloop.io
-      newwindow: false
+      url: https://blog.finiteloop.io
+      newwindow: true
       title: Blog
 footerlinks:
   - item:
       title: Privacy Policy
       url: /privacy-policy/
       newwindow: false
+  - item:
+      url: /aebox
+      newwindow: false
+      title: AEBox
 ---
