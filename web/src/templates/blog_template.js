@@ -1,10 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "../components/SanityTextEditorComponents/block-content"
 import clientConfig from "../../client-config"
+import { Helmet } from "react-helmet"
 import BlogLayout from "../components/blogLayout"
+import SEO from "../components/seo"
+
 const builder = imageUrlBuilder(clientConfig.sanity)
 
 function imageUrlFor(source) {
@@ -24,14 +27,16 @@ function buildImageObj(source) {
 const SampleBlog = ({ data }) => {
   return (
     <BlogLayout>
+      <Helmet title={`Blog | ${data.blog.title}`} />
+
       <article className="m-0 md:m-2 bg-white">
-        <div className="m-10 w-2/3 mx-auto">
+        <div className="m-10 sm:px-4 md:container mx-auto">
           <h1 className="text-2xl font-semibold md:pt-10 mb-4 md:text-3xl lg:text-5xl leading-tight font-neptune">
             {data.blog.title}
           </h1>
           <div class="w-full flex items-center lg:w-2/3 xl:w-2/3">
-            <Img
-              fluid={data.blog.author.image.asset.fluid}
+            <GatsbyImage
+              image={data.blog.author.image.asset}
               className="h-10 w-10 md:h-14 md:w-14 justify-center lg:h-12 lg:w-12 mr-2 rounded-full border-solid border-2"
               style={{
                 borderColor: "rgb(247, 222, 215)",
@@ -43,45 +48,53 @@ const SampleBlog = ({ data }) => {
                 {data.blog.author.name}
               </span>
               <p className="text-gray-600 my-0 py-0 text-sm">
-                {data.blog.publishedAt}{" "}
+                {data.blog.createdTime}{" "}
                 <span className="">
                   {" - "}
                   <li className="inline-block">
-                    {" "}
                     {data.blog.read_time} min read
-                  </li>{" "}
-                </span>{" "}
+                  </li>
+                </span>
               </p>
             </span>
           </div>
         </div>
-        <div className="w-5/6 md:container  md:w-2/3 mx-auto ">
+        <div className="mx-auto sm:px-4 md:container">
           {data.blog.mainImage && data.blog.mainImage.asset && (
-            <img
-              src={imageUrlFor(buildImageObj(data.blog.mainImage))
-                // .width(1400)
-                // .height(Math.floor((9 / 16) * 1200))
-                // .fit("crop")
+            <GatsbyImage
+              image={imageUrlFor(buildImageObj(data.blog.mainImage))
+                .width(1400)
+                .height(Math.floor((9 / 16) * 1200))
+                .fit("crop")
                 .url()}
               alt={data.blog.mainImage.alt}
               className="h-auto object-cover rounded sm:object-cover md:object-contain lg:object-contain xl:object-contain text-center w-full"
             />
           )}
         </div>
-        <div className=" w-5/6 mx-auto">
-          <div className="mt-8 sm:mr-6 md:mb-4 lg:ml-2 xl:m-20 bg-yellow-200-md">
-            {data.blog._rawBody && (
-              <BlockContent blocks={data.blog._rawBody || []} />
-            )}
-          </div>
+        <div className="md:container sm:px-4 mx-auto">
+          {data.blog._rawBody && (
+            <BlockContent blocks={data.blog._rawBody || []} />
+          )}
         </div>
       </article>
+      <SEO
+        title={`Blogs | ${data.blog.title} `}
+        description={data.sanitySiteSettings.siteDesc}
+      />
     </BlogLayout>
   )
 }
 
 export const query = graphql`
   query getBlog($slug: String) {
+    sanitySiteSettings {
+      introText
+      introText2
+      siteDesc
+      siteLongTitle
+      siteTitle
+    }
     blog: sanityBlog(slug: { current: { eq: $slug } }) {
       _rawBody
       title
@@ -108,17 +121,14 @@ export const query = graphql`
         alt
       }
       publishedAt(formatString: "MMMM DD, YYYY")
+      createdTime: _createdAt(formatString: "MMMM DD, YYYY")
       read_time
       author {
         name
         image {
           asset {
-            fixed(width: 125, height: 125) {
-              ...GatsbySanityImageFixed
-            }
-            fluid {
-              ...GatsbySanityImageFluid
-            }
+            # gatsbyImageData(layout: FIXED)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }

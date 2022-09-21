@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/index.css"
 import Footer from "./footer"
 import bg from "../images/finiteloop_bg_home.png"
 import BlogHeader from "./blogHeader"
+
+export const Head = ({ settings }) => <title>{settings.siteTitle}</title>
 
 const BlogLayout = ({ bgImg, children }) => {
   const { sanitySiteSettings: settings } = useStaticQuery(graphql`
@@ -43,11 +44,8 @@ const BlogLayout = ({ bgImg, children }) => {
         backgroundImage: bgImg ? `url(${bg})` : null,
       }}
     >
-      <Helmet title={settings.siteTitle} />
       <BlogHeader id="header" logo={settings.logo} />
-      <div className="sm:max-w-full md:max-w-3/4 my-8 mx-auto mb-auto">
-        {children}
-      </div>
+      <div className="max-w-full my-1 mx-auto">{children}</div>
       <Footer
         socialUrls={{
           linked: settings.linkedin,
