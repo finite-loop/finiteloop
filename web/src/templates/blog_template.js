@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "../components/SanityTextEditorComponents/block-content"
 import clientConfig from "../../client-config"
@@ -35,8 +35,8 @@ const SampleBlog = ({ data }) => {
             {data.blog.title}
           </h1>
           <div class="w-full flex items-center lg:w-2/3 xl:w-2/3">
-            <Img
-              fluid={data.blog.author.image.asset.fluid}
+            <GatsbyImage
+              image={data.blog.author.image.asset}
               className="h-10 w-10 md:h-14 md:w-14 justify-center lg:h-12 lg:w-12 mr-2 rounded-full border-solid border-2"
               style={{
                 borderColor: "rgb(247, 222, 215)",
@@ -61,8 +61,8 @@ const SampleBlog = ({ data }) => {
         </div>
         <div className="mx-auto sm:px-4 md:container">
           {data.blog.mainImage && data.blog.mainImage.asset && (
-            <img
-              src={imageUrlFor(buildImageObj(data.blog.mainImage))
+            <GatsbyImage
+              image={imageUrlFor(buildImageObj(data.blog.mainImage))
                 .width(1400)
                 .height(Math.floor((9 / 16) * 1200))
                 .fit("crop")
@@ -127,12 +127,8 @@ export const query = graphql`
         name
         image {
           asset {
-            fixed(width: 150, height: 150) {
-              ...GatsbySanityImageFixed
-            }
-            fluid {
-              ...GatsbySanityImageFluid
-            }
+            # gatsbyImageData(layout: FIXED)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }

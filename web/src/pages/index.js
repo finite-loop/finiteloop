@@ -1,10 +1,11 @@
 import React, { useEffect } from "react"
 import BlogLayout from "../components/blogLayout"
-import { Helmet } from "react-helmet"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import BlogListPage from "../components/BlogListPage"
 import { IoIosCloseCircleOutline } from "react-icons/io"
+
+export const Head = () => <title>Blogs</title>
 
 const BlogsPage = ({ data }) => {
   const [filters, setFilters] = React.useState([])
@@ -63,8 +64,6 @@ const BlogsPage = ({ data }) => {
   }
   return (
     <BlogLayout>
-      <Helmet title="Blogs" />
-
       <div className="pb-20">
         <div
           className="para-primary m-0 font-semibold"
@@ -150,16 +149,17 @@ export const query = graphql`
         mainImage {
           alt
           asset {
-            fluid {
-              ...GatsbySanityImageFluid
-            }
-            fixed(width: 370, height: 200) {
-              ...GatsbySanityImageFixed
-            }
-            smallImage: fixed(width: 300, height: 170) {
-              ...GatsbySanityImageFixed
-            }
-            url
+            gatsbyImageData(layout: FULL_WIDTH)
+            # fluid {
+            #   ...GatsbySanityImageFluid
+            # }
+            # fixed(width: 370, height: 200) {
+            #   ...GatsbySanityImageFixed
+            # }
+            # smallImage: fixed(width: 300, height: 170) {
+            #   ...GatsbySanityImageFixed
+            # }
+            # url
           }
         }
       }

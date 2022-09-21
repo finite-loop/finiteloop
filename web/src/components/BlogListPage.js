@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 const BlogListPage = ({ blog, filterData }) => {
   const filterByTag = tag => {
     const data = {
@@ -53,7 +53,7 @@ const BlogListPage = ({ blog, filterData }) => {
           style={{ textDecoration: "none" }}
         >
           <div>
-            <Img fixed={blog.mainImage.asset.fixed} />
+            <GatsbyImage image={blog.mainImage.asset} />
           </div>
         </Link>
       </div>
