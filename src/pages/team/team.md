@@ -54,19 +54,6 @@ team:
   - person:
       githubsiteurl: test
       twtrsiteurl: test
-      name: Shobha
-      fbsiteurl: test
-      background: gray
-      lnkdnsiteurl: https://www.linkedin.com/in/shobha-srikantaswamy-3104985/
-      title: Architect
-      avatar: /img/shobha_2.jpeg
-      quote: Knows all about integrating systems, and building large scale enterprise
-        applications. Quick learner, Hands-on, and a pragmatic architect with
-        exceptional customer focus. Active interest and efforts in contributing
-        to the improvement of the society.
-  - person:
-      githubsiteurl: test
-      twtrsiteurl: test
       name: Shashi
       fbsiteurl: test
       background: darkslategray
