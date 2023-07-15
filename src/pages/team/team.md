@@ -170,13 +170,6 @@ team:
       background: darkgray
       lnkdnsiteurl: https://www.linkedin.com/in/nagarajv/
   - person:
-      name: Saranya
-      title: Experience Designer
-      avatar: /img/saranya.jpg
-      quote: About me
-      background: darkgray
-      lnkdnsiteurl: https://www.linkedin.com/in/sarandesigns/
-  - person:
       name: Sandhya
       title: Delivery Manager
       avatar: /img/sandhya.jpeg
